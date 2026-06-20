@@ -9,7 +9,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for the report. Do not publish backup files, nutrition or health data, private logs, device serial numbers, or unredacted screenshots.
+        Thank you for the report. This form is for Esca Agnellis 0.14.0 (versionCode 37, package com.k2040.escaagnellis).
+        Do not publish backup or export files, nutrition, progress, or health data, device serial numbers, account details or credentials, private or unredacted logs, local file-system paths, identifying information, or unredacted screenshots.
   - type: input
     id: app_version
     attributes:
@@ -90,7 +91,7 @@ body:
     attributes:
       label: Privacy confirmation
       options:
-        - label: "I have not attached backup files or personal/sensitive data."
+        - label: "I have not attached backup or export files, nutrition, progress, or health data, device serial numbers, account details or credentials, local file-system paths, or identifying information."
           required: true
-        - label: "If I attached screenshots or logs, I reviewed and redacted them."
+        - label: "If I attached screenshots or logs, I reviewed and fully redacted them, and they contain no personal or sensitive information."
           required: true

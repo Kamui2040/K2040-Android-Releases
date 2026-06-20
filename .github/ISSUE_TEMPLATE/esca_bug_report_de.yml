@@ -9,7 +9,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Danke für die Meldung. Veröffentliche keine Sicherungsdateien, Ernährungs- oder Gesundheitsdaten, privaten Protokolle, Geräteseriennummern oder ungeschwärzten Screenshots.
+        Danke für die Meldung. Diese Vorlage ist für Esca Agnellis 0.14.0 (versionCode 37, Paket com.k2040.escaagnellis).
+        Veröffentliche keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Konto- oder Zugangsdaten, privaten oder ungeschwärzten Protokolle, lokalen Dateipfade, identifizierenden Informationen oder ungeschwärzten Screenshots.
   - type: input
     id: app_version
     attributes:
@@ -90,7 +91,7 @@ body:
     attributes:
       label: Datenschutzbestätigung
       options:
-        - label: "Ich habe keine Sicherungsdateien oder persönlichen/sensiblen Daten angehängt."
+        - label: "Ich habe keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Konto- oder Zugangsdaten, lokalen Dateipfade oder identifizierenden Informationen angehängt."
           required: true
-        - label: "Falls ich Screenshots oder Protokolle angehängt habe, wurden sie geprüft und geschwärzt."
+        - label: "Falls ich Screenshots oder Protokolle angehängt habe, wurden sie geprüft, vollständig geschwärzt und enthalten keine persönlichen oder sensiblen Informationen."
           required: true
