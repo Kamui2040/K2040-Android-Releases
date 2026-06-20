@@ -10,7 +10,6 @@
   <a href="https://ko-fi.com/kamui60507"><strong>Click to support me on Ko-fi</strong></a>
 </p>
 
-
 **Esca Agnellis by K2040** is a German-language Android application for friendly, low-pressure daily portion tracking based on a food-pyramid model.
 
 ## Public beta
@@ -19,7 +18,8 @@
 - versionCode: `37`
 - Package ID: `com.k2040.escaagnellis`
 - Minimum version: Android 8.0 / API 26
-- Planned release tag: `esca-agnellis-v0.14.0-beta.1`
+- Release tag: `esca-agnellis-v0.14.0-beta.1`
+- [GitHub Release: Esca Agnellis v0.14.0 Beta 1](../../../../releases/tag/esca-agnellis-v0.14.0-beta.1)
 - APK: `Esca-Agnellis-v0.14.0-vc37-release.apk`
 
 The APK is permanently signed with the official K2040 release identity. The public SHA-256 certificate fingerprint is:
