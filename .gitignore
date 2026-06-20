@@ -1,0 +1,29 @@
+# Binary release assets belong on GitHub Releases, not in Git.
+*.apk
+*.aab
+*.apks
+*.xapk
+
+# Signing and private configuration
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+signing.properties
+local.properties
+
+# Private build and shrinker outputs
+mapping.txt
+seeds.txt
+usage.txt
+configuration.txt
+retrace/
+build/
+.gradle/
+
+# Logs, backups, and local exports
+*.log
+backups/
+exports/

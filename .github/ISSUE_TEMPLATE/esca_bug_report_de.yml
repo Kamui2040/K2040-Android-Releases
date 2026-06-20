@@ -1,0 +1,96 @@
+name: "Esca Agnellis: Fehlerbericht (Deutsch)"
+description: "Melde einen reproduzierbaren Fehler in Esca Agnellis."
+title: "[Esca][DE][Fehler] "
+labels:
+  - "app:esca-agnellis"
+  - "language:de"
+  - "bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für die Meldung. Veröffentliche keine Sicherungsdateien, Ernährungs- oder Gesundheitsdaten, privaten Protokolle, Geräteseriennummern oder ungeschwärzten Screenshots.
+  - type: input
+    id: app_version
+    attributes:
+      label: App-Version
+      placeholder: "0.14.0"
+    validations:
+      required: true
+  - type: input
+    id: version_code
+    attributes:
+      label: versionCode
+      placeholder: "37"
+    validations:
+      required: true
+  - type: input
+    id: android_version
+    attributes:
+      label: Android-Version
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Gerät
+      description: "Hersteller und Modell, keine Seriennummer."
+    validations:
+      required: true
+  - type: dropdown
+    id: install_type
+    attributes:
+      label: Installationsart
+      options:
+        - Neuinstallation
+        - Aktualisierung
+        - Unbekannt
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Reproduzieren
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Tatsächliches Verhalten
+    validations:
+      required: true
+  - type: dropdown
+    id: repeats_after_restart
+    attributes:
+      label: Tritt das Problem nach dem Schließen und erneuten Öffnen der App erneut auf?
+      options:
+        - Ja
+        - Nein
+        - Nicht getestet
+    validations:
+      required: true
+  - type: dropdown
+    id: backup
+    attributes:
+      label: War Datensicherung oder Wiederherstellung beteiligt?
+      options:
+        - Nein
+        - Ja
+        - Unbekannt
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Datenschutzbestätigung
+      options:
+        - label: "Ich habe keine Sicherungsdateien oder persönlichen/sensiblen Daten angehängt."
+          required: true
+        - label: "Falls ich Screenshots oder Protokolle angehängt habe, wurden sie geprüft und geschwärzt."
+          required: true

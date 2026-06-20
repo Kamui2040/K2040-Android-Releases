@@ -1,0 +1,96 @@
+name: "Esca Agnellis: Bug Report (English)"
+description: "Report a reproducible problem in Esca Agnellis."
+title: "[Esca][EN][Bug] "
+labels:
+  - "app:esca-agnellis"
+  - "language:en"
+  - "bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for the report. Do not publish backup files, nutrition or health data, private logs, device serial numbers, or unredacted screenshots.
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      placeholder: "0.14.0"
+    validations:
+      required: true
+  - type: input
+    id: version_code
+    attributes:
+      label: versionCode
+      placeholder: "37"
+    validations:
+      required: true
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      description: "Manufacturer and model only; no serial number."
+    validations:
+      required: true
+  - type: dropdown
+    id: install_type
+    attributes:
+      label: Installation type
+      options:
+        - Fresh installation
+        - Update
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: repeats_after_restart
+    attributes:
+      label: Does the problem happen again after closing and reopening the app?
+      options:
+        - "Yes"
+        - "No"
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: backup
+    attributes:
+      label: Was backup or restore involved?
+      options:
+        - "No"
+        - "Yes"
+        - Unknown
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: "I have not attached backup files or personal/sensitive data."
+          required: true
+        - label: "If I attached screenshots or logs, I reviewed and redacted them."
+          required: true

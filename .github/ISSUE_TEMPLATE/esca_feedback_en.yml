@@ -1,0 +1,69 @@
+name: "Esca Agnellis: Feedback (English)"
+description: "Share general feedback about the Esca beta."
+title: "[Esca][EN][Feedback] "
+labels:
+  - "app:esca-agnellis"
+  - "language:en"
+  - "feedback"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not publish backup files, nutrition or health data, private logs, or unredacted screenshots.
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      placeholder: "0.14.0"
+    validations:
+      required: true
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Tracking flow
+        - Portion reference
+        - Backup and restore
+        - Theme and readability
+        - Installation or update
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked well?
+    validations:
+      required: true
+  - type: textarea
+    id: confusing
+    attributes:
+      label: What was confusing?
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+  - type: dropdown
+    id: blocker
+    attributes:
+      label: Does this block testing?
+      options:
+        - "No"
+        - Partially
+        - "Yes"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: "I have not attached backup files or personal/sensitive data; any screenshots were reviewed and redacted."
+          required: true

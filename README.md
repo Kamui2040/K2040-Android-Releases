@@ -1,0 +1,25 @@
+# K2040 Android Releases
+
+[English version](README.en.md)
+
+Dieses öffentliche Repository ist der offizielle Download-, Dokumentations- und Rückmeldekanal für freigegebene K2040-Android-Apps.
+
+## Aktueller Schwerpunkt
+
+Derzeit enthält das Repository ausschließlich Veröffentlichungen für **Esca Agnellis**.
+
+- [Esca Agnellis](apps/esca-agnellis/README.md)
+- Erste geplante Vorabversion: `esca-agnellis-v0.14.0-beta.1`
+- Paket-ID: `com.k2040.escaagnellis`
+
+Die Struktur kann später weitere K2040-Android-Apps aufnehmen. Jede App erhält dabei ihre eigene Dokumentation, Lizenz, Datenschutzerklärung, Signaturidentität, Prüfsummen, Versionshistorie und Rückmeldewege. Nicht veröffentlichungsreife Apps erhalten keine leeren Platzhalterbereiche.
+
+## Wichtiger Hinweis
+
+Dieses Repository enthält keine privaten Esca-Quelltexte und gewährt keine Quellcodelizenz. Signierte APK-Dateien werden ausschließlich als GitHub-Release-Assets bereitgestellt und nicht in den Git-Verlauf eingecheckt.
+
+APK-Dateien sollten nur über die hier verlinkten offiziellen Releases oder ausdrücklich als offiziell benannte Store-Einträge bezogen werden.
+
+## Sicherheit
+
+Sicherheitsrelevante Hinweise dürfen nicht als öffentliches Issue veröffentlicht werden. Siehe [SECURITY.md](SECURITY.md).
