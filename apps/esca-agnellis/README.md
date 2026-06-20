@@ -2,6 +2,15 @@
 
 [English version](README.en.md)
 
+<p align="center">
+  <img src="../../docs/assets/kofi-header.png" alt="K2040 Ko-fi header" width="720">
+</p>
+
+<p align="center">
+  <a href="https://ko-fi.com/kamui60507"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
+</p>
+
+
 **Esca Agnellis by K2040** ist eine deutschsprachige Android-App zum freundlichen, druckfreien Erfassen täglicher Portionen anhand einer Lebensmittelpyramide.
 
 ## Öffentliche Betaversion
