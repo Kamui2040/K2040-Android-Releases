@@ -10,7 +10,6 @@
   <a href="https://ko-fi.com/kamui60507"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
 </p>
 
-
 **Esca Agnellis by K2040** ist eine deutschsprachige Android-App zum freundlichen, druckfreien Erfassen täglicher Portionen anhand einer Lebensmittelpyramide.
 
 ## Öffentliche Betaversion
@@ -19,7 +18,8 @@
 - versionCode: `37`
 - Paket-ID: `com.k2040.escaagnellis`
 - Mindestversion: Android 8.0 / API 26
-- Geplantes Release-Tag: `esca-agnellis-v0.14.0-beta.1`
+- Release-Tag: `esca-agnellis-v0.14.0-beta.1`
+- [GitHub-Release: Esca Agnellis v0.14.0 Beta 1](../../../../releases/tag/esca-agnellis-v0.14.0-beta.1)
 - APK: `Esca-Agnellis-v0.14.0-vc37-release.apk`
 
 Die APK ist dauerhaft mit der offiziellen K2040-Release-Signatur signiert. Der öffentliche SHA-256-Fingerabdruck des Signaturzertifikats lautet:
@@ -55,7 +55,7 @@ Die öffentliche Version `0.14.0` ist eine neue, eigenständige Kompatibilitäts
 
 Dieses Release-Repository enthält keinen privaten Esca-Anwendungsquellcode und macht Esca Agnellis nicht zu Open-Source-Software.
 
-Links zu offiziellen Releases dürfen geteilt werden. Die APK-Datei darf nicht ohne ausdrückliche Genehmigung erneut hochgeladen, gespiegelt, verändert, neu signiert, neu verpackt, kommerziell weiterverteilt oder hinter einer Bezahlschranke angeboten werden.
+Links zu offiziellen Release-Seiten dürfen geteilt werden. Die APK-Datei darf nicht ohne ausdrückliche Genehmigung erneut hochgeladen, gespiegelt, verändert, neu signiert, neu verpackt, kommerziell weiterverteilt oder hinter einer Bezahlschranke angeboten werden.
 
 ## Rückmeldung
 
