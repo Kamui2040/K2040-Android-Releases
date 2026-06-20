@@ -9,12 +9,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Bitte veröffentliche keine Sicherungsdateien, Ernährungs- oder Gesundheitsdaten, privaten Protokolle oder ungeschwärzten Screenshots.
+        Diese Vorlage ist für Esca Agnellis 0.14.0 (versionCode 37, Paket com.k2040.escaagnellis).
+        Bitte veröffentliche keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Kontoinformationen, privaten oder ungeschwärzten Protokolle, lokalen Dateipfade, identifizierenden Angaben oder ungeschwärzten Screenshots.
   - type: input
     id: app_version
     attributes:
       label: App-Version
       placeholder: "0.14.0"
+    validations:
+      required: true
+  - type: input
+    id: version_code
+    attributes:
+      label: versionCode
+      placeholder: "37"
     validations:
       required: true
   - type: input
@@ -65,5 +73,7 @@ body:
     attributes:
       label: Datenschutzbestätigung
       options:
-        - label: "Ich habe keine Sicherungsdateien oder persönlichen/sensiblen Daten angehängt; beigefügte Screenshots wurden geprüft und geschwärzt."
+        - label: "Ich habe keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Kontoinformationen, lokalen Dateipfade oder identifizierenden Angaben angehängt."
+          required: true
+        - label: "Falls ich Screenshots oder Protokolle angehängt habe, wurden sie geprüft, vollständig geschwärzt und enthalten keine persönlichen oder sensiblen Informationen."
           required: true
