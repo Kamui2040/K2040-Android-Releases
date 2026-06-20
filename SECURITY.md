@@ -6,7 +6,7 @@
 
 Sicherheitsrelevante Informationen dürfen nicht in einem öffentlichen Issue, Kommentar oder Anhang veröffentlicht werden.
 
-Nutze nach Einrichtung des öffentlichen Repositorys die private GitHub-Sicherheitsmeldung:
+Nutze GitHubs private Sicherheitsmeldung:
 
 <https://github.com/Kamui2040/K2040-Android-Releases/security/advisories/new>
 
@@ -22,9 +22,10 @@ Insbesondere nicht öffentlich hochladen:
 - Geräteseriennummern;
 - lokale Dateipfade;
 - Zugangsdaten oder Kontoinformationen;
+- identifizierende Informationen;
 - Signaturmaterial, Schlüsseldateien oder Passwörter;
 - Screenshots mit persönlichen oder sensiblen Informationen.
 
 ## Unterstützte Veröffentlichung
 
-Die erste geplante unterstützte Esca-Veröffentlichung ist `esca-agnellis-v0.14.0-beta.1`. Beta-Versionen dienen dem öffentlichen Test und sind keine Zusage für langfristigen Support.
+Die derzeit unterstützte öffentliche Esca-Testversion ist `esca-agnellis-v0.14.0-beta.1`. Beta-Versionen dienen dem öffentlichen Test und sind keine Zusage für langfristigen Support.
