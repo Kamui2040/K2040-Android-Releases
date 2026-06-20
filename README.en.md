@@ -10,24 +10,24 @@
   <a href="https://ko-fi.com/kamui60507"><strong>Click to support me on Ko-fi</strong></a>
 </p>
 
-
-This public repository is the official download, documentation, and feedback channel for approved K2040 Android applications.
+This public repository is the official release, documentation, and feedback channel for approved K2040 Android applications.
 
 ## Current focus
 
 The repository currently contains releases for **Esca Agnellis only**.
 
 - [Esca Agnellis](apps/esca-agnellis/README.en.md)
-- First planned prerelease: `esca-agnellis-v0.14.0-beta.1`
+- [Esca Agnellis v0.14.0 Beta 1](../../releases/tag/esca-agnellis-v0.14.0-beta.1)
+- Release tag: `esca-agnellis-v0.14.0-beta.1`
 - Package ID: `com.k2040.escaagnellis`
 
 The structure may later support additional K2040 Android apps. Each app will retain its own documentation, licence, privacy statement, signing identity, checksums, release history, and feedback routes. Apps that are not release-ready will not receive empty placeholder areas.
 
 ## Important notice
 
-This repository contains no private Esca application source code and grants no source-code licence. Signed APK files are published only as GitHub Release assets and are not committed to Git history.
+This repository contains no private Esca application source code and grants no source-code licence. Signed application packages are published only as GitHub Release assets and are not committed to Git history.
 
-Obtain APK files only from releases linked here or from store listings explicitly designated as official.
+Use only the official releases linked from this repository or store listings explicitly designated as official.
 
 ## Security
 

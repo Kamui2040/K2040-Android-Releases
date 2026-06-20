@@ -10,7 +10,6 @@
   <a href="https://ko-fi.com/kamui60507"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
 </p>
 
-
 Dieses öffentliche Repository ist der offizielle Download-, Dokumentations- und Rückmeldekanal für freigegebene K2040-Android-Apps.
 
 ## Aktueller Schwerpunkt
@@ -18,7 +17,8 @@ Dieses öffentliche Repository ist der offizielle Download-, Dokumentations- und
 Derzeit enthält das Repository ausschließlich Veröffentlichungen für **Esca Agnellis**.
 
 - [Esca Agnellis](apps/esca-agnellis/README.md)
-- Erste geplante Vorabversion: `esca-agnellis-v0.14.0-beta.1`
+- [Esca Agnellis v0.14.0 Beta 1](../../releases/tag/esca-agnellis-v0.14.0-beta.1)
+- Release-Tag: `esca-agnellis-v0.14.0-beta.1`
 - Paket-ID: `com.k2040.escaagnellis`
 
 Die Struktur kann später weitere K2040-Android-Apps aufnehmen. Jede App erhält dabei ihre eigene Dokumentation, Lizenz, Datenschutzerklärung, Signaturidentität, Prüfsummen, Versionshistorie und Rückmeldewege. Nicht veröffentlichungsreife Apps erhalten keine leeren Platzhalterbereiche.
