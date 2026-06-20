@@ -3,7 +3,7 @@
 [Deutsche Version](README.md)
 
 <p align="center">
-  <img src="docs/assets/kofi-header.png" alt="K2040 Ko-fi header" width="720">
+  <img src="docs/assets/kofi-header.jpg" alt="K2040 Ko-fi header" width="720">
 </p>
 
 <p align="center">
