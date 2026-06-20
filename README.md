@@ -2,6 +2,15 @@
 
 [English version](README.en.md)
 
+<p align="center">
+  <img src="docs/assets/kofi-header.jpg" alt="K2040 Ko-fi header" width="720">
+</p>
+
+<p align="center">
+  <a href="https://ko-fi.com/kamui60507"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
+</p>
+
+
 Dieses öffentliche Repository ist der offizielle Download-, Dokumentations- und Rückmeldekanal für freigegebene K2040-Android-Apps.
 
 ## Aktueller Schwerpunkt
