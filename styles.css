@@ -1,0 +1,243 @@
+:root {
+  color-scheme: light;
+  --background: #f8f3e9;
+  --surface: rgba(255, 252, 246, 0.94);
+  --surface-strong: #fffaf1;
+  --text: #4f463d;
+  --muted: #74695f;
+  --green: #5f936f;
+  --green-dark: #3f6f50;
+  --green-soft: #dce8d2;
+  --gold-soft: #f7e6b8;
+  --pink-soft: #f5d8db;
+  --border: #dbcdbb;
+  --shadow: 0 18px 45px rgba(89, 72, 52, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(245, 216, 219, 0.55), transparent 28rem),
+    radial-gradient(circle at bottom right, rgba(220, 232, 210, 0.7), transparent 32rem),
+    var(--background);
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+.hero,
+.language-section,
+footer {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  overflow: hidden;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
+
+.hero-copy {
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.65rem;
+  color: var(--green-dark);
+  font-size: clamp(2.2rem, 7vw, 4.6rem);
+  line-height: 0.98;
+}
+
+h2 {
+  margin-bottom: 0.6rem;
+  color: var(--green-dark);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.hero-copy > p:not(.eyebrow),
+.section-heading > p:not(.eyebrow) {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.language-links,
+.secondary-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.language-links a,
+.secondary-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--green-dark);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.language-links a:hover,
+.language-links a:focus-visible,
+.secondary-links a:hover,
+.secondary-links a:focus-visible {
+  border-color: var(--green);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.language-section {
+  margin-top: 1.5rem;
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  scroll-margin-top: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.6rem 0;
+}
+
+.link-card {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  padding: 1.3rem;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: linear-gradient(150deg, var(--surface-strong), var(--green-soft));
+  text-decoration: none;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.link-card:nth-child(2) {
+  background: linear-gradient(150deg, var(--surface-strong), var(--gold-soft));
+}
+
+.link-card:nth-child(3) {
+  background: linear-gradient(150deg, var(--surface-strong), var(--pink-soft));
+}
+
+.link-card:hover,
+.link-card:focus-visible {
+  border-color: var(--green);
+  box-shadow: 0 14px 30px rgba(89, 72, 52, 0.14);
+  outline: none;
+  transform: translateY(-3px);
+}
+
+.link-card strong {
+  color: var(--green-dark);
+  font-size: 1.2rem;
+}
+
+.link-card span:last-child {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.card-label {
+  color: var(--green-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+footer {
+  margin-top: 1.5rem;
+  padding: 1.3rem 1.6rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    width: min(100% - 1rem, 1100px);
+    padding-top: 0.5rem;
+  }
+
+  .hero,
+  .language-section,
+  footer {
+    border-radius: 22px;
+  }
+
+  .hero-image {
+    aspect-ratio: 16 / 8;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .link-card {
+    min-height: 150px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .link-card,
+  .language-links a,
+  .secondary-links a {
+    transition: none;
+  }
+}
