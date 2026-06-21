@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/kamui60507"><strong>Click to support me on Ko-fi</strong></a>
+  <a href="https://ko-fi.com/k2040"><strong>Click to support me on Ko-fi</strong></a>
 </p>
 
 **Esca Agnellis by K2040** is a German-language Android application for friendly, low-pressure daily portion tracking based on a food-pyramid model.

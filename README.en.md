@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/kamui60507"><strong>Click to support me on Ko-fi</strong></a>
+  <a href="https://ko-fi.com/k2040"><strong>Click to support me on Ko-fi</strong></a>
 </p>
 
 This public repository is the official release, documentation, and feedback channel for approved K2040 Android applications.

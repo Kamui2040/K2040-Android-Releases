@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/kamui60507"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
+  <a href="https://ko-fi.com/k2040"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
 </p>
 
 Dieses öffentliche Repository ist der offizielle Download-, Dokumentations- und Rückmeldekanal für freigegebene K2040-Android-Apps.
