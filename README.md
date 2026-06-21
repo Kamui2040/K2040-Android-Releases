@@ -12,6 +12,14 @@
 
 Dieses öffentliche Repository ist der offizielle Download-, Dokumentations- und Rückmeldekanal für freigegebene K2040-Android-Apps.
 
+## Öffentlicher Projekthub
+
+Der gemeinsame K2040-Projekthub wird über GitHub Pages veröffentlicht:
+
+- <https://kamui2040.github.io/K2040-Android-Releases/>
+
+Der Hub dient als zentraler Einstiegspunkt für soziale Profile und zukünftige Veröffentlichungen. GitHub Releases bleibt die maßgebliche Quelle für APK-Dateien, Versionshinweise und Prüfsummen.
+
 ## Aktueller Schwerpunkt
 
 Derzeit enthält das Repository ausschließlich Veröffentlichungen für **Esca Agnellis**.
