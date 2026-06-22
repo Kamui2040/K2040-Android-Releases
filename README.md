@@ -18,7 +18,7 @@ Der gemeinsame K2040-Projekthub wird über GitHub Pages veröffentlicht:
 
 - <https://kamui2040.github.io/K2040-Android-Releases/>
 
-Der Hub dient als zentraler Einstiegspunkt für soziale Profile und zukünftige Veröffentlichungen. GitHub Releases bleibt die maßgebliche Quelle für APK-Dateien, Versionshinweise und Prüfsummen. Die Seite übernimmt standardmäßig das helle oder dunkle Systemdesign und bietet zusätzlich einen dauerhaften manuellen Umschalter.
+Die Seite ist ausschließlich für K2040-Android-Projekte bestimmt. Sie übernimmt standardmäßig das helle oder dunkle Systemdesign und bietet zusätzlich einen dauerhaften manuellen Umschalter. Die Sprache wird zunächst anhand der Browser-Einstellungen erkannt und kann danach dauerhaft über ein Auswahlmenü geändert werden. Unterstützt werden Englisch, Deutsch, europäisches Portugiesisch, Spanisch und Französisch; bei nicht unterstützten Sprachen wird Englisch verwendet. GitHub Releases bleibt die maßgebliche Quelle für APK-Dateien, Versionshinweise und Prüfsummen.
 
 ## Aktueller Schwerpunkt
 
