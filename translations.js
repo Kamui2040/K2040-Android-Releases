@@ -39,7 +39,10 @@ window.K2040_TRANSLATIONS = {
     },
     links: {
       more: "More K2040 links",
-      androidReleases: "Android Releases",
+      home: "Home",
+      androidProjects: "Android Projects",
+      gamingMods: "Gaming Mods",
+      androidRepository: "Android Releases repository",
       githubProfile: "GitHub profile"
     },
     footer: {
@@ -87,7 +90,10 @@ window.K2040_TRANSLATIONS = {
     },
     links: {
       more: "Weitere K2040-Links",
-      androidReleases: "Android-Veröffentlichungen",
+      home: "Startseite",
+      androidProjects: "Android-Projekte",
+      gamingMods: "Spiele-Mods",
+      androidRepository: "Android-Releases-Repository",
       githubProfile: "GitHub-Profil"
     },
     footer: {
@@ -135,7 +141,10 @@ window.K2040_TRANSLATIONS = {
     },
     links: {
       more: "Mais ligações K2040",
-      androidReleases: "Lançamentos Android",
+      home: "Início",
+      androidProjects: "Projetos Android",
+      gamingMods: "Mods de Jogos",
+      androidRepository: "Repositório de lançamentos Android",
       githubProfile: "Perfil do GitHub"
     },
     footer: {
@@ -183,7 +192,10 @@ window.K2040_TRANSLATIONS = {
     },
     links: {
       more: "Más enlaces de K2040",
-      androidReleases: "Lanzamientos Android",
+      home: "Inicio",
+      androidProjects: "Proyectos Android",
+      gamingMods: "Mods de Juegos",
+      androidRepository: "Repositorio de lanzamientos Android",
       githubProfile: "Perfil de GitHub"
     },
     footer: {
@@ -231,7 +243,10 @@ window.K2040_TRANSLATIONS = {
     },
     links: {
       more: "Autres liens K2040",
-      androidReleases: "Versions Android",
+      home: "Accueil",
+      androidProjects: "Projets Android",
+      gamingMods: "Mods de Jeux",
+      androidRepository: "Dépôt des versions Android",
       githubProfile: "Profil GitHub"
     },
     footer: {
