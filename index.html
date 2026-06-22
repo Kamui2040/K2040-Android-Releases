@@ -1,104 +1,97 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Offizieller K2040-Projekthub für Android-Veröffentlichungen, Dokumentation und Support.">
+  <meta name="description" content="Official K2040 Android releases, documentation, and support in one place.">
   <meta name="color-scheme" content="light dark">
-  <title>K2040 Projects</title>
-  <script src="theme.js"></script>
+  <title>K2040 Android Projects</title>
+  <script src="translations.js"></script>
+  <script src="site.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page-shell">
     <header class="hero">
-      <img class="hero-image" src="docs/assets/kofi-header.jpg" alt="K2040 Projekte: Apps, Mods und Tools">
+      <img
+        class="hero-image"
+        src="docs/assets/kofi-header.jpg"
+        alt="K2040 projects banner showing apps, mods, tools, and the wolf mascot"
+        data-i18n-alt="hero.bannerAlt"
+      >
       <div class="hero-copy">
         <p class="eyebrow">K2040 Projects</p>
-        <h1>Apps, Mods und Tools</h1>
-        <p>Offizielle Veröffentlichungen, Dokumentation und Supportwege an einem Ort.</p>
+        <h1 data-i18n="hero.title">Android Projects</h1>
+        <p data-i18n="hero.description">Official Android releases, documentation, and support in one place.</p>
+
         <div class="hero-actions">
-          <nav class="language-links" aria-label="Sprachauswahl">
-            <a href="#de">Deutsch</a>
-            <a href="#en">English</a>
-          </nav>
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkles Design aktivieren / Switch to dark theme">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-pressed="false"
+            aria-label="Switch to dark theme"
+          >
             <span class="theme-toggle-icon" aria-hidden="true">☾</span>
-            <span data-theme-label>Dunkel / Dark</span>
+            <span data-theme-label>Dark</span>
           </button>
+
+          <label class="language-control">
+            <span class="visually-hidden" data-i18n="controls.language">Language</span>
+            <select
+              class="language-select"
+              data-language-select
+              aria-label="Language"
+              data-i18n-aria-label="controls.language"
+            >
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+              <option value="pt-PT">Português (Portugal)</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+            </select>
+          </label>
         </div>
       </div>
     </header>
 
-    <section id="de" class="language-section" lang="de">
+    <section class="content-section">
       <div class="section-heading">
-        <p class="eyebrow">Aktuell veröffentlicht</p>
+        <p class="eyebrow" data-i18n="release.eyebrow">Currently released</p>
         <h2>Esca Agnellis</h2>
-        <p>Eine ruhige, deutschsprachige Android-App zum täglichen Erfassen von Portionen anhand einer Ernährungspyramide.</p>
+        <p data-i18n="release.description">A calm, German-first Android app for tracking daily portions with a food-pyramid layout.</p>
       </div>
 
       <div class="card-grid">
         <a class="link-card primary" href="https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.14.1-beta.2">
-          <span class="card-label">Download</span>
-          <strong>Esca Agnellis Beta 2</strong>
-          <span>APK, Release Notes und Prüfsumme</span>
+          <span class="card-label" data-i18n="cards.download.label">Download</span>
+          <strong data-i18n="cards.download.title">Esca Agnellis Beta 2</strong>
+          <span data-i18n="cards.download.description">APK, release notes, and checksum</span>
         </a>
+
         <a class="link-card" href="https://github.com/Kamui2040/K2040-Android-Releases/tree/main/apps/esca-agnellis">
-          <span class="card-label">Information</span>
-          <strong>App-Dokumentation</strong>
-          <span>Installation, Datenschutz und Nutzung</span>
+          <span class="card-label" data-i18n="cards.documentation.label">Information</span>
+          <strong data-i18n="cards.documentation.title">App documentation</strong>
+          <span data-i18n="cards.documentation.description">Installation, privacy, and usage</span>
         </a>
+
         <a class="link-card" href="https://github.com/Kamui2040/K2040-Android-Releases/issues/new/choose">
-          <span class="card-label">Rückmeldung</span>
-          <strong>Feedback und Fehlerberichte</strong>
-          <span>Deutsche und englische Formulare</span>
+          <span class="card-label" data-i18n="cards.feedback.label">Feedback</span>
+          <strong data-i18n="cards.feedback.title">Feedback and bug reports</strong>
+          <span data-i18n="cards.feedback.description">Forms in German and English</span>
         </a>
       </div>
 
-      <div class="secondary-links" aria-label="Weitere K2040-Links">
-        <a href="https://github.com/Kamui2040/K2040-Android-Releases">Android Releases</a>
-        <a href="https://github.com/Kamui2040">GitHub-Profil</a>
-        <a href="https://ko-fi.com/k2040">Ko-fi</a>
-        <a href="https://www.instagram.com/k2040.projects/">Instagram · K2040.Projects</a>
-      </div>
-    </section>
-
-    <section id="en" class="language-section" lang="en">
-      <div class="section-heading">
-        <p class="eyebrow">Currently released</p>
-        <h2>Esca Agnellis</h2>
-        <p>A calm, German-first Android app for tracking daily portions with a food-pyramid layout.</p>
-      </div>
-
-      <div class="card-grid">
-        <a class="link-card primary" href="https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.14.1-beta.2">
-          <span class="card-label">Download</span>
-          <strong>Esca Agnellis Beta 2</strong>
-          <span>APK, release notes, and checksum</span>
-        </a>
-        <a class="link-card" href="https://github.com/Kamui2040/K2040-Android-Releases/tree/main/apps/esca-agnellis">
-          <span class="card-label">Information</span>
-          <strong>App documentation</strong>
-          <span>Installation, privacy, and usage</span>
-        </a>
-        <a class="link-card" href="https://github.com/Kamui2040/K2040-Android-Releases/issues/new/choose">
-          <span class="card-label">Feedback</span>
-          <strong>Feedback and bug reports</strong>
-          <span>German and English forms</span>
-        </a>
-      </div>
-
-      <div class="secondary-links" aria-label="More K2040 links">
-        <a href="https://github.com/Kamui2040/K2040-Android-Releases">Android Releases</a>
-        <a href="https://github.com/Kamui2040">GitHub profile</a>
+      <div class="secondary-links" data-i18n-aria-label="links.more" aria-label="More K2040 links">
+        <a href="https://github.com/Kamui2040/K2040-Android-Releases" data-i18n="links.androidReleases">Android Releases</a>
+        <a href="https://github.com/Kamui2040" data-i18n="links.githubProfile">GitHub profile</a>
         <a href="https://ko-fi.com/k2040">Ko-fi</a>
         <a href="https://www.instagram.com/k2040.projects/">Instagram · K2040.Projects</a>
       </div>
     </section>
 
     <footer>
-      <p>GitHub Releases bleibt die maßgebliche Quelle für veröffentlichte APKs und Prüfsummen.</p>
-      <p>GitHub Releases remains the authoritative source for published APKs and checksums.</p>
+      <p data-i18n="footer.authority">GitHub Releases remains the authoritative source for published APKs and checksums.</p>
     </footer>
   </main>
 </body>
