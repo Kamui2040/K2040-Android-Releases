@@ -12,13 +12,15 @@
 
 This public repository is the official release, documentation, and feedback channel for approved K2040 Android applications.
 
-## Public project hub
+## Public project pages
 
-The shared K2040 project hub is published through GitHub Pages:
+The shared K2040 project pages are published through GitHub Pages:
 
-- <https://kamui2040.github.io/K2040-Android-Releases/>
+- Main gateway: <https://kamui2040.github.io/>
+- Android Projects: <https://kamui2040.github.io/K2040-Android-Releases/>
+- Gaming Mods: <https://kamui2040.github.io/gaming-mods/>
 
-The page is dedicated to K2040 Android projects. It follows the system light or dark appearance by default and also provides a persistent manual theme switch. The initial language is detected from the browser settings and can then be changed permanently through a selector. English, German, European Portuguese, Spanish, and French are supported; unsupported languages fall back to English. GitHub Releases remains the authoritative source for APK files, release notes, and checksums.
+All three pages link directly to one another. The Android page is dedicated to K2040 Android projects. It follows the system light or dark appearance by default and also provides a persistent manual theme switch. The initial language is detected from the browser settings and can then be changed permanently through a selector. English, German, European Portuguese, Spanish, and French are supported; unsupported languages fall back to English. GitHub Releases remains the authoritative source for APK files, release notes, and checksums.
 
 ## Current focus
 
