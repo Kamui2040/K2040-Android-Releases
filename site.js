@@ -54,6 +54,11 @@
   };
 
   const detectLanguage = () => {
+    const hashLanguage = normalizeLanguage(window.location.hash.slice(1));
+    if (hashLanguage) {
+      return hashLanguage;
+    }
+
     const storedLanguage = readStorage(languageStorageKey);
     if (supportedLanguages.includes(storedLanguage)) {
       return storedLanguage;
