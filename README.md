@@ -12,13 +12,15 @@
 
 Dieses öffentliche Repository ist der offizielle Download-, Dokumentations- und Rückmeldekanal für freigegebene K2040-Android-Apps.
 
-## Öffentlicher Projekthub
+## Öffentliche Projektseiten
 
-Der gemeinsame K2040-Projekthub wird über GitHub Pages veröffentlicht:
+Die gemeinsamen K2040-Projektseiten werden über GitHub Pages veröffentlicht:
 
-- <https://kamui2040.github.io/K2040-Android-Releases/>
+- Hauptseite: <https://kamui2040.github.io/>
+- Android-Projekte: <https://kamui2040.github.io/K2040-Android-Releases/>
+- Spiele-Mods: <https://kamui2040.github.io/gaming-mods/>
 
-Die Seite ist ausschließlich für K2040-Android-Projekte bestimmt. Sie übernimmt standardmäßig das helle oder dunkle Systemdesign und bietet zusätzlich einen dauerhaften manuellen Umschalter. Die Sprache wird zunächst anhand der Browser-Einstellungen erkannt und kann danach dauerhaft über ein Auswahlmenü geändert werden. Unterstützt werden Englisch, Deutsch, europäisches Portugiesisch, Spanisch und Französisch; bei nicht unterstützten Sprachen wird Englisch verwendet. GitHub Releases bleibt die maßgebliche Quelle für APK-Dateien, Versionshinweise und Prüfsummen.
+Alle drei Seiten sind direkt miteinander verlinkt. Die Android-Seite ist ausschließlich für K2040-Android-Projekte bestimmt. Sie übernimmt standardmäßig das helle oder dunkle Systemdesign und bietet zusätzlich einen dauerhaften manuellen Umschalter. Die Sprache wird zunächst anhand der Browser-Einstellungen erkannt und kann danach dauerhaft über ein Auswahlmenü geändert werden. Unterstützt werden Englisch, Deutsch, europäisches Portugiesisch, Spanisch und Französisch; bei nicht unterstützten Sprachen wird Englisch verwendet. GitHub Releases bleibt die maßgebliche Quelle für APK-Dateien, Versionshinweise und Prüfsummen.
 
 ## Aktueller Schwerpunkt
 
