@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Offizieller K2040-Projekthub für Android-Veröffentlichungen, Dokumentation und Support.">
+  <meta name="color-scheme" content="light dark">
   <title>K2040 Projects</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,10 +17,16 @@
         <p class="eyebrow">K2040 Projects</p>
         <h1>Apps, Mods und Tools</h1>
         <p>Offizielle Veröffentlichungen, Dokumentation und Supportwege an einem Ort.</p>
-        <nav class="language-links" aria-label="Sprachauswahl">
-          <a href="#de">Deutsch</a>
-          <a href="#en">English</a>
-        </nav>
+        <div class="hero-actions">
+          <nav class="language-links" aria-label="Sprachauswahl">
+            <a href="#de">Deutsch</a>
+            <a href="#en">English</a>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkles Design aktivieren / Switch to dark theme">
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+            <span data-theme-label>Dunkel / Dark</span>
+          </button>
+        </div>
       </div>
     </header>
 
