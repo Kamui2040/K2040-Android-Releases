@@ -20,6 +20,11 @@ window.K2040_TRANSLATIONS = {
       eyebrow: "Currently released",
       description: "A calm, multilingual Android app for tracking daily portions with a food-pyramid layout; German is the fallback language."
     },
+    updates: {
+      eyebrow: "Latest",
+      title: "App Updates",
+      description: "Published Android app releases and important app-specific changes."
+    },
     cards: {
       download: {
         label: "Download",
@@ -36,6 +41,9 @@ window.K2040_TRANSLATIONS = {
         title: "Feedback and bug reports",
         description: "Forms in German and English"
       }
+    },
+    actions: {
+      readMore: "Read more"
     },
     links: {
       more: "More K2040 links",
@@ -71,6 +79,11 @@ window.K2040_TRANSLATIONS = {
       eyebrow: "Aktuell veröffentlicht",
       description: "Eine ruhige, mehrsprachige Android-App zum täglichen Erfassen von Portionen anhand einer Ernährungspyramide; Deutsch bleibt die Fallback-Sprache."
     },
+    updates: {
+      eyebrow: "Neueste",
+      title: "App-Aktualisierungen",
+      description: "Veröffentlichte Android-App-Versionen und wichtige appbezogene Änderungen."
+    },
     cards: {
       download: {
         label: "Download",
@@ -87,6 +100,9 @@ window.K2040_TRANSLATIONS = {
         title: "Feedback und Fehlerberichte",
         description: "Formulare auf Deutsch und Englisch"
       }
+    },
+    actions: {
+      readMore: "Mehr erfahren"
     },
     links: {
       more: "Weitere K2040-Links",
@@ -122,6 +138,11 @@ window.K2040_TRANSLATIONS = {
       eyebrow: "Disponível atualmente",
       description: "Uma aplicação Android tranquila e multilingue para acompanhar porções diárias através de uma pirâmide alimentar; o alemão é o idioma de recurso."
     },
+    updates: {
+      eyebrow: "Mais recentes",
+      title: "Atualizações das Aplicações",
+      description: "Lançamentos publicados de aplicações Android e alterações importantes específicas de cada aplicação."
+    },
     cards: {
       download: {
         label: "Transferência",
@@ -138,6 +159,9 @@ window.K2040_TRANSLATIONS = {
         title: "Comentários e relatórios de erros",
         description: "Formulários em alemão e inglês"
       }
+    },
+    actions: {
+      readMore: "Saber mais"
     },
     links: {
       more: "Mais ligações K2040",
@@ -173,6 +197,11 @@ window.K2040_TRANSLATIONS = {
       eyebrow: "Publicado actualmente",
       description: "Una aplicación Android tranquila y multilingüe para registrar las porciones diarias mediante una pirámide alimentaria; el alemán es el idioma de reserva."
     },
+    updates: {
+      eyebrow: "Más recientes",
+      title: "Actualizaciones de Aplicaciones",
+      description: "Versiones publicadas de aplicaciones Android y cambios importantes específicos de cada aplicación."
+    },
     cards: {
       download: {
         label: "Descarga",
@@ -189,6 +218,9 @@ window.K2040_TRANSLATIONS = {
         title: "Comentarios e informes de errores",
         description: "Formularios en alemán e inglés"
       }
+    },
+    actions: {
+      readMore: "Más información"
     },
     links: {
       more: "Más enlaces de K2040",
@@ -224,6 +256,11 @@ window.K2040_TRANSLATIONS = {
       eyebrow: "Actuellement disponible",
       description: "Une application Android sobre et multilingue pour suivre les portions quotidiennes à l’aide d’une pyramide alimentaire ; l’allemand est la langue de repli."
     },
+    updates: {
+      eyebrow: "Dernières",
+      title: "Mises à jour des applications",
+      description: "Versions publiées des applications Android et changements importants propres à chaque application."
+    },
     cards: {
       download: {
         label: "Téléchargement",
@@ -240,6 +277,9 @@ window.K2040_TRANSLATIONS = {
         title: "Retours et signalements de bugs",
         description: "Formulaires en allemand et en anglais"
       }
+    },
+    actions: {
+      readMore: "En savoir plus"
     },
     links: {
       more: "Autres liens K2040",
