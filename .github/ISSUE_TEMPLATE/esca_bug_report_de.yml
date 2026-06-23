@@ -9,20 +9,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Danke für die Meldung. Diese Vorlage ist für Esca Agnellis 0.14.1 (versionCode 38, Paket com.k2040.escaagnellis).
+        Danke für die Meldung. Diese Vorlage ist für Esca Agnellis 0.15.0 (versionCode 39, Paket com.k2040.escaagnellis).
         Veröffentliche keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Konto- oder Zugangsdaten, privaten oder ungeschwärzten Protokolle, lokalen Dateipfade, identifizierenden Informationen oder ungeschwärzten Screenshots.
   - type: input
     id: app_version
     attributes:
       label: App-Version
-      placeholder: "0.14.1"
+      placeholder: "0.15.0"
     validations:
       required: true
   - type: input
     id: version_code
     attributes:
       label: versionCode
-      placeholder: "38"
+      placeholder: "39"
     validations:
       required: true
   - type: input

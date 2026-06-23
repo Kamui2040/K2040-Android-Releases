@@ -1,5 +1,5 @@
 name: "Esca Agnellis: Rückmeldung (Deutsch)"
-description: "Teile allgemeine Rückmeldung zur Esca-Betaversion."
+description: "Teile allgemeine Rückmeldung zu Esca Agnellis."
 title: "[Esca][DE][Feedback] "
 labels:
   - "app:esca-agnellis"
@@ -9,20 +9,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Diese Vorlage ist für Esca Agnellis 0.14.1 (versionCode 38, Paket com.k2040.escaagnellis).
+        Diese Vorlage ist für Esca Agnellis 0.15.0 (versionCode 39, Paket com.k2040.escaagnellis).
         Bitte veröffentliche keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Kontoinformationen, privaten oder ungeschwärzten Protokolle, lokalen Dateipfade, identifizierenden Angaben oder ungeschwärzten Screenshots.
   - type: input
     id: app_version
     attributes:
       label: App-Version
-      placeholder: "0.14.1"
+      placeholder: "0.15.0"
     validations:
       required: true
   - type: input
     id: version_code
     attributes:
       label: versionCode
-      placeholder: "38"
+      placeholder: "39"
     validations:
       required: true
   - type: input
@@ -40,6 +40,7 @@ body:
         - Portionen
         - Datensicherung
         - Theme und Lesbarkeit
+        - Sprache und Übersetzung
         - Installation oder Aktualisierung
         - Sonstiges
     validations:
@@ -61,7 +62,7 @@ body:
   - type: dropdown
     id: blocker
     attributes:
-      label: Blockiert dies den Test?
+      label: Beeinträchtigt dies die Nutzung?
       options:
         - Nein
         - Teilweise

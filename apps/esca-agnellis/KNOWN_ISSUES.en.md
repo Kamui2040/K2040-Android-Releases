@@ -2,7 +2,7 @@
 
 [Deutsche Version](KNOWN_ISSUES.md)
 
-No confirmed public issues are currently known for the first planned public beta.
+No confirmed public issues are currently known.
 
 ## Intentional behavior
 
@@ -10,6 +10,6 @@ In mixed rows, the numeric extra badge is intentionally displayed on the last vi
 
 This behavior is not a known defect or a planned correction.
 
-## Beta notice
+## Notice
 
-This is a beta release. Newly confirmed issues will be added here without publishing private test data, internal issue numbers, or sensitive information.
+Newly confirmed issues will be added here without publishing private test data, internal issue numbers, or sensitive information.

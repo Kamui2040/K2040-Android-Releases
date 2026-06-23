@@ -27,8 +27,8 @@ All three pages link directly to one another. The Android page is dedicated to K
 The repository currently contains releases for **Esca Agnellis only**.
 
 - [Esca Agnellis](apps/esca-agnellis/README.en.md)
-- [Esca Agnellis v0.14.0 Beta 1](../../releases/tag/esca-agnellis-v0.14.0-beta.1)
-- Release tag: `esca-agnellis-v0.14.0-beta.1`
+- [Esca Agnellis v0.15.0](../../releases/tag/esca-agnellis-v0.15.0)
+- Release tag: `esca-agnellis-v0.15.0`
 - Package ID: `com.k2040.escaagnellis`
 
 The structure may later support additional K2040 Android apps. Each app will retain its own documentation, licence, privacy statement, signing identity, checksums, release history, and feedback routes. Apps that are not release-ready will not receive empty placeholder areas.

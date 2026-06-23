@@ -28,4 +28,4 @@ In particular, do not upload:
 
 ## Supported release
 
-The currently supported public Esca test release is `esca-agnellis-v0.14.0-beta.1`. Beta releases are provided for public testing and do not guarantee long-term support.
+The currently supported public Esca release is `esca-agnellis-v0.15.0`.
