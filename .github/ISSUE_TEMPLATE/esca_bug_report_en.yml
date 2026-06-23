@@ -9,20 +9,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for the report. This form is for Esca Agnellis 0.14.1 (versionCode 38, package com.k2040.escaagnellis).
+        Thank you for the report. This form is for Esca Agnellis 0.15.0 (versionCode 39, package com.k2040.escaagnellis).
         Do not publish backup or export files, nutrition, progress, or health data, device serial numbers, account details or credentials, private or unredacted logs, local file-system paths, identifying information, or unredacted screenshots.
   - type: input
     id: app_version
     attributes:
       label: App version
-      placeholder: "0.14.1"
+      placeholder: "0.15.0"
     validations:
       required: true
   - type: input
     id: version_code
     attributes:
       label: versionCode
-      placeholder: "38"
+      placeholder: "39"
     validations:
       required: true
   - type: input

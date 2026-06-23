@@ -9,7 +9,7 @@
 
 ## Obtain the APK
 
-Download `Esca-Agnellis-v0.14.0-vc37-release.apk` only from the official GitHub release `esca-agnellis-v0.14.0-beta.1` or from a store listing later designated explicitly as official.
+Download `Esca-Agnellis-v0.15.0-vc39-release.apk` only from the official GitHub release `esca-agnellis-v0.15.0` or from a store listing explicitly designated as official.
 
 Do not use mirrors, re-uploads, or APK files offered elsewhere.
 
@@ -18,13 +18,13 @@ Do not use mirrors, re-uploads, or APK files offered elsewhere.
 Expected SHA-256:
 
 ```text
-FB6F7BA32415C96AB0B67E5441F56FFEBF8B3DB751C9DB681C42DEFF6B596B90
+12A9E0F93F581639A4DB43097B23A071831CEA62F42F4A614F51CE05AAFC1E6A
 ```
 
 PowerShell:
 
 ```powershell
-(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.14.0-vc37-release.apk" -Algorithm SHA256).Hash
+(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.15.0-vc39-release.apk" -Algorithm SHA256).Hash
 ```
 
 The result must match the published checksum exactly.
@@ -47,4 +47,4 @@ Create a current backup through `Datensicherung` before tests or major updates.
 
 ## Compatibility boundary
 
-Version `0.14.0` is an independent public baseline. Older private Esca data, older private installations, and older backup formats are unsupported. Unsupported backups are rejected before any data is changed.
+Version `0.14.0` remains the independent public compatibility baseline. Updates to `0.15.0` from compatible public releases preserve existing app data and settings. Older private Esca data, older private installations, and older backup formats are unsupported. Unsupported backups are rejected before any data is changed.

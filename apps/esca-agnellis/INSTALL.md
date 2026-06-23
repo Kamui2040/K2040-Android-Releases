@@ -9,7 +9,7 @@
 
 ## APK beziehen
 
-Lade `Esca-Agnellis-v0.14.0-vc37-release.apk` ausschließlich aus dem offiziellen GitHub-Release `esca-agnellis-v0.14.0-beta.1` oder aus einem später ausdrücklich als offiziell benannten Store-Eintrag herunter.
+Lade `Esca-Agnellis-v0.15.0-vc39-release.apk` ausschließlich aus dem offiziellen GitHub-Release `esca-agnellis-v0.15.0` oder aus einem ausdrücklich als offiziell benannten Store-Eintrag herunter.
 
 Verwende keine Spiegel, Re-Uploads oder anderswo angebotene APK-Dateien.
 
@@ -18,13 +18,13 @@ Verwende keine Spiegel, Re-Uploads oder anderswo angebotene APK-Dateien.
 Erwartete SHA-256-Prüfsumme:
 
 ```text
-FB6F7BA32415C96AB0B67E5441F56FFEBF8B3DB751C9DB681C42DEFF6B596B90
+12A9E0F93F581639A4DB43097B23A071831CEA62F42F4A614F51CE05AAFC1E6A
 ```
 
 PowerShell:
 
 ```powershell
-(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.14.0-vc37-release.apk" -Algorithm SHA256).Hash
+(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.15.0-vc39-release.apk" -Algorithm SHA256).Hash
 ```
 
 Das Ergebnis muss exakt mit der veröffentlichten Prüfsumme übereinstimmen.
@@ -47,4 +47,4 @@ Erstelle vor Tests oder größeren Aktualisierungen eine aktuelle Sicherung übe
 
 ## Kompatibilitätsgrenze
 
-Version `0.14.0` ist eine eigenständige öffentliche Basis. Ältere private Esca-Daten, ältere private Installationen und ältere Sicherungsformate werden nicht unterstützt. Importversuche mit nicht unterstützten Sicherungen werden vor Änderungen abgelehnt.
+Version `0.14.0` bleibt die eigenständige öffentliche Kompatibilitätsbasis. Aktualisierungen auf `0.15.0` aus kompatiblen öffentlichen Versionen bewahren vorhandene App-Daten und Einstellungen. Ältere private Esca-Daten, ältere private Installationen und ältere Sicherungsformate werden nicht unterstützt. Importversuche mit nicht unterstützten Sicherungen werden vor Änderungen abgelehnt.

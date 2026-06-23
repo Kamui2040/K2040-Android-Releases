@@ -10,17 +10,20 @@
   <a href="https://ko-fi.com/k2040"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
 </p>
 
-**Esca Agnellis by K2040** ist eine deutschsprachige Android-App zum freundlichen, druckfreien Erfassen täglicher Portionen anhand einer Lebensmittelpyramide.
+**Esca Agnellis by K2040** ist eine mehrsprachige Android-App mit Deutsch als Fallback-Sprache zum freundlichen, druckfreien Erfassen täglicher Portionen anhand einer Lebensmittelpyramide.
 
-## Öffentliche Betaversion
+## Öffentliche Veröffentlichung
 
-- Version: `0.14.0`
-- versionCode: `37`
+- Version: `0.15.0`
+- versionCode: `39`
 - Paket-ID: `com.k2040.escaagnellis`
 - Mindestversion: Android 8.0 / API 26
-- Release-Tag: `esca-agnellis-v0.14.0-beta.1`
-- [GitHub-Release: Esca Agnellis v0.14.0 Beta 1](../../../../releases/tag/esca-agnellis-v0.14.0-beta.1)
-- APK: `Esca-Agnellis-v0.14.0-vc37-release.apk`
+- Zielversion: Android 15 / API 35
+- Release-Tag: `esca-agnellis-v0.15.0`
+- [GitHub-Release: Esca Agnellis v0.15.0](../../../../releases/tag/esca-agnellis-v0.15.0)
+- APK: `Esca-Agnellis-v0.15.0-vc39-release.apk`
+
+Unterstützte App-Sprachen: Deutsch (Fallback), Englisch, Spanisch, Französisch und Portugiesisch (Portugal). Die Sprachwahl wird nur lokal gespeichert und ist nicht Bestandteil von `schemaVersion: 2`-Sicherungen.
 
 Die APK ist dauerhaft mit der offiziellen K2040-Release-Signatur signiert. Der öffentliche SHA-256-Fingerabdruck des Signaturzertifikats lautet:
 
@@ -39,7 +42,7 @@ Esca Agnellis:
 - speichert App-Daten lokal auf dem Gerät;
 - erstellt oder lädt Sicherungen nur nach einer ausdrücklichen Aktion über den Android-Dokumentauswahldialog.
 
-Die öffentliche Version `0.14.0` ist eine neue, eigenständige Kompatibilitätsbasis. Ältere private Esca-Daten und ältere Sicherungsformate werden nicht unterstützt.
+Die öffentliche Kompatibilitätsbasis bleibt Version `0.14.0` mit Sicherungsformat `schemaVersion: 2`. Aktualisierungen aus kompatiblen öffentlichen Versionen bewahren vorhandene App-Daten und Einstellungen. Ältere private Esca-Daten und ältere Sicherungsformate werden nicht unterstützt.
 
 ## Dokumentation
 
@@ -48,8 +51,8 @@ Die öffentliche Version `0.14.0` ist eine neue, eigenständige Kompatibilitäts
 - [Lizenz und Nutzung](LICENSE-AND-USAGE.md)
 - [Bekannte Probleme](KNOWN_ISSUES.md)
 - [Änderungsverlauf](CHANGELOG.md)
-- [Versionshinweise](release-notes/esca-agnellis-v0.14.0-beta.1.md)
-- [Prüfsumme](checksums/Esca-Agnellis-v0.14.0-vc37-release.apk.sha256)
+- [Versionshinweise](release-notes/esca-agnellis-v0.15.0.md)
+- [Prüfsumme](checksums/Esca-Agnellis-v0.15.0-vc39-release.apk.sha256)
 
 ## Quellcode und Verteilung
 

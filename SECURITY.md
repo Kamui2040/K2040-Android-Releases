@@ -28,4 +28,4 @@ Insbesondere nicht öffentlich hochladen:
 
 ## Unterstützte Veröffentlichung
 
-Die derzeit unterstützte öffentliche Esca-Testversion ist `esca-agnellis-v0.14.0-beta.1`. Beta-Versionen dienen dem öffentlichen Test und sind keine Zusage für langfristigen Support.
+Die derzeit unterstützte öffentliche Esca-Veröffentlichung ist `esca-agnellis-v0.15.0`.

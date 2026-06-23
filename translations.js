@@ -18,12 +18,12 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Currently released",
-      description: "A calm, German-first Android app for tracking daily portions with a food-pyramid layout."
+      description: "A calm, multilingual Android app for tracking daily portions with a food-pyramid layout; German is the fallback language."
     },
     cards: {
       download: {
         label: "Download",
-        title: "Esca Agnellis Beta 2",
+        title: "Esca Agnellis v0.15.0",
         description: "APK, release notes, and checksum"
       },
       documentation: {
@@ -69,12 +69,12 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Aktuell veröffentlicht",
-      description: "Eine ruhige, deutschsprachige Android-App zum täglichen Erfassen von Portionen anhand einer Ernährungspyramide."
+      description: "Eine ruhige, mehrsprachige Android-App zum täglichen Erfassen von Portionen anhand einer Ernährungspyramide; Deutsch bleibt die Fallback-Sprache."
     },
     cards: {
       download: {
         label: "Download",
-        title: "Esca Agnellis Beta 2",
+        title: "Esca Agnellis v0.15.0",
         description: "APK, Versionshinweise und Prüfsumme"
       },
       documentation: {
@@ -120,12 +120,12 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Disponível atualmente",
-      description: "Uma aplicação Android tranquila, concebida primeiro em alemão, para acompanhar porções diárias através de uma pirâmide alimentar."
+      description: "Uma aplicação Android tranquila e multilingue para acompanhar porções diárias através de uma pirâmide alimentar; o alemão é o idioma de recurso."
     },
     cards: {
       download: {
         label: "Transferência",
-        title: "Esca Agnellis Beta 2",
+        title: "Esca Agnellis v0.15.0",
         description: "APK, notas de versão e soma de verificação"
       },
       documentation: {
@@ -171,12 +171,12 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Publicado actualmente",
-      description: "Una aplicación Android tranquila, pensada primero en alemán, para registrar las porciones diarias mediante una pirámide alimentaria."
+      description: "Una aplicación Android tranquila y multilingüe para registrar las porciones diarias mediante una pirámide alimentaria; el alemán es el idioma de reserva."
     },
     cards: {
       download: {
         label: "Descarga",
-        title: "Esca Agnellis Beta 2",
+        title: "Esca Agnellis v0.15.0",
         description: "APK, notas de la versión y suma de comprobación"
       },
       documentation: {
@@ -222,12 +222,12 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Actuellement disponible",
-      description: "Une application Android sobre, d’abord conçue en allemand, pour suivre les portions quotidiennes à l’aide d’une pyramide alimentaire."
+      description: "Une application Android sobre et multilingue pour suivre les portions quotidiennes à l’aide d’une pyramide alimentaire ; l’allemand est la langue de repli."
     },
     cards: {
       download: {
         label: "Téléchargement",
-        title: "Esca Agnellis Beta 2",
+        title: "Esca Agnellis v0.15.0",
         description: "APK, notes de version et somme de contrôle"
       },
       documentation: {
