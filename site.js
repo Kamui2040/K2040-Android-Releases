@@ -110,6 +110,14 @@
     return typeof value === "string" ? value : null;
   };
 
+  const getLocalStrings = (entry) => {
+    if (!entry || typeof entry !== "object") {
+      return {};
+    }
+
+    return entry.strings?.[currentLanguage] || entry.strings?.en || {};
+  };
+
   const updateThemeToggle = (button) => {
     if (!button) {
       return;
@@ -131,6 +139,55 @@
 
     if (label) {
       label.textContent = getTranslation(labelKey) || labelKey;
+    }
+  };
+
+  const renderUpdates = () => {
+    const list = document.querySelector("[data-update-list]");
+    const template = document.querySelector("#update-card-template");
+    if (!list || !template) {
+      return;
+    }
+
+    list.replaceChildren();
+
+    for (const update of window.K2040_CONTENT?.updates || []) {
+      const strings = getLocalStrings(update);
+      const fragment = template.content.cloneNode(true);
+      const time = fragment.querySelector("[data-update-date]");
+      const category = fragment.querySelector("[data-update-category]");
+      const title = fragment.querySelector("[data-update-title]");
+      const summary = fragment.querySelector("[data-update-summary]");
+      const link = fragment.querySelector("[data-update-link]");
+
+      if (time) {
+        time.dateTime = update.date;
+        time.textContent = new Intl.DateTimeFormat(currentLanguage, {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          timeZone: "UTC"
+        }).format(new Date(`${update.date}T00:00:00Z`));
+      }
+      if (category) {
+        category.textContent = strings.category || "";
+      }
+      if (title) {
+        title.textContent = strings.title || "";
+      }
+      if (summary) {
+        summary.textContent = strings.summary || "";
+      }
+      if (link) {
+        if (update.href) {
+          link.href = update.href;
+          link.textContent = getTranslation("actions.readMore") || "Read more";
+        } else {
+          link.remove();
+        }
+      }
+
+      list.append(fragment);
     }
   };
 
@@ -175,6 +232,7 @@
       languageSelect.value = currentLanguage;
     }
 
+    renderUpdates();
     updateThemeToggle(document.querySelector("[data-theme-toggle]"));
   };
 
