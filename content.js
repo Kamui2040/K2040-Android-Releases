@@ -1,6 +1,38 @@
 window.K2040_CONTENT = {
   updates: [
     {
+      id: "geojoystick-0-1-2-listed",
+      date: "2026-07-07",
+      href: "https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.2",
+      strings: {
+        en: {
+          category: "GeoJoystick",
+          title: "GeoJoystick v0.1.2 listed",
+          summary: "The Android Projects page now links the public GitHub release, source repository, and issue tracker."
+        },
+        de: {
+          category: "GeoJoystick",
+          title: "GeoJoystick v0.1.2 gelistet",
+          summary: "Die Android-Projektseite verlinkt jetzt die öffentliche GitHub-Veröffentlichung, das Quellcode-Repository und den Issue-Tracker."
+        },
+        "pt-PT": {
+          category: "GeoJoystick",
+          title: "GeoJoystick v0.1.2 listado",
+          summary: "A página de Projetos Android liga agora para o lançamento público no GitHub, o repositório de código-fonte e o rastreador de problemas."
+        },
+        es: {
+          category: "GeoJoystick",
+          title: "GeoJoystick v0.1.2 añadido",
+          summary: "La página de Proyectos Android ahora enlaza la versión pública de GitHub, el repositorio de código fuente y el rastreador de incidencias."
+        },
+        fr: {
+          category: "GeoJoystick",
+          title: "GeoJoystick v0.1.2 ajouté",
+          summary: "La page des projets Android pointe désormais vers la version publique GitHub, le dépôt source et le suivi des problèmes."
+        }
+      }
+    },
+    {
       id: "esca-agnellis-0-15-0",
       date: "2026-06-23",
       href: "https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.15.0",
