@@ -18,6 +18,7 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Currently released",
+      geojoystickDescription: "An open-source Android mock-location joystick for emulator and developer testing.",
       description: "A calm, multilingual Android app for tracking daily portions with a food-pyramid layout; German is the fallback language."
     },
     updates: {
@@ -31,15 +32,27 @@ window.K2040_TRANSLATIONS = {
         title: "Esca Agnellis v0.15.0",
         description: "APK, release notes, and checksum"
       },
+      geojoystickDownload: {
+        title: "GeoJoystick v0.1.2",
+        description: "APK and release notes"
+      },
       documentation: {
         label: "Information",
         title: "App documentation",
         description: "Installation, privacy, and usage"
       },
+      geojoystickDocumentation: {
+        title: "Source and documentation",
+        description: "README, licence, and usage"
+      },
       feedback: {
         label: "Feedback",
         title: "Feedback and bug reports",
         description: "Forms in German and English"
+      },
+      geojoystickFeedback: {
+        title: "Feedback and bug reports",
+        description: "Report issues in the app repository"
       }
     },
     actions: {
@@ -77,6 +90,7 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Aktuell veröffentlicht",
+      geojoystickDescription: "Ein quelloffener Android-Mock-Location-Joystick für Emulator- und Entwicklertests.",
       description: "Eine ruhige, mehrsprachige Android-App zum täglichen Erfassen von Portionen anhand einer Ernährungspyramide; Deutsch bleibt die Fallback-Sprache."
     },
     updates: {
@@ -90,15 +104,27 @@ window.K2040_TRANSLATIONS = {
         title: "Esca Agnellis v0.15.0",
         description: "APK, Versionshinweise und Prüfsumme"
       },
+      geojoystickDownload: {
+        title: "GeoJoystick v0.1.2",
+        description: "APK und Versionshinweise"
+      },
       documentation: {
         label: "Information",
         title: "App-Dokumentation",
         description: "Installation, Datenschutz und Nutzung"
       },
+      geojoystickDocumentation: {
+        title: "Quellcode und Dokumentation",
+        description: "README, Lizenz und Nutzung"
+      },
       feedback: {
         label: "Rückmeldung",
         title: "Feedback und Fehlerberichte",
         description: "Formulare auf Deutsch und Englisch"
+      },
+      geojoystickFeedback: {
+        title: "Feedback und Fehlerberichte",
+        description: "Issues im App-Repository melden"
       }
     },
     actions: {
@@ -136,6 +162,7 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Disponível atualmente",
+      geojoystickDescription: "Um joystick Android de localização simulada, open-source, para testes em emuladores e desenvolvimento.",
       description: "Uma aplicação Android tranquila e multilingue para acompanhar porções diárias através de uma pirâmide alimentar; o alemão é o idioma de recurso."
     },
     updates: {
@@ -149,15 +176,27 @@ window.K2040_TRANSLATIONS = {
         title: "Esca Agnellis v0.15.0",
         description: "APK, notas de versão e soma de verificação"
       },
+      geojoystickDownload: {
+        title: "GeoJoystick v0.1.2",
+        description: "APK e notas de versão"
+      },
       documentation: {
         label: "Informação",
         title: "Documentação da aplicação",
         description: "Instalação, privacidade e utilização"
       },
+      geojoystickDocumentation: {
+        title: "Código-fonte e documentação",
+        description: "README, licença e utilização"
+      },
       feedback: {
         label: "Comentários",
         title: "Comentários e relatórios de erros",
         description: "Formulários em alemão e inglês"
+      },
+      geojoystickFeedback: {
+        title: "Comentários e relatórios de erros",
+        description: "Comunicar problemas no repositório da aplicação"
       }
     },
     actions: {
@@ -195,6 +234,7 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Publicado actualmente",
+      geojoystickDescription: "Un joystick Android de ubicación simulada, de código abierto, para pruebas en emuladores y desarrollo.",
       description: "Una aplicación Android tranquila y multilingüe para registrar las porciones diarias mediante una pirámide alimentaria; el alemán es el idioma de reserva."
     },
     updates: {
@@ -208,15 +248,27 @@ window.K2040_TRANSLATIONS = {
         title: "Esca Agnellis v0.15.0",
         description: "APK, notas de la versión y suma de comprobación"
       },
+      geojoystickDownload: {
+        title: "GeoJoystick v0.1.2",
+        description: "APK y notas de la versión"
+      },
       documentation: {
         label: "Información",
         title: "Documentación de la aplicación",
         description: "Instalación, privacidad y uso"
       },
+      geojoystickDocumentation: {
+        title: "Código fuente y documentación",
+        description: "README, licencia y uso"
+      },
       feedback: {
         label: "Comentarios",
         title: "Comentarios e informes de errores",
         description: "Formularios en alemán e inglés"
+      },
+      geojoystickFeedback: {
+        title: "Comentarios e informes de errores",
+        description: "Informar problemas en el repositorio de la aplicación"
       }
     },
     actions: {
@@ -254,6 +306,7 @@ window.K2040_TRANSLATIONS = {
     },
     release: {
       eyebrow: "Actuellement disponible",
+      geojoystickDescription: "Un joystick Android de position simulée open-source pour les tests sur émulateur et le développement.",
       description: "Une application Android sobre et multilingue pour suivre les portions quotidiennes à l’aide d’une pyramide alimentaire ; l’allemand est la langue de repli."
     },
     updates: {
@@ -267,15 +320,27 @@ window.K2040_TRANSLATIONS = {
         title: "Esca Agnellis v0.15.0",
         description: "APK, notes de version et somme de contrôle"
       },
+      geojoystickDownload: {
+        title: "GeoJoystick v0.1.2",
+        description: "APK et notes de version"
+      },
       documentation: {
         label: "Informations",
         title: "Documentation de l’application",
         description: "Installation, confidentialité et utilisation"
       },
+      geojoystickDocumentation: {
+        title: "Code source et documentation",
+        description: "README, licence et utilisation"
+      },
       feedback: {
         label: "Retours",
         title: "Retours et signalements de bugs",
         description: "Formulaires en allemand et en anglais"
+      },
+      geojoystickFeedback: {
+        title: "Retours et signalements de bugs",
+        description: "Signaler les problèmes dans le dépôt de l’application"
       }
     },
     actions: {
