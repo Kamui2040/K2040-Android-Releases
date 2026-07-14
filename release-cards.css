@@ -9,29 +9,33 @@
 }
 
 .release-source-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
+  margin: 0.55rem 0 0;
+  padding-left: 1.35rem;
+}
+
+.release-source-links li + li {
   margin-top: 0.45rem;
 }
 
+.release-source-links li::marker {
+  color: var(--accent-dark);
+}
+
 .release-source-links a {
-  display: inline-flex;
-  min-height: 40px;
-  align-items: center;
-  justify-content: center;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface-strong);
   color: var(--accent-dark);
   font-weight: 800;
-  text-decoration: none;
-  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-thickness 140ms ease;
 }
 
 .release-source-links a:hover,
-.release-source-links a:focus-visible,
+.release-source-links a:focus-visible {
+  outline: none;
+  text-decoration-thickness: 2px;
+}
+
 .card-footer-link:hover,
 .card-footer-link:focus-visible {
   border-color: var(--accent);
