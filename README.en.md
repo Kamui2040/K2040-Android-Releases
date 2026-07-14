@@ -24,18 +24,28 @@ All three pages link directly to one another. The Android page is dedicated to K
 
 ## Current focus
 
-The repository currently contains releases for **Esca Agnellis only**.
+The Android Projects page currently lists **GeoJoystick** and **Esca Agnellis**.
+
+### GeoJoystick
+
+- Android Projects page: <https://kamui2040.github.io/K2040-Android-Releases/>
+- Source and documentation: <https://github.com/Kamui2040/K2040-GeoJoystick>
+- [GeoJoystick v0.1.3](https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.3)
+- Official APKPure listing: <https://apkpure.com/p/com.k2040.geojoystick>
+- Package ID: `com.k2040.geojoystick`
+
+### Esca Agnellis
 
 - [Esca Agnellis](apps/esca-agnellis/README.en.md)
 - [Esca Agnellis v0.15.0](../../releases/tag/esca-agnellis-v0.15.0)
 - Release tag: `esca-agnellis-v0.15.0`
 - Package ID: `com.k2040.escaagnellis`
 
-The structure may later support additional K2040 Android apps. Each app will retain its own documentation, licence, privacy statement, signing identity, checksums, release history, and feedback routes. Apps that are not release-ready will not receive empty placeholder areas.
+Each app retains its own documentation, licence, privacy statement, signing identity, checksums, release history, and feedback routes. Apps that are not release-ready do not receive empty placeholder areas.
 
 ## Important notice
 
-This repository contains no private Esca application source code and grants no source-code licence. Signed application packages are published only as GitHub Release assets and are not committed to Git history.
+This repository contains no private Esca application source code and no copy of the public GeoJoystick source. GeoJoystick remains in its own GPL-3.0-only repository. Signed application packages are published as GitHub Release assets and through store listings explicitly designated as official; they are not committed to Git history.
 
 Use only the official releases linked from this repository or store listings explicitly designated as official.
 
