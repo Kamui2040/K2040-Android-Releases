@@ -24,18 +24,28 @@ Alle drei Seiten sind direkt miteinander verlinkt. Die Android-Seite ist ausschl
 
 ## Aktueller Schwerpunkt
 
-Derzeit enthält das Repository ausschließlich Veröffentlichungen für **Esca Agnellis**.
+Die Android-Projektseite führt derzeit **GeoJoystick** und **Esca Agnellis**.
+
+### GeoJoystick
+
+- Android-Projektseite: <https://kamui2040.github.io/K2040-Android-Releases/>
+- Quellcode und Dokumentation: <https://github.com/Kamui2040/K2040-GeoJoystick>
+- [GeoJoystick v0.1.3](https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.3)
+- Offizieller APKPure-Eintrag: <https://apkpure.com/p/com.k2040.geojoystick>
+- Paket-ID: `com.k2040.geojoystick`
+
+### Esca Agnellis
 
 - [Esca Agnellis](apps/esca-agnellis/README.md)
 - [Esca Agnellis v0.15.0](../../releases/tag/esca-agnellis-v0.15.0)
 - Release-Tag: `esca-agnellis-v0.15.0`
 - Paket-ID: `com.k2040.escaagnellis`
 
-Die Struktur kann später weitere K2040-Android-Apps aufnehmen. Jede App erhält dabei ihre eigene Dokumentation, Lizenz, Datenschutzerklärung, Signaturidentität, Prüfsummen, Versionshistorie und Rückmeldewege. Nicht veröffentlichungsreife Apps erhalten keine leeren Platzhalterbereiche.
+Jede App behält ihre eigene Dokumentation, Lizenz, Datenschutzerklärung, Signaturidentität, Prüfsummen, Versionshistorie und Rückmeldewege. Nicht veröffentlichungsreife Apps erhalten keine leeren Platzhalterbereiche.
 
 ## Wichtiger Hinweis
 
-Dieses Repository enthält keine privaten Esca-Quelltexte und gewährt keine Quellcodelizenz. Signierte APK-Dateien werden ausschließlich als GitHub-Release-Assets bereitgestellt und nicht in den Git-Verlauf eingecheckt.
+Dieses Repository enthält keine privaten Esca-Quelltexte und keine Kopie des öffentlichen GeoJoystick-Quellcodes. GeoJoystick bleibt in seinem eigenen GPL-3.0-only-Repository. Signierte APK-Dateien werden als GitHub-Release-Assets und über ausdrücklich als offiziell benannte Store-Einträge bereitgestellt; sie werden nicht in den Git-Verlauf eingecheckt.
 
 APK-Dateien sollten nur über die hier verlinkten offiziellen Releases oder ausdrücklich als offiziell benannte Store-Einträge bezogen werden.
 
