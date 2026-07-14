@@ -1,6 +1,38 @@
 window.K2040_CONTENT = {
   updates: [
     {
+      id: "geojoystick-apkpure-published",
+      date: "2026-07-14",
+      href: "https://apkpure.com/p/com.k2040.geojoystick",
+      strings: {
+        en: {
+          category: "GeoJoystick",
+          title: "GeoJoystick now available on APKPure",
+          summary: "The official APKPure listing for com.k2040.geojoystick is now live. GitHub remains the canonical source for release notes and release assets."
+        },
+        de: {
+          category: "GeoJoystick",
+          title: "GeoJoystick jetzt auf APKPure verfügbar",
+          summary: "Der offizielle APKPure-Eintrag für com.k2040.geojoystick ist jetzt verfügbar. GitHub bleibt die maßgebliche Quelle für Versionshinweise und Release-Dateien."
+        },
+        "pt-PT": {
+          category: "GeoJoystick",
+          title: "GeoJoystick agora disponível no APKPure",
+          summary: "A listagem oficial no APKPure para com.k2040.geojoystick já está disponível. O GitHub continua a ser a fonte oficial para notas de versão e ficheiros de lançamento."
+        },
+        es: {
+          category: "GeoJoystick",
+          title: "GeoJoystick ya está disponible en APKPure",
+          summary: "La ficha oficial de APKPure para com.k2040.geojoystick ya está disponible. GitHub sigue siendo la fuente oficial de las notas y los archivos de las versiones."
+        },
+        fr: {
+          category: "GeoJoystick",
+          title: "GeoJoystick est maintenant disponible sur APKPure",
+          summary: "La fiche APKPure officielle de com.k2040.geojoystick est désormais disponible. GitHub reste la source officielle des notes et fichiers de version."
+        }
+      }
+    },
+    {
       id: "geojoystick-0-1-2-listed",
       date: "2026-07-07",
       href: "https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.2",
