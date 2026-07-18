@@ -9,31 +9,36 @@
 }
 
 .release-source-links {
-  margin: 0.55rem 0 0;
-  padding-left: 1.35rem;
-}
-
-.release-source-links li + li {
-  margin-top: 0.45rem;
-}
-
-.release-source-links li::marker {
-  color: var(--accent-dark);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.75rem 0 1rem;
+  padding: 0;
 }
 
 .release-source-links a {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
   color: var(--accent-dark);
+  font-size: 0.92rem;
   font-weight: 800;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-  transition: text-decoration-thickness 140ms ease;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
 }
 
 .release-source-links a:hover,
 .release-source-links a:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--focus-ring);
   outline: none;
-  text-decoration-thickness: 2px;
+  transform: translateY(-1px);
 }
 
 .card-footer-link:hover,
@@ -56,6 +61,18 @@
   font-weight: 800;
   text-decoration: none;
   transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+@media (max-width: 760px) {
+  .release-source-links {
+    gap: 0.5rem;
+  }
+
+  .release-source-links a {
+    min-height: 36px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.88rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
