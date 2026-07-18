@@ -1,34 +1,34 @@
 window.K2040_CONTENT = {
   updates: [
     {
-      id: "geojoystick-apkpure-published",
-      date: "2026-07-14",
-      href: "https://apkpure.com/p/com.k2040.geojoystick",
+      id: "geojoystick-fdroid-apkpure-published",
+      date: "2026-07-18",
+      href: "https://f-droid.org/packages/com.k2040.geojoystick/",
       strings: {
         en: {
           category: "GeoJoystick",
-          title: "GeoJoystick now available on APKPure",
-          summary: "The official APKPure listing for com.k2040.geojoystick is now live. GitHub remains the canonical source for release notes and release assets."
+          title: "GeoJoystick v0.1.3 now available on F-Droid and APKPure",
+          summary: "The current release is now available through GitHub, F-Droid, and APKPure. GitHub remains the canonical source for release notes and release assets."
         },
         de: {
           category: "GeoJoystick",
-          title: "GeoJoystick jetzt auf APKPure verfügbar",
-          summary: "Der offizielle APKPure-Eintrag für com.k2040.geojoystick ist jetzt verfügbar. GitHub bleibt die maßgebliche Quelle für Versionshinweise und Release-Dateien."
+          title: "GeoJoystick v0.1.3 jetzt auf F-Droid und APKPure verfügbar",
+          summary: "Die aktuelle Version ist jetzt über GitHub, F-Droid und APKPure erhältlich. GitHub bleibt die maßgebliche Quelle für Versionshinweise und Release-Dateien."
         },
         "pt-PT": {
           category: "GeoJoystick",
-          title: "GeoJoystick agora disponível no APKPure",
-          summary: "A listagem oficial no APKPure para com.k2040.geojoystick já está disponível. O GitHub continua a ser a fonte oficial para notas de versão e ficheiros de lançamento."
+          title: "GeoJoystick v0.1.3 agora disponível no F-Droid e APKPure",
+          summary: "A versão atual está agora disponível através do GitHub, F-Droid e APKPure. O GitHub continua a ser a fonte oficial para notas de versão e ficheiros de lançamento."
         },
         es: {
           category: "GeoJoystick",
-          title: "GeoJoystick ya está disponible en APKPure",
-          summary: "La ficha oficial de APKPure para com.k2040.geojoystick ya está disponible. GitHub sigue siendo la fuente oficial de las notas y los archivos de las versiones."
+          title: "GeoJoystick v0.1.3 ya está disponible en F-Droid y APKPure",
+          summary: "La versión actual ya está disponible a través de GitHub, F-Droid y APKPure. GitHub sigue siendo la fuente oficial de las notas y los archivos de las versiones."
         },
         fr: {
           category: "GeoJoystick",
-          title: "GeoJoystick est maintenant disponible sur APKPure",
-          summary: "La fiche APKPure officielle de com.k2040.geojoystick est désormais disponible. GitHub reste la source officielle des notes et fichiers de version."
+          title: "GeoJoystick v0.1.3 est maintenant disponible sur F-Droid et APKPure",
+          summary: "La version actuelle est désormais disponible via GitHub, F-Droid et APKPure. GitHub reste la source officielle des notes et fichiers de version."
         }
       }
     },
