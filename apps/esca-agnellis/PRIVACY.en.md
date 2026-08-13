@@ -1,41 +1,37 @@
-# Privacy Statement
+# Privacy
 
-[Deutsche Version](PRIVACY.md)
+## Summary
 
-## Application data
+Esca Agnellis works locally on the Android device. The app requests no Internet permission and uses no accounts, advertising, telemetry, analytics, cloud synchronization, automatic crash reporting, or background data collection.
 
-Esca Agnellis processes tracked data locally on the Android device.
+## Locally stored data
 
-The app:
+The app stores locally:
 
-- has no Internet permission;
-- sends no telemetry or usage analytics;
-- contains no advertising;
-- uses no account or login;
-- uses no automatic crash reporting;
-- uses no cloud synchronization;
-- performs no background data collection.
+- selected daily portions and extra portions;
+- display, language, and theme settings;
+- optional companion state, when the companion has been enabled.
 
-## Backups
+The companion is disabled by default. Its state and backup remain separate from core tracking and its backup.
 
-Backups are created or restored only after an explicit action through Android's document picker. The user controls where a backup is stored, shared, and retained.
+## Backups and PDF reports
 
-Backup files may contain personal nutrition and progress data. Do not upload them to public issues, comments, store reviews, or attachments.
+Backups, restores, and PDF reports use Android's document picker. The app writes only to a location selected by the user and reads only a file selected by the user. There is no automatic upload and no required synchronization.
 
-## Public feedback
+## External links
 
-GitHub issues, comments, store reviews, and attachments may be publicly visible. Review screenshots and logs and remove personal or sensitive information before uploading.
+Information or voluntary support links are passed to the selected browser only after an explicit user action. The app does not load these destinations in the background.
 
-Do not publish:
+## Permissions
 
-- backup or export files;
-- nutrition, progress, or health information;
-- account details;
-- device serial numbers;
-- private or unredacted logs;
-- local file-system paths;
-- identifying information.
+The published manifest must not contain the Internet permission. Features that open Android's document picker use the access rights provided by the system for the selected document.
 
-## Platforms
+## Deletion and switching signing variants
 
-GitHub and later official stores may process access, account, or review data under their own privacy policies. That processing is not performed by the Esca application.
+Local app data is managed by Android. Manually uninstalling the app or clearing its app data removes it. K2040 developer APKs and independently signed F-Droid APKs cannot be installed directly over one another. Before switching, export the supported primary backup and, when the companion is enabled, the separate companion backup.
+
+No project tool may automatically uninstall the app or clear app data.
+
+## No health-data transmission
+
+The app transmits no nutrition or usage data. It is not a medical product and does not provide diagnosis, treatment, or individualized nutritional advice.
