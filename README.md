@@ -22,7 +22,7 @@ Die gemeinsamen K2040-Projektseiten werden über GitHub Pages veröffentlicht:
 
 Alle drei Seiten sind direkt miteinander verlinkt. Die Android-Seite ist ausschließlich für K2040-Android-Projekte bestimmt und enthält einen eigenen Bereich für veröffentlichte App-Aktualisierungen. Sie übernimmt standardmäßig das helle oder dunkle Systemdesign und bietet zusätzlich einen dauerhaften manuellen Umschalter. Die Sprache wird zunächst anhand der Browser-Einstellungen erkannt und kann danach dauerhaft über ein Auswahlmenü geändert werden. Unterstützt werden Englisch, Deutsch, europäisches Portugiesisch, Spanisch und Französisch; bei nicht unterstützten Sprachen wird Englisch verwendet. GitHub Releases bleibt die maßgebliche Quelle für APK-Dateien, Versionshinweise und Prüfsummen.
 
-Für alle Apps verwendet die Seite dasselbe Veröffentlichungsformat: eine Karte pro App-Version, kompakte benannte Download-Schaltflächen für verfügbare Quellen wie GitHub, F-Droid oder APKPure sowie einen eigenen Changelog-Link am unteren Kartenrand. Neue Stores werden als zusätzliche Schaltfläche in derselben Karte ergänzt und nicht als separate App-Karte dargestellt.
+Für alle Apps verwendet die Seite dasselbe Veröffentlichungsformat: eine Karte pro App-Version, kompakte benannte Download-Schaltflächen für verfügbare Quellen wie GitHub, F-Droid, APKPure oder Uptodown sowie einen eigenen Changelog-Link am unteren Kartenrand. Neue Stores werden als zusätzliche Schaltfläche in derselben Karte ergänzt und nicht als separate App-Karte dargestellt.
 
 ## Aktueller Schwerpunkt
 
@@ -41,6 +41,7 @@ Die Android-Projektseite führt derzeit **GeoJoystick** und **Esca Agnellis**.
 
 - [Esca Agnellis](apps/esca-agnellis/README.md)
 - [Esca Agnellis v0.16.0](../../releases/tag/esca-agnellis-v0.16.0)
+- Offizieller Uptodown-Eintrag: <https://esca-agnellis.en.uptodown.com/android>
 - Release-Tag: `esca-agnellis-v0.16.0`
 - Paket-ID: `com.k2040.escaagnellis`
 
