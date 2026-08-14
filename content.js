@@ -1,6 +1,44 @@
 window.K2040_CONTENT = {
   updates: [
     {
+      id: "esca-agnellis-uptodown-0-16-0",
+      date: "2026-08-14",
+      href: "https://esca-agnellis.en.uptodown.com/android",
+      image: "https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+      strings: {
+        en: {
+          category: "Esca Agnellis",
+          title: "Esca Agnellis v0.16.0 now on Uptodown",
+          summary: "The developer-signed v0.16.0 release is now available on Uptodown as an additional official download channel.",
+          imageAlt: "Esca Agnellis app screen"
+        },
+        de: {
+          category: "Esca Agnellis",
+          title: "Esca Agnellis v0.16.0 jetzt auf Uptodown",
+          summary: "Die entwicklersignierte Version v0.16.0 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar.",
+          imageAlt: "Ansicht der Esca-Agnellis-App"
+        },
+        "pt-PT": {
+          category: "Esca Agnellis",
+          title: "Esca Agnellis v0.16.0 agora no Uptodown",
+          summary: "A versão v0.16.0 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência.",
+          imageAlt: "Ecrã da aplicação Esca Agnellis"
+        },
+        es: {
+          category: "Esca Agnellis",
+          title: "Esca Agnellis v0.16.0 ya está en Uptodown",
+          summary: "La versión v0.16.0 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional.",
+          imageAlt: "Pantalla de la aplicación Esca Agnellis"
+        },
+        fr: {
+          category: "Esca Agnellis",
+          title: "Esca Agnellis v0.16.0 maintenant sur Uptodown",
+          summary: "La version v0.16.0 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire.",
+          imageAlt: "Écran de l’application Esca Agnellis"
+        }
+      }
+    },
+    {
       id: "esca-agnellis-0-16-0",
       date: "2026-08-14",
       href: "https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0",
@@ -72,7 +110,7 @@ window.K2040_CONTENT = {
           category: "GeoJoystick",
           title: "GeoJoystick v0.1.3 maintenant sur F-Droid et APKPure",
           summary: "La v0.1.3 corrige les dialogues qui ne suivaient pas le thème sombre choisi et utilise l’icône propre à GeoJoystick. La version est maintenant disponible sur GitHub, F-Droid et APKPure.",
-          imageAlt: "Écran principal de GeoJoystick"
+          imageAlt: "Écran principal du GeoJoystick"
         }
       }
     },
