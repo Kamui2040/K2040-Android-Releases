@@ -1,65 +1,53 @@
+
 # Esca Agnellis
 
 [Deutsche Version](README.md)
 
-<p align="center">
-  <img src="../../docs/assets/kofi-header.jpg" alt="K2040 Ko-fi header" width="720">
-</p>
+**Esca Agnellis by K2040** is a multilingual Android application with German as the fallback language for friendly, low-pressure daily food-pyramid tracking.
 
-<p align="center">
-  <a href="https://ko-fi.com/k2040"><strong>Click to support me on Ko-fi</strong></a>
-</p>
+## Current public release
 
-**Esca Agnellis by K2040** is a multilingual Android application with German as the fallback language for friendly, low-pressure daily portion tracking based on a food-pyramid model.
-
-## Public release
-
-- Version: `0.15.0`
-- versionCode: `39`
+- Version: `0.16.0`
+- versionCode: `40`
 - Package ID: `com.k2040.escaagnellis`
 - Minimum version: Android 8.0 / API 26
 - Target version: Android 15 / API 35
-- Release tag: `esca-agnellis-v0.15.0`
-- [GitHub Release: Esca Agnellis v0.15.0](../../../../releases/tag/esca-agnellis-v0.15.0)
-- APK: `Esca-Agnellis-v0.15.0-vc39-release.apk`
+- Release tag: `esca-agnellis-v0.16.0`
+- GitHub Release: https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0
+- APK: `Esca-Agnellis-v0.16.0-vc40-release.apk`
+- APK SHA-256: `4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
 
-Supported app languages: German (fallback), English, Spanish, French, and Portuguese (Portugal). The language choice is stored locally and is not included in `schemaVersion: 2` backups.
+The GitHub Release is currently the canonical public download channel. Additional stores are added as official download sources only after their listings are approved.
 
-The APK is permanently signed with the official K2040 release identity. The public SHA-256 certificate fingerprint is:
+Supported languages: German, English, Spanish, French, and Portuguese (Portugal).
 
-```text
-03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6
-```
+The developer APK is signed with the permanent official K2040 release identity: `03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6`.
 
-## Privacy and operation
+## New in 0.16.0
 
-Esca Agnellis:
+- optional local companion;
+- separate companion backup;
+- local PDF reports;
+- language, theme, and usability improvements;
+- unified first launch and refreshed information/licence flow;
+- first open-source Esca Agnellis release.
 
-- has no Internet permission;
-- uses no telemetry, analytics, advertising, or automatic crash reporting;
-- requires no account or login;
-- uses no cloud synchronization;
-- stores application data locally on the device;
-- creates or restores backups only after an explicit user action through Android's document picker.
+## Privacy
 
-The public compatibility baseline remains version `0.14.0` with backup format `schemaVersion: 2`. Updates from compatible public releases preserve existing app data and settings. Older private Esca data and older backup formats are unsupported.
+The application has no Internet permission and uses no advertising, telemetry, analytics, accounts, cloud synchronization, or automatic background collection. Tracking and companion data remain local.
 
-## Documentation
+## Documentation and source
 
 - [Installation and updates](INSTALL.en.md)
 - [Privacy](PRIVACY.en.md)
 - [Licence and usage](LICENSE-AND-USAGE.en.md)
-- [Known issues](KNOWN_ISSUES.en.md)
 - [Changelog](CHANGELOG.en.md)
-- [Release notes](release-notes/esca-agnellis-v0.15.0.en.md)
-- [Checksum](checksums/Esca-Agnellis-v0.15.0-vc39-release.apk.sha256)
+- [v0.16.0 release notes](release-notes/esca-agnellis-v0.16.0.en.md)
+- [Checksum](checksums/Esca-Agnellis-v0.16.0-vc40-release.apk.sha256)
+- [Public source](https://github.com/Kamui2040/Esca-Agnellis-Android)
 
-## Source code and distribution
+## Source and licensing
 
-This release repository contains no private Esca application source code and does not make Esca Agnellis open source.
+Esca Agnellis v0.16.0 is the first open-source release. K2040-authored application code and project build scripts are licensed under `GPL-3.0-only` together with the documented GPLv3 section 7(b) attribution-preservation additional term. Explicitly cleared documentation and artwork are licensed under `CC-BY-4.0` where documented by the controlling project files.
 
-Links to official release pages may be shared. The APK file may not be re-uploaded, mirrored, modified, re-signed, repackaged, commercially redistributed, or placed behind a paywall without express authorization.
-
-## Feedback
-
-Use the German or English Esca issue forms. Do not publish backup files, nutrition or health data, private logs, or unredacted screenshots.
+Historical binary versions through v0.15.0 retain their historical terms.
