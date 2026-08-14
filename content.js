@@ -110,7 +110,7 @@ window.K2040_CONTENT = {
           category: "GeoJoystick",
           title: "GeoJoystick v0.1.3 maintenant sur F-Droid et APKPure",
           summary: "La v0.1.3 corrige les dialogues qui ne suivaient pas le thème sombre choisi et utilise l’icône propre à GeoJoystick. La version est maintenant disponible sur GitHub, F-Droid et APKPure.",
-          imageAlt: "Écran principal du GeoJoystick"
+          imageAlt: "Écran principal de GeoJoystick"
         }
       }
     },
