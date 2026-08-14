@@ -1,65 +1,53 @@
+
 # Esca Agnellis
 
 [English version](README.en.md)
 
-<p align="center">
-  <img src="../../docs/assets/kofi-header.jpg" alt="K2040 Ko-fi header" width="720">
-</p>
+**Esca Agnellis by K2040** ist eine mehrsprachige Android-App mit Deutsch als Fallback-Sprache zum freundlichen, druckfreien Erfassen täglicher Portionen anhand einer Ernährungspyramide.
 
-<p align="center">
-  <a href="https://ko-fi.com/k2040"><strong>Klicke hier, um mich auf Ko-fi zu unterstützen</strong></a>
-</p>
+## Aktuelle öffentliche Veröffentlichung
 
-**Esca Agnellis by K2040** ist eine mehrsprachige Android-App mit Deutsch als Fallback-Sprache zum freundlichen, druckfreien Erfassen täglicher Portionen anhand einer Lebensmittelpyramide.
-
-## Öffentliche Veröffentlichung
-
-- Version: `0.15.0`
-- versionCode: `39`
+- Version: `0.16.0`
+- versionCode: `40`
 - Paket-ID: `com.k2040.escaagnellis`
 - Mindestversion: Android 8.0 / API 26
 - Zielversion: Android 15 / API 35
-- Release-Tag: `esca-agnellis-v0.15.0`
-- [GitHub-Release: Esca Agnellis v0.15.0](../../../../releases/tag/esca-agnellis-v0.15.0)
-- APK: `Esca-Agnellis-v0.15.0-vc39-release.apk`
+- Release-Tag: `esca-agnellis-v0.16.0`
+- GitHub-Release: https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0
+- APK: `Esca-Agnellis-v0.16.0-vc40-release.apk`
+- APK SHA-256: `4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
 
-Unterstützte App-Sprachen: Deutsch (Fallback), Englisch, Spanisch, Französisch und Portugiesisch (Portugal). Die Sprachwahl wird nur lokal gespeichert und ist nicht Bestandteil von `schemaVersion: 2`-Sicherungen.
+Derzeit ist das GitHub-Release der maßgebliche öffentliche Downloadkanal. Weitere Stores werden erst nach ihrer Freigabe als offizielle Downloadquelle ergänzt.
 
-Die APK ist dauerhaft mit der offiziellen K2040-Release-Signatur signiert. Der öffentliche SHA-256-Fingerabdruck des Signaturzertifikats lautet:
+Unterstützte Sprachen: Deutsch, Englisch, Spanisch, Französisch und Portugiesisch (Portugal).
 
-```text
-03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6
-```
+Die Entwickler-APK ist mit der dauerhaften offiziellen K2040-Release-Signatur signiert: `03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6`.
 
-## Datenschutz und Funktionsweise
+## Neu in 0.16.0
 
-Esca Agnellis:
+- optionaler lokaler Begleiter;
+- getrennte Begleitersicherung;
+- lokale PDF-Berichte;
+- Verbesserungen bei Sprachen, Themen und Bedienung;
+- vereinheitlichter erster Start und überarbeiteter Info-/Lizenzbereich;
+- erste quelloffene Esca-Agnellis-Version.
 
-- besitzt keine Internetberechtigung;
-- verwendet keine Telemetrie, Analyse, Werbung oder automatische Absturzberichte;
-- benötigt kein Konto und keine Anmeldung;
-- verwendet keine Cloud-Synchronisierung;
-- speichert App-Daten lokal auf dem Gerät;
-- erstellt oder lädt Sicherungen nur nach einer ausdrücklichen Aktion über den Android-Dokumentauswahldialog.
+## Datenschutz
 
-Die öffentliche Kompatibilitätsbasis bleibt Version `0.14.0` mit Sicherungsformat `schemaVersion: 2`. Aktualisierungen aus kompatiblen öffentlichen Versionen bewahren vorhandene App-Daten und Einstellungen. Ältere private Esca-Daten und ältere Sicherungsformate werden nicht unterstützt.
+Die App besitzt keine Internet-Berechtigung und verwendet keine Werbung, Telemetrie, Analyse, Konten, Cloud-Synchronisierung oder automatische Hintergrunddatenerfassung. Tracking- und Begleiterdaten bleiben lokal.
 
-## Dokumentation
+## Dokumentation und Quelle
 
 - [Installation und Aktualisierung](INSTALL.md)
 - [Datenschutz](PRIVACY.md)
 - [Lizenz und Nutzung](LICENSE-AND-USAGE.md)
-- [Bekannte Probleme](KNOWN_ISSUES.md)
 - [Änderungsverlauf](CHANGELOG.md)
-- [Versionshinweise](release-notes/esca-agnellis-v0.15.0.md)
-- [Prüfsumme](checksums/Esca-Agnellis-v0.15.0-vc39-release.apk.sha256)
+- [Versionshinweise zu v0.16.0](release-notes/esca-agnellis-v0.16.0.md)
+- [Prüfsumme](checksums/Esca-Agnellis-v0.16.0-vc40-release.apk.sha256)
+- [Öffentlicher Quellcode](https://github.com/Kamui2040/Esca-Agnellis-Android)
 
-## Quellcode und Verteilung
+## Quellcode und Lizenzierung
 
-Dieses Release-Repository enthält keinen privaten Esca-Anwendungsquellcode und macht Esca Agnellis nicht zu Open-Source-Software.
+Esca Agnellis v0.16.0 ist die erste quelloffene Veröffentlichung. Von K2040 erstellter Anwendungscode und Projekt-Buildskripte stehen unter `GPL-3.0-only` zusammen mit dem dokumentierten zusätzlichen Attributionserhaltungshinweis nach GPLv3 §7(b). Ausdrücklich freigegebene Dokumentation und Kunstwerke stehen unter `CC-BY-4.0`, soweit dies in den maßgeblichen Projektdateien dokumentiert ist.
 
-Links zu offiziellen Release-Seiten dürfen geteilt werden. Die APK-Datei darf nicht ohne ausdrückliche Genehmigung erneut hochgeladen, gespiegelt, verändert, neu signiert, neu verpackt, kommerziell weiterverteilt oder hinter einer Bezahlschranke angeboten werden.
-
-## Rückmeldung
-
-Nutze die deutschen oder englischen Esca-Issue-Formulare. Veröffentliche keine Sicherungsdateien, Ernährungs- oder Gesundheitsdaten, privaten Protokolle oder ungeschwärzten Screenshots.
+Historische Binärversionen bis einschließlich v0.15.0 behalten ihre damaligen Bedingungen.

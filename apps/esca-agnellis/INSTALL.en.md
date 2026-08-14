@@ -1,3 +1,4 @@
+
 # Installation and Updates
 
 [Deutsche Version](INSTALL.md)
@@ -9,42 +10,25 @@
 
 ## Obtain the APK
 
-Download `Esca-Agnellis-v0.15.0-vc39-release.apk` only from the official GitHub release `esca-agnellis-v0.15.0` or from a store listing explicitly designated as official.
+The official GitHub Release is currently the canonical download channel:
+https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0
 
-Do not use mirrors, re-uploads, or APK files offered elsewhere.
+File: `Esca-Agnellis-v0.16.0-vc40-release.apk`
+
+Additional stores become official download channels only when explicitly listed on the K2040 Android Projects page.
 
 ## Verify the checksum
 
-Expected SHA-256:
+Expected SHA-256: `4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
 
-```text
-12A9E0F93F581639A4DB43097B23A071831CEA62F42F4A614F51CE05AAFC1E6A
-```
+PowerShell: `(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.16.0-vc40-release.apk" -Algorithm SHA256).Hash`
 
-PowerShell:
+Linux: `sha256sum ./Esca-Agnellis-v0.16.0-vc40-release.apk`
 
-```powershell
-(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.15.0-vc39-release.apk" -Algorithm SHA256).Hash
-```
+## Signature and updating
 
-The result must match the published checksum exactly.
+The official developer APK retains the permanent K2040 signing identity: `03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6`.
 
-## Installation
+Compatible developer-signed releases can update one another when the package ID, signing identity, and Android version rules permit it. If multiple approved stores later carry the same developer APK, Android can therefore accept an update from another compatible official store.
 
-Open the downloaded APK on the Android device. Depending on the device and browser, Android may request one-time permission to install from that source.
-
-Before confirming, check:
-
-- application name: Esca Agnellis
-- package ID when technically inspected: `com.k2040.escaagnellis`
-- no unexpected permissions, especially no Internet permission
-
-## Updating
-
-A newer official Esca APK may update the existing installation when the package ID and signing identity remain unchanged and the versionCode is higher.
-
-Create a current backup through `Datensicherung` before tests or major updates.
-
-## Compatibility boundary
-
-Version `0.14.0` remains the independent public compatibility baseline. Updates to `0.15.0` from compatible public releases preserve existing app data and settings. Older private Esca data, older private installations, and older backup formats are unsupported. Unsupported backups are rejected before any data is changed.
+Independently signed variants, including normal F-Droid builds, use a different signing identity and cannot update directly over the developer APK.

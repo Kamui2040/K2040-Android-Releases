@@ -40,15 +40,15 @@ The Android Projects page currently lists **GeoJoystick** and **Esca Agnellis**.
 ### Esca Agnellis
 
 - [Esca Agnellis](apps/esca-agnellis/README.en.md)
-- [Esca Agnellis v0.15.0](../../releases/tag/esca-agnellis-v0.15.0)
-- Release tag: `esca-agnellis-v0.15.0`
+- [Esca Agnellis v0.16.0](../../releases/tag/esca-agnellis-v0.16.0)
+- Release tag: `esca-agnellis-v0.16.0`
 - Package ID: `com.k2040.escaagnellis`
 
 Each app retains its own documentation, licence, privacy statement, signing identity, checksums, release history, and feedback routes. Apps that are not release-ready do not receive empty placeholder areas.
 
 ## Important notice
 
-This repository contains no private Esca application source code and no copy of the public GeoJoystick source. GeoJoystick remains in its own GPL-3.0-only repository. Signed application packages are published as GitHub Release assets and through store listings explicitly designated as official; they are not committed to Git history.
+This release repository contains no copy of the Esca application source. Public Esca source is maintained at https://github.com/Kamui2040/Esca-Agnellis-Android. It also contains no copy of the public GeoJoystick source. GeoJoystick remains in its own GPL-3.0-only repository. Signed application packages are published as GitHub Release assets and through store listings explicitly designated as official; they are not committed to Git history.
 
 Use only the official releases linked from this repository or store listings explicitly designated as official.
 
