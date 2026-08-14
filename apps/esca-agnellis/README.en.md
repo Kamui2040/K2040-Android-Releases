@@ -14,10 +14,11 @@
 - Target version: Android 15 / API 35
 - Release tag: `esca-agnellis-v0.16.0`
 - GitHub Release: https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0
+- Uptodown: https://esca-agnellis.en.uptodown.com/android
 - APK: `Esca-Agnellis-v0.16.0-vc40-release.apk`
 - APK SHA-256: `4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
 
-The GitHub Release is currently the canonical public download channel. Additional stores are added as official download sources only after their listings are approved.
+GitHub Releases remains the authoritative source for APK files, release notes, and checksums. Uptodown is an additional official download channel for the developer-signed release.
 
 Supported languages: German, English, Spanish, French, and Portuguese (Portugal).
 
