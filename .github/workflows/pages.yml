@@ -6,7 +6,12 @@ on:
       - main
     paths:
       - index.html
+      - translations.js
+      - content.js
+      - site.js
       - styles.css
+      - release-cards.css
+      - updates.css
       - docs/assets/**
       - .github/workflows/pages.yml
   workflow_dispatch:
