@@ -142,6 +142,32 @@
     }
   };
 
+  const updateTimeValue = (update) => {
+    const value = Date.parse(`${update?.date || ""}T00:00:00Z`);
+    return Number.isNaN(value) ? null : value;
+  };
+
+  const sortedUpdates = () => {
+    return [...(window.K2040_CONTENT?.updates || [])]
+      .map((update, sourceIndex) => ({ update, sourceIndex, time: updateTimeValue(update) }))
+      .sort((left, right) => {
+        if (left.time === null && right.time === null) {
+          return left.sourceIndex - right.sourceIndex;
+        }
+        if (left.time === null) {
+          return 1;
+        }
+        if (right.time === null) {
+          return -1;
+        }
+        if (left.time !== right.time) {
+          return right.time - left.time;
+        }
+        return left.sourceIndex - right.sourceIndex;
+      })
+      .map(({ update }) => update);
+  };
+
   const renderUpdates = () => {
     const list = document.querySelector("[data-update-list]");
     const template = document.querySelector("#update-card-template");
@@ -151,14 +177,27 @@
 
     list.replaceChildren();
 
-    for (const update of window.K2040_CONTENT?.updates || []) {
+    for (const update of sortedUpdates()) {
       const strings = getLocalStrings(update);
       const fragment = template.content.cloneNode(true);
+      const card = fragment.querySelector(".update-card");
+      const media = fragment.querySelector("[data-update-media]");
+      const image = fragment.querySelector("[data-update-image]");
       const time = fragment.querySelector("[data-update-date]");
       const category = fragment.querySelector("[data-update-category]");
       const title = fragment.querySelector("[data-update-title]");
       const summary = fragment.querySelector("[data-update-summary]");
       const link = fragment.querySelector("[data-update-link]");
+
+      if (media && image && update.image) {
+        image.src = update.image;
+        image.alt = strings.imageAlt || "";
+        image.loading = "lazy";
+        image.decoding = "async";
+        card?.classList.add("update-card--with-media");
+      } else {
+        media?.remove();
+      }
 
       if (time) {
         time.dateTime = update.date;
