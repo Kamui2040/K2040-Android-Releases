@@ -6,12 +6,12 @@
   <meta name="description" content="Official K2040 Android releases, documentation, and support in one place.">
   <meta name="color-scheme" content="light dark">
   <title>K2040 Android Projects</title>
-  <script src="translations.js?v=20260814"></script>
-  <script src="content.js?v=20260814"></script>
-  <script src="site.js?v=20260814"></script>
-  <link rel="stylesheet" href="styles.css?v=20260814">
-  <link rel="stylesheet" href="release-cards.css?v=20260814">
-  <link rel="stylesheet" href="updates.css?v=20260814">
+  <script src="translations.js?v=20260814-2"></script>
+  <script src="content.js?v=20260814-2"></script>
+  <script src="site.js?v=20260814-2"></script>
+  <link rel="stylesheet" href="styles.css?v=20260814-2">
+  <link rel="stylesheet" href="release-cards.css?v=20260814-2">
+  <link rel="stylesheet" href="updates.css?v=20260814-2">
 </head>
 <body>
   <main class="page-shell">
@@ -136,7 +136,7 @@
       <div class="section-heading">
         <p class="eyebrow" data-i18n="updates.eyebrow">Latest</p>
         <h2 data-i18n="updates.title">App Updates</h2>
-        <p data-i18n="updates.description">Published Android app releases and important app-specific changes.</p>
+        <p data-i18n="updates.description">New releases and important app changes. Newest first.</p>
       </div>
       <div class="update-list" data-update-list></div>
     </section>
@@ -148,13 +148,18 @@
 
   <template id="update-card-template">
     <article class="update-card">
-      <div class="update-meta">
-        <time data-update-date></time>
-        <span data-update-category></span>
+      <div class="update-media" data-update-media>
+        <img class="update-image" data-update-image src="" alt="">
       </div>
-      <h3 data-update-title></h3>
-      <p data-update-summary></p>
-      <a class="text-link" data-update-link></a>
+      <div class="update-copy">
+        <div class="update-meta">
+          <time data-update-date></time>
+          <span data-update-category></span>
+        </div>
+        <h3 data-update-title></h3>
+        <p data-update-summary></p>
+        <a class="text-link" data-update-link></a>
+      </div>
     </article>
   </template>
 </body>
