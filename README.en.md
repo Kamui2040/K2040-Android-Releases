@@ -20,17 +20,17 @@ The shared K2040 project pages are published through GitHub Pages:
 - Android Projects: <https://kamui2040.github.io/K2040-Android-Releases/>
 - Gaming Mods: <https://kamui2040.github.io/gaming-mods/>
 
-All three pages link directly to one another. The Android page is dedicated to K2040 Android projects and includes its own feed for published app updates. It follows the system light or dark appearance by default and also provides a persistent manual theme switch. The initial language is detected from the browser settings and can then be changed permanently through a selector. English, German, European Portuguese, Spanish, and French are supported; unsupported languages fall back to English. GitHub Releases remains the authoritative source for APK files, release notes, and checksums.
+The Android Projects site provides a compact landing page, an **Apps** menu leading to dedicated pages for each released application, and a chronological **Updates** archive. Each app page collects its current release channels, real screenshots, privacy information, source/licence links, changelog, and feedback route.
 
-The page uses the same release format for every app: one card per app version, compact named download buttons for available sources such as GitHub, F-Droid, APKPure, or Uptodown, and a separate changelog link at the bottom of the card. New stores are added as another button in the same card rather than being presented as separate app cards.
+The site follows the system light or dark appearance by default and also provides a persistent manual theme switch. The initial language is detected from browser settings and can then be changed through a flag-based language menu. English, German, European Portuguese, Spanish, and French are supported; unsupported languages fall back to English. Esca screenshots follow the active site language where a corresponding accepted screenshot set exists.
 
-## Current focus
+GitHub Releases remains the authoritative source for developer-published APK files, release notes, and checksums. Store and source-built channels are identified separately on the applicable app page.
 
-The Android Projects page currently lists **GeoJoystick** and **Esca Agnellis**.
+## Current applications
 
 ### GeoJoystick
 
-- Android Projects page: <https://kamui2040.github.io/K2040-Android-Releases/>
+- App page: <https://kamui2040.github.io/K2040-Android-Releases/apps/geojoystick/>
 - Source and documentation: <https://github.com/Kamui2040/K2040-GeoJoystick>
 - [GeoJoystick v0.1.3](https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.3)
 - Official F-Droid listing: <https://f-droid.org/packages/com.k2040.geojoystick/>
@@ -39,8 +39,11 @@ The Android Projects page currently lists **GeoJoystick** and **Esca Agnellis**.
 
 ### Esca Agnellis
 
-- [Esca Agnellis](apps/esca-agnellis/README.en.md)
+- App page: <https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/>
+- [Esca Agnellis documentation](apps/esca-agnellis/README.en.md)
 - [Esca Agnellis v0.16.0](../../releases/tag/esca-agnellis-v0.16.0)
+- Official F-Droid listing: <https://f-droid.org/packages/com.k2040.escaagnellis/>
+- Official APKPure listing: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Official Uptodown listing: <https://esca-agnellis.en.uptodown.com/android>
 - Release tag: `esca-agnellis-v0.16.0`
 - Package ID: `com.k2040.escaagnellis`
@@ -51,7 +54,7 @@ Each app retains its own documentation, licence, privacy statement, signing iden
 
 This release repository contains no copy of the Esca application source. Public Esca source is maintained at https://github.com/Kamui2040/Esca-Agnellis-Android. It also contains no copy of the public GeoJoystick source. GeoJoystick remains in its own GPL-3.0-only repository. Signed application packages are published as GitHub Release assets and through store listings explicitly designated as official; they are not committed to Git history.
 
-Use only the official releases linked from this repository or store listings explicitly designated as official.
+Use only the official releases or store listings linked from this repository.
 
 ## Security
 
