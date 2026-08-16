@@ -20,17 +20,17 @@ Die gemeinsamen K2040-Projektseiten werden über GitHub Pages veröffentlicht:
 - Android-Projekte: <https://kamui2040.github.io/K2040-Android-Releases/>
 - Spiele-Mods: <https://kamui2040.github.io/gaming-mods/>
 
-Alle drei Seiten sind direkt miteinander verlinkt. Die Android-Seite ist ausschließlich für K2040-Android-Projekte bestimmt und enthält einen eigenen Bereich für veröffentlichte App-Aktualisierungen. Sie übernimmt standardmäßig das helle oder dunkle Systemdesign und bietet zusätzlich einen dauerhaften manuellen Umschalter. Die Sprache wird zunächst anhand der Browser-Einstellungen erkannt und kann danach dauerhaft über ein Auswahlmenü geändert werden. Unterstützt werden Englisch, Deutsch, europäisches Portugiesisch, Spanisch und Französisch; bei nicht unterstützten Sprachen wird Englisch verwendet. GitHub Releases bleibt die maßgebliche Quelle für APK-Dateien, Versionshinweise und Prüfsummen.
+Die Android-Projektseite bietet eine kompakte Übersichtsseite, ein **Apps**-Menü mit eigenen Detailseiten für jede veröffentlichte Anwendung und ein chronologisches **Updates**-Archiv. Jede App-Seite bündelt die aktuellen Downloadkanäle, echte Screenshots, Datenschutzinformationen, Quellcode-/Lizenzlinks, Änderungsverlauf und Rückmeldeweg.
 
-Für alle Apps verwendet die Seite dasselbe Veröffentlichungsformat: eine Karte pro App-Version, kompakte benannte Download-Schaltflächen für verfügbare Quellen wie GitHub, F-Droid, APKPure oder Uptodown sowie einen eigenen Changelog-Link am unteren Kartenrand. Neue Stores werden als zusätzliche Schaltfläche in derselben Karte ergänzt und nicht als separate App-Karte dargestellt.
+Die Seite übernimmt standardmäßig das helle oder dunkle Systemdesign und bietet zusätzlich einen dauerhaften manuellen Umschalter. Die Sprache wird zunächst anhand der Browser-Einstellungen erkannt und kann danach über ein Flaggenmenü geändert werden. Unterstützt werden Englisch, Deutsch, europäisches Portugiesisch, Spanisch und Französisch; bei nicht unterstützten Sprachen wird Englisch verwendet. Esca-Screenshots folgen der aktiven Seitensprache, sofern dafür ein entsprechender freigegebener Screenshot-Satz vorhanden ist.
 
-## Aktueller Schwerpunkt
+GitHub Releases bleibt die maßgebliche Quelle für vom Entwickler veröffentlichte APK-Dateien, Versionshinweise und Prüfsummen. Store- und quellcodebasierte Buildkanäle werden auf der jeweiligen App-Seite getrennt ausgewiesen.
 
-Die Android-Projektseite führt derzeit **GeoJoystick** und **Esca Agnellis**.
+## Aktuelle Apps
 
 ### GeoJoystick
 
-- Android-Projektseite: <https://kamui2040.github.io/K2040-Android-Releases/>
+- App-Seite: <https://kamui2040.github.io/K2040-Android-Releases/apps/geojoystick/>
 - Quellcode und Dokumentation: <https://github.com/Kamui2040/K2040-GeoJoystick>
 - [GeoJoystick v0.1.3](https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.3)
 - Offizieller F-Droid-Eintrag: <https://f-droid.org/packages/com.k2040.geojoystick/>
@@ -39,8 +39,11 @@ Die Android-Projektseite führt derzeit **GeoJoystick** und **Esca Agnellis**.
 
 ### Esca Agnellis
 
-- [Esca Agnellis](apps/esca-agnellis/README.md)
+- App-Seite: <https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/>
+- [Esca-Agnellis-Dokumentation](apps/esca-agnellis/README.md)
 - [Esca Agnellis v0.16.0](../../releases/tag/esca-agnellis-v0.16.0)
+- Offizieller F-Droid-Eintrag: <https://f-droid.org/packages/com.k2040.escaagnellis/>
+- Offizieller APKPure-Eintrag: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Offizieller Uptodown-Eintrag: <https://esca-agnellis.en.uptodown.com/android>
 - Release-Tag: `esca-agnellis-v0.16.0`
 - Paket-ID: `com.k2040.escaagnellis`
@@ -51,7 +54,7 @@ Jede App behält ihre eigene Dokumentation, Lizenz, Datenschutzerklärung, Signa
 
 Dieses Release-Repository enthält keine Kopie des Esca-Anwendungsquellcodes. Der öffentliche Esca-Quellcode befindet sich unter https://github.com/Kamui2040/Esca-Agnellis-Android. Es enthält außerdem keine Kopie des öffentlichen GeoJoystick-Quellcodes. GeoJoystick bleibt in seinem eigenen GPL-3.0-only-Repository. Signierte APK-Dateien werden als GitHub-Release-Assets und über ausdrücklich als offiziell benannte Store-Einträge bereitgestellt; sie werden nicht in den Git-Verlauf eingecheckt.
 
-APK-Dateien sollten nur über die hier verlinkten offiziellen Releases oder ausdrücklich als offiziell benannte Store-Einträge bezogen werden.
+APK-Dateien sollten nur über die hier verlinkten offiziellen Releases oder Store-Einträge bezogen werden.
 
 ## Sicherheit
 
