@@ -4,6 +4,13 @@
   const themeStorageKey = "k2040-theme";
   const languageStorageKey = "k2040-language";
   const supportedLanguages = ["en", "de", "pt-PT", "es", "fr"];
+  const languagePresentation = {
+    en: { flag: "🇬🇧", label: "English", locale: "en-US" },
+    de: { flag: "🇩🇪", label: "Deutsch", locale: "de-DE" },
+    "pt-PT": { flag: "🇵🇹", label: "Português", locale: "pt-PT" },
+    es: { flag: "🇪🇸", label: "Español", locale: "es-ES" },
+    fr: { flag: "🇫🇷", label: "Français", locale: "fr-FR" }
+  };
   const root = document.documentElement;
   const darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -19,7 +26,7 @@
     try {
       window.localStorage.setItem(key, value);
     } catch {
-      // The current page still works when persistent storage is unavailable.
+      // Persistent storage is optional; the current page still works without it.
     }
   };
 
@@ -79,8 +86,6 @@
   };
 
   let currentLanguage = detectLanguage();
-  root.lang = currentLanguage;
-  root.dataset.language = currentLanguage;
 
   const effectiveTheme = () => {
     const explicitTheme = root.dataset.theme;
@@ -97,6 +102,10 @@
   };
 
   const getTranslation = (key) => {
+    if (!key) {
+      return null;
+    }
+
     const segments = key.split(".");
     let value = getTranslations();
 
@@ -116,6 +125,13 @@
     }
 
     return entry.strings?.[currentLanguage] || entry.strings?.en || {};
+  };
+
+  const getLocalizedUpdateImage = (entry) => {
+    if (entry?.images && typeof entry.images === "object") {
+      return entry.images[currentLanguage] || entry.images.en || null;
+    }
+    return entry?.image || null;
   };
 
   const updateThemeToggle = (button) => {
@@ -140,6 +156,35 @@
     if (label) {
       label.textContent = getTranslation(labelKey) || labelKey;
     }
+  };
+
+  const updateLanguageControl = () => {
+    const presentation = languagePresentation[currentLanguage] || languagePresentation.en;
+
+    document.querySelectorAll("[data-language-current-flag]").forEach((element) => {
+      element.textContent = presentation.flag;
+    });
+
+    document.querySelectorAll("[data-language-current-label]").forEach((element) => {
+      element.textContent = presentation.label;
+    });
+
+    document.querySelectorAll("[data-language-option]").forEach((button) => {
+      const selected = button.dataset.languageOption === currentLanguage;
+      button.setAttribute("aria-current", selected ? "true" : "false");
+    });
+  };
+
+  const updateLocalizedScreenshots = () => {
+    const locale = languagePresentation[currentLanguage]?.locale || "en-US";
+
+    document.querySelectorAll("[data-esca-screenshot]").forEach((image) => {
+      const filename = image.dataset.escaScreenshot;
+      if (!filename) {
+        return;
+      }
+      image.src = `https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/${locale}/images/phoneScreenshots/${filename}`;
+    });
   };
 
   const updateTimeValue = (update) => {
@@ -169,73 +214,91 @@
   };
 
   const renderUpdates = () => {
-    const list = document.querySelector("[data-update-list]");
-    const template = document.querySelector("#update-card-template");
-    if (!list || !template) {
-      return;
-    }
-
-    list.replaceChildren();
-
-    for (const update of sortedUpdates()) {
-      const strings = getLocalStrings(update);
-      const fragment = template.content.cloneNode(true);
-      const card = fragment.querySelector(".update-card");
-      const media = fragment.querySelector("[data-update-media]");
-      const image = fragment.querySelector("[data-update-image]");
-      const time = fragment.querySelector("[data-update-date]");
-      const category = fragment.querySelector("[data-update-category]");
-      const title = fragment.querySelector("[data-update-title]");
-      const summary = fragment.querySelector("[data-update-summary]");
-      const link = fragment.querySelector("[data-update-link]");
-
-      if (media && image && update.image) {
-        image.src = update.image;
-        image.alt = strings.imageAlt || "";
-        image.loading = "lazy";
-        image.decoding = "async";
-        card?.classList.add("update-card--with-media");
-      } else {
-        media?.remove();
+    document.querySelectorAll("[data-update-list]").forEach((list) => {
+      const template = document.querySelector("#update-card-template");
+      if (!template) {
+        return;
       }
 
-      if (time) {
-        time.dateTime = update.date;
-        time.textContent = new Intl.DateTimeFormat(currentLanguage, {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-          timeZone: "UTC"
-        }).format(new Date(`${update.date}T00:00:00Z`));
-      }
-      if (category) {
-        category.textContent = strings.category || "";
-      }
-      if (title) {
-        title.textContent = strings.title || "";
-      }
-      if (summary) {
-        summary.textContent = strings.summary || "";
-      }
-      if (link) {
-        if (update.href) {
-          link.href = update.href;
-          link.textContent = getTranslation("actions.readMore") || "Read more";
-        } else {
-          link.remove();
+      const requestedLimit = Number.parseInt(list.dataset.updateLimit || "", 10);
+      const updates = Number.isFinite(requestedLimit) && requestedLimit > 0
+        ? sortedUpdates().slice(0, requestedLimit)
+        : sortedUpdates();
+
+      list.replaceChildren();
+
+      updates.forEach((update, index) => {
+        const strings = getLocalStrings(update);
+        const fragment = template.content.cloneNode(true);
+        const card = fragment.querySelector("[data-update-card]");
+        const media = fragment.querySelector("[data-update-media]");
+        const image = fragment.querySelector("[data-update-image]");
+        const time = fragment.querySelector("[data-update-date]");
+        const category = fragment.querySelector("[data-update-category]");
+        const title = fragment.querySelector("[data-update-title]");
+        const summary = fragment.querySelector("[data-update-summary]");
+        const action = fragment.querySelector("[data-update-action]");
+        const localizedImage = getLocalizedUpdateImage(update);
+
+        if (card) {
+          if (update.href) {
+            card.href = update.href;
+          } else {
+            card.removeAttribute("href");
+            card.setAttribute("aria-disabled", "true");
+          }
+          if (index === 0) {
+            card.classList.add("update-card--featured");
+          }
         }
-      }
 
-      list.append(fragment);
-    }
+        if (media && image && localizedImage) {
+          image.src = localizedImage;
+          image.alt = strings.imageAlt || "";
+          image.loading = index === 0 ? "eager" : "lazy";
+          image.decoding = "async";
+          card?.classList.add("update-card--with-media");
+        } else {
+          media?.remove();
+          card?.classList.add("update-card--no-media");
+        }
+
+        if (time) {
+          time.dateTime = update.date;
+          time.textContent = new Intl.DateTimeFormat(currentLanguage, {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            timeZone: "UTC"
+          }).format(new Date(`${update.date}T00:00:00Z`));
+        }
+
+        if (category) {
+          category.textContent = strings.category || "";
+        }
+        if (title) {
+          title.textContent = strings.title || "";
+        }
+        if (summary) {
+          summary.textContent = strings.summary || "";
+        }
+        if (action) {
+          action.textContent = `${getTranslation("actions.readMore") || "Read more"} →`;
+        }
+
+        list.append(fragment);
+      });
+    });
   };
 
   const applyTranslations = () => {
     root.lang = currentLanguage;
     root.dataset.language = currentLanguage;
 
-    const pageTitle = getTranslation("meta.title");
-    const metaDescription = getTranslation("meta.description");
+    const pageTitleKey = document.body?.dataset.pageTitleKey || "meta.title";
+    const pageDescriptionKey = document.body?.dataset.pageDescriptionKey || "meta.description";
+    const pageTitle = getTranslation(pageTitleKey);
+    const metaDescription = getTranslation(pageDescriptionKey);
     const descriptionElement = document.querySelector('meta[name="description"]');
 
     if (pageTitle) {
@@ -266,18 +329,22 @@
       }
     });
 
-    const languageSelect = document.querySelector("[data-language-select]");
-    if (languageSelect) {
-      languageSelect.value = currentLanguage;
-    }
-
+    updateLanguageControl();
+    updateLocalizedScreenshots();
     renderUpdates();
     updateThemeToggle(document.querySelector("[data-theme-toggle]"));
   };
 
+  const closeSiblingMenus = (activeDetails) => {
+    document.querySelectorAll("details.menu").forEach((details) => {
+      if (details !== activeDetails) {
+        details.open = false;
+      }
+    });
+  };
+
   const initializePage = () => {
     const themeToggle = document.querySelector("[data-theme-toggle]");
-    const languageSelect = document.querySelector("[data-language-select]");
 
     applyTranslations();
 
@@ -290,9 +357,9 @@
       });
     }
 
-    if (languageSelect) {
-      languageSelect.addEventListener("change", () => {
-        const selectedLanguage = languageSelect.value;
+    document.querySelectorAll("[data-language-option]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedLanguage = button.dataset.languageOption;
         if (!supportedLanguages.includes(selectedLanguage)) {
           return;
         }
@@ -300,8 +367,29 @@
         currentLanguage = selectedLanguage;
         writeStorage(languageStorageKey, selectedLanguage);
         applyTranslations();
+
+        const menu = button.closest("details");
+        if (menu) {
+          menu.open = false;
+        }
       });
-    }
+    });
+
+    document.querySelectorAll("details.menu").forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (details.open) {
+          closeSiblingMenus(details);
+        }
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest("details.menu")) {
+        document.querySelectorAll("details.menu[open]").forEach((details) => {
+          details.open = false;
+        });
+      }
+    });
 
     const updateForSystemPreference = () => {
       if (!root.dataset.theme) {
