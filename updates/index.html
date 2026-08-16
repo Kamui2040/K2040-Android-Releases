@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official K2040 Android projects, releases, documentation, and updates.">
+  <meta name="description" content="Published updates for K2040 Android projects.">
   <meta name="color-scheme" content="light dark">
-  <title>K2040 Android Projects</title>
+  <title>Updates · K2040 Android Projects</title>
   <link rel="stylesheet" href="/K2040-Android-Releases/styles.css?v=20260817-1">
   <link rel="stylesheet" href="/K2040-Android-Releases/updates.css?v=20260817-1">
   <script defer src="/K2040-Android-Releases/translations.js?v=20260817-1"></script>
   <script defer src="/K2040-Android-Releases/content.js?v=20260817-1"></script>
   <script defer src="/K2040-Android-Releases/site.js?v=20260817-1"></script>
 </head>
-<body>
+<body data-page-title-key="pages.updates.metaTitle" data-page-description-key="pages.updates.metaDescription">
   <div class="page-shell">
     <header class="site-header">
-      <a class="site-brand" href="/K2040-Android-Releases/" aria-current="page">
+      <a class="site-brand" href="/K2040-Android-Releases/">
         <strong>K2040</strong>
         <span data-i18n="nav.home">Android Projects</span>
       </a>
@@ -38,7 +38,7 @@
           </div>
         </details>
 
-        <a class="nav-link" href="/K2040-Android-Releases/updates/" data-i18n="nav.updates">Updates</a>
+        <a class="nav-link" href="/K2040-Android-Releases/updates/" aria-current="page" data-i18n="nav.updates">Updates</a>
 
         <details class="menu language-menu">
           <summary data-i18n-aria-label="controls.language" aria-label="Language">
@@ -63,60 +63,14 @@
     </header>
 
     <main>
-      <section class="landing-hero">
-        <div class="landing-hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">K2040 Projects</p>
-          <h1 data-i18n="hero.title">Android Projects</h1>
-          <p class="lead" data-i18n="hero.description">Open-source Android apps with clear privacy, licensing, and direct download information.</p>
-        </div>
-        <div class="landing-hero-media">
-          <img src="/K2040-Android-Releases/docs/assets/kofi-header.jpg" data-i18n-alt="hero.bannerAlt" alt="K2040 projects banner showing apps, mods, tools, and the wolf mascot">
-        </div>
+      <section class="page-intro">
+        <p class="eyebrow" data-i18n="pages.updates.eyebrow">K2040 Android Projects</p>
+        <h1 data-i18n="pages.updates.title">Updates</h1>
+        <p class="lead" data-i18n="pages.updates.description">Published releases, new official download channels, and important app-specific changes. Newest first.</p>
       </section>
 
-      <section class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="landing.appsEyebrow">Released apps</p>
-          <h2 data-i18n="landing.appsTitle">Apps</h2>
-          <p data-i18n="landing.appsDescription">Choose an app for downloads, screenshots, privacy, source, and release details.</p>
-        </div>
-
-        <div class="app-overview-grid">
-          <a class="app-overview-card" href="/K2040-Android-Releases/apps/esca-agnellis/">
-            <div class="app-overview-media app-overview-media--esca">
-              <img data-esca-screenshot="1.png" data-i18n-alt="pages.esca.screenshot1" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Esca Agnellis main tracking screen">
-            </div>
-            <div class="app-overview-copy">
-              <div class="app-name-row"><h3>Esca Agnellis</h3><span class="version-pill">v0.16.0</span></div>
-              <p data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</p>
-              <span class="text-action" data-i18n="actions.viewApp">View app</span>
-            </div>
-          </a>
-
-          <a class="app-overview-card" href="/K2040-Android-Releases/apps/geojoystick/">
-            <div class="app-overview-media app-overview-media--geo">
-              <img src="https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/0dcd335fd4ebb6810a0dc2ea82dc7854ed3ed4b4/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png" data-i18n-alt="pages.geo.screenshot1" alt="GeoJoystick main screen">
-            </div>
-            <div class="app-overview-copy">
-              <div class="app-name-row"><h3>GeoJoystick</h3><span class="version-pill">v0.1.3</span></div>
-              <p data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing using Android's standard mock-location flow.</p>
-              <span class="text-action" data-i18n="actions.viewApp">View app</span>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow" data-i18n="landing.updatesEyebrow">Latest</p>
-            <h2 data-i18n="landing.updatesTitle">Updates</h2>
-            <p data-i18n="landing.updatesDescription">New releases, store availability, and important project changes.</p>
-          </div>
-          <a class="section-link" href="/K2040-Android-Releases/updates/"><span data-i18n="landing.viewAll">View all updates</span> →</a>
-        </div>
-
-        <div class="update-list" data-update-list data-update-limit="4"></div>
+      <section class="content-section update-archive">
+        <div class="update-list" data-update-list></div>
       </section>
     </main>
 
@@ -131,9 +85,14 @@
     </footer>
     <template id="update-card-template">
       <a class="update-card" data-update-card>
-        <div class="update-media" data-update-media><img class="update-image" data-update-image src="" alt=""></div>
+        <div class="update-media" data-update-media>
+          <img class="update-image" data-update-image src="" alt="">
+        </div>
         <div class="update-copy">
-          <div class="update-meta"><time data-update-date></time><span data-update-category></span></div>
+          <div class="update-meta">
+            <time data-update-date></time>
+            <span data-update-category></span>
+          </div>
           <h3 data-update-title></h3>
           <p data-update-summary></p>
           <span class="update-action" data-update-action>Read more →</span>
