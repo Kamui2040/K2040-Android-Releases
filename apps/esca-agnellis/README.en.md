@@ -1,4 +1,3 @@
-
 # Esca Agnellis
 
 [Deutsche Version](README.md)
@@ -14,11 +13,13 @@
 - Target version: Android 15 / API 35
 - Release tag: `esca-agnellis-v0.16.0`
 - GitHub Release: https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0
+- F-Droid: https://f-droid.org/packages/com.k2040.escaagnellis/
+- APKPure: https://apkpure.com/p/com.k2040.escaagnellis
 - Uptodown: https://esca-agnellis.en.uptodown.com/android
 - APK: `Esca-Agnellis-v0.16.0-vc40-release.apk`
 - APK SHA-256: `4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
 
-GitHub Releases remains the authoritative source for APK files, release notes, and checksums. Uptodown is an additional official download channel for the developer-signed release.
+GitHub Releases remains the authoritative source for the developer-signed APK, release notes, and checksum. APKPure and Uptodown are additional official channels for the developer-signed release. F-Droid provides its independently built and signed free-software package from the corresponding public source.
 
 Supported languages: German, English, Spanish, French, and Portuguese (Portugal).
 
