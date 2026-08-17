@@ -1,6 +1,50 @@
 window.K2040_CONTENT = {
   "updates": [
     {
+      "id": "geojoystick-0-1-4",
+      "date": "2026-08-17",
+      "href": "https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.4",
+      "images": {
+        "en": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png",
+        "de": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/de-DE/images/phoneScreenshots/01-main.png",
+        "pt-PT": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png",
+        "es": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png",
+        "fr": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png"
+      },
+      "strings": {
+        "en": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 released",
+          "summary": "v0.1.4 refreshes Home, Settings, and overlay controls, improves simulation recovery and map handling, adds onboarding and expanded app information, improves accessibility, and adds Android 16 support. The developer-signed APK is available directly from GitHub Releases.",
+          "imageAlt": "GeoJoystick v0.1.4 main screen"
+        },
+        "de": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 veröffentlicht",
+          "summary": "v0.1.4 überarbeitet Startseite, Einstellungen und Overlay-Steuerung, verbessert Simulationswiederherstellung und Kartenfunktionen, ergänzt Onboarding und erweiterte App-Informationen, verbessert die Barrierefreiheit und unterstützt Android 16. Die entwicklersignierte APK kann direkt über GitHub Releases heruntergeladen werden.",
+          "imageAlt": "GeoJoystick-v0.1.4-Hauptansicht"
+        },
+        "pt-PT": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 lançado",
+          "summary": "A v0.1.4 renova o ecrã principal, as definições e os controlos da sobreposição, melhora a recuperação da simulação e o mapa, acrescenta introdução e informação ampliada da aplicação, melhora a acessibilidade e adiciona suporte para Android 16. O APK assinado pelo programador está disponível diretamente no GitHub Releases.",
+          "imageAlt": "Ecrã principal do GeoJoystick v0.1.4"
+        },
+        "es": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 publicado",
+          "summary": "La v0.1.4 renueva la pantalla principal, los ajustes y los controles de la superposición, mejora la recuperación de la simulación y el mapa, añade la introducción y más información de la aplicación, mejora la accesibilidad y añade compatibilidad con Android 16. El APK firmado por el desarrollador está disponible directamente en GitHub Releases.",
+          "imageAlt": "Pantalla principal de GeoJoystick v0.1.4"
+        },
+        "fr": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 publié",
+          "summary": "La v0.1.4 modernise l’accueil, les réglages et les commandes de la superposition, améliore la récupération de la simulation et la carte, ajoute l’accueil initial et des informations d’application plus complètes, améliore l’accessibilité et prend en charge Android 16. L’APK signé par le développeur est disponible directement sur GitHub Releases.",
+          "imageAlt": "Écran principal de GeoJoystick v0.1.4"
+        }
+      }
+    },
+    {
       "id": "esca-agnellis-fdroid-0-16-0",
       "date": "2026-08-17",
       "href": "https://f-droid.org/packages/com.k2040.escaagnellis/",
