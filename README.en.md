@@ -32,7 +32,8 @@ GitHub Releases remains the authoritative source for developer-published APK fil
 
 - App page: <https://kamui2040.github.io/K2040-Android-Releases/apps/geojoystick/>
 - Source and documentation: <https://github.com/Kamui2040/K2040-GeoJoystick>
-- [GeoJoystick v0.1.3](https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.3)
+- [GeoJoystick v0.1.4](https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.4)
+- Direct developer-signed APK: <https://github.com/Kamui2040/K2040-GeoJoystick/releases/download/v0.1.4/GeoJoystick-v0.1.4.apk>
 - Official F-Droid listing: <https://f-droid.org/packages/com.k2040.geojoystick/>
 - Official APKPure listing: <https://apkpure.com/p/com.k2040.geojoystick>
 - Package ID: `com.k2040.geojoystick`
