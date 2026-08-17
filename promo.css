@@ -54,6 +54,92 @@ body[data-page-title-key="pages.geo.metaTitle"] .detail-card h2 {
   font-size: clamp(1.35rem, 2.5vw, 1.9rem);
 }
 
+.app-promo-list {
+  display: grid;
+  gap: 1.35rem;
+  margin-top: 1.5rem;
+}
+
+.app-promo-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface-strong);
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.app-promo-card:hover,
+.app-promo-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: var(--card-hover-shadow);
+  outline: none;
+  transform: translateY(-3px);
+}
+
+.app-promo-media {
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-promo-media--esca {
+  background: #f7efe5;
+}
+
+.app-promo-media--esca img,
+.app-promo-geo-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.app-promo-media--esca img {
+  aspect-ratio: 2172 / 724;
+}
+
+.app-promo-media--geo {
+  background: #171f2a;
+}
+
+.app-promo-geo-svg {
+  aspect-ratio: 1702 / 630;
+}
+
+.app-promo-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.4rem 1.35rem;
+}
+
+.app-promo-copy > div {
+  min-width: 0;
+}
+
+.app-promo-copy .app-name-row {
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+.app-promo-copy h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.app-promo-copy p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.app-promo-copy .text-action {
+  flex: 0 0 auto;
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
 .app-overview-media--promo {
   position: relative;
   overflow: hidden;
@@ -137,6 +223,17 @@ body[data-page-title-key="pages.geo.metaTitle"] .detail-card h2 {
 
   .app-detail-summary {
     margin-top: 1rem;
+  }
+
+  .app-promo-card {
+    border-radius: 18px;
+  }
+
+  .app-promo-copy {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1.05rem 1.1rem;
   }
 
   .geo-card-collage {
