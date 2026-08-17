@@ -5,11 +5,12 @@ window.K2040_CONTENT = {
       "date": "2026-08-17",
       "href": "https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.4",
       "images": {
-        "en": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png",
-        "de": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/de-DE/images/phoneScreenshots/01-main.png",
-        "pt-PT": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png",
-        "es": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png",
-        "fr": "https://raw.githubusercontent.com/Kamui2040/K2040-GeoJoystick/e599579522bc8bdec2ee95466b83f6ab63819af7/fastlane/metadata/android/en-US/images/phoneScreenshots/01-main.png"
+        "en": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png",
+        "de": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-de.png",
+        "pt-PT": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png",
+        "es": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png",
+        "fr": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png"
+
       },
       "strings": {
         "en": {
