@@ -32,6 +32,11 @@
   font-size: clamp(1rem, 1.7vw, 1.12rem);
 }
 
+body[data-page-title-key="pages.geo.metaTitle"] .content-section h2,
+body[data-page-title-key="pages.geo.metaTitle"] .detail-card h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+}
+
 .app-overview-media--promo {
   position: relative;
   overflow: hidden;
