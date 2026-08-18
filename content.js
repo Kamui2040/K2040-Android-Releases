@@ -1,6 +1,50 @@
 window.K2040_CONTENT = {
   "updates": [
     {
+      "id": "geojoystick-uptodown-0-1-4",
+      "date": "2026-08-18",
+      "href": "https://geojoystick.en.uptodown.com/android",
+      "images": {
+        "en": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png",
+        "de": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-de.png",
+        "pt-PT": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png",
+        "es": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png",
+        "fr": "/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png"
+      },
+      "strings": {
+        "en": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 now on Uptodown",
+          "summary": "The developer-signed v0.1.4 release is now available on Uptodown as an additional official download channel.",
+          "imageAlt": "GeoJoystick v0.1.4 promotional banner"
+        },
+        "de": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 jetzt auf Uptodown",
+          "summary": "Die entwicklersignierte Version v0.1.4 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar.",
+          "imageAlt": "GeoJoystick-v0.1.4-Werbebanner"
+        },
+        "pt-PT": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 agora no Uptodown",
+          "summary": "A versão v0.1.4 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência.",
+          "imageAlt": "Banner promocional do GeoJoystick v0.1.4"
+        },
+        "es": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 ya está en Uptodown",
+          "summary": "La versión v0.1.4 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional.",
+          "imageAlt": "Banner promocional de GeoJoystick v0.1.4"
+        },
+        "fr": {
+          "category": "GeoJoystick",
+          "title": "GeoJoystick v0.1.4 maintenant sur Uptodown",
+          "summary": "La version v0.1.4 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire.",
+          "imageAlt": "Bannière promotionnelle de GeoJoystick v0.1.4"
+        }
+      }
+    },
+    {
       "id": "geojoystick-0-1-4",
       "date": "2026-08-17",
       "href": "https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.4",
