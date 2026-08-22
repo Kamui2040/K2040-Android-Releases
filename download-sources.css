@@ -1,0 +1,51 @@
+/* Consistent presentation for official download destinations.
+   Brand names remain text so links stay clear without depending on third-party logo assets. */
+.download-button--source {
+  gap: .55rem;
+}
+
+.download-source-icon {
+  display: inline-grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--accent) 58%, var(--border));
+  background: color-mix(in srgb, var(--accent-soft) 68%, transparent);
+  color: var(--accent-dark);
+  font-size: .82rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.download-source-label {
+  min-width: 0;
+}
+
+@media (max-width: 620px) {
+  .download-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .download-button--source {
+    width: 100%;
+    min-width: 0;
+    padding-inline: .75rem;
+  }
+
+  .download-button--source:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 360px) {
+  .download-row {
+    grid-template-columns: 1fr;
+  }
+
+  .download-button--source:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
