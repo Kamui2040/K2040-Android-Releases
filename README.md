@@ -44,6 +44,8 @@ Esca Agnellis ist ein einfacher, privater Ernährungspyramiden-Tracker, der sein
 - APKPure: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Uptodown: <https://esca-agnellis.en.uptodown.com/android>
 
+Release-spezifische Hinweise, historische Lizenzinformationen und Prüfsummen bleiben unter `apps/esca-agnellis/`, weil die offizielle K2040-APK von Esca aus diesem Release-Repository veröffentlicht wird. GeoJoystick veröffentlicht seine GitHub-Releases direkt aus seinem Quellrepository; deshalb ist dessen App-Ordner bewusst schlanker.
+
 ## Downloads
 
 Nutze die oben verlinkten offiziellen Quellen. GitHub Releases enthält die von K2040 veröffentlichten App-Dateien und Versionshinweise. F-Droid baut und signiert seine Pakete selbst aus dem öffentlichen Quellcode. Deshalb lässt sich eine F-Droid-Version möglicherweise nicht direkt über eine von K2040 veröffentlichte APK installieren.
