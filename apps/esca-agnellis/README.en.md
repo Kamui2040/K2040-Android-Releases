@@ -2,54 +2,47 @@
 
 [Deutsche Version](README.md)
 
-**Esca Agnellis by K2040** is a multilingual Android application with German as the fallback language for friendly, low-pressure daily food-pyramid tracking.
+Esca Agnellis is a multilingual Android app for simple, low-pressure food-pyramid tracking. It works locally and keeps its tracking data on the device.
 
-## Current public release
+## Current release
 
-- Version: `0.16.0`
-- versionCode: `40`
-- Package ID: `com.k2040.escaagnellis`
-- Minimum version: Android 8.0 / API 26
-- Target version: Android 15 / API 35
-- Release tag: `esca-agnellis-v0.16.0`
-- GitHub Release: https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0
-- F-Droid: https://f-droid.org/packages/com.k2040.escaagnellis/
-- APKPure: https://apkpure.com/p/com.k2040.escaagnellis
-- Uptodown: https://esca-agnellis.en.uptodown.com/android
-- APK: `Esca-Agnellis-v0.16.0-vc40-release.apk`
-- APK SHA-256: `4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
+The current public release is **v0.16.0** and requires Android 8.0 or newer.
 
-GitHub Releases remains the authoritative source for the developer-signed APK, release notes, and checksum. APKPure and Uptodown are additional official channels for the developer-signed release. F-Droid provides its independently built and signed free-software package from the corresponding public source.
+Official download and project links:
 
-Supported languages: German, English, Spanish, French, and Portuguese (Portugal).
+- [Android Projects page](https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/)
+- [GitHub release](https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0)
+- [F-Droid](https://f-droid.org/packages/com.k2040.escaagnellis/)
+- [APKPure](https://apkpure.com/p/com.k2040.escaagnellis)
+- [Uptodown](https://esca-agnellis.en.uptodown.com/android)
+- [Public source](https://github.com/Kamui2040/Esca-Agnellis-Android)
 
-The developer APK is signed with the permanent official K2040 release identity: `03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6`.
+GitHub, APKPure, and Uptodown provide the K2040-published app. F-Droid builds and signs its own package from the public source, so switching between F-Droid and a K2040-published APK may require reinstalling the app.
 
-## New in 0.16.0
+## What's new in v0.16.0
 
-- optional local companion;
-- separate companion backup;
-- local PDF reports;
+- an optional local companion;
+- a separate backup for companion data;
+- PDF reports created on the device;
 - language, theme, and usability improvements;
-- unified first launch and refreshed information/licence flow;
-- first open-source Esca Agnellis release.
+- a clearer first-launch and information flow;
+- the first open-source Esca Agnellis release.
 
 ## Privacy
 
-The application has no Internet permission and uses no advertising, telemetry, analytics, accounts, cloud synchronization, or automatic background collection. Tracking and companion data remain local.
+Esca Agnellis has no Internet permission. It uses no ads, accounts, analytics, telemetry, cloud sync, or automatic background data collection. Tracking and optional companion data stay on the device unless you choose to create a backup or PDF report.
 
-## Documentation and source
+## Documentation
 
 - [Installation and updates](INSTALL.en.md)
 - [Privacy](PRIVACY.en.md)
 - [Licence and usage](LICENSE-AND-USAGE.en.md)
 - [Changelog](CHANGELOG.en.md)
 - [v0.16.0 release notes](release-notes/esca-agnellis-v0.16.0.en.md)
-- [Checksum](checksums/Esca-Agnellis-v0.16.0-vc40-release.apk.sha256)
-- [Public source](https://github.com/Kamui2040/Esca-Agnellis-Android)
+- [Download checksum](checksums/Esca-Agnellis-v0.16.0-vc40-release.apk.sha256)
 
-## Source and licensing
+## Licence
 
-Esca Agnellis v0.16.0 is the first open-source release. K2040-authored application code and project build scripts are licensed under `GPL-3.0-only` together with the documented GPLv3 section 7(b) attribution-preservation additional term. Explicitly cleared documentation and artwork are licensed under `CC-BY-4.0` where documented by the controlling project files.
+Esca Agnellis v0.16.0 is the first open-source release. The K2040-written app source is published under GPL-3.0-only. Some documentation and artwork are available under CC BY 4.0 where they are specifically marked that way. Third-party material keeps its own licence.
 
-Historical binary versions through v0.15.0 retain their historical terms.
+Older releases keep the terms they were originally published under.
