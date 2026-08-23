@@ -7,17 +7,15 @@
   <meta name="color-scheme" content="light dark">
   <title>Updates · K2040 Android Projects</title>
   <link rel="stylesheet" href="/K2040-Android-Releases/styles.css?v=20260817-1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/navigation.css?v=20260823f2">
   <link rel="stylesheet" href="/K2040-Android-Releases/updates.css?v=20260817-1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/mobile-navigation.css?v=20260823-1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/global-navigation.css?v=20260823-6">
-  <link rel="stylesheet" href="/K2040-Android-Releases/android-redesign.css?v=20260823-2">
-  <link rel="stylesheet" href="/K2040-Android-Releases/final-parity.css?v=20260823-3">
+  <link rel="stylesheet" href="/K2040-Android-Releases/mobile-navigation.css?v=20260823u1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/android-redesign.css?v=20260823u1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/shared-ui.css?v=20260823u1">
   <script defer src="/K2040-Android-Releases/translations.js?v=20260817-1"></script>
   <script defer src="/K2040-Android-Releases/updates/latest.js?v=20260823-1"></script>
   <script defer src="/K2040-Android-Releases/updates/archive-2026.js?v=20260823-1"></script>
-  <script defer src="/K2040-Android-Releases/global-navigation.js?v=20260823-4"></script>
-  <script defer src="/K2040-Android-Releases/site.js?v=20260823-3"></script>
+  <script defer src="/K2040-Android-Releases/shared-navigation.js?v=20260823u1"></script>
+  <script defer src="/K2040-Android-Releases/site.js?v=20260823u1"></script>
 </head>
 <body data-page-title-key="pages.updates.metaTitle" data-page-description-key="pages.updates.metaDescription">
   <div class="page-shell">
@@ -45,12 +43,12 @@
     <main>
       <section class="page-intro"><p class="eyebrow" data-i18n="pages.updates.eyebrow">K2040 Android Projects</p><h1 data-i18n="pages.updates.title">Updates</h1><p class="lead" data-i18n="pages.updates.description">Published releases, new official download channels, and important app-specific changes. Newest first.</p></section>
       <section class="content-section update-archive"><div class="update-list" data-update-list></div></section>
-    </main>
 
-    <footer class="site-footer">
-      <div class="section-heading"><p class="eyebrow">K2040 Projects</p><h2 data-i18n="common.about">About</h2><p data-i18n="footer.authority">GitHub Releases remains the authoritative source for published APKs and checksums.</p></div>
-      <nav class="about-links" aria-label="K2040"><a href="https://kamui2040.github.io/" data-i18n="footer.projects">K2040 projects</a><a href="/K2040-Android-Releases/">Android Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/">Gaming Mods</a><a href="https://github.com/Kamui2040" data-i18n="footer.github">GitHub</a><a href="https://next.nexusmods.com/profile/kamui2040">Nexus Mods</a><a href="https://ko-fi.com/k2040" data-i18n="footer.kofi">Ko-fi</a><a href="https://www.instagram.com/k2040.projects/" data-i18n="footer.instagram">Instagram</a></nav>
-    </footer>
+      <section class="content-section about-section site-footer" id="about">
+        <div class="section-heading"><p class="eyebrow">K2040 Projects</p><h2 data-i18n="common.about">About</h2><p data-i18n="footer.authority">GitHub Releases remains the authoritative source for published APKs and checksums.</p></div>
+        <nav class="about-links" aria-label="K2040"><a href="https://kamui2040.github.io/" data-i18n="footer.projects">K2040 projects</a><a href="/K2040-Android-Releases/">Android Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/">Gaming Mods</a><a href="https://github.com/Kamui2040" data-i18n="footer.github">GitHub</a><a href="https://next.nexusmods.com/profile/kamui2040">Nexus Mods</a><a href="https://ko-fi.com/k2040" data-i18n="footer.kofi">Ko-fi</a><a href="https://www.instagram.com/k2040.projects/" data-i18n="footer.instagram">Instagram</a></nav>
+      </section>
+    </main>
 
     <template id="update-card-template"><a class="update-card" data-update-card><div class="update-media" data-update-media><img class="update-image" data-update-image src="" alt=""></div><div class="update-copy"><div class="update-meta"><time data-update-date></time><span data-update-category></span></div><h3 data-update-title></h3><p data-update-summary></p><span class="update-action" data-update-action>Read more →</span></div></a></template>
   </div>
