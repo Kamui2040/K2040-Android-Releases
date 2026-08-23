@@ -2,43 +2,32 @@
 
 [Deutsche Version](esca-agnellis-v0.14.0-beta.1.md)
 
-This is the first planned public beta release of Esca Agnellis.
-
-## Release identity
-
-- Version: `0.14.0`
-- versionCode: `37`
-- Package ID: `com.k2040.escaagnellis`
-- Minimum version: Android 8.0 / API 26
-- APK: `Esca-Agnellis-v0.14.0-vc37-release.apk`
-- APK size: `6370584` bytes
-- SHA-256: `FB6F7BA32415C96AB0B67E5441F56FFEBF8B3DB751C9DB681C42DEFF6B596B90`
-- Certificate SHA-256: `03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6`
+Esca Agnellis v0.14.0 was the first public beta.
 
 ## Included
 
-- 22 daily default blocks across eight groups;
-- combined fruit and vegetable group;
-- independent subtype extras in mixed rows;
-- exact date navigation from the overview;
-- revised portion reference using hand and household measures;
-- local backup contract `schemaVersion: 2`;
+- daily tracking across eight food groups;
+- combined fruit and vegetable tracking;
+- separate extra amounts in mixed rows;
+- direct date selection from the overview;
+- clearer portion help using hand and household measures;
+- local backups;
 - system, light, dark, and cozy pastel themes.
 
 ## Privacy
 
-The app has no Internet permission and uses no telemetry, analytics, advertising, accounts, cloud synchronization, or automatic crash reporting.
+The app has no Internet permission and uses no accounts, ads, analytics, telemetry, cloud sync, or automatic crash reporting.
 
 ## Compatibility
 
-`0.14.0` is a new independent public compatibility baseline. Older private Esca data and older backup formats are unsupported.
+This beta started a new public compatibility line. Older private Esca data and older backup formats are not supported.
 
-Create a current backup before updates or testing.
+Create a current backup before updating or testing.
 
 ## Known issues
 
-No confirmed public issues are currently known. The numeric extra badge in mixed rows is intentional behavior.
+No confirmed public issues were known for this release. The extra-count badge in mixed rows is intentional behavior.
 
-## Beta status
+## Status
 
-This release is intended for public testing and is not marked as a stable production release.
+This was a public beta for testing, not a stable release.
