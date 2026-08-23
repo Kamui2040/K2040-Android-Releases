@@ -343,10 +343,46 @@
     });
   };
 
+  const positionAppMenu = () => {
+    const menu = document.querySelector("details.app-menu");
+    const panel = menu?.querySelector(".app-menu-panel");
+    const summary = menu?.querySelector("summary");
+    if (!menu || !panel || !summary) {
+      return;
+    }
+
+    if (window.innerWidth <= 760) {
+      panel.style.removeProperty("left");
+      panel.style.removeProperty("right");
+      return;
+    }
+
+    panel.style.left = "0";
+    panel.style.right = "auto";
+
+    if (!menu.open) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      const trigger = summary.getBoundingClientRect();
+      const panelWidth = panel.offsetWidth || 360;
+      const margin = 16;
+      const fitsRight = trigger.left + panelWidth <= window.innerWidth - margin;
+      const fitsLeft = trigger.right - panelWidth >= margin;
+
+      if (!fitsRight && fitsLeft) {
+        panel.style.left = "auto";
+        panel.style.right = "0";
+      }
+    });
+  };
+
   const initializePage = () => {
     const themeToggle = document.querySelector("[data-theme-toggle]");
 
     applyTranslations();
+    positionAppMenu();
 
     if (themeToggle) {
       themeToggle.addEventListener("click", () => {
@@ -379,6 +415,9 @@
       details.addEventListener("toggle", () => {
         if (details.open) {
           closeSiblingMenus(details);
+          if (details.classList.contains("app-menu")) {
+            positionAppMenu();
+          }
         }
       });
     });
@@ -390,6 +429,8 @@
         });
       }
     });
+
+    window.addEventListener("resize", positionAppMenu, { passive: true });
 
     const updateForSystemPreference = () => {
       if (!root.dataset.theme) {
