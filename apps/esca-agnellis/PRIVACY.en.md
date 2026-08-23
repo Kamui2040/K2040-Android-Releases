@@ -2,36 +2,36 @@
 
 ## Summary
 
-Esca Agnellis works locally on the Android device. The app requests no Internet permission and uses no accounts, advertising, telemetry, analytics, cloud synchronization, automatic crash reporting, or background data collection.
+Esca Agnellis works locally on your Android device. It has no Internet permission and uses no accounts, ads, analytics, telemetry, cloud sync, automatic crash reporting, or background data collection.
 
-## Locally stored data
+## Data stored on the device
 
-The app stores locally:
+The app stores:
 
-- selected daily portions and extra portions;
+- your daily portion choices and extra portions;
 - display, language, and theme settings;
-- optional companion state, when the companion has been enabled.
+- optional companion data if you enable the companion.
 
-The companion is disabled by default. Its state and backup remain separate from core tracking and its backup.
+The companion is off by default. Its data and backup are kept separate from the main tracking data and backup.
 
 ## Backups and PDF reports
 
-Backups, restores, and PDF reports use Android's document picker. The app writes only to a location selected by the user and reads only a file selected by the user. There is no automatic upload and no required synchronization.
+Backups, restores, and PDF reports use Android's normal file picker. The app only reads or writes a file or location that you choose. Nothing is uploaded automatically.
 
 ## External links
 
-Information or voluntary support links are passed to the selected browser only after an explicit user action. The app does not load these destinations in the background.
+The app opens information or support links in your chosen browser only after you tap them. It does not open or load those pages in the background.
 
 ## Permissions
 
-The published manifest must not contain the Internet permission. Features that open Android's document picker use the access rights provided by the system for the selected document.
+The app does not request Internet access. When you create or restore a backup or save a PDF report, Android gives the app access only to the file or location you select.
 
-## Deletion and switching signing variants
+## Removing data or switching download sources
 
-Local app data is managed by Android. Manually uninstalling the app or clearing its app data removes it. K2040 developer APKs and independently signed F-Droid APKs cannot be installed directly over one another. Before switching, export the supported primary backup and, when the companion is enabled, the separate companion backup.
+Android manages the app's local data. Uninstalling the app or clearing its app data removes that local data.
 
-No project tool may automatically uninstall the app or clear app data.
+F-Droid signs its own build, while GitHub, APKPure, and Uptodown provide the K2040-published build. Android does not normally allow one of these differently signed versions to be installed directly over the other. Create the main backup before switching. If you use the optional companion, create its separate backup too.
 
-## No health-data transmission
+## Health information
 
-The app transmits no nutrition or usage data. It is not a medical product and does not provide diagnosis, treatment, or individualized nutritional advice.
+Esca Agnellis does not send nutrition or usage data anywhere. It is not a medical product and does not provide diagnosis, treatment, or personal nutritional advice.
