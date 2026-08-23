@@ -1,20 +1,19 @@
-/* Consistent presentation for official download destinations.
-   Brand names remain text so links stay clear without depending on third-party logo assets. */
+/* Download destinations use the same single-piece control as Gaming actions. */
 .download-button--source {
-  gap: .55rem;
+  gap: .4rem;
 }
 
 .download-source-icon {
-  display: inline-grid;
-  width: 1.45rem;
-  height: 1.45rem;
-  place-items: center;
+  display: inline;
+  width: auto;
+  height: auto;
   flex: 0 0 auto;
-  border: 1px solid color-mix(in srgb, var(--accent) 58%, var(--border));
-  background: color-mix(in srgb, var(--accent-soft) 68%, transparent);
-  color: var(--accent-dark);
-  font-size: .82rem;
-  font-weight: 900;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 750;
   line-height: 1;
 }
 
