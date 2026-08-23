@@ -114,11 +114,7 @@
         const media = fragment.querySelector("[data-update-media]");
         const image = fragment.querySelector("[data-update-image]");
         const localizedImage = localizedUpdateImage(update);
-        if (card) {
-          if (update.href) card.href = update.href;
-          else { card.removeAttribute("href"); card.setAttribute("aria-disabled", "true"); }
-          if (index === 0) card.classList.add("update-card--featured");
-        }
+        if (card && index === 0) card.classList.add("update-card--featured");
         if (media && image && localizedImage) {
           image.src = localizedImage;
           image.alt = strings.imageAlt || "";
@@ -141,7 +137,11 @@
         if (category) category.textContent = strings.category || "";
         if (title) title.textContent = strings.title || "";
         if (summary) summary.textContent = strings.summary || "";
-        if (action) action.textContent = `${translate("actions.readMore") || "Read more"} →`;
+        if (action) {
+          action.textContent = `${translate("actions.readMore") || "Read more"} →`;
+          if (update.href) action.href = update.href;
+          else action.remove();
+        }
         list.append(fragment);
       });
     });

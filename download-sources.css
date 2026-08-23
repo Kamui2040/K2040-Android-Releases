@@ -1,7 +1,4 @@
-/* Android download-row layout only. Button appearance comes from Gaming. */
-.download-source-label {
-  min-width: 0;
-}
+/* Android download-row layout only. Action appearance comes from Gaming's .text-link. */
 
 @media (max-width: 620px) {
   .download-row {
@@ -10,12 +7,12 @@
     width: 100%;
   }
 
-  .download-button--source {
+  .download-source {
     width: 100%;
     min-width: 0;
   }
 
-  .download-button--source:last-child:nth-child(odd) {
+  .download-source:last-child:nth-child(odd) {
     grid-column: 1 / -1;
   }
 }
@@ -25,7 +22,7 @@
     grid-template-columns: 1fr;
   }
 
-  .download-button--source:last-child:nth-child(odd) {
+  .download-source:last-child:nth-child(odd) {
     grid-column: auto;
   }
 }
