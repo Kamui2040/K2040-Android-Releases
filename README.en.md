@@ -16,7 +16,7 @@ This public repository is the official release and documentation hub for publish
 
 - Main K2040 page: <https://kamui2040.github.io/>
 - Android Projects: <https://kamui2040.github.io/K2040-Android-Releases/>
-- Gaming Mods: <https://kamui2040.github.io/gaming-mods/>
+- Gaming Mods: <https://kamui2040.github.io/K2040-Gaming-Mods/>
 
 The Android Projects site brings the current apps, download links, screenshots, privacy information, and updates together in one place.
 
@@ -38,12 +38,11 @@ GeoJoystick provides a joystick-style way to control Android mock locations.
 Esca Agnellis is a simple, private food-pyramid tracker that keeps its data on the device.
 
 - App page: <https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/>
-- Documentation: [Esca Agnellis documentation](apps/esca-agnellis/README.en.md)
+- Source and documentation: <https://github.com/Kamui2040/Esca-Agnellis-Android>
 - GitHub release: <https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0>
 - F-Droid: <https://f-droid.org/packages/com.k2040.escaagnellis/>
 - APKPure: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Uptodown: <https://esca-agnellis.en.uptodown.com/android>
-- Source: <https://github.com/Kamui2040/Esca-Agnellis-Android>
 
 ## Downloads
 
