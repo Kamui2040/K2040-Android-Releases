@@ -1,136 +1,21 @@
-/* Android-specific composition. Shared controls and the K2040 cascade live in shared-ui.css. */
+/* Android-only content layout. Shared navigation and controls come from Gaming. */
 
-:root {
-  --background: #aeb7c0;
-  --surface: rgba(190, 199, 208, .97);
-  --surface-strong: #b8c2cc;
-  --surface-muted: #b9c1c9;
-  --text: #1e2933;
-  --muted: #42505c;
-  --accent: #3f91c4;
-  --accent-dark: #1d577d;
-  --accent-soft: #b6c7d5;
-  --taupe-soft: #b3bdc7;
-  --graphite-soft: #b9c1c9;
-  --border: #7f8c98;
-  --focus-ring: rgba(63, 145, 196, .28);
-  --shadow: 0 18px 45px rgba(24, 34, 43, .28);
-  --card-hover-shadow: 0 18px 38px rgba(24, 34, 43, .28);
-  --nav-bg: #20262d;
-  --nav-text: #f5f7f9;
-  --nav-muted: #c9d0d6;
-  --nav-hover: rgba(255, 255, 255, .09);
-  --nav-border: rgba(255, 255, 255, .1);
-}
-
-:root[data-theme="dark"] {
-  --background: #090c10;
-  --surface: rgba(15, 20, 26, .97);
-  --surface-strong: #171e26;
-  --surface-muted: #252b31;
-  --text: #edf1f5;
-  --muted: #aeb8c2;
-  --accent: #69b9e8;
-  --accent-dark: #a3d8f5;
-  --accent-soft: #1b3140;
-  --taupe-soft: #242c34;
-  --graphite-soft: #252b31;
-  --border: #3d4955;
-  --focus-ring: rgba(105, 185, 232, .28);
-  --shadow: 0 18px 45px rgba(0, 0, 0, .48);
-  --card-hover-shadow: 0 18px 38px rgba(0, 0, 0, .42);
-  --nav-bg: #0f1318;
-  --nav-text: #f7f9fb;
-  --nav-muted: #c6ccd2;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --background: #090c10;
-    --surface: rgba(15, 20, 26, .97);
-    --surface-strong: #171e26;
-    --surface-muted: #252b31;
-    --text: #edf1f5;
-    --muted: #aeb8c2;
-    --accent: #69b9e8;
-    --accent-dark: #a3d8f5;
-    --accent-soft: #1b3140;
-    --taupe-soft: #242c34;
-    --graphite-soft: #252b31;
-    --border: #3d4955;
-    --focus-ring: rgba(105, 185, 232, .28);
-    --shadow: 0 18px 45px rgba(0, 0, 0, .48);
-    --card-hover-shadow: 0 18px 38px rgba(0, 0, 0, .42);
-    --nav-bg: #0f1318;
-    --nav-text: #f7f9fb;
-    --nav-muted: #c6ccd2;
-  }
-}
-
-body {
-  background:
-    radial-gradient(circle at top left, rgba(71, 145, 190, .14), transparent 30rem),
-    radial-gradient(circle at bottom right, rgba(73, 92, 108, .1), transparent 32rem),
-    var(--background);
-}
-
-.page-shell {
-  width: min(1180px, calc(100% - 2rem));
-}
-
-h1 {
-  margin-bottom: .65rem;
-  font-size: clamp(2.2rem, 7vw, 4.6rem);
-  line-height: .98;
-  letter-spacing: normal;
-}
-
-h2 {
-  margin-bottom: .6rem;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  line-height: normal;
-}
-
-h3 {
-  margin-bottom: .55rem;
-  font-size: 1.25rem;
-}
-
-.eyebrow {
-  margin: 0 0 .35rem;
-  color: var(--accent-dark);
-  font-size: .82rem;
-  font-weight: 800;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-.lead,
-.section-heading > p:not(.eyebrow),
-.detail-card > p:not(.eyebrow),
-.app-promo-copy p,
-.site-footer p {
-  color: var(--muted);
-  line-height: 1.65;
-}
-
-.lead,
-.section-heading > p:not(.eyebrow) {
-  font-size: 1.05rem;
-}
-
-/* Android pages use the same angular panel language while retaining their own content layouts. */
-:where(.landing-hero,.page-intro,.content-section,.detail-card,.site-footer,.esca-promo-section,.geo-promo-section,.app-promo-card,.update-card,.screenshot-card) {
+/* Android-specific panels use Gaming's angular panel language. */
+:where(.detail-card,.esca-promo-section,.geo-promo-section,.app-promo-card,.update-card,.screenshot-card) {
   position: relative;
   isolation: isolate;
   border: 1px solid rgba(0,207,215,.54) !important;
   border-radius: 0 !important;
   background-color: var(--surface);
-  box-shadow: 0 0 0 1px rgba(0,130,143,.32),0 0 22px rgba(0,210,220,.08),inset 0 0 30px rgba(0,209,219,.035),0 20px 44px rgba(0,0,0,.24) !important;
+  box-shadow:
+    0 0 0 1px rgba(0,130,143,.32),
+    0 0 22px rgba(0,210,220,.08),
+    inset 0 0 30px rgba(0,209,219,.035),
+    0 20px 44px rgba(0,0,0,.24) !important;
   clip-path: polygon(0 14px,14px 0,calc(100% - 14px) 0,100% 14px,100% calc(100% - 14px),calc(100% - 14px) 100%,14px 100%,0 calc(100% - 14px));
 }
 
-:where(.landing-hero,.page-intro,.content-section,.detail-card,.site-footer,.esca-promo-section,.geo-promo-section,.app-promo-card,.update-card,.screenshot-card)::before {
+:where(.detail-card,.esca-promo-section,.geo-promo-section,.app-promo-card,.update-card,.screenshot-card)::before {
   position: absolute;
   z-index: 3;
   inset: 7px;
@@ -145,23 +30,22 @@ h3 {
   clip-path: polygon(0 8px,8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px));
 }
 
-.content-section,
-.page-intro,
-.detail-card,
-.site-footer {
+.detail-card {
   background-image:
     linear-gradient(135deg,rgba(105,185,232,.08),transparent 26%),
     linear-gradient(315deg,rgba(105,185,232,.045),transparent 28%);
 }
 
-/* Landing hero follows the Gaming composition while preserving Android artwork and copy. */
+/* Android landing hero keeps its artwork but uses Gaming's cinematic composition. */
 .landing-hero--stacked {
   position: relative;
   display: block;
   min-height: 470px;
   overflow: hidden;
+  border-radius: 0 !important;
   background: #090e13;
   color: #f5f8fa;
+  clip-path: polygon(0 14px,14px 0,calc(100% - 14px) 0,100% 14px,100% calc(100% - 14px),calc(100% - 14px) 100%,14px 100%,0 calc(100% - 14px));
 }
 
 .landing-hero--stacked::after {
@@ -220,12 +104,7 @@ h3 {
   color: #d0d8df;
 }
 
-/* App artwork composition is owned by app-cards.css. */
-.app-promo-list {
-  margin-top: 1.5rem;
-}
-
-/* Detail pages: equal card rows and bottom-aligned actions. */
+/* Android app-detail content. */
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
@@ -263,10 +142,6 @@ h3 {
   padding-top: 1.2rem;
 }
 
-.screenshot-section {
-  margin-top: 1.5rem;
-}
-
 .download-row,
 .resource-links,
 .about-links {
@@ -275,9 +150,11 @@ h3 {
   gap: .7rem;
 }
 
-/* Detail metadata uses the same compact field treatment as the Gaming cards. */
 .status-row {
+  display: flex;
+  flex-wrap: wrap;
   gap: .4rem;
+  margin-top: 1.2rem;
 }
 
 .status-row .version-pill,
@@ -290,7 +167,7 @@ h3 {
   border: 1px solid rgba(0,217,229,.28);
   border-radius: 0;
   background: transparent;
-  color: var(--accent-dark);
+  color: var(--accentText);
   font-size: .67rem;
   font-weight: 750;
   line-height: 1.2;
@@ -299,21 +176,56 @@ h3 {
   clip-path: none;
 }
 
-/* One About component across Android landing, app, and update pages. */
-.site-footer {
-  display: block;
+.feature-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.feature-list li {
+  margin: .55rem 0;
+  padding-left: .2rem;
+  line-height: 1.5;
+}
+
+.screenshot-section {
   margin-top: 1.5rem;
-  padding: clamp(1.4rem,4vw,2.5rem);
 }
 
-.site-footer p {
-  max-width: 760px;
-  margin-bottom: 0;
-  font-size: 1.05rem;
-  line-height: 1.65;
+.screenshot-gallery {
+  display: grid;
+  grid-auto-columns: minmax(210px,1fr);
+  grid-auto-flow: column;
+  gap: 1rem;
+  margin-top: 1.4rem;
+  padding-bottom: .4rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
 }
 
-.site-footer .about-links {
+.screenshot-card {
+  display: flex;
+  min-height: 390px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  scroll-snap-align: start;
+}
+
+.screenshot-card img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: 0 10px 28px rgba(0,0,0,.28);
+}
+
+/* The About block uses the same structure as Gaming; only its copy differs. */
+.about-links {
   justify-content: flex-start;
   gap: .65rem;
   margin-top: 1.25rem;
@@ -326,10 +238,6 @@ h3 {
 }
 
 @media (max-width: 760px) {
-  .page-shell {
-    width: min(100% - 1rem,1180px);
-  }
-
   .landing-hero--stacked {
     min-height: 500px;
   }
@@ -347,11 +255,12 @@ h3 {
     padding: 1.5rem;
   }
 
-  .content-section,
-  .page-intro,
-  .detail-card,
-  .site-footer {
-    padding: 1.25rem;
+  .screenshot-gallery {
+    grid-auto-columns: minmax(78vw,1fr);
+  }
+
+  .screenshot-card {
+    min-height: 340px;
   }
 }
 

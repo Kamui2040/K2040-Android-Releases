@@ -6,18 +6,18 @@
   <meta name="description" content="Published updates for K2040 Android projects.">
   <meta name="color-scheme" content="light dark">
   <title>Updates · K2040 Android Projects</title>
-  <link rel="stylesheet" href="/K2040-Android-Releases/styles.css?v=20260817-1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/updates.css?v=20260817-1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/mobile-navigation.css?v=20260823u1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/android-redesign.css?v=20260823u1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/shared-ui.css?v=20260823u1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/styles.css?v=20260823gbase1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/updates.css?v=20260823gbase1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/mobile-navigation.css?v=20260823gbase1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/android-redesign.css?v=20260823gbase1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/shared-ui.css?v=20260823gbase1">
   <script defer src="/K2040-Android-Releases/translations.js?v=20260817-1"></script>
   <script defer src="/K2040-Android-Releases/updates/latest.js?v=20260823-1"></script>
   <script defer src="/K2040-Android-Releases/updates/archive-2026.js?v=20260823-1"></script>
   <script defer src="/K2040-Android-Releases/shared-navigation.js?v=20260823u1"></script>
-  <script defer src="/K2040-Android-Releases/site.js?v=20260823u1"></script>
+  <script defer src="/K2040-Android-Releases/site.js?v=20260823gbase1"></script>
 </head>
-<body data-page-title-key="pages.updates.metaTitle" data-page-description-key="pages.updates.metaDescription">
+<body class="projects-home-page android-page" data-page-title-key="pages.updates.metaTitle" data-page-description-key="pages.updates.metaDescription">
   <div class="page-shell">
     <header class="site-header">
       <div class="site-brand">
@@ -35,7 +35,7 @@
       <nav class="site-nav" aria-label="Primary">
         <details class="menu app-menu"><summary data-i18n-aria-label="nav.appsMenu" aria-label="Available apps"><span data-i18n="nav.apps">Apps</span><span class="menu-caret" aria-hidden="true">⌄</span></summary><div class="menu-panel app-menu-panel"><a href="/K2040-Android-Releases/apps/esca-agnellis/"><strong>Esca Agnellis</strong><small data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</small></a><a href="/K2040-Android-Releases/apps/geojoystick/"><strong>GeoJoystick</strong><small data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing.</small></a></div></details>
         <a class="nav-link" href="/K2040-Android-Releases/#updates" data-i18n="nav.updates">Updates</a>
-        <details class="menu language-menu"><summary data-i18n-aria-label="controls.language" aria-label="Language"><span class="language-flag" data-language-current-flag aria-hidden="true">🇬🇧</span><span class="language-current" data-language-current-label>English</span><span class="menu-caret" aria-hidden="true">⌄</span></summary><div class="menu-panel language-menu-panel"><button type="button" data-language-option="en"><span aria-hidden="true">🇬🇧</span><span>English</span></button><button type="button" data-language-option="de"><span aria-hidden="true">🇩🇪</span><span>Deutsch</span></button><button type="button" data-language-option="pt-PT"><span aria-hidden="true">🇵🇹</span><span>Português</span></button><button type="button" data-language-option="es"><span aria-hidden="true">🇪🇸</span><span>Español</span></button><button type="button" data-language-option="fr"><span aria-hidden="true">🇫🇷</span><span>Français</span></button></div></details>
+        <label class="nav-language-control"><span class="visually-hidden" data-i18n="controls.language">Language</span><select class="nav-language-select" data-language-select aria-label="Language" data-i18n-aria-label="controls.language"><option value="en">🇬🇧 English</option><option value="de">🇩🇪 Deutsch</option><option value="pt-PT">🇵🇹 Português</option><option value="es">🇪🇸 Español</option><option value="fr">🇫🇷 Français</option></select></label>
         <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span data-theme-label>Dark</span></button>
       </nav>
     </header>
@@ -44,7 +44,7 @@
       <section class="page-intro"><p class="eyebrow" data-i18n="pages.updates.eyebrow">K2040 Android Projects</p><h1 data-i18n="pages.updates.title">Updates</h1><p class="lead" data-i18n="pages.updates.description">Published releases, new official download channels, and important app-specific changes. Newest first.</p></section>
       <section class="content-section update-archive"><div class="update-list" data-update-list></div></section>
 
-      <section class="content-section about-section site-footer" id="about">
+      <section class="content-section about-section" id="about">
         <div class="section-heading"><p class="eyebrow">K2040 Projects</p><h2 data-i18n="common.about">About</h2><p data-i18n="footer.authority">GitHub Releases remains the authoritative source for published APKs and checksums.</p></div>
         <nav class="about-links" aria-label="K2040"><a href="https://kamui2040.github.io/" data-i18n="footer.projects">K2040 projects</a><a href="/K2040-Android-Releases/">Android Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/">Gaming Mods</a><a href="https://github.com/Kamui2040" data-i18n="footer.github">GitHub</a><a href="https://next.nexusmods.com/profile/kamui2040">Nexus Mods</a><a href="https://ko-fi.com/k2040" data-i18n="footer.kofi">Ko-fi</a><a href="https://www.instagram.com/k2040.projects/" data-i18n="footer.instagram">Instagram</a></nav>
       </section>

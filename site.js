@@ -73,6 +73,7 @@
 
   const updateLanguageControl = () => {
     const presentation = languagePresentation[currentLanguage] || languagePresentation.en;
+    document.querySelectorAll("[data-language-select]").forEach((select) => { select.value = currentLanguage; });
     document.querySelectorAll("[data-language-current-flag]").forEach((element) => { element.textContent = presentation.flag; });
     document.querySelectorAll("[data-language-current-label]").forEach((element) => { element.textContent = presentation.label; });
     document.querySelectorAll("[data-language-option]").forEach((button) => {
@@ -202,6 +203,13 @@
     });
   };
 
+  const setLanguage = (language) => {
+    if (!supportedLanguages.includes(language)) return;
+    currentLanguage = language;
+    writeStorage(languageStorageKey, language);
+    applyTranslations();
+  };
+
   const initializePage = () => {
     const themeToggle = document.querySelector("[data-theme-toggle]");
     applyTranslations();
@@ -214,13 +222,13 @@
       updateThemeToggle(themeToggle);
     });
 
+    document.querySelectorAll("[data-language-select]").forEach((select) => {
+      select.addEventListener("change", () => setLanguage(select.value));
+    });
+
     document.querySelectorAll("[data-language-option]").forEach((button) => {
       button.addEventListener("click", () => {
-        const language = button.dataset.languageOption;
-        if (!supportedLanguages.includes(language)) return;
-        currentLanguage = language;
-        writeStorage(languageStorageKey, language);
-        applyTranslations();
+        setLanguage(button.dataset.languageOption);
         button.closest("details")?.removeAttribute("open");
       });
     });
