@@ -1,0 +1,161 @@
+/* Final 4:5 Android app-card artwork with website-rendered copy. */
+
+.app-promo-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1.25rem !important;
+  margin-top: 1.5rem !important;
+}
+
+.app-promo-card {
+  position: relative !important;
+  display: block !important;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  background: #0a131d !important;
+  color: #edf3f6 !important;
+  text-decoration: none !important;
+}
+
+.app-promo-media {
+  position: absolute !important;
+  z-index: 1 !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.app-card-artwork {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.app-promo-copy {
+  position: absolute !important;
+  z-index: 4 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  display: flex !important;
+  height: 35% !important;
+  min-height: 0 !important;
+  align-items: stretch !important;
+  justify-content: space-between !important;
+  flex-direction: column !important;
+  gap: .7rem !important;
+  padding: clamp(.9rem, 2vw, 1.25rem) !important;
+  background: transparent !important;
+  color: #edf3f6 !important;
+}
+
+.app-promo-card--esca .app-promo-copy {
+  color: #f4f2e9 !important;
+}
+
+.app-promo-card--geo .app-promo-copy {
+  color: #edf5fa !important;
+}
+
+.app-promo-copy > div {
+  min-width: 0;
+}
+
+.app-promo-copy .app-name-row {
+  display: flex !important;
+  width: 100% !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: .7rem !important;
+}
+
+.app-promo-copy h3 {
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: clamp(1.2rem, 2.3vw, 1.55rem) !important;
+  line-height: 1.15 !important;
+}
+
+.app-promo-copy p {
+  margin: .45rem 0 0 !important;
+  color: rgba(235, 242, 245, .82) !important;
+  font-size: clamp(.88rem, 1.45vw, 1rem) !important;
+  line-height: 1.45 !important;
+}
+
+.app-promo-card--esca .app-promo-copy p {
+  color: rgba(244, 242, 233, .82) !important;
+}
+
+.app-promo-copy .version-pill,
+.app-card-meta .status-badge {
+  display: inline-flex !important;
+  min-height: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: .24rem .42rem !important;
+  border: 1px solid rgba(0, 217, 229, .34) !important;
+  border-radius: 0 !important;
+  background: rgba(8, 18, 25, .44) !important;
+  color: #dce8ec !important;
+  font-size: .67rem !important;
+  font-weight: 750 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .02em !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+}
+
+.app-card-meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .35rem !important;
+  margin-top: .6rem !important;
+}
+
+.app-promo-copy .text-action {
+  align-self: flex-start !important;
+  flex: 0 0 auto !important;
+}
+
+@media (max-width: 900px) {
+  .app-promo-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .app-promo-copy {
+    gap: .55rem !important;
+    padding: .85rem !important;
+  }
+
+  .app-promo-copy h3 {
+    font-size: 1.18rem !important;
+  }
+
+  .app-promo-copy p {
+    margin-top: .35rem !important;
+    font-size: .86rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .app-card-meta {
+    gap: .28rem !important;
+    margin-top: .45rem !important;
+  }
+
+  .app-promo-copy .version-pill,
+  .app-card-meta .status-badge {
+    padding: .2rem .34rem !important;
+    font-size: .62rem !important;
+  }
+}
