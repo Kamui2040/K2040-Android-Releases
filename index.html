@@ -11,143 +11,70 @@
   <link rel="stylesheet" href="/K2040-Android-Releases/promo.css?v=20260817-5">
   <link rel="stylesheet" href="/K2040-Android-Releases/updates.css?v=20260817-1">
   <link rel="stylesheet" href="/K2040-Android-Releases/mobile-navigation.css?v=20260823-1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/global-navigation.css?v=20260823-1">
   <script defer src="/K2040-Android-Releases/translations.js?v=20260817-1"></script>
   <script defer src="/K2040-Android-Releases/content.js?v=20260818-1"></script>
+  <script defer src="/K2040-Android-Releases/global-navigation.js?v=20260823-1"></script>
   <script defer src="/K2040-Android-Releases/site.js?v=20260823-2"></script>
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <div class="site-brand">
-        <a class="site-brand-name" href="https://kamui2040.github.io/" aria-label="K2040 main page"><strong>K2040</strong></a>
+        <details class="menu global-menu" data-global-menu>
+          <summary data-global-aria="menu" aria-label="K2040 navigation"><strong>K2040</strong><span class="menu-caret" aria-hidden="true">⌄</span></summary>
+          <div class="menu-panel global-menu-panel">
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="home">Home</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Home"><a href="https://kamui2040.github.io/" data-global-i18n="home">Home</a><a href="https://kamui2040.github.io/#projects" data-global-i18n="projectAreas">Project Areas</a><a href="https://kamui2040.github.io/#news" data-global-i18n="news">News</a><a href="https://kamui2040.github.io/#about" data-global-i18n="about">About</a></nav></details>
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="android">Android Projects</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Android Projects"><a href="/K2040-Android-Releases/" data-global-i18n="androidHome">Android Home</a><a href="#apps" data-global-i18n="apps">Apps</a><a href="#updates" data-global-i18n="updates">Updates</a><a href="#about" data-global-i18n="about">About</a></nav></details>
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="gaming">Gaming Mods</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Gaming Mods"><a href="https://kamui2040.github.io/K2040-Gaming-Mods/" data-global-i18n="modsHome">Mods Home</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#projects" data-global-i18n="modProjects">Mod Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#updates" data-global-i18n="updates">Updates</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#about" data-global-i18n="about">About</a></nav></details>
+          </div>
+        </details>
         <a class="site-brand-section" href="/K2040-Android-Releases/" aria-current="page"><span data-i18n="nav.home">Android Projects</span></a>
       </div>
 
       <nav class="site-nav" aria-label="Primary">
         <details class="menu app-menu">
-          <summary data-i18n-aria-label="nav.appsMenu" aria-label="Available apps">
-            <span data-i18n="nav.apps">Apps</span>
-            <span class="menu-caret" aria-hidden="true">⌄</span>
-          </summary>
+          <summary data-i18n-aria-label="nav.appsMenu" aria-label="Available apps"><span data-i18n="nav.apps">Apps</span><span class="menu-caret" aria-hidden="true">⌄</span></summary>
           <div class="menu-panel app-menu-panel">
-            <a href="/K2040-Android-Releases/apps/esca-agnellis/">
-              <strong>Esca Agnellis</strong>
-              <small data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</small>
-            </a>
-            <a href="/K2040-Android-Releases/apps/geojoystick/">
-              <strong>GeoJoystick</strong>
-              <small data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing.</small>
-            </a>
+            <a href="/K2040-Android-Releases/apps/esca-agnellis/"><strong>Esca Agnellis</strong><small data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</small></a>
+            <a href="/K2040-Android-Releases/apps/geojoystick/"><strong>GeoJoystick</strong><small data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing.</small></a>
           </div>
         </details>
-
-        <a class="nav-link" href="/K2040-Android-Releases/updates/" data-i18n="nav.updates">Updates</a>
-
+        <a class="nav-link" href="#updates" data-i18n="nav.updates">Updates</a>
         <details class="menu language-menu">
-          <summary data-i18n-aria-label="controls.language" aria-label="Language">
-            <span class="language-flag" data-language-current-flag aria-hidden="true">🇬🇧</span>
-            <span class="language-current" data-language-current-label>English</span>
-            <span class="menu-caret" aria-hidden="true">⌄</span>
-          </summary>
-          <div class="menu-panel language-menu-panel">
-            <button type="button" data-language-option="en"><span aria-hidden="true">🇬🇧</span><span>English</span></button>
-            <button type="button" data-language-option="de"><span aria-hidden="true">🇩🇪</span><span>Deutsch</span></button>
-            <button type="button" data-language-option="pt-PT"><span aria-hidden="true">🇵🇹</span><span>Português</span></button>
-            <button type="button" data-language-option="es"><span aria-hidden="true">🇪🇸</span><span>Español</span></button>
-            <button type="button" data-language-option="fr"><span aria-hidden="true">🇫🇷</span><span>Français</span></button>
-          </div>
+          <summary data-i18n-aria-label="controls.language" aria-label="Language"><span class="language-flag" data-language-current-flag aria-hidden="true">🇬🇧</span><span class="language-current" data-language-current-label>English</span><span class="menu-caret" aria-hidden="true">⌄</span></summary>
+          <div class="menu-panel language-menu-panel"><button type="button" data-language-option="en"><span aria-hidden="true">🇬🇧</span><span>English</span></button><button type="button" data-language-option="de"><span aria-hidden="true">🇩🇪</span><span>Deutsch</span></button><button type="button" data-language-option="pt-PT"><span aria-hidden="true">🇵🇹</span><span>Português</span></button><button type="button" data-language-option="es"><span aria-hidden="true">🇪🇸</span><span>Español</span></button><button type="button" data-language-option="fr"><span aria-hidden="true">🇫🇷</span><span>Français</span></button></div>
         </details>
-
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
-          <span class="theme-toggle-icon" aria-hidden="true">☾</span>
-          <span data-theme-label>Dark</span>
-        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span data-theme-label>Dark</span></button>
       </nav>
     </header>
 
     <main>
       <section class="landing-hero landing-hero--stacked">
-        <div class="landing-hero-media">
-          <img src="/K2040-Android-Releases/docs/assets/kofi-header.jpg" data-i18n-alt="hero.bannerAlt" alt="K2040 projects banner showing apps, mods, tools, and the wolf mascot" decoding="async">
-        </div>
-        <div class="landing-hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">K2040 Projects</p>
-          <h1 data-i18n="hero.title">Android Projects</h1>
-          <p class="lead" data-i18n="hero.description">Open-source Android apps with clear privacy, licensing, and direct download information.</p>
-        </div>
+        <div class="landing-hero-media"><img src="/K2040-Android-Releases/docs/assets/kofi-header.jpg" data-i18n-alt="hero.bannerAlt" alt="K2040 projects banner showing apps, mods, tools, and the wolf mascot" decoding="async"></div>
+        <div class="landing-hero-copy"><p class="eyebrow" data-i18n="hero.eyebrow">K2040 Projects</p><h1 data-i18n="hero.title">Android Projects</h1><p class="lead" data-i18n="hero.description">Open-source Android apps with clear privacy, licensing, and direct download information.</p></div>
       </section>
 
-      <section class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="landing.appsEyebrow">Released apps</p>
-          <h2 data-i18n="landing.appsTitle">Apps</h2>
-          <p data-i18n="landing.appsDescription">Choose an app for downloads, screenshots, privacy, source, and release details.</p>
-        </div>
-
+      <section class="content-section" id="apps">
+        <div class="section-heading"><p class="eyebrow" data-i18n="landing.appsEyebrow">Released apps</p><h2 data-i18n="landing.appsTitle">Apps</h2><p data-i18n="landing.appsDescription">Choose an app for downloads, screenshots, privacy, source, and release details.</p></div>
         <div class="app-promo-list">
-          <a class="app-promo-card app-promo-card--esca" href="/K2040-Android-Releases/apps/esca-agnellis/">
-            <div class="app-promo-media app-promo-media--esca">
-              <img src="/K2040-Android-Releases/assets/esca-agnellis-promo-banner.png" width="2172" height="724" alt="Esca Agnellis promotional banner with app icon, friendly low-pressure food-pyramid tracking message, feature badges, and three real app screenshots." loading="lazy" decoding="async">
-            </div>
-            <div class="app-promo-copy">
-              <div>
-                <div class="app-name-row"><h3>Esca Agnellis</h3><span class="version-pill">v0.16.0</span></div>
-                <p data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</p>
-              </div>
-              <span class="text-action" data-i18n="actions.viewApp">View app</span>
-            </div>
-          </a>
-
-          <a class="app-promo-card app-promo-card--geo" href="/K2040-Android-Releases/apps/geojoystick/">
-            <div class="app-promo-media app-promo-media--geo">
-              <img class="app-promo-geo-image geo-banner geo-banner--en" src="/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png" width="1024" height="500" alt="GeoJoystick v0.1.4 promotional banner" loading="lazy" decoding="async">
-              <img class="app-promo-geo-image geo-banner geo-banner--de" src="/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-de.png" width="1024" height="500" alt="GeoJoystick v0.1.4 Werbebanner" loading="lazy" decoding="async">
-            </div>
-            <div class="app-promo-copy">
-              <div>
-                <div class="app-name-row"><h3>GeoJoystick</h3><span class="version-pill">v0.1.4</span></div>
-                <p data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing using Android's standard mock-location flow.</p>
-              </div>
-              <span class="text-action" data-i18n="actions.viewApp">View app</span>
-            </div>
-          </a>
+          <a class="app-promo-card app-promo-card--esca" href="/K2040-Android-Releases/apps/esca-agnellis/"><div class="app-promo-media app-promo-media--esca"><img src="/K2040-Android-Releases/assets/esca-agnellis-promo-banner.png" width="2172" height="724" alt="Esca Agnellis promotional banner with app icon, friendly low-pressure food-pyramid tracking message, feature badges, and three real app screenshots." loading="lazy" decoding="async"></div><div class="app-promo-copy"><div><div class="app-name-row"><h3>Esca Agnellis</h3><span class="version-pill">v0.16.0</span></div><p data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</p></div><span class="text-action" data-i18n="actions.viewApp">View app</span></div></a>
+          <a class="app-promo-card app-promo-card--geo" href="/K2040-Android-Releases/apps/geojoystick/"><div class="app-promo-media app-promo-media--geo"><img class="app-promo-geo-image geo-banner geo-banner--en" src="/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-en.png" width="1024" height="500" alt="GeoJoystick v0.1.4 promotional banner" loading="lazy" decoding="async"><img class="app-promo-geo-image geo-banner geo-banner--de" src="/K2040-Android-Releases/assets/geojoystick-v0.1.4-banner-de.png" width="1024" height="500" alt="GeoJoystick v0.1.4 Werbebanner" loading="lazy" decoding="async"></div><div class="app-promo-copy"><div><div class="app-name-row"><h3>GeoJoystick</h3><span class="version-pill">v0.1.4</span></div><p data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing using Android's standard mock-location flow.</p></div><span class="text-action" data-i18n="actions.viewApp">View app</span></div></a>
         </div>
       </section>
 
-      <section class="content-section">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow" data-i18n="landing.updatesEyebrow">Latest</p>
-            <h2 data-i18n="landing.updatesTitle">Updates</h2>
-            <p data-i18n="landing.updatesDescription">New releases, store availability, and important project changes.</p>
-          </div>
-          <a class="section-link" href="/K2040-Android-Releases/updates/"><span data-i18n="landing.viewAll">View all updates</span> →</a>
-        </div>
+      <section class="content-section" id="updates">
+        <div class="section-heading section-heading--split"><div><p class="eyebrow" data-i18n="landing.updatesEyebrow">Latest</p><h2 data-i18n="landing.updatesTitle">Updates</h2><p data-i18n="landing.updatesDescription">New releases, store availability, and important project changes.</p></div><a class="section-link" href="/K2040-Android-Releases/updates/"><span data-i18n="landing.viewAll">View all updates</span> →</a></div>
+        <div class="update-list" data-update-list data-update-limit="5"></div>
+      </section>
 
-        <div class="update-list" data-update-list data-update-limit="4"></div>
+      <section class="content-section landing-about" id="about">
+        <div class="section-heading"><p class="eyebrow" data-i18n="hero.eyebrow">K2040 Projects</p><h2 data-i18n="common.about">About</h2><p data-i18n="hero.description">Open-source Android apps with clear privacy, licensing, and direct download information.</p></div>
+        <nav class="about-links" aria-label="K2040 links"><a href="https://kamui2040.github.io/" data-global-i18n="home">Home</a><a href="/K2040-Android-Releases/" data-global-i18n="android">Android Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/" data-global-i18n="gaming">Gaming Mods</a><a href="https://github.com/Kamui2040">GitHub</a><a href="https://ko-fi.com/k2040">Ko-fi</a><a href="https://www.instagram.com/k2040.projects/">Instagram</a></nav>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p data-i18n="footer.authority">GitHub Releases remains the authoritative source for published APKs and checksums.</p>
-      <nav aria-label="K2040">
-        <a href="https://kamui2040.github.io/" data-i18n="footer.projects">K2040 projects</a>
-        <a href="https://github.com/Kamui2040" data-i18n="footer.github">GitHub</a>
-        <a href="https://ko-fi.com/k2040" data-i18n="footer.kofi">Ko-fi</a>
-        <a href="https://www.instagram.com/k2040.projects/" data-i18n="footer.instagram">Instagram</a>
-      </nav>
-    </footer>
-    <template id="update-card-template">
-      <a class="update-card" data-update-card>
-        <div class="update-media" data-update-media><img class="update-image" data-update-image src="" alt=""></div>
-        <div class="update-copy">
-          <div class="update-meta"><time data-update-date></time><span data-update-category></span></div>
-          <h3 data-update-title></h3>
-          <p data-update-summary></p>
-          <span class="update-action" data-update-action>Read more →</span>
-        </div>
-      </a>
-    </template>
+    <template id="update-card-template"><a class="update-card" data-update-card><div class="update-media" data-update-media><img class="update-image" data-update-image src="" alt=""></div><div class="update-copy"><div class="update-meta"><time data-update-date></time><span data-update-category></span></div><h3 data-update-title></h3><p data-update-summary></p><span class="update-action" data-update-action>Read more →</span></div></a></template>
   </div>
 </body>
 </html>
