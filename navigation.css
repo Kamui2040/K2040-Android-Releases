@@ -1,31 +1,56 @@
 .site-brand-name,
 .site-brand-section {
+  position: relative;
   display: inline-flex;
-  align-items: baseline;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .65rem .8rem;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
   color: inherit;
   text-decoration: none;
+  box-shadow: none !important;
+  clip-path: polygon(0 7px,7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px));
+  transition: background 140ms ease,border-color 140ms ease,box-shadow 140ms ease;
 }
 
 .site-brand-name:hover,
 .site-brand-name:focus-visible,
 .site-brand-section:hover,
-.site-brand-section:focus-visible {
+.site-brand-section:focus-visible,
+.site-brand-section[aria-current="page"] {
+  border-color: transparent !important;
+  border-bottom-color: #00d9e5 !important;
+  background: linear-gradient(180deg,rgba(0,217,229,.08),transparent) !important;
+  box-shadow: inset 0 -2px 0 #00d9e5,0 0 10px rgba(0,217,229,.1) !important;
   outline: none;
 }
 
-.site-brand-name:hover strong,
-.site-brand-name:focus-visible strong {
-  color: #8fd3f4;
+.site-brand-name strong,
+.site-brand-section span {
+  color: #f5f7f9;
 }
 
-.site-brand-section:hover span,
-.site-brand-section:focus-visible span,
-.site-brand-section[aria-current="page"] span {
-  color: #ffffff;
+/* Landing/archive pages use a details trigger instead of the simple K2040 link. */
+.site-brand > .global-menu > summary {
+  position: relative;
+  min-height: 44px;
+  padding: .65rem .8rem;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  clip-path: polygon(0 7px,7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px));
 }
-
-.site-brand-name:focus-visible,
-.site-brand-section:focus-visible {
-  border-radius: 7px;
-  box-shadow: 0 0 0 3px rgba(105, 185, 232, 0.3);
+.site-brand > .global-menu > summary:hover,
+.site-brand > .global-menu > summary:focus-visible,
+.site-brand > .global-menu[open] > summary {
+  border-color: transparent !important;
+  border-bottom-color: #00d9e5 !important;
+  background: linear-gradient(180deg,rgba(0,217,229,.08),transparent) !important;
+  box-shadow: inset 0 -2px 0 #00d9e5,0 0 10px rgba(0,217,229,.1) !important;
+  outline: none;
 }
