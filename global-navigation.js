@@ -31,18 +31,32 @@
     menu.addEventListener("toggle",()=>{if(!menu.open)items.forEach((item)=>item.open=false)});
     addEventListener("resize",()=>items.forEach(position),{passive:true});
   };
-  const bind=()=>{
-    apply();
-    document.querySelectorAll("[data-global-menu]").forEach(initMenu);
-    document.querySelectorAll("[data-language-option]").forEach((button)=>{
+  const bindScope=(scope)=>{
+    if(!scope||scope.nodeType!==1&&scope!==document)return false;
+    let found=false;
+    const menus=[];
+    if(scope!==document&&scope.matches?.("[data-global-menu]"))menus.push(scope);
+    menus.push(...(scope.querySelectorAll?.("[data-global-menu]")||[]));
+    menus.forEach((menu)=>{if(!boundMenus.has(menu)){initMenu(menu);found=true}});
+    const buttons=[];
+    if(scope!==document&&scope.matches?.("[data-language-option]"))buttons.push(scope);
+    buttons.push(...(scope.querySelectorAll?.("[data-language-option]")||[]));
+    buttons.forEach((button)=>{
       if(boundLanguageButtons.has(button))return;
       boundLanguageButtons.add(button);
       button.addEventListener("click",()=>apply(button.dataset.languageOption));
+      found=true;
     });
+    return found;
   };
   const init=()=>{
-    bind();
-    const observer=new MutationObserver(()=>bind());
+    bindScope(document);
+    apply();
+    const observer=new MutationObserver((records)=>{
+      let found=false;
+      records.forEach((record)=>record.addedNodes.forEach((node)=>{if(node.nodeType===1&&bindScope(node))found=true}));
+      if(found)apply();
+    });
     observer.observe(document.body,{childList:true,subtree:true});
     document.addEventListener("click",(event)=>document.querySelectorAll("[data-global-menu][open]").forEach((menu)=>{if(!menu.contains(event.target))menu.open=false}));
   };
