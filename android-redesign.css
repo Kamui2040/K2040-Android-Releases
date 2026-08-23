@@ -1,0 +1,344 @@
+/* Final Android composition and shared UI parity with K2040 Gaming. */
+
+:root {
+  --background: #aeb7c0;
+  --surface: rgba(190, 199, 208, .97);
+  --surface-strong: #b8c2cc;
+  --surface-muted: #b9c1c9;
+  --text: #1e2933;
+  --muted: #42505c;
+  --accent: #3f91c4;
+  --accent-dark: #1d577d;
+  --accent-soft: #b6c7d5;
+  --taupe-soft: #b3bdc7;
+  --graphite-soft: #b9c1c9;
+  --border: #7f8c98;
+  --focus-ring: rgba(63, 145, 196, .28);
+  --shadow: 0 18px 45px rgba(24, 34, 43, .28);
+  --card-hover-shadow: 0 18px 38px rgba(24, 34, 43, .28);
+  --nav-bg: #20262d;
+  --nav-text: #f5f7f9;
+  --nav-muted: #c9d0d6;
+  --nav-hover: rgba(255, 255, 255, .09);
+  --nav-border: rgba(255, 255, 255, .1);
+}
+
+:root[data-theme="dark"] {
+  --background: #090c10;
+  --surface: rgba(15, 20, 26, .97);
+  --surface-strong: #171e26;
+  --surface-muted: #252b31;
+  --text: #edf1f5;
+  --muted: #aeb8c2;
+  --accent: #69b9e8;
+  --accent-dark: #a3d8f5;
+  --accent-soft: #1b3140;
+  --taupe-soft: #242c34;
+  --graphite-soft: #252b31;
+  --border: #3d4955;
+  --focus-ring: rgba(105, 185, 232, .28);
+  --shadow: 0 18px 45px rgba(0, 0, 0, .48);
+  --card-hover-shadow: 0 18px 38px rgba(0, 0, 0, .42);
+  --nav-bg: #0f1318;
+  --nav-text: #f7f9fb;
+  --nav-muted: #c6ccd2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #090c10;
+    --surface: rgba(15, 20, 26, .97);
+    --surface-strong: #171e26;
+    --surface-muted: #252b31;
+    --text: #edf1f5;
+    --muted: #aeb8c2;
+    --accent: #69b9e8;
+    --accent-dark: #a3d8f5;
+    --accent-soft: #1b3140;
+    --taupe-soft: #242c34;
+    --graphite-soft: #252b31;
+    --border: #3d4955;
+    --focus-ring: rgba(105, 185, 232, .28);
+    --shadow: 0 18px 45px rgba(0, 0, 0, .48);
+    --card-hover-shadow: 0 18px 38px rgba(0, 0, 0, .42);
+    --nav-bg: #0f1318;
+    --nav-text: #f7f9fb;
+    --nav-muted: #c6ccd2;
+  }
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(71, 145, 190, .14), transparent 30rem),
+    radial-gradient(circle at bottom right, rgba(73, 92, 108, .1), transparent 32rem),
+    var(--background);
+}
+
+.page-shell { width: min(1180px, calc(100% - 2rem)); }
+
+h1 { margin-bottom: .65rem; font-size: clamp(2.2rem, 7vw, 4.6rem); line-height: .98; letter-spacing: normal; }
+h2 { margin-bottom: .6rem; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: normal; }
+h3 { margin-bottom: .55rem; font-size: 1.25rem; }
+.eyebrow { margin: 0 0 .35rem; color: var(--accent-dark); font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.lead,.section-heading>p:not(.eyebrow),.detail-card>p:not(.eyebrow),.app-promo-copy p,.site-footer p { color: var(--muted); line-height: 1.65; }
+.lead,.section-heading>p:not(.eyebrow) { font-size: 1.05rem; }
+
+/* Header and navigation match Gaming dimensions, colors and interaction states. */
+.site-header {
+  position: sticky;
+  top: .65rem;
+  z-index: 50;
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: .55rem .65rem .55rem 1rem;
+  border: 1px solid rgba(0, 207, 215, .54);
+  border-radius: 0;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  box-shadow: 0 0 0 1px rgba(0,130,143,.32),0 0 22px rgba(0,210,220,.08),inset 0 0 30px rgba(0,209,219,.035),0 20px 44px rgba(0,0,0,.24);
+  clip-path: polygon(0 10px,10px 0,calc(100% - 10px) 0,100% 10px,100% calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,0 calc(100% - 10px));
+  isolation: isolate;
+}
+.site-header::before,.menu-panel::before,.global-menu-submenu::before {
+  position: absolute;
+  z-index: 3;
+  inset: 7px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(0,183,193,.2);
+  background: linear-gradient(90deg,#00d9e5,transparent) 0 0/3.5rem 1px no-repeat,linear-gradient(180deg,#00d9e5,transparent) 0 0/1px 3.5rem no-repeat,linear-gradient(-90deg,#00d9e5,transparent) 100% 100%/3.5rem 1px no-repeat,linear-gradient(0deg,#00d9e5,transparent) 100% 100%/1px 3.5rem no-repeat;
+  clip-path: polygon(0 8px,8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px));
+}
+.site-brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--nav-text); white-space: nowrap; }
+.site-brand-name,.site-brand-section,.site-brand>.global-menu>summary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .65rem .8rem;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--nav-text);
+  text-decoration: none;
+  box-shadow: none !important;
+  clip-path: polygon(0 7px,7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px));
+}
+.site-brand-name strong,.site-brand>.global-menu>summary strong { color: #fff; font-size: 1.05rem; letter-spacing: .04em; }
+.site-brand-section span { color: #f5f7f9; font-size: .88rem; font-weight: 700; }
+.site-nav { display: flex; align-items: center; justify-content: flex-end; gap: .35rem; }
+.nav-link,.site-header .menu>summary,.site-header .theme-toggle {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .65rem .8rem;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--nav-text) !important;
+  font-weight: 750;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  clip-path: polygon(0 7px,7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px));
+}
+.site-brand-name:hover,.site-brand-name:focus-visible,.site-brand-section:hover,.site-brand-section:focus-visible,.site-brand>.global-menu>summary:hover,.site-brand>.global-menu>summary:focus-visible,.site-brand>.global-menu[open]>summary,.nav-link:hover,.nav-link:focus-visible,.site-header .menu>summary:hover,.site-header .menu>summary:focus-visible,.site-header .menu[open]>summary,.site-header .theme-toggle:hover,.site-header .theme-toggle:focus-visible {
+  border-color: transparent !important;
+  border-bottom-color: #00d9e5 !important;
+  background: linear-gradient(180deg,rgba(0,217,229,.08),transparent) !important;
+  box-shadow: inset 0 -2px 0 #00d9e5,0 0 10px rgba(0,217,229,.1) !important;
+  outline: none;
+  transform: none;
+}
+.site-brand-section[aria-current="page"],.nav-link[aria-current="page"] { border-color: transparent !important; border-bottom-color: transparent !important; background: transparent !important; box-shadow: none !important; }
+.site-brand-section[aria-current="page"]:hover,.site-brand-section[aria-current="page"]:focus-visible,.nav-link[aria-current="page"]:hover,.nav-link[aria-current="page"]:focus-visible { border-bottom-color: #00d9e5 !important; box-shadow: inset 0 -2px 0 #00d9e5,0 0 10px rgba(0,217,229,.1) !important; }
+
+/* Menu panels and menu typography mirror Gaming. */
+.menu-panel,.global-menu-submenu {
+  position: absolute;
+  z-index: 60;
+  padding: .65rem;
+  border: 1px solid rgba(0,207,215,.54) !important;
+  border-radius: 0 !important;
+  background: var(--nav-bg) !important;
+  color: var(--nav-text) !important;
+  box-shadow: 0 0 0 1px rgba(0,130,143,.32),0 0 22px rgba(0,210,220,.08),0 20px 44px rgba(0,0,0,.24) !important;
+  clip-path: polygon(0 10px,10px 0,calc(100% - 10px) 0,100% 10px,100% calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,0 calc(100% - 10px));
+  isolation: isolate;
+}
+.app-menu-panel { width: min(360px,calc(100vw - 2rem)); }
+.language-menu-panel { min-width: 190px; }
+.app-menu-panel a,.language-menu-panel button,.global-menu-item>summary,.global-menu-submenu a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 42px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .7rem .55rem;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--nav-text) !important;
+  font: inherit;
+  font-weight: 750;
+  text-align: left;
+  text-decoration: none;
+  box-shadow: none !important;
+  clip-path: polygon(0 7px,7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px));
+}
+.language-menu-panel button { display: grid; grid-template-columns: 1.6rem 1fr; align-items: center; justify-content: initial; gap: .55rem; }
+.global-menu-item>summary { align-items: center; justify-content: space-between; flex-direction: row; }
+.app-menu-panel small { margin: 0; color: var(--nav-muted) !important; font-size: .78rem; font-weight: 600; line-height: 1.35; }
+.app-menu-panel a:hover,.app-menu-panel a:focus-visible,.language-menu-panel button:hover,.language-menu-panel button:focus-visible,.language-menu-panel button[aria-current="true"],.global-menu-item>summary:hover,.global-menu-item>summary:focus-visible,.global-menu-item[open]>summary,.global-menu-submenu a:hover,.global-menu-submenu a:focus-visible {
+  border-color: transparent !important;
+  border-bottom-color: #00d9e5 !important;
+  background: linear-gradient(180deg,rgba(0,217,229,.08),transparent) !important;
+  box-shadow: inset 0 -2px 0 #00d9e5,0 0 10px rgba(0,217,229,.1) !important;
+  outline: none;
+}
+.app-menu-panel a+a,.language-menu-panel button+button,.global-menu-item+.global-menu-item,.global-menu-submenu a+a { margin-top: .65rem; padding-top: 1.25rem; }
+.app-menu-panel a+a::before,.language-menu-panel button+button::before,.global-menu-item+.global-menu-item::before,.global-menu-submenu a+a::before {
+  position: absolute;
+  top: .28rem;
+  left: 16%;
+  right: 16%;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg,transparent,rgba(0,217,229,.72),transparent);
+  box-shadow: 0 0 7px rgba(0,217,229,.28);
+}
+.global-menu-panel { top: calc(100% + .55rem); right: auto; left: 0; width: 220px; padding: .55rem; overflow: visible; clip-path: none; }
+.global-menu-item { position: relative; }
+.global-menu-submenu { top: 0; left: calc(100% + .55rem); width: 245px; padding: .55rem; }
+.global-menu-item--flip .global-menu-submenu { right: calc(100% + .55rem); left: auto; }
+.global-menu-item-arrow { color: var(--nav-muted); font-size: 1.05rem; }
+
+/* Angular technical panel language used by Gaming. */
+:where(.landing-hero,.page-intro,.content-section,.detail-card,.site-footer,.esca-promo-section,.geo-promo-section,.app-promo-card,.update-card,.screenshot-card) {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(0,207,215,.54) !important;
+  border-radius: 0 !important;
+  background-color: var(--surface);
+  box-shadow: 0 0 0 1px rgba(0,130,143,.32),0 0 22px rgba(0,210,220,.08),inset 0 0 30px rgba(0,209,219,.035),0 20px 44px rgba(0,0,0,.24) !important;
+  clip-path: polygon(0 14px,14px 0,calc(100% - 14px) 0,100% 14px,100% calc(100% - 14px),calc(100% - 14px) 100%,14px 100%,0 calc(100% - 14px));
+}
+:where(.landing-hero,.page-intro,.content-section,.detail-card,.site-footer,.esca-promo-section,.geo-promo-section,.app-promo-card,.update-card,.screenshot-card)::before {
+  position: absolute;
+  z-index: 3;
+  inset: 7px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(0,183,193,.2);
+  background: linear-gradient(90deg,#00d9e5,transparent) 0 0/3.5rem 1px no-repeat,linear-gradient(180deg,#00d9e5,transparent) 0 0/1px 3.5rem no-repeat,linear-gradient(-90deg,#00d9e5,transparent) 100% 100%/3.5rem 1px no-repeat,linear-gradient(0deg,#00d9e5,transparent) 100% 100%/1px 3.5rem no-repeat;
+  clip-path: polygon(0 8px,8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px));
+}
+.content-section,.page-intro,.detail-card,.site-footer { background-image: linear-gradient(135deg,rgba(105,185,232,.08),transparent 26%),linear-gradient(315deg,rgba(105,185,232,.045),transparent 28%); }
+
+/* Landing hero follows the Gaming composition while preserving Android artwork and copy. */
+.landing-hero--stacked { position: relative; display: block; min-height: 470px; overflow: hidden; background: #090e13; color: #f5f8fa; }
+.landing-hero--stacked::after { position: absolute; z-index: 1; inset: 0; pointer-events: none; content: ""; background: linear-gradient(90deg,rgba(5,10,15,.96) 0%,rgba(5,10,15,.78) 35%,rgba(5,10,15,.16) 72%,rgba(5,10,15,.1) 100%); }
+.landing-hero--stacked .landing-hero-media { position: absolute; inset: 0; min-height: 0; background: #090e13; }
+.landing-hero--stacked .landing-hero-media img { display: block; width: 100%; height: 100%; min-height: 0; aspect-ratio: auto; object-fit: cover; object-position: center; }
+.landing-hero--stacked .landing-hero-copy { position: relative; z-index: 2; display: flex; min-height: 470px; max-width: 590px; flex-direction: column; justify-content: center; padding: clamp(2rem,6vw,4.5rem); }
+.landing-hero--stacked .landing-hero-copy .eyebrow { width: max-content; padding: .3rem .6rem; background: rgba(0,217,229,.1); color: #8fdff0; clip-path: polygon(0 6px,6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px)); }
+.landing-hero--stacked h1 { color: #f5f8fa; font-size: clamp(2.4rem,5vw,4.5rem); line-height: 1.05; }
+.landing-hero--stacked .lead { max-width: 470px; color: #d0d8df; }
+
+/* App cards keep their Android-specific artwork while adopting Gaming framing. */
+.app-promo-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; margin-top: 1.5rem; }
+.app-promo-card { display: flex; min-height: 420px; flex-direction: column; overflow: hidden; background: var(--surface-strong); text-decoration: none; transition: transform .14s ease,box-shadow .14s ease,border-color .14s ease; }
+.app-promo-card:hover,.app-promo-card:focus-visible,.update-card:hover,.update-card:focus-visible { border-color: #00d9e5 !important; box-shadow: 0 0 0 1px rgba(0,217,229,.48),0 0 24px rgba(0,217,229,.12),0 22px 46px rgba(0,0,0,.26) !important; outline: none; transform: translateY(-3px); }
+.app-promo-media { height: 245px; flex: 0 0 245px; overflow: hidden; background: #0d141b; }
+.app-promo-media--esca img,.app-promo-geo-image { display: block; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
+.app-promo-copy { display: flex; min-height: 175px; flex: 1; align-items: flex-start; flex-direction: column; justify-content: space-between; gap: 1rem; padding: 1.2rem; background: linear-gradient(150deg,var(--surface-strong),var(--accent-soft)); }
+.app-promo-card--geo .app-promo-copy { background: linear-gradient(150deg,var(--surface-strong),var(--graphite-soft)); }
+.app-promo-copy .app-name-row { width: 100%; align-items: flex-start; justify-content: space-between; gap: .75rem; }
+.version-pill,.status-badge { border-radius: 0 !important; clip-path: polygon(0 6px,6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px)); }
+
+/* Detail pages: equal card rows and bottom-aligned actions. */
+.detail-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.detail-card { display: flex; min-height: 100%; flex-direction: column; padding: clamp(1.4rem,4vw,2.3rem); }
+.detail-card .inline-link,.detail-card .download-row { margin-top: auto; align-self: flex-start; }
+.detail-card .download-row { padding-top: 1rem; }
+.detail-card .section-heading { max-width: none; }
+.app-detail-summary { margin-top: 0; }
+.app-detail-summary .status-row { margin-top: auto; padding-top: 1.2rem; }
+.screenshot-section { margin-top: 1.5rem; }
+
+/* Shared buttons exactly follow the Gaming dark/angular/cyan control language. */
+.section-link,.inline-link,.download-button,.resource-links a,.about-links a,.site-footer nav a,.update-action,.text-action {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem .85rem;
+  border: 1px solid rgba(0,207,215,.3) !important;
+  border-radius: 0 !important;
+  background: rgba(12,22,29,.88) !important;
+  color: #dce8ec !important;
+  font-size: .9rem;
+  font-weight: 750;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  clip-path: polygon(0 7px,7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px));
+}
+.section-link:hover,.section-link:focus-visible,.inline-link:hover,.inline-link:focus-visible,.download-button:hover,.download-button:focus-visible,.resource-links a:hover,.resource-links a:focus-visible,.about-links a:hover,.about-links a:focus-visible,.site-footer nav a:hover,.site-footer nav a:focus-visible,.update-action:hover,.update-action:focus-visible,.text-action:hover,.text-action:focus-visible,.app-promo-card:hover .text-action,.app-promo-card:focus-visible .text-action,.update-card:hover .update-action,.update-card:focus-visible .update-action {
+  border-color: transparent !important;
+  border-bottom-color: #00d9e5 !important;
+  background: linear-gradient(180deg,rgba(0,217,229,.08),rgba(8,20,27,.94)) !important;
+  box-shadow: inset 0 -2px 0 #00d9e5,0 0 10px rgba(0,217,229,.1) !important;
+  outline: none !important;
+  text-decoration: none !important;
+  transform: none !important;
+}
+.download-row,.resource-links,.about-links { display: flex; flex-wrap: wrap; gap: .7rem; }
+
+/* One footer component across Android pages. */
+.site-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.5rem; padding: 1.15rem 1.4rem; }
+.site-footer p { max-width: 560px; margin: 0; font-size: .9rem; }
+.site-footer nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .65rem; }
+
+@media (max-width: 900px) {
+  .site-header { position: static; align-items: stretch; flex-direction: column; padding: .8rem; }
+  .site-nav { justify-content: flex-start; flex-wrap: wrap; }
+  .detail-grid,.app-promo-list { grid-template-columns: 1fr; }
+  .site-footer { align-items: flex-start; flex-direction: column; }
+  .site-footer nav { justify-content: flex-start; }
+}
+
+@media (max-width: 760px) {
+  .page-shell { width: min(100% - 1rem,1180px); }
+  .global-menu-panel { width: min(320px,calc(100vw - 1rem)); max-height: calc(100vh - 6rem); overflow-y: auto; }
+  .global-menu-submenu,.global-menu-item--flip .global-menu-submenu { position: static; width: auto; margin: .3rem 0 .45rem .65rem; padding: .3rem; box-shadow: none !important; }
+  .global-menu-item-arrow { transform: rotate(90deg); }
+  .global-menu-item[open] .global-menu-item-arrow { transform: rotate(-90deg); }
+  .landing-hero--stacked { min-height: 500px; }
+  .landing-hero--stacked .landing-hero-copy { min-height: 500px; max-width: 78%; padding: 2rem; }
+}
+
+@media (max-width: 620px) {
+  .site-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); width: 100%; }
+  .site-nav>.nav-link,.site-nav>.menu,.site-nav>.theme-toggle { width: 100%; }
+  .site-nav>.menu>summary { width: 100%; }
+  .language-current,[data-theme-label] { display: none; }
+  .menu-panel { right: auto; left: 0; }
+  .app-menu-panel { width: min(340px,calc(100vw - 2rem)); }
+  .landing-hero--stacked .landing-hero-copy { max-width: 88%; padding: 1.5rem; }
+  .app-promo-media { height: 220px; flex-basis: 220px; }
+  .content-section,.page-intro,.detail-card { padding: 1.25rem; }
+  .site-footer { padding: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-promo-card,.update-card { transition: none; }
+}
