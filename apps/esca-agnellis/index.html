@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="/K2040-Android-Releases/download-sources.css?v=20260823-1">
   <link rel="stylesheet" href="/K2040-Android-Releases/mobile-navigation.css?v=20260823-1">
   <link rel="stylesheet" href="/K2040-Android-Releases/global-navigation.css?v=20260823-4">
-  <link rel="stylesheet" href="/K2040-Android-Releases/button-style.css?v=20260823-1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/android-redesign.css?v=20260823-1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/android-redesign.css?v=20260823-2">
   <script defer src="/K2040-Android-Releases/translations.js?v=20260817-1"></script>
   <script defer src="/K2040-Android-Releases/global-navigation.js?v=20260823-4"></script>
   <script defer src="/K2040-Android-Releases/site.js?v=20260817-1"></script>
@@ -22,110 +21,65 @@
   <div class="page-shell">
     <header class="site-header">
       <div class="site-brand">
-        <a class="site-brand-name" href="https://kamui2040.github.io/" aria-label="K2040 main page"><strong>K2040</strong></a>
+        <details class="menu global-menu" data-global-menu>
+          <summary data-global-aria="menu" aria-label="K2040 navigation"><strong>K2040</strong><span class="menu-caret" aria-hidden="true">⌄</span></summary>
+          <div class="menu-panel global-menu-panel">
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="home">Home</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Home"><a href="https://kamui2040.github.io/" data-global-i18n="home">Home</a><a href="https://kamui2040.github.io/#projects" data-global-i18n="projectAreas">Project Areas</a><a href="https://kamui2040.github.io/#news" data-global-i18n="news">News</a><a href="https://kamui2040.github.io/#about" data-global-i18n="about">About</a></nav></details>
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="android">Android Projects</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Android Projects"><a href="/K2040-Android-Releases/" data-global-i18n="androidHome">Android Home</a><a href="/K2040-Android-Releases/#apps" data-global-i18n="apps">Apps</a><a href="/K2040-Android-Releases/#updates" data-global-i18n="updates">Updates</a><a href="/K2040-Android-Releases/#about" data-global-i18n="about">About</a></nav></details>
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="gaming">Gaming Mods</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Gaming Mods"><a href="https://kamui2040.github.io/K2040-Gaming-Mods/" data-global-i18n="modsHome">Mods Home</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#projects" data-global-i18n="modProjects">Mod Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#updates" data-global-i18n="updates">Updates</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#about" data-global-i18n="about">About</a></nav></details>
+          </div>
+        </details>
         <a class="site-brand-section" href="/K2040-Android-Releases/"><span data-i18n="nav.home">Android Projects</span></a>
       </div>
 
       <nav class="site-nav" aria-label="Primary">
         <details class="menu app-menu">
-          <summary data-i18n-aria-label="nav.appsMenu" aria-label="Available apps">
-            <span data-i18n="nav.apps">Apps</span>
-            <span class="menu-caret" aria-hidden="true">⌄</span>
-          </summary>
-          <div class="menu-panel app-menu-panel">
-            <a href="/K2040-Android-Releases/apps/esca-agnellis/">
-              <strong>Esca Agnellis</strong>
-              <small data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</small>
-            </a>
-            <a href="/K2040-Android-Releases/apps/geojoystick/">
-              <strong>GeoJoystick</strong>
-              <small data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing.</small>
-            </a>
-          </div>
+          <summary data-i18n-aria-label="nav.appsMenu" aria-label="Available apps"><span data-i18n="nav.apps">Apps</span><span class="menu-caret" aria-hidden="true">⌄</span></summary>
+          <div class="menu-panel app-menu-panel"><a href="/K2040-Android-Releases/apps/esca-agnellis/"><strong>Esca Agnellis</strong><small data-i18n="landing.escaDescription">A calm, multilingual food-pyramid tracker for daily portions.</small></a><a href="/K2040-Android-Releases/apps/geojoystick/"><strong>GeoJoystick</strong><small data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing.</small></a></div>
         </details>
-
         <a class="nav-link" href="/K2040-Android-Releases/updates/" data-i18n="nav.updates">Updates</a>
-
         <details class="menu language-menu">
-          <summary data-i18n-aria-label="controls.language" aria-label="Language">
-            <span class="language-flag" data-language-current-flag aria-hidden="true">🇬🇧</span>
-            <span class="language-current" data-language-current-label>English</span>
-            <span class="menu-caret" aria-hidden="true">⌄</span>
-          </summary>
-          <div class="menu-panel language-menu-panel">
-            <button type="button" data-language-option="en"><span aria-hidden="true">🇬🇧</span><span>English</span></button>
-            <button type="button" data-language-option="de"><span aria-hidden="true">🇩🇪</span><span>Deutsch</span></button>
-            <button type="button" data-language-option="pt-PT"><span aria-hidden="true">🇵🇹</span><span>Português</span></button>
-            <button type="button" data-language-option="es"><span aria-hidden="true">🇪🇸</span><span>Español</span></button>
-            <button type="button" data-language-option="fr"><span aria-hidden="true">🇫🇷</span><span>Français</span></button>
-          </div>
+          <summary data-i18n-aria-label="controls.language" aria-label="Language"><span class="language-flag" data-language-current-flag aria-hidden="true">🇬🇧</span><span class="language-current" data-language-current-label>English</span><span class="menu-caret" aria-hidden="true">⌄</span></summary>
+          <div class="menu-panel language-menu-panel"><button type="button" data-language-option="en"><span aria-hidden="true">🇬🇧</span><span>English</span></button><button type="button" data-language-option="de"><span aria-hidden="true">🇩🇪</span><span>Deutsch</span></button><button type="button" data-language-option="pt-PT"><span aria-hidden="true">🇵🇹</span><span>Português</span></button><button type="button" data-language-option="es"><span aria-hidden="true">🇪🇸</span><span>Español</span></button><button type="button" data-language-option="fr"><span aria-hidden="true">🇫🇷</span><span>Français</span></button></div>
         </details>
-
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
-          <span class="theme-toggle-icon" aria-hidden="true">☾</span>
-          <span data-theme-label>Dark</span>
-        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span data-theme-label>Dark</span></button>
       </nav>
     </header>
 
     <main>
       <section class="esca-promo-section" aria-labelledby="esca-page-title">
         <h1 class="visually-hidden" id="esca-page-title">Esca Agnellis</h1>
-        <img
-          class="esca-promo-image"
-          src="/K2040-Android-Releases/assets/esca-agnellis-promo-banner.png"
-          width="2172"
-          height="724"
-          decoding="async"
-          alt="Esca Agnellis promotional banner showing the app icon, the title Esca Agnellis, the message Friendly, low-pressure daily food-pyramid tracking, feature badges for Local & offline, Easy & gentle, Track progress, and Your data, your choice, plus three real app screenshots."
-        >
+        <img class="esca-promo-image" src="/K2040-Android-Releases/assets/esca-agnellis-promo-banner.png" width="2172" height="724" decoding="async" alt="Esca Agnellis promotional banner showing the app icon, the title Esca Agnellis, the message Friendly, low-pressure daily food-pyramid tracking, feature badges for Local & offline, Easy & gentle, Track progress, and Your data, your choice, plus three real app screenshots.">
       </section>
 
-      <section class="content-section app-detail-summary">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="pages.esca.eyebrow">Featured app</p>
-          <h2>Esca Agnellis</h2>
-          <p class="lead" data-i18n="pages.esca.description"></p>
-          <div class="status-row">
-            <span class="version-pill">v0.16.0</span>
-            <span class="status-badge" data-i18n="pages.esca.badgeFoss"></span>
-            <span class="status-badge" data-i18n="pages.esca.badgeOffline"></span>
-            <span class="status-badge" data-i18n="pages.esca.badgeNoAds"></span>
-            <span class="status-badge" data-i18n="pages.esca.badgeNoTracking"></span>
+      <section class="detail-grid detail-grid--primary">
+        <article class="detail-card app-detail-summary">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="pages.esca.eyebrow">Featured app</p>
+            <h2>Esca Agnellis</h2>
+            <p class="lead" data-i18n="pages.esca.description"></p>
+            <div class="status-row">
+              <span class="version-pill">v0.16.0</span>
+              <span class="status-badge" data-i18n="pages.esca.badgeFoss"></span>
+              <span class="status-badge" data-i18n="pages.esca.badgeOffline"></span>
+              <span class="status-badge" data-i18n="pages.esca.badgeNoAds"></span>
+              <span class="status-badge" data-i18n="pages.esca.badgeNoTracking"></span>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section class="content-section download-section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="actions.download">Download</p>
-          <h2 data-i18n="common.downloadFrom">Download from</h2>
-          <p data-i18n="pages.esca.downloadNote"></p>
-        </div>
-        <div class="download-row">
-          <a class="download-button download-button--source" href="https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0"><span class="download-source-label">GitHub Releases</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
-          <a class="download-button download-button--source" href="https://f-droid.org/packages/com.k2040.escaagnellis/"><span class="download-source-label">F-Droid</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
-          <a class="download-button download-button--source" href="https://apkpure.com/p/com.k2040.escaagnellis"><span class="download-source-label">APKPure</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
-          <a class="download-button download-button--source" href="https://esca-agnellis.en.uptodown.com/android"><span class="download-source-label">Uptodown</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-
-      <section class="detail-grid">
-        <article class="detail-card detail-card--wide">
-          <p class="eyebrow" data-i18n="common.about">About</p>
-          <h2 data-i18n="pages.esca.aboutTitle"></h2>
-          <p data-i18n="pages.esca.aboutText"></p>
         </article>
 
-        <article class="detail-card">
-          <p class="eyebrow" data-i18n="common.highlights">Highlights</p>
-          <ul class="feature-list">
-            <li data-i18n="pages.esca.feature1"></li>
-            <li data-i18n="pages.esca.feature2"></li>
-            <li data-i18n="pages.esca.feature3"></li>
-            <li data-i18n="pages.esca.feature4"></li>
-            <li data-i18n="pages.esca.feature5"></li>
-          </ul>
+        <article class="detail-card download-section">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="actions.download">Download</p>
+            <h2 data-i18n="common.downloadFrom">Download from</h2>
+            <p data-i18n="pages.esca.downloadNote"></p>
+          </div>
+          <div class="download-row">
+            <a class="download-button download-button--source" href="https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0"><span class="download-source-label">GitHub Releases</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
+            <a class="download-button download-button--source" href="https://f-droid.org/packages/com.k2040.escaagnellis/"><span class="download-source-label">F-Droid</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
+            <a class="download-button download-button--source" href="https://apkpure.com/p/com.k2040.escaagnellis"><span class="download-source-label">APKPure</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
+            <a class="download-button download-button--source" href="https://esca-agnellis.en.uptodown.com/android"><span class="download-source-label">Uptodown</span><span class="download-source-icon" aria-hidden="true">↗</span></a>
+          </div>
         </article>
       </section>
 
@@ -136,19 +90,23 @@
           <p data-i18n="common.screenshotsDescription">Real app screenshots from the published release.</p>
         </div>
         <div class="screenshot-gallery">
-          <figure class="screenshot-card">
-            <img data-esca-screenshot="1.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" data-i18n-alt="pages.esca.screenshot1" alt="" loading="lazy" decoding="async">
-          </figure>
-          <figure class="screenshot-card">
-            <img data-esca-screenshot="2.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" data-i18n-alt="pages.esca.screenshot2" alt="" loading="lazy" decoding="async">
-          </figure>
-          <figure class="screenshot-card">
-            <img data-esca-screenshot="3.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" data-i18n-alt="pages.esca.screenshot3" alt="" loading="lazy" decoding="async">
-          </figure>
-          <figure class="screenshot-card">
-            <img data-esca-screenshot="4.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" data-i18n-alt="pages.esca.screenshot4" alt="" loading="lazy" decoding="async">
-          </figure>
+          <figure class="screenshot-card"><img data-esca-screenshot="1.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" data-i18n-alt="pages.esca.screenshot1" alt="" loading="lazy" decoding="async"></figure>
+          <figure class="screenshot-card"><img data-esca-screenshot="2.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" data-i18n-alt="pages.esca.screenshot2" alt="" loading="lazy" decoding="async"></figure>
+          <figure class="screenshot-card"><img data-esca-screenshot="3.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" data-i18n-alt="pages.esca.screenshot3" alt="" loading="lazy" decoding="async"></figure>
+          <figure class="screenshot-card"><img data-esca-screenshot="4.png" src="https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" data-i18n-alt="pages.esca.screenshot4" alt="" loading="lazy" decoding="async"></figure>
         </div>
+      </section>
+
+      <section class="detail-grid">
+        <article class="detail-card detail-card--wide">
+          <p class="eyebrow" data-i18n="common.about">About</p>
+          <h2 data-i18n="pages.esca.aboutTitle"></h2>
+          <p data-i18n="pages.esca.aboutText"></p>
+        </article>
+        <article class="detail-card">
+          <p class="eyebrow" data-i18n="common.highlights">Highlights</p>
+          <ul class="feature-list"><li data-i18n="pages.esca.feature1"></li><li data-i18n="pages.esca.feature2"></li><li data-i18n="pages.esca.feature3"></li><li data-i18n="pages.esca.feature4"></li><li data-i18n="pages.esca.feature5"></li></ul>
+        </article>
       </section>
 
       <section class="detail-grid">
@@ -158,7 +116,6 @@
           <p data-i18n="pages.esca.privacyText"></p>
           <a class="inline-link" href="https://github.com/Kamui2040/Esca-Agnellis-Android/blob/main/PRIVACY.md"><span data-i18n="actions.privacy">Privacy</span> →</a>
         </article>
-
         <article class="detail-card">
           <p class="eyebrow" data-i18n="actions.source">Source</p>
           <h2 data-i18n="pages.esca.sourceTitle"></h2>
@@ -168,26 +125,14 @@
       </section>
 
       <section class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="common.moreInformation">More information</p>
-        </div>
-        <nav class="resource-links">
-          <a href="https://github.com/Kamui2040/K2040-Android-Releases/blob/main/apps/esca-agnellis/CHANGELOG.md" data-i18n="actions.changelog">Changelog</a>
-          <a href="https://github.com/Kamui2040/K2040-Android-Releases/issues/new/choose" data-i18n="actions.feedback">Feedback</a>
-          <a href="https://github.com/Kamui2040/Esca-Agnellis-Android" data-i18n="actions.source">Source</a>
-          <a href="https://github.com/Kamui2040/Esca-Agnellis-Android/blob/main/PRIVACY.md" data-i18n="actions.privacy">Privacy</a>
-        </nav>
+        <div class="section-heading"><p class="eyebrow" data-i18n="common.moreInformation">More information</p></div>
+        <nav class="resource-links"><a href="https://github.com/Kamui2040/K2040-Android-Releases/blob/main/apps/esca-agnellis/CHANGELOG.md" data-i18n="actions.changelog">Changelog</a><a href="https://github.com/Kamui2040/K2040-Android-Releases/issues/new/choose" data-i18n="actions.feedback">Feedback</a><a href="https://github.com/Kamui2040/Esca-Agnellis-Android" data-i18n="actions.source">Source</a><a href="https://github.com/Kamui2040/Esca-Agnellis-Android/blob/main/PRIVACY.md" data-i18n="actions.privacy">Privacy</a></nav>
       </section>
     </main>
 
     <footer class="site-footer">
       <p data-i18n="footer.authority">GitHub Releases remains the authoritative source for published APKs and checksums.</p>
-      <nav aria-label="K2040">
-        <a href="https://kamui2040.github.io/" data-i18n="footer.projects">K2040 projects</a>
-        <a href="https://github.com/Kamui2040" data-i18n="footer.github">GitHub</a>
-        <a href="https://ko-fi.com/k2040" data-i18n="footer.kofi">Ko-fi</a>
-        <a href="https://www.instagram.com/k2040.projects/" data-i18n="footer.instagram">Instagram</a>
-      </nav>
+      <nav aria-label="K2040"><a href="https://kamui2040.github.io/" data-i18n="footer.projects">K2040 projects</a><a href="/K2040-Android-Releases/">Android Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/">Gaming Mods</a><a href="https://github.com/Kamui2040" data-i18n="footer.github">GitHub</a><a href="https://www.nexusmods.com/profile/kamui2040">Nexus Mods</a><a href="https://ko-fi.com/k2040" data-i18n="footer.kofi">Ko-fi</a><a href="https://www.instagram.com/k2040.projects/" data-i18n="footer.instagram">Instagram</a></nav>
     </footer>
   </div>
 </body>
