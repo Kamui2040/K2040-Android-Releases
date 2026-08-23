@@ -59,41 +59,6 @@
   const localStrings = (entry) => entry?.strings?.[currentLanguage] || entry?.strings?.en || {};
   const localizedUpdateImage = (entry) => entry?.images?.[currentLanguage] || entry?.images?.en || entry?.image || null;
 
-  const ensureGlobalNavigation = () => {
-    if (!document.querySelector('link[href*="global-navigation.css"]')) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = "/K2040-Android-Releases/global-navigation.css?v=20260823-2";
-      document.head.append(link);
-    }
-
-    if (!document.querySelector("[data-global-menu]")) {
-      const oldBrand = document.querySelector(".site-brand-name");
-      if (oldBrand) {
-        const wrapper = document.createElement("div");
-        wrapper.innerHTML = `<details class="menu global-menu" data-global-menu>
-          <summary data-global-aria="menu" aria-label="K2040 navigation"><strong>K2040</strong><span class="menu-caret" aria-hidden="true">⌄</span></summary>
-          <div class="menu-panel global-menu-panel">
-            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="home">Home</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Home"><a href="https://kamui2040.github.io/" data-global-i18n="home">Home</a><a href="https://kamui2040.github.io/#projects" data-global-i18n="projectAreas">Project Areas</a><a href="https://kamui2040.github.io/#news" data-global-i18n="news">News</a><a href="https://kamui2040.github.io/#about" data-global-i18n="about">About</a></nav></details>
-            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="android">Android Projects</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Android Projects"><a href="/K2040-Android-Releases/" data-global-i18n="androidHome">Android Home</a><a href="/K2040-Android-Releases/#apps" data-global-i18n="apps">Apps</a><a href="/K2040-Android-Releases/#updates" data-global-i18n="updates">Updates</a><a href="/K2040-Android-Releases/#about" data-global-i18n="about">About</a></nav></details>
-            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="gaming">Gaming Mods</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Gaming Mods"><a href="https://kamui2040.github.io/K2040-Gaming-Mods/" data-global-i18n="modsHome">Mods Home</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#projects" data-global-i18n="modProjects">Mod Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#updates" data-global-i18n="updates">Updates</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#about" data-global-i18n="about">About</a></nav></details>
-          </div>
-        </details>`;
-        oldBrand.replaceWith(wrapper.firstElementChild);
-      }
-    }
-
-    document.querySelectorAll('a.nav-link[data-i18n="nav.updates"]').forEach((link) => {
-      if (!document.querySelector("#updates")) link.href = "/K2040-Android-Releases/#updates";
-    });
-
-    if (!document.querySelector('script[src*="global-navigation.js"]')) {
-      const script = document.createElement("script");
-      script.src = "/K2040-Android-Releases/global-navigation.js?v=20260823-2";
-      document.head.append(script);
-    }
-  };
-
   const updateThemeToggle = (button) => {
     if (!button) return;
     const current = effectiveTheme();
@@ -208,28 +173,36 @@
   };
 
   const closeSiblingMenus = (active) => {
-    document.querySelectorAll("details.menu").forEach((details) => { if (details !== active) details.open = false; });
+    document.querySelectorAll("details.menu:not(.global-menu)").forEach((details) => {
+      if (details !== active) details.open = false;
+    });
   };
+
   const positionAppMenu = () => {
     const menu = document.querySelector("details.app-menu");
     const panel = menu?.querySelector(".app-menu-panel");
-    const summary = menu?.querySelector("summary");
+    const summary = menu?.querySelector(":scope > summary");
     if (!menu || !panel || !summary) return;
-    if (innerWidth <= 760) { panel.style.removeProperty("left"); panel.style.removeProperty("right"); return; }
-    panel.style.left = "0"; panel.style.right = "auto";
+    if (innerWidth <= 760) {
+      panel.style.removeProperty("left");
+      panel.style.removeProperty("right");
+      return;
+    }
+    panel.style.left = "0";
+    panel.style.right = "auto";
     if (!menu.open) return;
     requestAnimationFrame(() => {
       const trigger = summary.getBoundingClientRect();
       const width = panel.offsetWidth || 360;
       const margin = 16;
       if (trigger.left + width > innerWidth - margin && trigger.right - width >= margin) {
-        panel.style.left = "auto"; panel.style.right = "0";
+        panel.style.left = "auto";
+        panel.style.right = "0";
       }
     });
   };
 
   const initializePage = () => {
-    ensureGlobalNavigation();
     const themeToggle = document.querySelector("[data-theme-toggle]");
     applyTranslations();
     positionAppMenu();
@@ -252,7 +225,7 @@
       });
     });
 
-    document.querySelectorAll("details.menu").forEach((details) => {
+    document.querySelectorAll("details.menu:not(.global-menu)").forEach((details) => {
       details.addEventListener("toggle", () => {
         if (details.open) {
           closeSiblingMenus(details);
@@ -260,9 +233,13 @@
         }
       });
     });
+
     document.addEventListener("click", (event) => {
-      if (!event.target.closest("details.menu")) document.querySelectorAll("details.menu[open]").forEach((details) => { details.open = false; });
+      if (!event.target.closest("details.menu:not(.global-menu)")) {
+        document.querySelectorAll("details.menu:not(.global-menu)[open]").forEach((details) => { details.open = false; });
+      }
     });
+
     addEventListener("resize", positionAppMenu, { passive: true });
     const updateSystemTheme = () => { if (!root.dataset.theme) updateThemeToggle(themeToggle); };
     darkPreference.addEventListener?.("change", updateSystemTheme);
