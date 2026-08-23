@@ -11,7 +11,7 @@
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 20px;
-  background: var(--surface-strong);
+  background: var(--strong);
   color: inherit;
   text-decoration: none;
   transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
@@ -20,7 +20,7 @@
 .update-card:hover,
 .update-card:focus-visible {
   border-color: var(--accent);
-  box-shadow: var(--card-hover-shadow);
+  box-shadow: var(--shadow);
   outline: none;
   transform: translateY(-2px);
 }
@@ -30,7 +30,7 @@
   grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
   border-radius: 24px;
   background:
-    linear-gradient(135deg, var(--surface-strong), color-mix(in srgb, var(--accent-soft) 55%, var(--surface-strong)));
+    linear-gradient(135deg, var(--strong), color-mix(in srgb, var(--soft) 55%, var(--strong)));
 }
 
 .update-card--no-media {
@@ -44,7 +44,7 @@
   justify-content: center;
   overflow: hidden;
   padding: 0.9rem;
-  background: linear-gradient(145deg, var(--accent-soft), var(--taupe-soft));
+  background: linear-gradient(145deg, var(--soft), var(--soft2));
 }
 
 .update-card--featured .update-media {
@@ -82,7 +82,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-  color: var(--accent-dark);
+  color: var(--accentText);
   font-size: 0.74rem;
   font-weight: 850;
   letter-spacing: 0.08em;
@@ -106,11 +106,10 @@
   line-height: 1.58;
 }
 
+/* Shared Gaming CSS owns the button appearance. */
 .update-action {
+  align-self: flex-start;
   margin-top: auto;
-  padding-top: 0.2rem;
-  color: var(--accent-dark);
-  font-weight: 850;
 }
 
 .update-archive {
