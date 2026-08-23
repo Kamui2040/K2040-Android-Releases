@@ -1,5 +1,5 @@
 name: "Esca Agnellis: Rückmeldung (Deutsch)"
-description: "Teile allgemeine Rückmeldung zu Esca Agnellis."
+description: "Teile deine allgemeine Rückmeldung zu Esca Agnellis."
 title: "[Esca][DE][Feedback] "
 labels:
   - "app:esca-agnellis"
@@ -9,20 +9,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        Diese Vorlage ist für Esca Agnellis 0.15.0 (versionCode 39, Paket com.k2040.escaagnellis).
-        Bitte veröffentliche keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Kontoinformationen, privaten oder ungeschwärzten Protokolle, lokalen Dateipfade, identifizierenden Angaben oder ungeschwärzten Screenshots.
+        Danke für deine Rückmeldung. Die aktuelle öffentliche Version ist Esca Agnellis 0.16.0.
+        Bitte keine Sicherungen oder Exporte, Ernährungs- oder Gesundheitsdaten, Geräteseriennummern, Kontodaten, privaten Protokolle, lokalen Dateipfade, identifizierenden Informationen oder ungeschwärzten Screenshots anhängen.
   - type: input
     id: app_version
     attributes:
       label: App-Version
-      placeholder: "0.15.0"
-    validations:
-      required: true
-  - type: input
-    id: version_code
-    attributes:
-      label: versionCode
-      placeholder: "39"
+      placeholder: "0.16.0"
     validations:
       required: true
   - type: input
@@ -34,12 +27,12 @@ body:
   - type: dropdown
     id: area
     attributes:
-      label: Bereich
+      label: Worauf bezieht sich deine Rückmeldung?
       options:
-        - Erfassungsablauf
-        - Portionen
-        - Datensicherung
-        - Theme und Lesbarkeit
+        - Tägliche Erfassung
+        - Portionshilfe
+        - Sicherung und Wiederherstellung
+        - Design und Lesbarkeit
         - Sprache und Übersetzung
         - Installation oder Aktualisierung
         - Sonstiges
@@ -54,15 +47,15 @@ body:
   - type: textarea
     id: confusing
     attributes:
-      label: Was war unklar?
+      label: Was war unklar oder schwierig?
   - type: textarea
     id: suggestion
     attributes:
-      label: Verbesserungsvorschlag
+      label: Was würdest du verbessern?
   - type: dropdown
     id: blocker
     attributes:
-      label: Beeinträchtigt dies die Nutzung?
+      label: Beeinträchtigt dies die normale Nutzung?
       options:
         - Nein
         - Teilweise
@@ -72,9 +65,9 @@ body:
   - type: checkboxes
     id: privacy
     attributes:
-      label: Datenschutzbestätigung
+      label: Datenschutzprüfung
       options:
-        - label: "Ich habe keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Kontoinformationen, lokalen Dateipfade oder identifizierenden Angaben angehängt."
+        - label: "Ich habe keine Sicherungen, Exporte, Ernährungs- oder Gesundheitsdaten, Geräteseriennummern, Kontodaten, lokalen Dateipfade oder identifizierenden Informationen angehängt."
           required: true
-        - label: "Falls ich Screenshots oder Protokolle angehängt habe, wurden sie geprüft, vollständig geschwärzt und enthalten keine persönlichen oder sensiblen Informationen."
+        - label: "Falls ich einen Screenshot oder ein Protokoll angehängt habe, habe ich persönliche oder sensible Informationen vollständig entfernt."
           required: true
