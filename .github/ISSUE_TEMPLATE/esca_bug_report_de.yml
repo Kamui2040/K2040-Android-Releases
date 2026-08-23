@@ -1,5 +1,5 @@
 name: "Esca Agnellis: Fehlerbericht (Deutsch)"
-description: "Melde einen reproduzierbaren Fehler in Esca Agnellis."
+description: "Melde ein Problem in Esca Agnellis, das sich wiederholen lässt."
 title: "[Esca][DE][Fehler] "
 labels:
   - "app:esca-agnellis"
@@ -9,20 +9,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        Danke für die Meldung. Diese Vorlage ist für Esca Agnellis 0.15.0 (versionCode 39, Paket com.k2040.escaagnellis).
-        Veröffentliche keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Konto- oder Zugangsdaten, privaten oder ungeschwärzten Protokolle, lokalen Dateipfade, identifizierenden Informationen oder ungeschwärzten Screenshots.
+        Danke für die Meldung. Die aktuelle öffentliche Version ist Esca Agnellis 0.16.0.
+        Bitte keine Sicherungen oder Exporte, Ernährungs- oder Gesundheitsdaten, Geräteseriennummern, Kontodaten, Passwörter, privaten Protokolle, lokalen Dateipfade, identifizierenden Informationen oder ungeschwärzten Screenshots anhängen.
   - type: input
     id: app_version
     attributes:
       label: App-Version
-      placeholder: "0.15.0"
-    validations:
-      required: true
-  - type: input
-    id: version_code
-    attributes:
-      label: versionCode
-      placeholder: "39"
+      placeholder: "0.16.0"
     validations:
       required: true
   - type: input
@@ -35,41 +28,42 @@ body:
     id: device
     attributes:
       label: Gerät
-      description: "Hersteller und Modell, keine Seriennummer."
+      description: "Nur Hersteller und Modell; keine Seriennummer."
     validations:
       required: true
   - type: dropdown
     id: install_type
     attributes:
-      label: Installationsart
+      label: Wie wurde die App installiert?
       options:
         - Neuinstallation
-        - Aktualisierung
+        - Von einer älteren Version aktualisiert
         - Unbekannt
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Schritte zum Reproduzieren
+      label: Was hast du getan, bevor das Problem auftrat?
+      description: "Bitte nenne die Schritte in der richtigen Reihenfolge, damit sich das Problem wiederholen lässt."
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Erwartetes Verhalten
+      label: Was sollte passieren?
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Tatsächliches Verhalten
+      label: Was ist stattdessen passiert?
     validations:
       required: true
   - type: dropdown
     id: repeats_after_restart
     attributes:
-      label: Tritt das Problem nach dem Schließen und erneuten Öffnen der App erneut auf?
+      label: Tritt das Problem nach dem Schließen und erneuten Öffnen der App wieder auf?
       options:
         - Ja
         - Nein
@@ -79,7 +73,7 @@ body:
   - type: dropdown
     id: backup
     attributes:
-      label: War Datensicherung oder Wiederherstellung beteiligt?
+      label: War eine Sicherung oder Wiederherstellung beteiligt?
       options:
         - Nein
         - Ja
@@ -89,9 +83,9 @@ body:
   - type: checkboxes
     id: privacy
     attributes:
-      label: Datenschutzbestätigung
+      label: Datenschutzprüfung
       options:
-        - label: "Ich habe keine Sicherungs- oder Exportdateien, Ernährungs-, Fortschritts- oder Gesundheitsdaten, Geräteseriennummern, Konto- oder Zugangsdaten, lokalen Dateipfade oder identifizierenden Informationen angehängt."
+        - label: "Ich habe keine Sicherungen, Exporte, Ernährungs- oder Gesundheitsdaten, Geräteseriennummern, Kontodaten, lokalen Dateipfade oder identifizierenden Informationen angehängt."
           required: true
-        - label: "Falls ich Screenshots oder Protokolle angehängt habe, wurden sie geprüft, vollständig geschwärzt und enthalten keine persönlichen oder sensiblen Informationen."
+        - label: "Falls ich einen Screenshot oder ein Protokoll angehängt habe, habe ich persönliche oder sensible Informationen vollständig entfernt."
           required: true
