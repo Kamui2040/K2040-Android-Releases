@@ -1,41 +1,37 @@
-# Datenschutz / Privacy
+# Datenschutz
 
 ## Kurzfassung
 
-Esca Agnellis arbeitet lokal auf dem Android-Gerät. Die App fordert keine Internet-Berechtigung an und verwendet keine Konten, Werbung, Telemetrie, Analyse, Cloud-Synchronisierung, automatische Absturzübertragung oder Hintergrunddatenerfassung.
+Esca Agnellis arbeitet lokal auf deinem Android-Gerät. Die App besitzt keine Internet-Berechtigung und verwendet keine Konten, Werbung, Analyse, Telemetrie, Cloud-Synchronisierung, automatische Absturzberichte oder Hintergrunddatenerfassung.
 
-## Lokal gespeicherte Daten
+## Auf dem Gerät gespeicherte Daten
 
-Die App speichert lokal:
+Die App speichert:
 
-- ausgewählte Tagesportionen und Zusatzportionen;
-- Anzeige-, Sprach- und Theme-Einstellungen;
-- den optionalen Begleiterstatus, wenn der Begleiter aktiviert wurde.
+- deine täglichen Portionen und Zusatzportionen;
+- Anzeige-, Sprach- und Design-Einstellungen;
+- optionale Begleiterdaten, wenn du den Begleiter aktivierst.
 
-Der Begleiter ist standardmäßig deaktiviert. Sein Zustand und seine Sicherung bleiben vom Kern-Tracking und dessen Sicherung getrennt.
+Der Begleiter ist standardmäßig ausgeschaltet. Seine Daten und seine Sicherung bleiben von den normalen Tracking-Daten und deren Sicherung getrennt.
 
 ## Sicherungen und PDF-Berichte
 
-Sicherungen, Wiederherstellungen und PDF-Berichte verwenden Androids Dokumentauswahl. Die App schreibt nur an einen vom Benutzer gewählten Speicherort und liest nur eine vom Benutzer gewählte Datei. Es gibt keinen automatischen Upload und keine verpflichtende Synchronisierung.
+Sicherungen, Wiederherstellungen und PDF-Berichte verwenden die normale Android-Dateiauswahl. Die App liest oder schreibt nur eine Datei oder einen Speicherort, den du selbst auswählst. Es wird nichts automatisch hochgeladen.
 
 ## Externe Links
 
-Informations- oder freiwillige Unterstützungslinks werden nur nach einer ausdrücklichen Benutzeraktion an den ausgewählten Browser übergeben. Die App lädt diese Ziele nicht im Hintergrund.
+Informations- oder Unterstützungslinks werden erst nach dem Antippen in deinem gewählten Browser geöffnet. Die App lädt diese Seiten nicht im Hintergrund.
 
 ## Berechtigungen
 
-Das veröffentlichte Manifest darf keine Internet-Berechtigung enthalten. Funktionen, die einen Android-Dokumentauswahldialog öffnen, verwenden die vom System bereitgestellten Zugriffsrechte für das jeweils gewählte Dokument.
+Die App fordert keinen Internetzugriff an. Wenn du eine Sicherung erstellst oder wiederherstellst oder einen PDF-Bericht speicherst, erhält die App von Android nur Zugriff auf die von dir ausgewählte Datei oder den ausgewählten Speicherort.
 
-## Löschen und Wechseln der Signaturvariante
+## Daten löschen oder Downloadquelle wechseln
 
-Lokale App-Daten werden durch Android verwaltet. Eine manuelle Deinstallation oder das manuelle Löschen von App-Daten entfernt sie. K2040-Entwickler-APKs und unabhängig signierte F-Droid-APKs können nicht direkt übereinander installiert werden. Vor einem Wechsel müssen die unterstützte Hauptsicherung und bei aktiviertem Begleiter die separate Begleitersicherung exportiert werden.
+Android verwaltet die lokalen App-Daten. Wenn du die App deinstallierst oder ihre App-Daten löschst, werden diese lokalen Daten entfernt.
 
-Kein Projektwerkzeug darf die App automatisch deinstallieren oder App-Daten löschen.
+F-Droid signiert seinen eigenen Build. GitHub, APKPure und Uptodown bieten dagegen die von K2040 veröffentlichte Version an. Android erlaubt normalerweise nicht, diese unterschiedlich signierten Versionen direkt übereinander zu installieren. Erstelle vor einem Wechsel die normale Sicherung. Wenn du den optionalen Begleiter verwendest, sichere auch dessen Daten separat.
 
-## Keine Gesundheitsdatenübertragung
+## Gesundheitsinformationen
 
-Die App überträgt keine Ernährungs- oder Nutzungsdaten. Sie ist kein medizinisches Produkt und bietet keine Diagnose, Behandlung oder individualisierte Ernährungsberatung.
-
-## English summary
-
-Esca Agnellis stores tracking, settings and optional companion data locally. It requests no Internet permission and uses no account, advertising, telemetry, analytics, cloud sync, automatic crash reporting or background collection. Backups and PDF reports are handled only through user-selected Android document locations.
+Esca Agnellis sendet keine Ernährungs- oder Nutzungsdaten. Die App ist kein medizinisches Produkt und bietet keine Diagnose, Behandlung oder persönliche Ernährungsberatung.
