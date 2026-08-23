@@ -4,12 +4,12 @@
 
 No confirmed public issues are currently known.
 
-## Intentional behavior
+## Expected behavior
 
-In mixed rows, the numeric extra badge is intentionally displayed on the last visible tile for the corresponding subtype. The badge represents that subtype's recorded extra count, including `+1` when exactly one extra is recorded.
+When a row contains more than one kind of item, the extra-count badge appears on the last visible item of the matching kind. A single extra item is shown as `+1`.
 
-This behavior is not a known defect or a planned correction.
+This is intentional behavior, not a known bug.
 
-## Notice
+## New issues
 
-Newly confirmed issues will be added here without publishing private test data, internal issue numbers, or sensitive information.
+Confirmed public issues will be added here when needed. Private test data, internal tracking numbers, and sensitive information will not be published.
