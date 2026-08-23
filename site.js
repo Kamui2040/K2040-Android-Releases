@@ -15,243 +15,144 @@
   const darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
 
   const readStorage = (key) => {
-    try {
-      return window.localStorage.getItem(key);
-    } catch {
-      return null;
-    }
+    try { return localStorage.getItem(key); } catch { return null; }
   };
-
   const writeStorage = (key, value) => {
-    try {
-      window.localStorage.setItem(key, value);
-    } catch {
-      // Persistent storage is optional; the current page still works without it.
-    }
+    try { localStorage.setItem(key, value); } catch {}
   };
-
-  const storedTheme = readStorage(themeStorageKey);
-  if (storedTheme === "light" || storedTheme === "dark") {
-    root.dataset.theme = storedTheme;
-  }
-
-  const normalizeLanguage = (languageTag) => {
-    if (typeof languageTag !== "string") {
-      return null;
-    }
-
-    const normalized = languageTag.trim().toLowerCase();
-    if (normalized === "en" || normalized.startsWith("en-")) {
-      return "en";
-    }
-    if (normalized === "de" || normalized.startsWith("de-")) {
-      return "de";
-    }
-    if (normalized === "pt" || normalized.startsWith("pt-")) {
-      return "pt-PT";
-    }
-    if (normalized === "es" || normalized.startsWith("es-")) {
-      return "es";
-    }
-    if (normalized === "fr" || normalized.startsWith("fr-")) {
-      return "fr";
-    }
-
+  const normalizeLanguage = (value) => {
+    const tag = typeof value === "string" ? value.trim().toLowerCase() : "";
+    if (tag === "en" || tag.startsWith("en-")) return "en";
+    if (tag === "de" || tag.startsWith("de-")) return "de";
+    if (tag === "pt" || tag.startsWith("pt-")) return "pt-PT";
+    if (tag === "es" || tag.startsWith("es-")) return "es";
+    if (tag === "fr" || tag.startsWith("fr-")) return "fr";
     return null;
   };
-
   const detectLanguage = () => {
-    const hashLanguage = normalizeLanguage(window.location.hash.slice(1));
-    if (hashLanguage) {
-      return hashLanguage;
+    const hashLanguage = normalizeLanguage(location.hash.slice(1));
+    if (hashLanguage) return hashLanguage;
+    const stored = readStorage(languageStorageKey);
+    if (supportedLanguages.includes(stored)) return stored;
+    const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language];
+    for (const value of browserLanguages) {
+      const language = normalizeLanguage(value);
+      if (language) return language;
     }
-
-    const storedLanguage = readStorage(languageStorageKey);
-    if (supportedLanguages.includes(storedLanguage)) {
-      return storedLanguage;
-    }
-
-    const browserLanguages = Array.isArray(navigator.languages) && navigator.languages.length > 0
-      ? navigator.languages
-      : [navigator.language];
-
-    for (const browserLanguage of browserLanguages) {
-      const supportedLanguage = normalizeLanguage(browserLanguage);
-      if (supportedLanguage) {
-        return supportedLanguage;
-      }
-    }
-
     return "en";
   };
 
   let currentLanguage = detectLanguage();
+  const storedTheme = readStorage(themeStorageKey);
+  if (storedTheme === "light" || storedTheme === "dark") root.dataset.theme = storedTheme;
 
-  const effectiveTheme = () => {
-    const explicitTheme = root.dataset.theme;
-    if (explicitTheme === "light" || explicitTheme === "dark") {
-      return explicitTheme;
+  const effectiveTheme = () => root.dataset.theme || (darkPreference.matches ? "dark" : "light");
+  const translations = () => window.K2040_TRANSLATIONS?.[currentLanguage] || window.K2040_TRANSLATIONS?.en || {};
+  const translate = (key) => {
+    let value = translations();
+    for (const part of (key || "").split(".")) {
+      if (!value || typeof value !== "object" || !(part in value)) return null;
+      value = value[part];
     }
-
-    return darkPreference.matches ? "dark" : "light";
-  };
-
-  const getTranslations = () => {
-    const translations = window.K2040_TRANSLATIONS || {};
-    return translations[currentLanguage] || translations.en || {};
-  };
-
-  const getTranslation = (key) => {
-    if (!key) {
-      return null;
-    }
-
-    const segments = key.split(".");
-    let value = getTranslations();
-
-    for (const segment of segments) {
-      if (!value || typeof value !== "object" || !Object.prototype.hasOwnProperty.call(value, segment)) {
-        return null;
-      }
-      value = value[segment];
-    }
-
     return typeof value === "string" ? value : null;
   };
+  const localStrings = (entry) => entry?.strings?.[currentLanguage] || entry?.strings?.en || {};
+  const localizedUpdateImage = (entry) => entry?.images?.[currentLanguage] || entry?.images?.en || entry?.image || null;
 
-  const getLocalStrings = (entry) => {
-    if (!entry || typeof entry !== "object") {
-      return {};
+  const ensureGlobalNavigation = () => {
+    if (!document.querySelector('link[href*="global-navigation.css"]')) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/K2040-Android-Releases/global-navigation.css?v=20260823-2";
+      document.head.append(link);
     }
 
-    return entry.strings?.[currentLanguage] || entry.strings?.en || {};
-  };
-
-  const getLocalizedUpdateImage = (entry) => {
-    if (entry?.images && typeof entry.images === "object") {
-      return entry.images[currentLanguage] || entry.images.en || null;
+    if (!document.querySelector("[data-global-menu]")) {
+      const oldBrand = document.querySelector(".site-brand-name");
+      if (oldBrand) {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = `<details class="menu global-menu" data-global-menu>
+          <summary data-global-aria="menu" aria-label="K2040 navigation"><strong>K2040</strong><span class="menu-caret" aria-hidden="true">⌄</span></summary>
+          <div class="menu-panel global-menu-panel">
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="home">Home</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Home"><a href="https://kamui2040.github.io/" data-global-i18n="home">Home</a><a href="https://kamui2040.github.io/#projects" data-global-i18n="projectAreas">Project Areas</a><a href="https://kamui2040.github.io/#news" data-global-i18n="news">News</a><a href="https://kamui2040.github.io/#about" data-global-i18n="about">About</a></nav></details>
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="android">Android Projects</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Android Projects"><a href="/K2040-Android-Releases/" data-global-i18n="androidHome">Android Home</a><a href="/K2040-Android-Releases/#apps" data-global-i18n="apps">Apps</a><a href="/K2040-Android-Releases/#updates" data-global-i18n="updates">Updates</a><a href="/K2040-Android-Releases/#about" data-global-i18n="about">About</a></nav></details>
+            <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="gaming">Gaming Mods</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Gaming Mods"><a href="https://kamui2040.github.io/K2040-Gaming-Mods/" data-global-i18n="modsHome">Mods Home</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#projects" data-global-i18n="modProjects">Mod Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#updates" data-global-i18n="updates">Updates</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#about" data-global-i18n="about">About</a></nav></details>
+          </div>
+        </details>`;
+        oldBrand.replaceWith(wrapper.firstElementChild);
+      }
     }
-    return entry?.image || null;
+
+    document.querySelectorAll('a.nav-link[data-i18n="nav.updates"]').forEach((link) => {
+      if (!document.querySelector("#updates")) link.href = "/K2040-Android-Releases/#updates";
+    });
+
+    if (!document.querySelector('script[src*="global-navigation.js"]')) {
+      const script = document.createElement("script");
+      script.src = "/K2040-Android-Releases/global-navigation.js?v=20260823-2";
+      document.head.append(script);
+    }
   };
 
   const updateThemeToggle = (button) => {
-    if (!button) {
-      return;
-    }
-
-    const currentTheme = effectiveTheme();
-    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    if (!button) return;
+    const current = effectiveTheme();
+    const next = current === "dark" ? "light" : "dark";
+    button.setAttribute("aria-pressed", String(current === "dark"));
+    button.setAttribute("aria-label", translate(next === "dark" ? "controls.switchToDark" : "controls.switchToLight") || "");
     const icon = button.querySelector(".theme-toggle-icon");
     const label = button.querySelector("[data-theme-label]");
-    const labelKey = nextTheme === "dark" ? "controls.dark" : "controls.light";
-    const ariaKey = nextTheme === "dark" ? "controls.switchToDark" : "controls.switchToLight";
-
-    button.setAttribute("aria-pressed", String(currentTheme === "dark"));
-    button.setAttribute("aria-label", getTranslation(ariaKey) || ariaKey);
-
-    if (icon) {
-      icon.textContent = nextTheme === "dark" ? "☾" : "☀";
-    }
-
-    if (label) {
-      label.textContent = getTranslation(labelKey) || labelKey;
-    }
+    if (icon) icon.textContent = next === "dark" ? "☾" : "☀";
+    if (label) label.textContent = translate(next === "dark" ? "controls.dark" : "controls.light") || "";
   };
 
   const updateLanguageControl = () => {
     const presentation = languagePresentation[currentLanguage] || languagePresentation.en;
-
-    document.querySelectorAll("[data-language-current-flag]").forEach((element) => {
-      element.textContent = presentation.flag;
-    });
-
-    document.querySelectorAll("[data-language-current-label]").forEach((element) => {
-      element.textContent = presentation.label;
-    });
-
+    document.querySelectorAll("[data-language-current-flag]").forEach((element) => { element.textContent = presentation.flag; });
+    document.querySelectorAll("[data-language-current-label]").forEach((element) => { element.textContent = presentation.label; });
     document.querySelectorAll("[data-language-option]").forEach((button) => {
-      const selected = button.dataset.languageOption === currentLanguage;
-      button.setAttribute("aria-current", selected ? "true" : "false");
+      button.setAttribute("aria-current", button.dataset.languageOption === currentLanguage ? "true" : "false");
     });
   };
 
   const updateLocalizedScreenshots = () => {
     const locale = languagePresentation[currentLanguage]?.locale || "en-US";
-
     document.querySelectorAll("[data-esca-screenshot]").forEach((image) => {
       const filename = image.dataset.escaScreenshot;
-      if (!filename) {
-        return;
-      }
-      image.src = `https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/${locale}/images/phoneScreenshots/${filename}`;
+      if (filename) image.src = `https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/${locale}/images/phoneScreenshots/${filename}`;
     });
   };
 
-  const updateTimeValue = (update) => {
-    const value = Date.parse(`${update?.date || ""}T00:00:00Z`);
-    return Number.isNaN(value) ? null : value;
-  };
-
-  const sortedUpdates = () => {
-    return [...(window.K2040_CONTENT?.updates || [])]
-      .map((update, sourceIndex) => ({ update, sourceIndex, time: updateTimeValue(update) }))
-      .sort((left, right) => {
-        if (left.time === null && right.time === null) {
-          return left.sourceIndex - right.sourceIndex;
-        }
-        if (left.time === null) {
-          return 1;
-        }
-        if (right.time === null) {
-          return -1;
-        }
-        if (left.time !== right.time) {
-          return right.time - left.time;
-        }
-        return left.sourceIndex - right.sourceIndex;
-      })
-      .map(({ update }) => update);
-  };
+  const sortedUpdates = () => [...(window.K2040_CONTENT?.updates || [])]
+    .map((update, sourceIndex) => ({ update, sourceIndex, time: Date.parse(`${update?.date || ""}T00:00:00Z`) }))
+    .sort((a, b) => {
+      const aValid = !Number.isNaN(a.time), bValid = !Number.isNaN(b.time);
+      if (!aValid && !bValid) return a.sourceIndex - b.sourceIndex;
+      if (!aValid) return 1;
+      if (!bValid) return -1;
+      return a.time === b.time ? a.sourceIndex - b.sourceIndex : b.time - a.time;
+    })
+    .map(({ update }) => update);
 
   const renderUpdates = () => {
     document.querySelectorAll("[data-update-list]").forEach((list) => {
       const template = document.querySelector("#update-card-template");
-      if (!template) {
-        return;
-      }
-
+      if (!template) return;
       const requestedLimit = Number.parseInt(list.dataset.updateLimit || "", 10);
-      const updates = Number.isFinite(requestedLimit) && requestedLimit > 0
-        ? sortedUpdates().slice(0, requestedLimit)
-        : sortedUpdates();
-
+      const updates = Number.isFinite(requestedLimit) && requestedLimit > 0 ? sortedUpdates().slice(0, requestedLimit) : sortedUpdates();
       list.replaceChildren();
-
       updates.forEach((update, index) => {
-        const strings = getLocalStrings(update);
+        const strings = localStrings(update);
         const fragment = template.content.cloneNode(true);
         const card = fragment.querySelector("[data-update-card]");
         const media = fragment.querySelector("[data-update-media]");
         const image = fragment.querySelector("[data-update-image]");
-        const time = fragment.querySelector("[data-update-date]");
-        const category = fragment.querySelector("[data-update-category]");
-        const title = fragment.querySelector("[data-update-title]");
-        const summary = fragment.querySelector("[data-update-summary]");
-        const action = fragment.querySelector("[data-update-action]");
-        const localizedImage = getLocalizedUpdateImage(update);
-
+        const localizedImage = localizedUpdateImage(update);
         if (card) {
-          if (update.href) {
-            card.href = update.href;
-          } else {
-            card.removeAttribute("href");
-            card.setAttribute("aria-disabled", "true");
-          }
-          if (index === 0) {
-            card.classList.add("update-card--featured");
-          }
+          if (update.href) card.href = update.href;
+          else { card.removeAttribute("href"); card.setAttribute("aria-disabled", "true"); }
+          if (index === 0) card.classList.add("update-card--featured");
         }
-
         if (media && image && localizedImage) {
           image.src = localizedImage;
           image.alt = strings.imageAlt || "";
@@ -262,30 +163,19 @@
           media?.remove();
           card?.classList.add("update-card--no-media");
         }
-
+        const time = fragment.querySelector("[data-update-date]");
         if (time) {
           time.dateTime = update.date;
-          time.textContent = new Intl.DateTimeFormat(currentLanguage, {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-            timeZone: "UTC"
-          }).format(new Date(`${update.date}T00:00:00Z`));
+          time.textContent = new Intl.DateTimeFormat(currentLanguage, { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${update.date}T00:00:00Z`));
         }
-
-        if (category) {
-          category.textContent = strings.category || "";
-        }
-        if (title) {
-          title.textContent = strings.title || "";
-        }
-        if (summary) {
-          summary.textContent = strings.summary || "";
-        }
-        if (action) {
-          action.textContent = `${getTranslation("actions.readMore") || "Read more"} →`;
-        }
-
+        const category = fragment.querySelector("[data-update-category]");
+        const title = fragment.querySelector("[data-update-title]");
+        const summary = fragment.querySelector("[data-update-summary]");
+        const action = fragment.querySelector("[data-update-action]");
+        if (category) category.textContent = strings.category || "";
+        if (title) title.textContent = strings.title || "";
+        if (summary) summary.textContent = strings.summary || "";
+        if (action) action.textContent = `${translate("actions.readMore") || "Read more"} →`;
         list.append(fragment);
       });
     });
@@ -294,120 +184,71 @@
   const applyTranslations = () => {
     root.lang = currentLanguage;
     root.dataset.language = currentLanguage;
-
-    const pageTitleKey = document.body?.dataset.pageTitleKey || "meta.title";
-    const pageDescriptionKey = document.body?.dataset.pageDescriptionKey || "meta.description";
-    const pageTitle = getTranslation(pageTitleKey);
-    const metaDescription = getTranslation(pageDescriptionKey);
-    const descriptionElement = document.querySelector('meta[name="description"]');
-
-    if (pageTitle) {
-      document.title = pageTitle;
-    }
-    if (descriptionElement && metaDescription) {
-      descriptionElement.setAttribute("content", metaDescription);
-    }
-
+    const pageTitle = translate(document.body?.dataset.pageTitleKey || "meta.title");
+    const description = translate(document.body?.dataset.pageDescriptionKey || "meta.description");
+    if (pageTitle) document.title = pageTitle;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta && description) meta.content = description;
     document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const translatedText = getTranslation(element.dataset.i18n);
-      if (translatedText) {
-        element.textContent = translatedText;
-      }
+      const value = translate(element.dataset.i18n);
+      if (value) element.textContent = value;
     });
-
     document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-      const translatedText = getTranslation(element.dataset.i18nAriaLabel);
-      if (translatedText) {
-        element.setAttribute("aria-label", translatedText);
-      }
+      const value = translate(element.dataset.i18nAriaLabel);
+      if (value) element.setAttribute("aria-label", value);
     });
-
     document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
-      const translatedText = getTranslation(element.dataset.i18nAlt);
-      if (translatedText) {
-        element.setAttribute("alt", translatedText);
-      }
+      const value = translate(element.dataset.i18nAlt);
+      if (value) element.alt = value;
     });
-
     updateLanguageControl();
     updateLocalizedScreenshots();
     renderUpdates();
     updateThemeToggle(document.querySelector("[data-theme-toggle]"));
   };
 
-  const closeSiblingMenus = (activeDetails) => {
-    document.querySelectorAll("details.menu").forEach((details) => {
-      if (details !== activeDetails) {
-        details.open = false;
-      }
-    });
+  const closeSiblingMenus = (active) => {
+    document.querySelectorAll("details.menu").forEach((details) => { if (details !== active) details.open = false; });
   };
-
   const positionAppMenu = () => {
     const menu = document.querySelector("details.app-menu");
     const panel = menu?.querySelector(".app-menu-panel");
     const summary = menu?.querySelector("summary");
-    if (!menu || !panel || !summary) {
-      return;
-    }
-
-    if (window.innerWidth <= 760) {
-      panel.style.removeProperty("left");
-      panel.style.removeProperty("right");
-      return;
-    }
-
-    panel.style.left = "0";
-    panel.style.right = "auto";
-
-    if (!menu.open) {
-      return;
-    }
-
+    if (!menu || !panel || !summary) return;
+    if (innerWidth <= 760) { panel.style.removeProperty("left"); panel.style.removeProperty("right"); return; }
+    panel.style.left = "0"; panel.style.right = "auto";
+    if (!menu.open) return;
     requestAnimationFrame(() => {
       const trigger = summary.getBoundingClientRect();
-      const panelWidth = panel.offsetWidth || 360;
+      const width = panel.offsetWidth || 360;
       const margin = 16;
-      const fitsRight = trigger.left + panelWidth <= window.innerWidth - margin;
-      const fitsLeft = trigger.right - panelWidth >= margin;
-
-      if (!fitsRight && fitsLeft) {
-        panel.style.left = "auto";
-        panel.style.right = "0";
+      if (trigger.left + width > innerWidth - margin && trigger.right - width >= margin) {
+        panel.style.left = "auto"; panel.style.right = "0";
       }
     });
   };
 
   const initializePage = () => {
+    ensureGlobalNavigation();
     const themeToggle = document.querySelector("[data-theme-toggle]");
-
     applyTranslations();
     positionAppMenu();
 
-    if (themeToggle) {
-      themeToggle.addEventListener("click", () => {
-        const nextTheme = effectiveTheme() === "dark" ? "light" : "dark";
-        root.dataset.theme = nextTheme;
-        writeStorage(themeStorageKey, nextTheme);
-        updateThemeToggle(themeToggle);
-      });
-    }
+    themeToggle?.addEventListener("click", () => {
+      const next = effectiveTheme() === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      writeStorage(themeStorageKey, next);
+      updateThemeToggle(themeToggle);
+    });
 
     document.querySelectorAll("[data-language-option]").forEach((button) => {
       button.addEventListener("click", () => {
-        const selectedLanguage = button.dataset.languageOption;
-        if (!supportedLanguages.includes(selectedLanguage)) {
-          return;
-        }
-
-        currentLanguage = selectedLanguage;
-        writeStorage(languageStorageKey, selectedLanguage);
+        const language = button.dataset.languageOption;
+        if (!supportedLanguages.includes(language)) return;
+        currentLanguage = language;
+        writeStorage(languageStorageKey, language);
         applyTranslations();
-
-        const menu = button.closest("details");
-        if (menu) {
-          menu.open = false;
-        }
+        button.closest("details")?.removeAttribute("open");
       });
     });
 
@@ -415,39 +256,18 @@
       details.addEventListener("toggle", () => {
         if (details.open) {
           closeSiblingMenus(details);
-          if (details.classList.contains("app-menu")) {
-            positionAppMenu();
-          }
+          if (details.classList.contains("app-menu")) positionAppMenu();
         }
       });
     });
-
     document.addEventListener("click", (event) => {
-      if (!event.target.closest("details.menu")) {
-        document.querySelectorAll("details.menu[open]").forEach((details) => {
-          details.open = false;
-        });
-      }
+      if (!event.target.closest("details.menu")) document.querySelectorAll("details.menu[open]").forEach((details) => { details.open = false; });
     });
-
-    window.addEventListener("resize", positionAppMenu, { passive: true });
-
-    const updateForSystemPreference = () => {
-      if (!root.dataset.theme) {
-        updateThemeToggle(themeToggle);
-      }
-    };
-
-    if (typeof darkPreference.addEventListener === "function") {
-      darkPreference.addEventListener("change", updateForSystemPreference);
-    } else if (typeof darkPreference.addListener === "function") {
-      darkPreference.addListener(updateForSystemPreference);
-    }
+    addEventListener("resize", positionAppMenu, { passive: true });
+    const updateSystemTheme = () => { if (!root.dataset.theme) updateThemeToggle(themeToggle); };
+    darkPreference.addEventListener?.("change", updateSystemTheme);
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initializePage, { once: true });
-  } else {
-    initializePage();
-  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initializePage, { once: true });
+  else initializePage();
 })();
