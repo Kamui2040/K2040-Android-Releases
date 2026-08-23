@@ -1,4 +1,4 @@
-/* Android download-row layout only. Shared button appearance lives in shared-ui.css. */
+/* Android download-row layout only. Button appearance comes from Gaming. */
 .download-source-label {
   min-width: 0;
 }
@@ -13,7 +13,6 @@
   .download-button--source {
     width: 100%;
     min-width: 0;
-    padding-inline: .75rem;
   }
 
   .download-button--source:last-child:nth-child(odd) {
