@@ -13,3 +13,18 @@
 
 .about-links{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.25rem}.landing-about{scroll-margin-top:6.5rem}#apps,#updates{scroll-margin-top:6.5rem}
 @media(max-width:760px){.global-menu-panel{width:min(320px,calc(100vw - 1rem));max-height:calc(100vh - 6rem);overflow-y:auto}.global-menu-submenu,.global-menu-item--flip .global-menu-submenu{position:static;width:auto;margin:.3rem 0 .45rem .65rem;padding:.3rem;box-shadow:none}.global-menu-item-arrow{transform:rotate(90deg)}.global-menu-item[open] .global-menu-item-arrow{transform:rotate(-90deg)}}
+
+/* Final metric parity with the Gaming site. These selectors intentionally outrank the older Android layers. */
+.site-header{clip-path:none!important}
+.site-header .global-menu>summary{min-width:86px}
+.site-header .global-menu-panel{padding:.55rem!important}
+.site-header .global-menu-item>summary{gap:.6rem!important;padding:.65rem .6rem!important}
+.site-header .global-menu-submenu a{padding:.7rem .6rem!important;font-weight:700!important}
+.site-header .global-menu-submenu a+a{margin-top:.55rem!important;padding-top:1.25rem!important}
+.site-header .app-menu-panel,.site-header .language-menu-panel{clip-path:none!important}
+body .section-link,body .inline-link,body .download-button,body .resource-links a{min-height:38px!important;padding:.5rem .85rem!important;font-size:inherit!important}
+body .about-links a,body .site-footer nav a{min-height:40px!important;padding:.5rem .85rem!important;font-size:inherit!important}
+body .update-action,body .text-action{min-height:36px!important;padding:.45rem .8rem!important;font-size:inherit!important}
+body .site-footer{display:block!important;margin-top:1.5rem!important;padding:clamp(1.4rem,4vw,2.5rem)!important}
+body .site-footer p{max-width:760px!important;margin:0!important;font-size:1.05rem!important;line-height:1.65!important}
+body .site-footer nav{justify-content:flex-start!important;gap:.65rem!important;margin-top:1.25rem!important}
