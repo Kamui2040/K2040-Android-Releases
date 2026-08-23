@@ -16,7 +16,7 @@ Dieses öffentliche Repository ist die offizielle Anlaufstelle für veröffentli
 
 - K2040-Hauptseite: <https://kamui2040.github.io/>
 - Android-Projekte: <https://kamui2040.github.io/K2040-Android-Releases/>
-- Spiele-Mods: <https://kamui2040.github.io/gaming-mods/>
+- Spiele-Mods: <https://kamui2040.github.io/K2040-Gaming-Mods/>
 
 Die Android-Projektseite bündelt die aktuellen Apps, Downloadlinks, Screenshots, Datenschutzinformationen und Updates.
 
@@ -38,12 +38,13 @@ GeoJoystick bietet eine Joystick-Steuerung für Android-Teststandorte.
 Esca Agnellis ist ein einfacher, privater Ernährungspyramiden-Tracker, der seine Daten auf dem Gerät speichert.
 
 - App-Seite: <https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/>
-- Dokumentation: [Esca-Agnellis-Dokumentation](apps/esca-agnellis/README.md)
+- Quellcode und Dokumentation: <https://github.com/Kamui2040/Esca-Agnellis-Android>
 - GitHub-Release: <https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0>
 - F-Droid: <https://f-droid.org/packages/com.k2040.escaagnellis/>
 - APKPure: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Uptodown: <https://esca-agnellis.en.uptodown.com/android>
-- Quellcode: <https://github.com/Kamui2040/Esca-Agnellis-Android>
+
+Release-spezifische Hinweise, historische Lizenzinformationen und Prüfsummen bleiben unter `apps/esca-agnellis/`, weil die offizielle K2040-APK von Esca aus diesem Release-Repository veröffentlicht wird. GeoJoystick veröffentlicht seine GitHub-Releases direkt aus seinem Quellrepository; deshalb ist dessen App-Ordner bewusst schlanker.
 
 ## Downloads
 
