@@ -106,8 +106,8 @@
   line-height: 1.58;
 }
 
-/* Shared Gaming CSS owns the button appearance. */
-.update-action {
+/* Layout only. The action itself is Gaming's .text-link component. */
+.update-copy > .text-link {
   align-self: flex-start;
   margin-top: auto;
 }
