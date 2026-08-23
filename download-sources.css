@@ -1,22 +1,4 @@
-/* Download destinations use the same single-piece control as Gaming actions. */
-.download-button--source {
-  gap: .4rem;
-}
-
-.download-source-icon {
-  display: inline;
-  width: auto;
-  height: auto;
-  flex: 0 0 auto;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  font-size: .92rem;
-  font-weight: 750;
-  line-height: 1;
-}
-
+/* Android download-row layout only. Shared button appearance lives in shared-ui.css. */
 .download-source-label {
   min-width: 0;
 }
