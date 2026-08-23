@@ -20,8 +20,7 @@
 .site-brand-name:hover,
 .site-brand-name:focus-visible,
 .site-brand-section:hover,
-.site-brand-section:focus-visible,
-.site-brand-section[aria-current="page"] {
+.site-brand-section:focus-visible {
   border-color: transparent !important;
   border-bottom-color: #00d9e5 !important;
   background: linear-gradient(180deg,rgba(0,217,229,.08),transparent) !important;
