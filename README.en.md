@@ -44,6 +44,8 @@ Esca Agnellis is a simple, private food-pyramid tracker that keeps its data on t
 - APKPure: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Uptodown: <https://esca-agnellis.en.uptodown.com/android>
 
+Release-specific guidance, historical licence information and checksums remain under `apps/esca-agnellis/` because Esca's official K2040 APK is published from this release repository. GeoJoystick publishes its GitHub releases directly from its source repository, so its app folder is intentionally smaller.
+
 ## Downloads
 
 Use the official links above. GitHub Releases provides the K2040-published app files and release notes. F-Droid builds and signs its own packages from the public source, so its version may not install directly over a K2040-published APK.
