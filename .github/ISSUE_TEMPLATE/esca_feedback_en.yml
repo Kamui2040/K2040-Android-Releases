@@ -9,20 +9,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        This form is for Esca Agnellis 0.15.0 (versionCode 39, package com.k2040.escaagnellis).
-        Do not publish backup or export files, nutrition, progress, or health data, device serial numbers, account details, private or unredacted logs, local file-system paths, identifying information, or unredacted screenshots.
+        Thanks for sharing feedback. The current public release is Esca Agnellis 0.16.0.
+        Please do not attach backups or exports, nutrition or health data, device serial numbers, account details, private logs, local file paths, identifying information, or unredacted screenshots.
   - type: input
     id: app_version
     attributes:
       label: App version
-      placeholder: "0.15.0"
-    validations:
-      required: true
-  - type: input
-    id: version_code
-    attributes:
-      label: versionCode
-      placeholder: "39"
+      placeholder: "0.16.0"
     validations:
       required: true
   - type: input
@@ -34,10 +27,10 @@ body:
   - type: dropdown
     id: area
     attributes:
-      label: Area
+      label: What is your feedback about?
       options:
-        - Tracking flow
-        - Portion reference
+        - Daily tracking
+        - Portion guide
         - Backup and restore
         - Theme and readability
         - Language and translation
@@ -54,27 +47,27 @@ body:
   - type: textarea
     id: confusing
     attributes:
-      label: What was confusing?
+      label: What was unclear or difficult?
   - type: textarea
     id: suggestion
     attributes:
-      label: Suggested improvement
+      label: What would you improve?
   - type: dropdown
     id: blocker
     attributes:
       label: Does this affect normal use?
       options:
         - "No"
-        - Partially
+        - Partly
         - "Yes"
     validations:
       required: true
   - type: checkboxes
     id: privacy
     attributes:
-      label: Privacy confirmation
+      label: Privacy check
       options:
-        - label: "I have not attached backup or export files, nutrition, progress, or health data, device serial numbers, account details, local file-system paths, or identifying information."
+        - label: "I have not attached backups, exports, nutrition or health data, device serial numbers, account details, local file paths, or identifying information."
           required: true
-        - label: "If I attached screenshots or logs, I reviewed and fully redacted them, and they contain no personal or sensitive information."
+        - label: "If I attached a screenshot or log, I checked and fully removed personal or sensitive information."
           required: true
