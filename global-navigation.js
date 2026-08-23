@@ -10,7 +10,11 @@
   const normalize=(value)=>{const v=(value||"").toLowerCase();if(v.startsWith("de"))return"de";if(v.startsWith("pt"))return"pt-PT";if(v.startsWith("es"))return"es";if(v.startsWith("fr"))return"fr";return"en"};
   const current=()=>{try{const saved=localStorage.getItem("k2040-language");if(saved&&labels[saved])return saved}catch{}return normalize(document.documentElement.lang||navigator.language)};
   const apply=(language=current())=>{const copy=labels[language]||labels.en;document.querySelectorAll("[data-global-i18n]").forEach((el)=>{const value=copy[el.dataset.globalI18n];if(value)el.textContent=value});document.querySelectorAll("[data-global-aria]").forEach((el)=>{const value=copy[el.dataset.globalAria];if(value)el.setAttribute("aria-label",value)})};
+  const boundMenus=new WeakSet();
+  const boundLanguageButtons=new WeakSet();
   const initMenu=(menu)=>{
+    if(boundMenus.has(menu))return;
+    boundMenus.add(menu);
     const items=[...menu.querySelectorAll("[data-global-menu-item]")];
     const position=(item)=>{item.classList.remove("global-menu-item--flip");if(!item.open||innerWidth<=760)return;requestAnimationFrame(()=>{const panel=menu.querySelector(".global-menu-panel");const sub=item.querySelector(".global-menu-submenu");if(!panel||!sub)return;const rect=panel.getBoundingClientRect(),width=sub.offsetWidth||245,gap=9,margin=16;const fitsRight=rect.right+gap+width<=innerWidth-margin;const fitsLeft=rect.left-gap-width>=margin;item.classList.toggle("global-menu-item--flip",!fitsRight&&fitsLeft)})};
     items.forEach((item)=>{
@@ -27,6 +31,20 @@
     menu.addEventListener("toggle",()=>{if(!menu.open)items.forEach((item)=>item.open=false)});
     addEventListener("resize",()=>items.forEach(position),{passive:true});
   };
-  const init=()=>{apply();document.querySelectorAll("[data-global-menu]").forEach(initMenu);document.querySelectorAll("[data-language-option]").forEach((button)=>button.addEventListener("click",()=>apply(button.dataset.languageOption)));document.addEventListener("click",(event)=>document.querySelectorAll("[data-global-menu][open]").forEach((menu)=>{if(!menu.contains(event.target))menu.open=false}))};
+  const bind=()=>{
+    apply();
+    document.querySelectorAll("[data-global-menu]").forEach(initMenu);
+    document.querySelectorAll("[data-language-option]").forEach((button)=>{
+      if(boundLanguageButtons.has(button))return;
+      boundLanguageButtons.add(button);
+      button.addEventListener("click",()=>apply(button.dataset.languageOption));
+    });
+  };
+  const init=()=>{
+    bind();
+    const observer=new MutationObserver(()=>bind());
+    observer.observe(document.body,{childList:true,subtree:true});
+    document.addEventListener("click",(event)=>document.querySelectorAll("[data-global-menu][open]").forEach((menu)=>{if(!menu.contains(event.target))menu.open=false}));
+  };
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
 })();
