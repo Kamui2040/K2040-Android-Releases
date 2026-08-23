@@ -231,6 +231,66 @@
   margin-top: 1.25rem;
 }
 
+/* Exact resting and hover treatment used by visible Gaming actions. */
+.android-page .text-link,
+.android-page .project-action,
+.android-page .section-link,
+.android-page .inline-link,
+.android-page .download-button,
+.android-page .resource-links a,
+.android-page .about-links a,
+.android-page .site-footer nav a,
+.android-page .update-action,
+.android-page .text-action {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .55rem .85rem;
+  border: 1px solid rgba(0,207,215,.34);
+  border-bottom-color: #00d9e5;
+  border-radius: 0;
+  background: linear-gradient(180deg,rgba(0,217,229,.09),var(--strong));
+  box-shadow: inset 0 -2px 0 #00d9e5,0 0 10px rgba(0,217,229,.08);
+  color: var(--accentText);
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  clip-path: polygon(0 8px,8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px));
+  transition: background 140ms ease,border-color 140ms ease,box-shadow 140ms ease,color 140ms ease,transform 140ms ease;
+}
+
+.android-page .text-link:hover,
+.android-page .text-link:focus-visible,
+.android-page .project-action:hover,
+.android-page .project-action:focus-visible,
+.android-page .section-link:hover,
+.android-page .section-link:focus-visible,
+.android-page .inline-link:hover,
+.android-page .inline-link:focus-visible,
+.android-page .download-button:hover,
+.android-page .download-button:focus-visible,
+.android-page .resource-links a:hover,
+.android-page .resource-links a:focus-visible,
+.android-page .about-links a:hover,
+.android-page .about-links a:focus-visible,
+.android-page .site-footer nav a:hover,
+.android-page .site-footer nav a:focus-visible,
+.android-page .update-action:hover,
+.android-page .update-action:focus-visible,
+.android-page .text-action:hover,
+.android-page .text-action:focus-visible {
+  border-color: rgba(0,240,242,.58);
+  border-bottom-color: #00f0f2;
+  background: linear-gradient(180deg,rgba(0,217,229,.16),var(--surface));
+  box-shadow: inset 0 -2px 0 #00f0f2,0 0 13px rgba(0,217,229,.18);
+  color: var(--text);
+  outline: none;
+  transform: translateY(-1px);
+}
+
 @media (max-width: 900px) {
   .detail-grid {
     grid-template-columns: 1fr;
