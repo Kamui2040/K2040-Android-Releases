@@ -2,30 +2,30 @@
 
 [English version](SECURITY.en.md)
 
-## Sicherheitsprobleme melden
+## Sicherheitsprobleme privat melden
 
-Sicherheitsrelevante Informationen dürfen nicht in einem öffentlichen Issue, Kommentar oder Anhang veröffentlicht werden.
+Veröffentliche sicherheitsrelevante Informationen nicht in einem öffentlichen Issue, Kommentar oder Anhang.
 
-Nutze GitHubs private Sicherheitsmeldung:
+Nutze die private Sicherheitsmeldung von GitHub:
 
 <https://github.com/Kamui2040/K2040-Android-Releases/security/advisories/new>
 
-Falls dieser Weg nicht verfügbar ist, veröffentliche keine vertraulichen Details. Erstelle stattdessen zunächst keine öffentliche Meldung und verwende nur einen später ausdrücklich benannten privaten Kontaktweg.
+Falls diese Seite nicht verfügbar ist, veröffentliche die Details nicht. Warte auf einen privaten Kontaktweg, statt eine öffentliche Meldung zu erstellen.
 
-## Nicht veröffentlichen
+## Private Informationen nicht hochladen
 
-Insbesondere nicht öffentlich hochladen:
+Bitte nicht veröffentlichen:
 
-- Sicherungskopien oder exportierte App-Daten;
+- Sicherungen oder exportierte App-Daten;
 - Ernährungs-, Fortschritts- oder Gesundheitsdaten;
 - private oder ungeschwärzte Protokolle;
 - Geräteseriennummern;
 - lokale Dateipfade;
-- Zugangsdaten oder Kontoinformationen;
-- identifizierende Informationen;
-- Signaturmaterial, Schlüsseldateien oder Passwörter;
+- Passwörter, Kontodaten oder andere Zugangsdaten;
+- Informationen, die eine Person identifizieren;
+- Signaturschlüssel oder anderes Signaturmaterial;
 - Screenshots mit persönlichen oder sensiblen Informationen.
 
-## Unterstützte Veröffentlichung
+## Unterstützte Version
 
-Die derzeit unterstützte öffentliche Esca-Veröffentlichung ist `esca-agnellis-v0.15.0`.
+Nutze für Prüfungen und Meldungen die aktuelle öffentliche Esca-Agnellis-Version, die auf der [Android-Projektseite](https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/) aufgeführt ist.

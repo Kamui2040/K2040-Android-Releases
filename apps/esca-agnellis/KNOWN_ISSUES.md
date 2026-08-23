@@ -4,12 +4,12 @@
 
 Derzeit sind keine bestätigten öffentlichen Probleme bekannt.
 
-## Absichtliches Verhalten
+## Erwartetes Verhalten
 
-In gemischten Reihen wird die numerische Zusatzkennzeichnung absichtlich auf dem letzten sichtbaren Feld des jeweiligen Untertyps angezeigt. Die Kennzeichnung entspricht der gespeicherten Zusatzmenge dieses Untertyps, einschließlich `+1` bei genau einer Zusatzmenge.
+Wenn eine Reihe mehrere Arten von Einträgen enthält, erscheint die Kennzeichnung für zusätzliche Einträge beim letzten sichtbaren Eintrag der passenden Art. Ein einzelner zusätzlicher Eintrag wird als `+1` angezeigt.
 
-Dieses Verhalten ist kein bekannter Fehler und keine geplante Korrektur.
+Dieses Verhalten ist beabsichtigt und kein bekannter Fehler.
 
-## Hinweis
+## Neue Probleme
 
-Neue bestätigte Probleme werden hier ergänzt, ohne private Testdaten, interne Issue-Nummern oder sensible Informationen zu veröffentlichen.
+Bestätigte öffentliche Probleme werden hier bei Bedarf ergänzt. Private Testdaten, interne Nummern und sensible Informationen werden nicht veröffentlicht.

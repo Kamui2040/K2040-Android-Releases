@@ -2,30 +2,30 @@
 
 [Deutsche Version](SECURITY.md)
 
-## Reporting a security issue
+## Report a security problem privately
 
-Do not publish security-sensitive information in a public issue, comment, or attachment.
+Do not post security-sensitive information in a public issue, comment, or attachment.
 
-Use GitHub private vulnerability reporting:
+Use GitHub's private security reporting page:
 
 <https://github.com/Kamui2040/K2040-Android-Releases/security/advisories/new>
 
-If that route is unavailable, do not disclose confidential details publicly. Do not open a public report until a private route has been explicitly designated.
+If that page is not available, do not publish the details. Wait for a private contact route instead of opening a public report.
 
-## Do not publish
+## Keep private information out of reports
 
-In particular, do not upload:
+Do not upload:
 
-- backup or exported application data;
+- backups or exported app data;
 - nutrition, progress, or health information;
 - private or unredacted logs;
 - device serial numbers;
-- local file-system paths;
-- credentials or account information;
-- identifying information;
-- signing material, key files, or passwords;
-- screenshots containing personal or sensitive information.
+- local file paths;
+- passwords, account details, or other credentials;
+- information that identifies a person;
+- signing keys or other signing material;
+- screenshots that contain personal or sensitive information.
 
 ## Supported release
 
-The currently supported public Esca release is `esca-agnellis-v0.15.0`.
+Use the current public Esca Agnellis release listed on the [Android Projects page](https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/) when checking or reporting a problem.

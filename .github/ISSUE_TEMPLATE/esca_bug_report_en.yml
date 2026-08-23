@@ -1,5 +1,5 @@
 name: "Esca Agnellis: Bug Report (English)"
-description: "Report a reproducible problem in Esca Agnellis."
+description: "Report a problem that can be repeated in Esca Agnellis."
 title: "[Esca][EN][Bug] "
 labels:
   - "app:esca-agnellis"
@@ -9,20 +9,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for the report. This form is for Esca Agnellis 0.15.0 (versionCode 39, package com.k2040.escaagnellis).
-        Do not publish backup or export files, nutrition, progress, or health data, device serial numbers, account details or credentials, private or unredacted logs, local file-system paths, identifying information, or unredacted screenshots.
+        Thanks for reporting a problem. The current public release is Esca Agnellis 0.16.0.
+        Do not attach backups or exports, nutrition or health data, device serial numbers, account details, passwords, private logs, local file paths, identifying information, or unredacted screenshots.
   - type: input
     id: app_version
     attributes:
       label: App version
-      placeholder: "0.15.0"
-    validations:
-      required: true
-  - type: input
-    id: version_code
-    attributes:
-      label: versionCode
-      placeholder: "39"
+      placeholder: "0.16.0"
     validations:
       required: true
   - type: input
@@ -35,41 +28,42 @@ body:
     id: device
     attributes:
       label: Device
-      description: "Manufacturer and model only; no serial number."
+      description: "Manufacturer and model only; do not include a serial number."
     validations:
       required: true
   - type: dropdown
     id: install_type
     attributes:
-      label: Installation type
+      label: How was the app installed?
       options:
         - Fresh installation
-        - Update
+        - Updated from an older version
         - Unknown
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
+      label: What did you do before the problem happened?
+      description: "Please list the steps in order so the problem can be repeated."
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
+      label: What did you expect to happen?
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Actual behavior
+      label: What happened instead?
     validations:
       required: true
   - type: dropdown
     id: repeats_after_restart
     attributes:
-      label: Does the problem happen again after closing and reopening the app?
+      label: Does it happen again after closing and reopening the app?
       options:
         - "Yes"
         - "No"
@@ -79,7 +73,7 @@ body:
   - type: dropdown
     id: backup
     attributes:
-      label: Was backup or restore involved?
+      label: Was a backup or restore involved?
       options:
         - "No"
         - "Yes"
@@ -89,9 +83,9 @@ body:
   - type: checkboxes
     id: privacy
     attributes:
-      label: Privacy confirmation
+      label: Privacy check
       options:
-        - label: "I have not attached backup or export files, nutrition, progress, or health data, device serial numbers, account details or credentials, local file-system paths, or identifying information."
+        - label: "I have not attached backups, exports, nutrition or health data, device serial numbers, account details, local file paths, or identifying information."
           required: true
-        - label: "If I attached screenshots or logs, I reviewed and fully redacted them, and they contain no personal or sensitive information."
+        - label: "If I attached a screenshot or log, I checked and fully removed personal or sensitive information."
           required: true

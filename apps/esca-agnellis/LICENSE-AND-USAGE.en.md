@@ -1,22 +1,22 @@
-
-# Esca Agnellis — Licence and Usage Notice
+# Esca Agnellis — Licence and Usage
 
 [Deutsche Version](LICENSE-AND-USAGE.md)
 
-## v0.16.0 and later open-source releases
+## Open-source releases
 
-Esca Agnellis v0.16.0 is the first open-source release. The authoritative public source is https://github.com/Kamui2040/Esca-Agnellis-Android.
+Esca Agnellis v0.16.0 is the first open-source release. The public source is available at:
+<https://github.com/Kamui2040/Esca-Agnellis-Android>
 
-K2040-authored application code and project build scripts are licensed under `GPL-3.0-only` together with the GPLv3 section 7(b) attribution-preservation additional term documented in the source repository. Documentation and artwork explicitly cleared accordingly are licensed under `CC-BY-4.0` where documented by the controlling project files. Third-party material and Gradle components retain their respective licences and notices.
+K2040-written app code and project build scripts are licensed under GPL-3.0-only, including the additional attribution term documented in the source repository. Documentation and artwork are available under CC BY 4.0 only where they are specifically marked that way. Third-party material keeps its own licence and notices.
 
-Rights to use, study, modify, convey, and redistribute applicable source and binary material arise from the corresponding open-source licences. This notice does not add restrictions to those licence rights.
+These licences define the rights to use, study, change, and share the covered material. This page does not add extra restrictions to those rights.
 
-## Official K2040 developer builds
+## Official K2040 builds
 
-A build may be represented as an official K2040 developer build only when K2040 expressly publishes it as such or distributes it through a channel expressly designated as official. The GitHub Release is currently the canonical download channel. Store listings are added as additional official sources only after approval.
+A build may be described as an official K2040 build only when K2040 publishes it directly or lists its download source as official.
 
-Independent, modified, or differently signed builds must accurately represent their origin and signing identity and must not imply that they are official K2040 builds.
+Modified, independently built, or differently signed versions must clearly state where they came from and must not be presented as official K2040 builds.
 
-## Historical versions
+## Older releases
 
-Public binary releases through v0.15.0 retain the terms under which they were historically published. Publishing source beginning with v0.16.0 does not retroactively relicense those earlier binary files.
+Public releases up to and including v0.15.0 keep the terms they were originally published under. Making the source public from v0.16.0 onward does not change the terms of those older files.

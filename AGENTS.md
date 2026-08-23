@@ -1,35 +1,37 @@
 # K2040 Android Releases Repository Instructions
 
-## Repository role
+## Purpose
 
-This public repository is a distribution/support channel for explicitly approved K2040 Android release artifacts and public release documentation. It is not a private development workspace or a storage location for maintainer operations.
+This public repository is used for approved K2040 Android releases, public documentation, and support links. It is not a private development or storage area.
 
-## Public-only boundary
+## Keep the repository public-safe
 
-- Everything committed or uploaded here must be intentionally public.
-- Never place credentials, signing keys, private certificates, passwords, tokens, recovery data, private QA archives, raw device identifiers, authentic user data/backups, machine-specific paths, private storage links/IDs, internal assistant/tool policy, or maintainer-only workflow in this repository.
-- Do not use this repository as temporary staging, assistant transport, scratch storage, or a private build archive.
+- Everything committed or uploaded here must be safe to make public.
+- Do not store passwords, tokens, signing or recovery material, private test data, personal data, device IDs, private links or IDs, machine-specific paths, private backups, or maintainer-only records here.
+- Do not use this repository as temporary private storage.
 
-## Release artifacts
+## Release files
 
-- Publish only release artifacts explicitly approved for the applicable application/version/channel.
-- Verify package/application identity, version/versionCode, file identity/checksum, and expected signing model before upload where applicable.
-- Keep checksums and release notes synchronized with the exact published artifact.
-- Never publish debug/private test builds as production releases unless the channel explicitly and clearly identifies them as developer/test artifacts.
-- Do not publish R8 mapping/retrace files, private diagnostics, signing configuration, keystores, or authentic backups.
+- Publish only files approved for the correct app and version.
+- Before publishing, confirm that the app, version, file, checksum, and signing information match the intended release.
+- Keep release notes and checksums matched to the exact published file.
+- Do not publish private test or debug builds as normal releases.
+- Keep private diagnostics, signing files, keys, and real user backups out of the repository.
 
-## Documentation
+## Public writing
 
-- Keep README/release notes public, concise, and user-facing.
-- Source-build and contributor documentation belongs in the corresponding source repository rather than being duplicated here unless the distribution channel genuinely requires it.
-- Preserve licence/attribution notices that must accompany distributed artifacts.
+- Write README files, release notes, security/privacy pages, install guides, issue forms, and other public text in natural, simple language.
+- Avoid developer jargon and implementation details unless they are needed for installation, verification, security, bug reporting, or troubleshooting.
+- Explain necessary technical details in plain language whenever possible.
+- Keep licence and attribution notices that must stay with published files.
+- Put source-build and contributor instructions in the relevant source repository unless they are genuinely needed here.
 
-## Security and provenance
+## Safety checks
 
-- Release files must come from a reviewed source/version boundary and have known provenance.
-- Do not accept unexplained binaries or assets.
-- Treat any mismatch in expected package, version, signer, checksum, source tag/commit, or release notes as a blocker until resolved.
+- Release files must have a clear, trusted origin.
+- Stop if the app, version, signer, checksum, source, or release notes do not match what is expected.
+- Do not accept unexplained files or assets.
 
-## Publication control
+## Release publication
 
-Creating a release, uploading/replacing an artifact, changing public release notes, publishing checksums, or otherwise changing the public distribution state is an official publication action and remains maintainer-controlled.
+Creating a release, uploading or replacing a release file, changing official release notes or checksums, or otherwise changing the published release state is an official release action and remains maintainer-controlled.

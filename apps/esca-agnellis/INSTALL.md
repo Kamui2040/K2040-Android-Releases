@@ -1,34 +1,38 @@
-
 # Installation und Aktualisierung
 
 [English version](INSTALL.en.md)
 
 ## Voraussetzungen
 
-- Android 8.0 / API 26 oder neuer
-- Paket-ID: `com.k2040.escaagnellis`
+Esca Agnellis benötigt Android 8.0 oder neuer.
 
-## APK beziehen
+## Download
 
-Derzeit ist das offizielle GitHub-Release der maßgebliche Downloadkanal:
-https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0
+Nutze einen der offiziellen Links auf der [Esca-Agnellis-Projektseite](https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/).
 
-Datei: `Esca-Agnellis-v0.16.0-vc40-release.apk`
+Das aktuelle GitHub-Release findest du hier:
+<https://github.com/Kamui2040/K2040-Android-Releases/releases/tag/esca-agnellis-v0.16.0>
 
-Weitere Stores gelten erst dann als offizieller Downloadkanal, wenn sie auf der K2040-Android-Projektseite ausdrücklich aufgeführt sind.
+GitHub, APKPure und Uptodown bieten die von K2040 veröffentlichte App an. F-Droid baut und signiert sein eigenes Paket aus dem öffentlichen Quellcode.
 
-## Prüfsumme
+## Aktualisieren
 
-Erwartete SHA-256-Prüfsumme: `4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
+Eine neuere von K2040 veröffentlichte APK kann normalerweise über eine ältere kompatible K2040-Version installiert werden, ohne die App-Daten zu entfernen.
 
-PowerShell: `(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.16.0-vc40-release.apk" -Algorithm SHA256).Hash`
+F-Droid verwendet eine eigene Signatur. Android behandelt die F-Droid-Version deshalb anders als eine von K2040 veröffentlichte APK. Ein direkter Wechsel ist normalerweise nicht möglich. Erstelle vor dem Wechsel zwischen diesen Downloadquellen eine Sicherung.
 
-Linux: `sha256sum ./Esca-Agnellis-v0.16.0-vc40-release.apk`
+Wenn du den optionalen Begleiter verwendest, sichere auch dessen Daten separat.
 
-## Signatur und Aktualisierung
+## Optionale Download-Prüfung
 
-Die offizielle Entwickler-APK verwendet weiterhin die dauerhafte K2040-Signatur: `03CB5E9325BEA5AED36E8FFE1711C28300FC4421C4AED95E6740DA8A893821E6`.
+Wenn du prüfen möchtest, ob die GitHub-APK korrekt heruntergeladen wurde, vergleiche ihre SHA-256-Prüfsumme mit dem veröffentlichten Wert:
 
-Kompatible Entwickler-signierte Versionen können direkt übereinander aktualisiert werden, wenn Paket-ID, Signaturidentität und Android-Versionsregeln dies erlauben. Wenn künftig mehrere freigegebene Stores dieselbe Entwickler-APK anbieten, kann Android deshalb auch ein Update aus einem anderen kompatiblen offiziellen Store akzeptieren.
+`4906088F6EF2FF87874D064226C807D54CDFADD8E17B0EBE9DD2B638AC34AB49`
 
-Unabhängig signierte Varianten wie reguläre F-Droid-Builds besitzen eine andere Signaturidentität und können nicht direkt über die Entwickler-APK aktualisieren.
+PowerShell:
+`(Get-FileHash -LiteralPath ".\Esca-Agnellis-v0.16.0-vc40-release.apk" -Algorithm SHA256).Hash`
+
+Linux:
+`sha256sum ./Esca-Agnellis-v0.16.0-vc40-release.apk`
+
+Die Prüfsummendatei findest du ebenfalls im Ordner [checksums](checksums/Esca-Agnellis-v0.16.0-vc40-release.apk.sha256).
