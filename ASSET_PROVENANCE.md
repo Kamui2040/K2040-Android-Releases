@@ -16,3 +16,12 @@
 - Use here: displayed unchanged as the destination icon for Uptodown links.
 - Changes: none to the icon artwork; CSS only controls its displayed size and position.
 - Uptodown's name, icon, logo, and trademarks remain the property of Uptodown.
+
+## ONE store destination icon
+
+- Source: official ONE store Brand `App Icons` page and its published app-icon presentation image: `https://www.onestorecorp.com/brand/wp-content/uploads/2021/11/app_02_20211201.png`.
+- Brand resources: https://www.onestorecorp.com/brand/index.php/portfolio-item/app-icons-2/
+- Current developer guidance: https://onestore-dev.gitbook.io/dev/eng/tools/icon-guide
+- Use here: the official ONE store app icon is shown as the destination icon for GeoJoystick's ONE store links.
+- Changes: the artwork itself is not redrawn; CSS crops the official presentation image to the app-icon region and controls its displayed size.
+- ONE store's name, icon, logo, and trademarks remain the property of One store Co., Ltd.

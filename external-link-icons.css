@@ -47,6 +47,20 @@
   clip-path: none;
 }
 
+/* Official ONE store app icon, isolated from ONE store's published brand presentation image. */
+.external-platform-icon--onestore.external-platform-icon--monogram {
+  overflow: hidden;
+  border: 0;
+  border-radius: 28%;
+  background-color: #ff3b57;
+  background-image: url("https://www.onestorecorp.com/brand/wp-content/uploads/2021/11/app_02_20211201.png");
+  background-repeat: no-repeat;
+  background-position: 33% 42.5%;
+  background-size: 432% auto;
+  font-size: 0;
+  clip-path: none;
+}
+
 .external-platform-label {
   min-width: 0;
 }
