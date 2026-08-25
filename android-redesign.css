@@ -41,7 +41,6 @@
   object-position: center;
 }
 
-
 /* Android app-detail content. */
 .detail-grid {
   display: grid;
@@ -232,6 +231,21 @@
 @media (max-width: 900px) {
   .detail-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .detail-grid--primary .detail-card {
+    min-height: auto;
+  }
+
+  .detail-grid--primary .app-detail-summary .status-row {
+    margin-top: 1.2rem;
+    padding-top: 0;
+  }
+
+  .detail-grid--primary .download-section .download-row {
+    margin-top: 1.2rem;
+    padding-top: 0;
   }
 }
 
@@ -251,6 +265,14 @@
   .landing-hero--stacked .landing-hero-copy {
     max-width: 88%;
     padding: 1.5rem;
+  }
+
+  .detail-grid {
+    margin-top: 1rem;
+  }
+
+  .detail-card {
+    padding: 1.15rem;
   }
 
   .screenshot-gallery {
