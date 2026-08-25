@@ -29,6 +29,16 @@
   clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
 }
 
+/* APKPure mark adapted from Arcticons' APKPure icon (CC BY-SA 4.0). */
+.external-platform-icon--apkpure.external-platform-icon--monogram {
+  border: 0;
+  background: currentColor;
+  font-size: 0;
+  clip-path: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolygon%20points%3D%2219.1%204.5%204.73%2033.8%209.49%2043.5%2028.61%204.5%2019.1%204.5%22%2F%3E%3Cpolygon%20points%3D%2243.27%2033.2%2038.22%2043.5%2033.17%2033.2%2043.27%2033.2%22%2F%3E%3Cpolygon%20points%3D%2228.61%204.5%2037.93%2023.5%2033.17%2033.2%2023.86%2014.2%2028.61%204.5%22%2F%3E%3Cline%20x1%3D%2219.05%22%20y1%3D%2224%22%20x2%3D%2228.66%22%20y2%3D%2224%22%2F%3E%3Cline%20x1%3D%2214.54%22%20y1%3D%2233.21%22%20x2%3D%2233.17%22%20y2%3D%2233.21%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolygon%20points%3D%2219.1%204.5%204.73%2033.8%209.49%2043.5%2028.61%204.5%2019.1%204.5%22%2F%3E%3Cpolygon%20points%3D%2243.27%2033.2%2038.22%2043.5%2033.17%2033.2%2043.27%2033.2%22%2F%3E%3Cpolygon%20points%3D%2228.61%204.5%2037.93%2023.5%2033.17%2033.2%2023.86%2014.2%2028.61%204.5%22%2F%3E%3Cline%20x1%3D%2219.05%22%20y1%3D%2224%22%20x2%3D%2228.66%22%20y2%3D%2224%22%2F%3E%3Cline%20x1%3D%2214.54%22%20y1%3D%2233.21%22%20x2%3D%2233.17%22%20y2%3D%2233.21%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / contain no-repeat;
+}
+
 .external-platform-label {
   min-width: 0;
 }
