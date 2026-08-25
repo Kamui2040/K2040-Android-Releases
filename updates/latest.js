@@ -1,6 +1,18 @@
 window.K2040_CONTENT = {
   updates: [
     {
+      id: "geojoystick-onestore-0-1-4",
+      date: "2026-08-25",
+      href: "https://m.onestore.net/en-us/apps/appsDetail?prodId=0001008367",
+      strings: {
+        en: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 now on ONE store", summary: "The developer-signed v0.1.4 release is now available on ONE store as an additional official download channel." },
+        de: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 jetzt im ONE store", summary: "Die entwicklersignierte Version v0.1.4 ist jetzt auch im ONE store als zusätzlicher offizieller Downloadkanal verfügbar." },
+        "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.4 agora na ONE store", summary: "A versão v0.1.4 assinada pelo programador está agora também disponível na ONE store como canal oficial adicional de transferência." },
+        es: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 ya está en ONE store", summary: "La versión v0.1.4 firmada por el desarrollador ya está disponible también en ONE store como canal oficial de descarga adicional." },
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur ONE store", summary: "La version v0.1.4 signée par le développeur est désormais également disponible sur ONE store comme canal officiel de téléchargement supplémentaire." }
+      }
+    },
+    {
       id: "geojoystick-uptodown-0-1-4",
       date: "2026-08-18",
       href: "https://geojoystick.en.uptodown.com/android",

@@ -20,6 +20,8 @@ New app source and normal app releases belong in the app's public source reposit
 - Do not add new APKs here as the normal release workflow when the app has its own public source repository.
 - Download links, version labels, checksums, package identity, and app identity must match the authoritative public source.
 - Stop if the app, version, file, checksum, signer, source, or release notes do not match what is expected.
+- Add website update records only for confirmed public changes that are already implemented or published. Do not present planned or merely announced changes as completed updates.
+- The Main K2040 site consumes the Android update feed automatically. Keep Android update facts here and do not duplicate the same mutable records in the Main-site repository.
 
 ## Maintenance
 

@@ -29,6 +29,13 @@
   clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
 }
 
+.external-platform-icon--nexus.external-platform-icon--monogram {
+  border: 0;
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-nexus.webp") center / contain no-repeat;
+  font-size: 0;
+  clip-path: none;
+}
+
 /* APKPure mark adapted from Arcticons' APKPure icon (CC BY-SA 4.0). */
 .external-platform-icon--apkpure.external-platform-icon--monogram {
   border: 0;
@@ -47,18 +54,20 @@
   clip-path: none;
 }
 
-/* Official ONE store app icon, isolated from ONE store's published brand presentation image. */
+/* Original compact destination cue for ONE store. */
 .external-platform-icon--onestore.external-platform-icon--monogram {
-  overflow: hidden;
-  border: 0;
-  border-radius: 28%;
-  background-color: #ff3b57;
-  background-image: url("https://www.onestorecorp.com/brand/wp-content/uploads/2021/11/app_02_20211201.png");
-  background-repeat: no-repeat;
-  background-position: 33% 42.5%;
-  background-size: 432% auto;
+  border: 1px solid currentColor;
+  background: transparent;
+  border-radius: 0;
   font-size: 0;
-  clip-path: none;
+  clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
+}
+
+.external-platform-icon--onestore.external-platform-icon--monogram::before {
+  content: "1";
+  font-size: .72rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .external-platform-label {
