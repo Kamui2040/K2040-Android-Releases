@@ -106,6 +106,7 @@
       if (!template) return;
       const requestedLimit = Number.parseInt(list.dataset.updateLimit || "", 10);
       const updates = Number.isFinite(requestedLimit) && requestedLimit > 0 ? sortedUpdates().slice(0, requestedLimit) : sortedUpdates();
+      const textOnly = document.body.classList.contains("projects-home-page") && Boolean(list.closest("#updates"));
       list.replaceChildren();
       updates.forEach((update, index) => {
         const strings = localStrings(update);
@@ -115,7 +116,7 @@
         const image = fragment.querySelector("[data-update-image]");
         const localizedImage = localizedUpdateImage(update);
         if (card && index === 0) card.classList.add("update-card--featured");
-        if (media && image && localizedImage) {
+        if (!textOnly && media && image && localizedImage) {
           image.src = localizedImage;
           image.alt = strings.imageAlt || "";
           image.loading = index === 0 ? "eager" : "lazy";
