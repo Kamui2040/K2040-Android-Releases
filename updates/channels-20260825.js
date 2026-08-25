@@ -24,3 +24,4 @@ window.K2040_CHANNEL_UPDATES = [
     }
   }
 ];
+window.dispatchEvent(new CustomEvent("k2040-channel-updates-loaded"));
