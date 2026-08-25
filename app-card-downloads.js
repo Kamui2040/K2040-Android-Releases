@@ -20,7 +20,8 @@
         ["F-Droid", "https://f-droid.org/packages/com.k2040.geojoystick/"],
         ["APKPure", "https://apkpure.com/p/com.k2040.geojoystick"],
         ["Uptodown", "https://geojoystick.en.uptodown.com/android"],
-        ["ONE store", "https://m.onestore.net/en-us/apps/appsDetail?prodId=0001008367", "onestore"]
+        ["ONE store", "https://m.onestore.net/en-us/apps/appsDetail?prodId=0001008367", "onestore"],
+        ["OpenAPK", "https://www.openapk.net/geojoystick/com.k2040.geojoystick/", "openapk"]
       ]
     }
   ];
@@ -46,12 +47,12 @@
       link.title = platform;
       link.setAttribute("aria-label", `Download ${name} from ${platform}`);
 
-      if (iconKey === "onestore") {
+      if (["onestore", "openapk"].includes(iconKey)) {
         link.classList.add("external-platform-link");
         const icon = document.createElement("span");
-        icon.className = "external-platform-icon external-platform-icon--onestore external-platform-icon--monogram";
+        icon.className = `external-platform-icon external-platform-icon--${iconKey} external-platform-icon--monogram`;
         icon.setAttribute("aria-hidden", "true");
-        icon.textContent = "O";
+        icon.textContent = iconKey === "onestore" ? "1" : "O";
         const label = document.createElement("span");
         label.className = "external-platform-label";
         label.textContent = platform;
