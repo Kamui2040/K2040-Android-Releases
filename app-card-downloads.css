@@ -1,0 +1,72 @@
+/* Compact storefront actions for Android landing-page app cards. */
+
+.app-card-actions {
+  display: flex !important;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+}
+
+.app-card-actions > .text-link {
+  align-self: auto !important;
+  flex: 0 0 auto !important;
+}
+
+.app-card-downloads {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .35rem;
+  margin-left: auto;
+}
+
+.app-promo-copy .app-card-download-link {
+  position: relative;
+  width: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  flex: 0 0 36px !important;
+  padding: .42rem !important;
+}
+
+.app-card-download-link .external-platform-label {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
+
+.app-card-download-link .external-platform-icon {
+  width: 1.05rem !important;
+  height: 1.05rem !important;
+}
+
+@media (max-width: 520px) {
+  .app-card-actions {
+    gap: .42rem;
+  }
+
+  .app-card-downloads {
+    gap: .25rem;
+  }
+
+  .app-promo-copy .app-card-download-link {
+    width: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    flex-basis: 32px !important;
+    padding: .34rem !important;
+  }
+
+  .app-card-download-link .external-platform-icon {
+    width: .95rem !important;
+    height: .95rem !important;
+  }
+}
