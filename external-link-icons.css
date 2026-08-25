@@ -59,8 +59,15 @@
   border: 1px solid currentColor;
   background: transparent;
   border-radius: 0;
-  font-size: .72rem;
+  font-size: 0;
   clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
+}
+
+.external-platform-icon--onestore.external-platform-icon--monogram::before {
+  content: "1";
+  font-size: .72rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .external-platform-label {
