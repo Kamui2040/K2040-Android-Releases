@@ -1,28 +1,46 @@
-/* Android download-row layout only. Action appearance comes from Gaming's .text-link. */
+/* Android app download-source layout. Action appearance comes from the shared K2040 button system. */
 
-@media (max-width: 620px) {
-  .download-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.download-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .7rem;
+}
+
+.download-source {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .android-page .download-section .download-row {
     width: 100%;
-  }
-
-  .download-source {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .download-source:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
+    margin-top: 1.2rem;
+    padding-top: 0;
+    align-self: stretch;
+    justify-content: flex-start;
+    gap: .65rem;
   }
 }
 
-@media (max-width: 360px) {
-  .download-row {
-    grid-template-columns: 1fr;
+@media (max-width: 620px) {
+  .android-page .download-section .download-source {
+    width: auto;
+    min-width: 0;
+    min-height: 46px;
   }
 
-  .download-source:last-child:nth-child(odd) {
-    grid-column: auto;
+  .android-page .download-section .external-platform-link--icon-only-mobile {
+    width: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    padding-right: .6rem !important;
+    padding-left: .6rem !important;
+  }
+
+  .android-page .download-section .download-source:not(.external-platform-link--icon-only-mobile) {
+    padding-right: .75rem;
+    padding-left: .75rem;
+    font-size: .84rem;
   }
 }

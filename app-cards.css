@@ -134,28 +134,37 @@
 
 @media (max-width: 520px) {
   .app-promo-copy {
-    gap: .55rem !important;
-    padding: .85rem !important;
+    height: auto !important;
+    min-height: 44% !important;
+    gap: .5rem !important;
+    padding: .78rem !important;
   }
 
   .app-promo-copy h3 {
-    font-size: 1.18rem !important;
+    font-size: 1.12rem !important;
   }
 
   .app-promo-copy p {
-    margin-top: .35rem !important;
-    font-size: .86rem !important;
-    line-height: 1.38 !important;
+    margin-top: .32rem !important;
+    font-size: .8rem !important;
+    line-height: 1.32 !important;
   }
 
   .app-card-meta {
-    gap: .28rem !important;
-    margin-top: .45rem !important;
+    gap: .26rem !important;
+    margin-top: .4rem !important;
   }
 
   .app-promo-copy .version-pill,
   .app-card-meta .status-badge {
-    padding: .2rem .34rem !important;
-    font-size: .62rem !important;
+    padding: .18rem .3rem !important;
+    font-size: .58rem !important;
+  }
+
+  .app-promo-copy .text-link {
+    min-height: 34px !important;
+    margin-top: .05rem !important;
+    padding: .38rem .62rem !important;
+    font-size: .76rem !important;
   }
 }
