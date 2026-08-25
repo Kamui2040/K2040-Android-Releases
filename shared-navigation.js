@@ -7,7 +7,7 @@
     if (!document.querySelector('link[data-external-platform-icons]')) {
       const styles = document.createElement("link");
       styles.rel = "stylesheet";
-      styles.href = new URL("external-link-icons.css?v=20260825a", base).href;
+      styles.href = new URL("external-link-icons.css?v=20260825stores1", base).href;
       styles.dataset.externalPlatformIcons = "true";
       document.head.append(styles);
     }
@@ -15,6 +15,25 @@
       const script = document.createElement("script");
       script.src = new URL("external-link-icons.js?v=20260825a", base).href;
       script.dataset.externalPlatformIcons = "true";
+      document.head.append(script);
+    }
+    if (!document.querySelector('link[data-k2040-brand-menu]')) {
+      const styles = document.createElement("link");
+      styles.rel = "stylesheet";
+      styles.href = `${location.origin}/brand-menu-icon.css?v=20260825brand1`;
+      styles.dataset.k2040BrandMenu = "true";
+      document.head.append(styles);
+    }
+    if (!document.querySelector('script[data-channel-updates]')) {
+      const script = document.createElement("script");
+      script.src = new URL("updates/channels-20260825.js?v=20260825stores1", base).href;
+      script.dataset.channelUpdates = "true";
+      document.head.append(script);
+    }
+    if (!document.querySelector('script[data-android-store-links]')) {
+      const script = document.createElement("script");
+      script.src = new URL("android-store-links.js?v=20260825stores1", base).href;
+      script.dataset.androidStoreLinks = "true";
       document.head.append(script);
     }
   }
@@ -71,10 +90,10 @@
 
   const loadAndroidCardDownloads = () => {
     if (!document.querySelector(".app-promo-list")) return;
-    loadStylesheet(`${location.origin}/K2040-Android-Releases/app-card-downloads.css?v=20260825nav1`, "data-app-card-downloads");
+    loadStylesheet(`${location.origin}/K2040-Android-Releases/app-card-downloads.css?v=20260825stores1`, "data-app-card-downloads");
     if (document.querySelector('script[data-app-card-downloads]')) return;
     const script = document.createElement("script");
-    script.src = `${location.origin}/K2040-Android-Releases/app-card-downloads.js?v=20260825nav1`;
+    script.src = `${location.origin}/K2040-Android-Releases/app-card-downloads.js?v=20260825stores1`;
     script.dataset.appCardDownloads = "true";
     document.head.append(script);
   };
