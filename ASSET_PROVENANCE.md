@@ -1,5 +1,12 @@
 # Asset provenance
 
+## K2040 site-family icons
+
+- The Home, Android, Gaming, and Nexus destination images used by this site are shared K2040 website assets hosted by the public Main site at `https://kamui2040.github.io/assets/icons/`.
+- The Home icon is derived from the project owner's K2040 brand artwork. The Android, Gaming, and Nexus destination images are original K2040 artwork approved for the shared website navigation and link system.
+- This repository references those public assets rather than duplicating their binary files. Their detailed provenance is maintained in the Main site's `ASSET_PROVENANCE.md`.
+- The Nexus destination image is an original visual cue and is not represented as the official Nexus Mods logo.
+
 ## APKPure destination icon
 
 - Source: Arcticons `icons/black/apkpure.svg`
@@ -17,11 +24,9 @@
 - Changes: none to the icon artwork; CSS only controls its displayed size and position.
 - Uptodown's name, icon, logo, and trademarks remain the property of Uptodown.
 
-## ONE store destination icon
+## ONE store destination symbol
 
-- Source: official ONE store Brand `App Icons` page and its published app-icon presentation image: `https://www.onestorecorp.com/brand/wp-content/uploads/2021/11/app_02_20211201.png`.
-- Brand resources: https://www.onestorecorp.com/brand/index.php/portfolio-item/app-icons-2/
-- Current developer guidance: https://onestore-dev.gitbook.io/dev/eng/tools/icon-guide
-- Use here: the official ONE store app icon is shown as the destination icon for GeoJoystick's ONE store links.
-- Changes: the artwork itself is not redrawn; CSS crops the official presentation image to the app-icon region and controls its displayed size.
-- ONE store's name, icon, logo, and trademarks remain the property of One store Co., Ltd.
+- Reference: ONE store developer guidance at `https://onestore-dev.gitbook.io/dev/eng/tools/icon-guide`.
+- Use here: a small custom `1` destination symbol identifies ONE store links without redistributing or hot-linking ONE store artwork.
+- The symbol is an original site cue and is not represented as an official ONE store logo or app icon.
+- ONE store names and trademarks remain the property of One store Co., Ltd.
