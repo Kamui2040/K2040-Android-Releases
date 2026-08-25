@@ -57,7 +57,12 @@
     return typeof value === "string" ? value : null;
   };
   const localStrings = (entry) => entry?.strings?.[currentLanguage] || entry?.strings?.en || {};
-  const localizedUpdateImage = (entry) => entry?.images?.[currentLanguage] || entry?.images?.en || entry?.image || null;
+  const localizedUpdateImage = (entry) => {
+    const id = entry?.id || "";
+    if (id.startsWith("geojoystick")) return "/K2040-Android-Releases/assets/geojoystick-app-card.webp";
+    if (id.startsWith("esca-agnellis")) return "/K2040-Android-Releases/assets/esca-agnellis-app-card.webp";
+    return entry?.images?.[currentLanguage] || entry?.images?.en || entry?.image || null;
+  };
 
   const updateThemeToggle = (button) => {
     if (!button) return;
@@ -89,7 +94,17 @@
     });
   };
 
-  const sortedUpdates = () => [...(window.K2040_CONTENT?.updates || [])]
+  const allUpdates = () => {
+    const merged = [...(window.K2040_CHANNEL_UPDATES || []), ...(window.K2040_CONTENT?.updates || [])];
+    const seen = new Set();
+    return merged.filter((update) => {
+      if (!update?.id || seen.has(update.id)) return false;
+      seen.add(update.id);
+      return true;
+    });
+  };
+
+  const sortedUpdates = () => allUpdates()
     .map((update, sourceIndex) => ({ update, sourceIndex, time: Date.parse(`${update?.date || ""}T00:00:00Z`) }))
     .sort((a, b) => {
       const aValid = !Number.isNaN(a.time), bValid = !Number.isNaN(b.time);
@@ -99,6 +114,19 @@
       return a.time === b.time ? a.sourceIndex - b.sourceIndex : b.time - a.time;
     })
     .map(({ update }) => update);
+
+  const storeLabel = (href) => {
+    if (!href) return null;
+    let host = "";
+    try { host = new URL(href, location.href).hostname.toLowerCase(); } catch { return null; }
+    if (host === "github.com" || host.endsWith(".github.com")) return "GitHub";
+    if (host === "f-droid.org" || host.endsWith(".f-droid.org")) return "F-Droid";
+    if (host === "apkpure.com" || host.endsWith(".apkpure.com")) return "APKPure";
+    if (host === "uptodown.com" || host.endsWith(".uptodown.com")) return "Uptodown";
+    if (host === "onestore.net" || host.endsWith(".onestore.net")) return "ONE store";
+    if (host === "openapk.net" || host.endsWith(".openapk.net")) return "OpenAPK";
+    return null;
+  };
 
   const renderUpdates = () => {
     document.querySelectorAll("[data-update-list]").forEach((list) => {
@@ -114,7 +142,6 @@
         const media = fragment.querySelector("[data-update-media]");
         const image = fragment.querySelector("[data-update-image]");
         const localizedImage = localizedUpdateImage(update);
-        if (card && index === 0) card.classList.add("update-card--featured");
         if (media && image && localizedImage) {
           image.src = localizedImage;
           image.alt = strings.imageAlt || "";
@@ -138,9 +165,10 @@
         if (title) title.textContent = strings.title || "";
         if (summary) summary.textContent = strings.summary || "";
         if (action) {
-          action.textContent = `${translate("actions.readMore") || "Read more"} →`;
-          if (update.href) action.href = update.href;
-          else action.remove();
+          if (update.href) {
+            action.href = update.href;
+            action.textContent = storeLabel(update.href) || translate("actions.readMore") || "Read more";
+          } else action.remove();
         }
         list.append(fragment);
       });
@@ -252,6 +280,8 @@
     const updateSystemTheme = () => { if (!root.dataset.theme) updateThemeToggle(themeToggle); };
     darkPreference.addEventListener?.("change", updateSystemTheme);
   };
+
+  window.addEventListener("k2040-channel-updates-loaded", renderUpdates);
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initializePage, { once: true });
   else initializePage();
