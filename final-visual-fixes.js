@@ -42,17 +42,12 @@
     try { url = new URL(link.href, location.href); } catch { return null; }
     const path = url.pathname.replace(/\/+$/, "/");
     if (url.hostname === "kamui2040.github.io" && path === "/") return "home";
-    if (path === "/K2040-Android-Releases/") return "android";
-    if (path === "/K2040-Gaming-Mods/") return "gaming";
+    if (path.startsWith("/K2040-Android-Releases/")) return "android";
+    if (path.startsWith("/K2040-Gaming-Mods/")) return "gaming";
     return null;
   };
 
-  const isFamilyIconTarget = (link) => Boolean(
-    link.closest(".about-links, .site-footer") || link.hasAttribute("data-site-family-icon")
-  );
-
   const ensureFamilyIcon = (link) => {
-    if (!isFamilyIconTarget(link)) return;
     const family = familyFor(link);
     if (!family) return;
     let icon = link.querySelector(":scope > .site-family-icon");
@@ -102,14 +97,6 @@
     root.querySelectorAll?.("a[href]").forEach(decorateLink);
   };
 
-  const cleanHeader = () => {
-    document.querySelectorAll(".site-header .site-family-icon").forEach((icon) => icon.remove());
-    document.querySelectorAll(".site-header .site-family-link").forEach((link) => {
-      link.classList.remove("site-family-link");
-      delete link.dataset.siteFamilyIcon;
-    });
-  };
-
   const ensureFooter = () => {
     const shell = document.querySelector(".page-shell");
     const main = shell?.querySelector("main");
@@ -130,14 +117,24 @@
       footer.replaceChildren(nav);
     }
 
-    nav.replaceChildren();
     footerLinks.forEach((item) => {
-      const link = document.createElement("a");
-      link.className = "text-link";
-      link.dataset.footerKey = item.key;
+      let link = nav.querySelector(`:scope > a[data-footer-key="${item.key}"]`);
+      if (!link) {
+        link = document.createElement("a");
+        link.className = "text-link";
+        link.dataset.footerKey = item.key;
+        nav.append(link);
+      }
       link.href = item.href;
-      link.textContent = labelFor(item);
-      nav.append(link);
+      const platformLabel = link.querySelector(":scope > .external-platform-label");
+      if (platformLabel) platformLabel.textContent = labelFor(item);
+      else {
+        const icon = link.querySelector(":scope > .site-family-icon, :scope > .external-platform-icon");
+        if (icon) {
+          [...link.childNodes].filter((node) => node !== icon).forEach((node) => node.remove());
+          link.append(document.createTextNode(labelFor(item)));
+        } else link.textContent = labelFor(item);
+      }
       decorateLink(link);
     });
 
@@ -150,17 +147,13 @@
   };
 
   const init = () => {
-    cleanHeader();
     refreshFooter();
     decorate();
-    cleanHeader();
 
     new MutationObserver((records) => {
       records.forEach((record) => record.addedNodes.forEach((node) => {
-        if (node.nodeType !== Node.ELEMENT_NODE) return;
-        decorate(node);
+        if (node.nodeType === Node.ELEMENT_NODE) decorate(node);
       }));
-      cleanHeader();
     }).observe(document.body, { childList: true, subtree: true });
 
     document.querySelectorAll("[data-language-select]").forEach((select) => {
