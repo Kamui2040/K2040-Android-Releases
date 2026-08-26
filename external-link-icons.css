@@ -1,13 +1,13 @@
 /* Shared external platform link icons. */
 .external-platform-link {
-  gap: .45rem;
+  gap: .5rem;
 }
 
 .external-platform-icon {
   display: inline-flex;
-  width: 1.1rem;
-  height: 1.1rem;
-  flex: 0 0 1.1rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 1.35rem;
   align-items: center;
   justify-content: center;
   color: currentColor;
@@ -20,10 +20,10 @@
 }
 
 .external-platform-icon--monogram {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.35rem;
+  height: 1.35rem;
   border: 1px solid currentColor;
-  font-size: .68rem;
+  font-size: .8rem;
   font-weight: 900;
   line-height: 1;
   clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
@@ -31,7 +31,7 @@
 
 .external-platform-icon--nexus.external-platform-icon--monogram {
   border: 0;
-  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-nexus.webp") center / contain no-repeat;
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-nexus.webp") center / 118% no-repeat;
   font-size: 0;
   clip-path: none;
 }
@@ -54,41 +54,58 @@
   clip-path: none;
 }
 
-/* Original compact destination cue for ONE store. */
+/* Shared ONE store cue, matching the working Main News treatment. */
 .external-platform-icon--onestore.external-platform-icon--monogram {
-  border: 1px solid currentColor;
-  background: transparent;
-  font-size: .72rem;
-  clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: .28rem;
+  background: #f43a59;
+  color: #fff;
+  font-size: 0;
+  clip-path: none;
+}
+
+.external-platform-icon--onestore.external-platform-icon--monogram::before {
+  content: "1";
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1;
+  transform: translateY(-.02rem);
 }
 
 /* Official OpenAPK mark from the project's CC0-licensed public repository. */
 .external-platform-icon--openapk.external-platform-icon--monogram {
   border: 0;
-  background: transparent url("/K2040-Android-Releases/assets/openapk.svg") center / contain no-repeat;
+  background: transparent url("/K2040-Android-Releases/assets/openapk.svg") center / 112% no-repeat;
   font-size: 0;
   clip-path: none;
 }
 
 .site-brand-section.nav-home {
-  gap: .45rem;
+  gap: .5rem;
 }
 
 .site-brand-section.nav-home::before {
-  width: 1.15rem;
-  height: 1.15rem;
-  flex: 0 0 1.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem;
   content: "";
-  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp") center / contain no-repeat;
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp") center / 116% no-repeat;
 }
 
 .about-links .site-family-icon,
-.site-footer .site-family-icon,
+.site-footer .site-family-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-basis: 1.4rem;
+}
+
 .about-links .external-platform-icon,
 .site-footer .external-platform-icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  flex-basis: 1.1rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-basis: 1.35rem;
 }
 
 .external-platform-label {
@@ -98,10 +115,10 @@
 @media (max-width: 760px) {
   .external-platform-link--icon-only-mobile {
     position: relative;
-    width: 42px;
-    min-width: 42px;
-    padding-right: .55rem !important;
-    padding-left: .55rem !important;
+    width: 44px;
+    min-width: 44px;
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
     gap: 0;
   }
 
@@ -118,8 +135,8 @@
   }
 
   .external-platform-link--icon-only-mobile .external-platform-icon {
-    width: 1.1rem;
-    height: 1.1rem;
-    flex-basis: 1.1rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    flex-basis: 1.35rem;
   }
 }
