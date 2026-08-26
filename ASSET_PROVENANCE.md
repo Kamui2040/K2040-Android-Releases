@@ -30,3 +30,13 @@
 - Use here: a small custom `1` destination symbol identifies ONE store links without redistributing or hot-linking ONE store artwork.
 - The symbol is an original site cue and is not represented as an official ONE store logo or app icon.
 - ONE store names and trademarks remain the property of One store Co., Ltd.
+
+## OpenAPK destination icon
+
+- Source: `public/openapk-blank.svg` from the official `mobilenetworkltd/openapk` repository.
+- Upstream: https://github.com/mobilenetworkltd/openapk/blob/main/public/openapk-blank.svg
+- Licence: CC0 1.0 Universal, as declared by the upstream repository.
+- Local copy: `assets/openapk.svg`.
+- Use here: displayed as the destination icon for links to OpenAPK listings.
+- Changes: none to the SVG artwork; CSS only controls displayed size and position.
+- OpenAPK names and trademarks remain the property of their respective owner.
