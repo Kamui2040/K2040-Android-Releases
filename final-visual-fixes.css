@@ -18,26 +18,9 @@
   clip-path: none !important;
 }
 
-/* Header navigation only has one site icon: the Android Home mark. */
-.site-header .site-family-icon {
-  display: none !important;
-}
-
-.site-header .nav-downloads::before,
-.site-header .nav-updates::before {
-  display: none !important;
-  content: none !important;
-}
-
 .site-brand-section.nav-home::before {
-  display: inline-block !important;
-  width: var(--k2040-unified-icon-size) !important;
-  height: var(--k2040-unified-icon-size) !important;
-  flex: 0 0 var(--k2040-unified-icon-size) !important;
-  border: 0 !important;
   content: "";
   background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp?v=20260826outline1") center / contain no-repeat !important;
-  box-shadow: none !important;
   clip-path: none !important;
 }
 
@@ -98,20 +81,15 @@
 }
 
 .site-footer .footer-links {
-  display: flex !important;
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: .65rem;
   margin: 0;
 }
 
-.site-footer .footer-links > a {
-  display: inline-flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
 .site-footer .footer-links a {
+  display: inline-flex;
   min-height: 40px;
   align-items: center;
   justify-content: center;
