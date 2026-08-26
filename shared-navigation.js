@@ -19,7 +19,7 @@
     }
     if (!document.querySelector('script[data-onestore-link-icon]')) {
       const script = document.createElement("script");
-      script.src = new URL("onestore-link-icon.js?v=20260826stores1", base).href;
+      script.src = new URL("onestore-link-icon.js?v=20260826stores2", base).href;
       script.dataset.onestoreLinkIcon = "true";
       document.head.append(script);
     }
