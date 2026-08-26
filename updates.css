@@ -110,6 +110,7 @@
 .update-copy > .text-link {
   align-self: flex-start;
   margin-top: auto;
+  margin-left: 0;
 }
 
 .update-archive {

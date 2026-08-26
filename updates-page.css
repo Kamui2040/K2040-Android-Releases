@@ -1,0 +1,72 @@
+.updates-page .page-intro {
+  margin-bottom: 1.5rem;
+}
+
+.updates-page .update-archive .update-list {
+  margin-top: 0;
+}
+
+.updates-page .update-card,
+.updates-page .update-card--featured {
+  min-height: 190px;
+  grid-template-columns: 190px minmax(0, 1fr);
+  background: var(--surface);
+}
+
+.updates-page .update-card--no-media {
+  grid-template-columns: 1fr;
+}
+
+.updates-page .update-media,
+.updates-page .update-card--featured .update-media {
+  min-height: 190px;
+  padding: 0;
+  background: var(--strong);
+}
+
+.updates-page .update-image,
+.updates-page .update-card--featured .update-image {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.updates-page .update-copy,
+.updates-page .update-card--featured .update-copy {
+  min-width: 0;
+  padding: 1.3rem 1.45rem;
+}
+
+.updates-page .update-card h3,
+.updates-page .update-card--featured h3 {
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+}
+
+.updates-page .update-copy > .text-link {
+  margin-top: auto;
+  margin-left: 0;
+  align-self: flex-start;
+}
+
+@media (max-width: 760px) {
+  .updates-page .update-card,
+  .updates-page .update-card--featured {
+    grid-template-columns: 1fr;
+  }
+
+  .updates-page .update-media,
+  .updates-page .update-card--featured .update-media {
+    min-height: 0;
+    aspect-ratio: 16 / 8;
+  }
+
+  .updates-page .update-copy,
+  .updates-page .update-card--featured .update-copy {
+    padding: 1.2rem;
+  }
+}

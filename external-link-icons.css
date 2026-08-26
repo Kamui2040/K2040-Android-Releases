@@ -7,7 +7,7 @@
   display: inline-flex;
   width: 1.1rem;
   height: 1.1rem;
-  flex: 0 0 auto;
+  flex: 0 0 1.1rem;
   align-items: center;
   justify-content: center;
   color: currentColor;
@@ -20,8 +20,8 @@
 }
 
 .external-platform-icon--monogram {
-  width: 1.12rem;
-  height: 1.12rem;
+  width: 1.1rem;
+  height: 1.1rem;
   border: 1px solid currentColor;
   font-size: .68rem;
   font-weight: 900;
@@ -58,16 +58,37 @@
 .external-platform-icon--onestore.external-platform-icon--monogram {
   border: 1px solid currentColor;
   background: transparent;
-  border-radius: 0;
-  font-size: 0;
+  font-size: .72rem;
   clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
 }
 
-.external-platform-icon--onestore.external-platform-icon--monogram::before {
-  content: "1";
-  font-size: .72rem;
-  font-weight: 900;
-  line-height: 1;
+/* Official OpenAPK mark from the project's CC0-licensed public repository. */
+.external-platform-icon--openapk.external-platform-icon--monogram {
+  border: 0;
+  background: transparent url("/K2040-Android-Releases/assets/openapk.svg") center / contain no-repeat;
+  font-size: 0;
+  clip-path: none;
+}
+
+.site-brand-section.nav-home {
+  gap: .45rem;
+}
+
+.site-brand-section.nav-home::before {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 1.15rem;
+  content: "";
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp") center / contain no-repeat;
+}
+
+.about-links .site-family-icon,
+.site-footer .site-family-icon,
+.about-links .external-platform-icon,
+.site-footer .external-platform-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-basis: 1.1rem;
 }
 
 .external-platform-label {
@@ -99,5 +120,6 @@
   .external-platform-link--icon-only-mobile .external-platform-icon {
     width: 1.2rem;
     height: 1.2rem;
+    flex-basis: 1.2rem;
   }
 }
