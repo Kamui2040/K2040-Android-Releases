@@ -24,6 +24,16 @@
 - Changes: none to the icon artwork; CSS only controls its displayed size and position.
 - Uptodown's name, icon, logo, and trademarks remain the property of Uptodown.
 
+## OpenAPK destination icon
+
+- Source: `mobilenetworkltd/openapk`, `public/openapk-blank.svg`.
+- Upstream: https://github.com/mobilenetworkltd/openapk
+- Licence: CC0 1.0 Universal for the repository asset.
+- Local copy: `assets/icons/openapk-blank.svg`.
+- Use here: displayed as the destination icon for OpenAPK links.
+- Changes: none to the artwork; CSS controls only its displayed size and position.
+- OpenAPK names and trademarks remain the property of their respective owner.
+
 ## ONE store destination symbol
 
 - Reference: ONE store developer guidance at `https://onestore-dev.gitbook.io/dev/eng/tools/icon-guide`.
