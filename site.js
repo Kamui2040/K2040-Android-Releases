@@ -151,7 +151,7 @@
         const media = fragment.querySelector("[data-update-media]");
         const image = fragment.querySelector("[data-update-image]");
         const mediaInfo = updateMedia(update, strings);
-        if (card && index === 0) card.classList.add("update-card--featured");
+        if (card && index === 0 && !textOnly) card.classList.add("update-card--featured");
         if (!textOnly && media && image && mediaInfo?.src) {
           image.src = mediaInfo.src;
           image.alt = mediaInfo.alt || "";
