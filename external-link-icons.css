@@ -70,6 +70,27 @@
   clip-path: none;
 }
 
+.site-brand-section.nav-home {
+  gap: .45rem;
+}
+
+.site-brand-section.nav-home::before {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 1.15rem;
+  content: "";
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp") center / contain no-repeat;
+}
+
+.about-links .site-family-icon,
+.site-footer .site-family-icon,
+.about-links .external-platform-icon,
+.site-footer .external-platform-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-basis: 1.1rem;
+}
+
 .external-platform-label {
   min-width: 0;
 }
