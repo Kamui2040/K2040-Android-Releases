@@ -11,6 +11,10 @@
     es: { flag: "🇪🇸", label: "Español", locale: "es-ES" },
     fr: { flag: "🇫🇷", label: "Français", locale: "fr-FR" }
   };
+  const projectUpdateMedia = {
+    "esca-agnellis": { src: "/K2040-Android-Releases/assets/esca-agnellis-app-card.webp", alt: "Esca Agnellis app artwork" },
+    geojoystick: { src: "/K2040-Android-Releases/assets/geojoystick-app-card.webp", alt: "GeoJoystick app artwork" }
+  };
   const root = document.documentElement;
   const darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -57,7 +61,16 @@
     return typeof value === "string" ? value : null;
   };
   const localStrings = (entry) => entry?.strings?.[currentLanguage] || entry?.strings?.en || {};
-  const localizedUpdateImage = (entry) => entry?.images?.[currentLanguage] || entry?.images?.en || entry?.image || null;
+
+  const updateMedia = (entry, strings) => {
+    const override = entry?.media;
+    if (typeof override === "string" && override) return { src: override, alt: strings.imageAlt || "" };
+    if (override && typeof override === "object") {
+      const src = override.images?.[currentLanguage] || override.images?.en || override.src;
+      if (src) return { src, alt: override.alt?.[currentLanguage] || override.alt?.en || override.alt || strings.imageAlt || "" };
+    }
+    return projectUpdateMedia[entry?.projectId] || null;
+  };
 
   const updateThemeToggle = (button) => {
     if (!button) return;
@@ -100,6 +113,29 @@
     })
     .map(({ update }) => update);
 
+  const renderUpdateActions = (action, update) => {
+    if (!action) return;
+    if (Array.isArray(update.links) && update.links.length) {
+      const actions = document.createElement("div");
+      actions.className = "update-actions";
+      update.links.forEach((entry) => {
+        if (!entry?.href || !entry?.label) return;
+        const link = document.createElement("a");
+        link.className = "text-link";
+        link.href = entry.href;
+        link.textContent = entry.label;
+        actions.append(link);
+      });
+      if (actions.childElementCount) {
+        action.replaceWith(actions);
+        return;
+      }
+    }
+    action.textContent = `${translate("actions.readMore") || "Read more"} →`;
+    if (update.href) action.href = update.href;
+    else action.remove();
+  };
+
   const renderUpdates = () => {
     document.querySelectorAll("[data-update-list]").forEach((list) => {
       const template = document.querySelector("#update-card-template");
@@ -114,11 +150,11 @@
         const card = fragment.querySelector("[data-update-card]");
         const media = fragment.querySelector("[data-update-media]");
         const image = fragment.querySelector("[data-update-image]");
-        const localizedImage = localizedUpdateImage(update);
+        const mediaInfo = updateMedia(update, strings);
         if (card && index === 0) card.classList.add("update-card--featured");
-        if (!textOnly && media && image && localizedImage) {
-          image.src = localizedImage;
-          image.alt = strings.imageAlt || "";
+        if (!textOnly && media && image && mediaInfo?.src) {
+          image.src = mediaInfo.src;
+          image.alt = mediaInfo.alt || "";
           image.loading = index === 0 ? "eager" : "lazy";
           image.decoding = "async";
           card?.classList.add("update-card--with-media");
@@ -138,11 +174,7 @@
         if (category) category.textContent = strings.category || "";
         if (title) title.textContent = strings.title || "";
         if (summary) summary.textContent = strings.summary || "";
-        if (action) {
-          action.textContent = `${translate("actions.readMore") || "Read more"} →`;
-          if (update.href) action.href = update.href;
-          else action.remove();
-        }
+        renderUpdateActions(action, update);
         list.append(fragment);
       });
     });
