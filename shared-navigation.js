@@ -7,7 +7,7 @@
     if (!document.querySelector('link[data-external-platform-icons]')) {
       const styles = document.createElement("link");
       styles.rel = "stylesheet";
-      styles.href = new URL("external-link-icons.css?v=20260826stores2", base).href;
+      styles.href = new URL("external-link-icons.css?v=20260826stores3", base).href;
       styles.dataset.externalPlatformIcons = "true";
       document.head.append(styles);
     }
@@ -26,7 +26,7 @@
     if (!document.querySelector('link[data-site-family-icons]')) {
       const styles = document.createElement("link");
       styles.rel = "stylesheet";
-      styles.href = "https://kamui2040.github.io/site-family-icons.css?v=20260826family2";
+      styles.href = "https://kamui2040.github.io/site-family-icons.css?v=20260826family3";
       styles.dataset.siteFamilyIcons = "true";
       document.head.append(styles);
     }
