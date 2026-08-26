@@ -5,6 +5,10 @@ window.K2040_CONTENT = {
       projectId: "geojoystick",
       date: "2026-08-25",
       href: "https://kamui2040.github.io/K2040-Android-Releases/apps/geojoystick/",
+      links: [
+        { label: "ONE store", href: "https://m.onestore.net/en-us/apps/appsDetail?prodId=0001008367" },
+        { label: "OpenAPK", href: "https://www.openapk.net/de/geojoystick/com.k2040.geojoystick/" }
+      ],
       strings: {
         en: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 now on ONE store and OpenAPK", summary: "GeoJoystick v0.1.4 is now available through ONE store and OpenAPK as additional download channels." },
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 jetzt im ONE store und bei OpenAPK", summary: "GeoJoystick v0.1.4 ist jetzt über den ONE store und OpenAPK als zusätzliche Downloadkanäle verfügbar." },
