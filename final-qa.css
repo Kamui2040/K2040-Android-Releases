@@ -1,6 +1,5 @@
 :root {
   --k2040-unified-icon-size: 1.5rem;
-  --k2040-framed-icon-scale: 1.72;
 }
 
 /* One icon box size everywhere on the Android site family pages. */
@@ -18,24 +17,19 @@
 
 .site-family-icon {
   object-fit: contain;
+  transform: none !important;
+  clip-path: none !important;
 }
 
-/* Android, Gaming, and Nexus artwork has an outer presentation frame baked into
-   the raster. Crop that frame visually while keeping the same canonical box size. */
-.site-family-icon--android,
-.site-family-icon--gaming {
-  transform: scale(var(--k2040-framed-icon-scale));
-  clip-path: inset(12%);
-}
-
+/* New transparent outline artwork fills the canonical box directly. */
 .external-platform-icon--nexus.external-platform-icon--monogram {
-  background-size: 176% !important;
-  clip-path: inset(8%) !important;
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-nexus.webp?v=20260826outline1") center / contain no-repeat !important;
+  clip-path: none !important;
 }
 
 .site-brand-section.nav-home::before {
-  background-size: 176% !important;
-  clip-path: inset(8%);
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp?v=20260826outline1") center / contain no-repeat !important;
+  clip-path: none !important;
 }
 
 .global-menu > summary::before {
