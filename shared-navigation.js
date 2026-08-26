@@ -7,20 +7,14 @@
     if (!document.querySelector('link[data-external-platform-icons]')) {
       const styles = document.createElement("link");
       styles.rel = "stylesheet";
-      styles.href = new URL("external-link-icons.css?v=20260825icons3", base).href;
+      styles.href = new URL("external-link-icons.css?v=20260826a", base).href;
       styles.dataset.externalPlatformIcons = "true";
       document.head.append(styles);
     }
     if (!document.querySelector('script[data-external-platform-icons]')) {
       const script = document.createElement("script");
-      script.src = new URL("external-link-icons.js?v=20260825icons2", base).href;
+      script.src = new URL("external-link-icons.js?v=20260826a", base).href;
       script.dataset.externalPlatformIcons = "true";
-      document.head.append(script);
-    }
-    if (!document.querySelector('script[data-onestore-link-icon]')) {
-      const script = document.createElement("script");
-      script.src = new URL("onestore-link-icon.js?v=20260825icons1", base).href;
-      script.dataset.onestoreLinkIcon = "true";
       document.head.append(script);
     }
     if (!document.querySelector('link[data-site-family-icons]')) {
@@ -128,6 +122,7 @@
     home.classList.add("nav-home");
     home.href = root;
     home.removeAttribute("aria-current");
+    home.dataset.siteFamilyIcon = "pending";
     const homeLabel = home.querySelector("span") || home;
     homeLabel.removeAttribute("data-i18n");
     homeLabel.setAttribute("data-global-i18n", "home");
