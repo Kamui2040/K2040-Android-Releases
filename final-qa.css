@@ -1,5 +1,6 @@
 :root {
   --k2040-unified-icon-size: 1.5rem;
+  --k2040-framed-icon-scale: 1.72;
 }
 
 /* One icon box size everywhere on the Android site family pages. */
@@ -19,10 +20,26 @@
   object-fit: contain;
 }
 
-.external-platform-icon--nexus.external-platform-icon--monogram,
-.site-brand-section.nav-home::before,
+/* Android, Gaming, and Nexus artwork has an outer presentation frame baked into
+   the raster. Crop that frame visually while keeping the same canonical box size. */
+.site-family-icon--android,
+.site-family-icon--gaming {
+  transform: scale(var(--k2040-framed-icon-scale));
+  clip-path: inset(12%);
+}
+
+.external-platform-icon--nexus.external-platform-icon--monogram {
+  background-size: 176% !important;
+  clip-path: inset(8%) !important;
+}
+
+.site-brand-section.nav-home::before {
+  background-size: 176% !important;
+  clip-path: inset(8%);
+}
+
 .global-menu > summary::before {
-  background-size: 130% !important;
+  background-size: 116% !important;
 }
 
 /* Preserve the working ONE store treatment while using the shared icon box. */
