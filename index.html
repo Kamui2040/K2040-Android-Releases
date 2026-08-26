@@ -8,20 +8,24 @@
   <title>K2040 Android Projects</title>
   <link rel="stylesheet" href="/K2040-Android-Releases/styles.css?v=20260824exact1">
   <link rel="stylesheet" href="/K2040-Android-Releases/promo.css?v=20260824exact1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/updates.css?v=20260826align1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/mobile-navigation.css?v=20260824exact1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/updates.css?v=20260826align2">
   <link rel="stylesheet" href="/K2040-Android-Releases/android-redesign.css?v=20260824buttons1">
   <link rel="stylesheet" href="/K2040-Android-Releases/app-cards.css?v=20260825mobile1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/shared-ui.css?v=20260824exact1">
+  <link rel="stylesheet" href="https://kamui2040.github.io/shared-ui.css?v=20260824exact1">
   <link rel="stylesheet" href="/K2040-Android-Releases/android-hero.css?v=20260826hero1">
-  <link rel="stylesheet" href="/K2040-Android-Releases/final-visual-fixes.css?v=20260826a">
+  <link rel="stylesheet" href="/K2040-Android-Releases/app-card-downloads.css?v=20260825nav1">
+  <link rel="stylesheet" href="/K2040-Android-Releases/external-link-icons.css?v=20260826stores3">
+  <link rel="stylesheet" href="https://kamui2040.github.io/shared/k2040-chrome.css?v=20260826source1">
   <script defer src="/K2040-Android-Releases/translations.js?v=20260817-1"></script>
   <script defer src="/K2040-Android-Releases/updates/latest.js?v=20260826feed1"></script>
-  <script defer src="/K2040-Android-Releases/shared-navigation.js?v=20260826stores2"></script>
   <script defer src="/K2040-Android-Releases/site.js?v=20260825updates1"></script>
-  <script defer src="/K2040-Android-Releases/final-visual-fixes.js?v=20260826a"></script>
+  <script defer src="/K2040-Android-Releases/android-global-labels.js?v=20260826source1"></script>
+  <script defer src="/K2040-Android-Releases/external-link-icons.js?v=20260825icons2"></script>
+  <script defer src="/K2040-Android-Releases/onestore-link-icon.js?v=20260826stores3"></script>
+  <script defer src="/K2040-Android-Releases/app-card-downloads.js?v=20260826stores1"></script>
+  <script defer src="https://kamui2040.github.io/shared/k2040-chrome.js?v=20260826source1"></script>
 </head>
-<body class="projects-home-page android-page">
+<body class="projects-home-page android-page" data-k2040-site="android">
   <div class="page-shell">
     <header class="site-header">
       <div class="site-brand">
@@ -35,7 +39,7 @@
             <details class="global-menu-item" data-global-menu-item><summary><span data-global-i18n="gaming">Gaming Mods</span><span class="global-menu-item-arrow" aria-hidden="true">›</span></summary><nav class="global-menu-submenu" aria-label="Gaming Mods"><a href="https://kamui2040.github.io/K2040-Gaming-Mods/" data-global-i18n="modsHome">Mods Home</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#projects" data-global-i18n="modProjects">Mod Projects</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#updates" data-global-i18n="updates">Updates</a><a href="https://kamui2040.github.io/K2040-Gaming-Mods/#about" data-global-i18n="about">About</a></nav></details>
           </div>
         </details>
-        <a class="site-brand-section" href="/K2040-Android-Releases/" aria-current="page"><span data-i18n="nav.home">Android Projects</span></a>
+        <a class="site-brand-section nav-home" data-k2040-site-home href="/K2040-Android-Releases/"><span data-global-i18n="home">Home</span></a>
       </div>
 
       <nav class="site-nav" aria-label="Primary">
@@ -46,7 +50,8 @@
             <a href="/K2040-Android-Releases/apps/geojoystick/"><strong>GeoJoystick</strong><small data-i18n="landing.geoDescription">A mock-location joystick for emulator and developer testing.</small></a>
           </div>
         </details>
-        <a class="nav-link" href="#updates" data-i18n="nav.updates">Updates</a>
+        <a class="nav-link nav-downloads" href="#apps" data-global-i18n="downloads">Downloads</a>
+        <a class="nav-link nav-updates" href="#updates" data-i18n="nav.updates">Updates</a>
         <label class="nav-language-control"><span class="visually-hidden" data-i18n="controls.language">Language</span><select class="nav-language-select" data-language-select aria-label="Language" data-i18n-aria-label="controls.language"><option value="en">🇬🇧 English</option><option value="de">🇩🇪 Deutsch</option><option value="pt-PT">🇵🇹 Português</option><option value="es">🇪🇸 Español</option><option value="fr">🇫🇷 Français</option></select></label>
         <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span data-theme-label>Dark</span></button>
       </nav>
@@ -99,9 +104,10 @@
 
       <section class="content-section about-section" id="about">
         <div class="section-heading"><p class="eyebrow" data-i18n="hero.eyebrow">K2040 Projects</p><h2 data-i18n="common.about">About</h2><p data-i18n="hero.description">Open-source Android apps with clear privacy, licensing, and direct download information.</p></div>
-        <nav class="about-links" aria-label="K2040 links"><a class="text-link" href="https://kamui2040.github.io/" data-global-i18n="home">Home</a><a class="text-link" href="/K2040-Android-Releases/" data-global-i18n="android">Android Projects</a><a class="text-link" href="https://kamui2040.github.io/K2040-Gaming-Mods/" data-global-i18n="gaming">Gaming Mods</a><a class="text-link" href="https://github.com/Kamui2040">GitHub</a><a class="text-link" href="https://next.nexusmods.com/profile/kamui2040">Nexus Mods</a><a class="text-link" href="https://ko-fi.com/k2040">Ko-fi</a><a class="text-link" href="https://www.instagram.com/k2040.projects/">Instagram</a></nav>
       </section>
     </main>
+
+    <footer data-k2040-footer></footer>
 
     <template id="update-card-template"><article class="update-card" data-update-card><div class="update-media" data-update-media><img class="update-image" data-update-image src="" alt=""></div><div class="update-copy"><div class="update-meta"><time data-update-date></time><span data-update-category></span></div><h3 data-update-title></h3><p data-update-summary></p><a class="text-link" data-update-action>Read more →</a></div></article></template>
   </div>

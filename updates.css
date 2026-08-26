@@ -78,6 +78,13 @@
   padding: clamp(1.5rem, 4vw, 2.4rem);
 }
 
+/* Dedicated Updates uses one copy-column inset for every card. */
+.updates-page .update-copy,
+.updates-page .update-card--featured .update-copy {
+  min-width: 0;
+  padding: 1.3rem 1.35rem;
+}
+
 .update-meta {
   display: flex;
   flex-wrap: wrap;
@@ -106,10 +113,11 @@
   line-height: 1.58;
 }
 
-/* Layout only. The action itself is Gaming's .text-link component. */
+/* Layout only. The action itself is the shared .text-link component. */
 .update-copy > .text-link {
   align-self: flex-start;
   margin-top: auto;
+  margin-right: 0;
   margin-left: 0;
 }
 
@@ -138,7 +146,9 @@
   }
 
   .update-copy,
-  .update-card--featured .update-copy {
+  .update-card--featured .update-copy,
+  .updates-page .update-copy,
+  .updates-page .update-card--featured .update-copy {
     padding: 1.2rem;
   }
 }
