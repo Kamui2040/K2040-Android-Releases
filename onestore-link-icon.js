@@ -7,7 +7,7 @@
     if (!document.querySelector('link[data-final-qa-style]')) {
       const styles = document.createElement("link");
       styles.rel = "stylesheet";
-      styles.href = new URL("final-qa.css?v=20260826b", base).href;
+      styles.href = new URL("final-qa.css?v=20260826c", base).href;
       styles.dataset.finalQaStyle = "true";
       document.head.append(styles);
     }

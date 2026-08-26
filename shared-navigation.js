@@ -19,20 +19,20 @@
     }
     if (!document.querySelector('script[data-onestore-link-icon]')) {
       const script = document.createElement("script");
-      script.src = new URL("onestore-link-icon.js?v=20260826stores2", base).href;
+      script.src = new URL("onestore-link-icon.js?v=20260826stores3", base).href;
       script.dataset.onestoreLinkIcon = "true";
       document.head.append(script);
     }
     if (!document.querySelector('link[data-site-family-icons]')) {
       const styles = document.createElement("link");
       styles.rel = "stylesheet";
-      styles.href = "https://kamui2040.github.io/site-family-icons.css?v=20260826family3";
+      styles.href = "https://kamui2040.github.io/site-family-icons.css?v=20260826family5";
       styles.dataset.siteFamilyIcons = "true";
       document.head.append(styles);
     }
     if (!document.querySelector('script[data-site-family-icons]')) {
       const script = document.createElement("script");
-      script.src = "https://kamui2040.github.io/site-family-icons.js?v=20260825family1";
+      script.src = "https://kamui2040.github.io/site-family-icons.js?v=20260826outline1";
       script.dataset.siteFamilyIcons = "true";
       document.head.append(script);
     }
