@@ -7,7 +7,7 @@
   display: inline-flex;
   width: 1.1rem;
   height: 1.1rem;
-  flex: 0 0 auto;
+  flex: 0 0 1.1rem;
   align-items: center;
   justify-content: center;
   color: currentColor;
@@ -20,8 +20,8 @@
 }
 
 .external-platform-icon--monogram {
-  width: 1.12rem;
-  height: 1.12rem;
+  width: 1.1rem;
+  height: 1.1rem;
   border: 1px solid currentColor;
   font-size: .68rem;
   font-weight: 900;
@@ -50,6 +50,14 @@
 .external-platform-icon--uptodown.external-platform-icon--monogram {
   border: 0;
   background: transparent url("https://img.utdstc.com/icon/f66/dd0/f66dd06c25088f96b64eb440bcc90a2994cc645680cb27840b30fbf996902804") center / contain no-repeat;
+  font-size: 0;
+  clip-path: none;
+}
+
+/* Official OpenAPK mark from the CC0-licensed OpenAPK repository. */
+.external-platform-icon--openapk.external-platform-icon--monogram {
+  border: 0;
+  background: transparent url("/K2040-Android-Releases/assets/icons/openapk-blank.svg") center / contain no-repeat;
   font-size: 0;
   clip-path: none;
 }
