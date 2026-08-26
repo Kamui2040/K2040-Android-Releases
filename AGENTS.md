@@ -21,6 +21,8 @@ New app source and normal app releases belong in the app's public source reposit
 - Download links, version labels, checksums, package identity, and app identity must match the authoritative public source.
 - Stop if the app, version, file, checksum, signer, source, or release notes do not match what is expected.
 - Add website update records only for confirmed public changes that are already implemented or published. Do not present planned or merely announced changes as completed updates.
+- `updates/latest.js` is the canonical Android website update feed. The landing page, dedicated Updates page, and Main K2040 relay must render from those records rather than keeping separate mutable copies.
+- Keep presentation-specific image choices out of the update facts by default. Renderers may reuse the current app card artwork from `projectId`; use update-specific media only when the visual asset itself is part of the update.
 - The Main K2040 site consumes the Android update feed automatically. Keep Android update facts here and do not duplicate the same mutable records in the Main-site repository.
 
 ## Maintenance
