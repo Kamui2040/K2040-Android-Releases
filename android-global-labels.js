@@ -18,6 +18,41 @@
     return "en";
   };
 
+  const createAndroidIcon = () => {
+    const icon = document.createElement("span");
+    icon.className = "k2040-icon k2040-icon--android";
+    icon.setAttribute("aria-hidden", "true");
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("focusable", "false");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "1.8");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+
+    const phone = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    phone.setAttribute("x", "6");
+    phone.setAttribute("y", "2");
+    phone.setAttribute("width", "12");
+    phone.setAttribute("height", "20");
+    phone.setAttribute("rx", "2.3");
+
+    const details = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    details.setAttribute("d", "M9.5 5h5M10 19h4");
+
+    svg.append(phone, details);
+    icon.append(svg);
+    return icon;
+  };
+
+  const ensureAndroidHomeIcon = () => {
+    document.querySelectorAll("[data-k2040-site-home]").forEach((link) => {
+      if (!link.querySelector(".k2040-icon--android")) link.prepend(createAndroidIcon());
+    });
+  };
+
   const apply = (language = normalizeLanguage(document.documentElement.lang || navigator.language)) => {
     const copy = labels[language] || labels.en;
     document.querySelectorAll("[data-global-i18n]").forEach((element) => {
@@ -31,6 +66,7 @@
   };
 
   const init = () => {
+    ensureAndroidHomeIcon();
     apply();
     document.querySelectorAll("[data-language-select]").forEach((select) => {
       select.addEventListener("change", () => requestAnimationFrame(() => apply(select.value)));
