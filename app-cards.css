@@ -121,8 +121,14 @@
   margin-top: .6rem;
 }
 
-.app-promo-copy .text-link {
-  align-self: flex-start;
+.app-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+}
+
+.app-card-actions .text-link {
   flex: 0 0 auto;
 }
 
@@ -161,10 +167,7 @@
     font-size: .58rem;
   }
 
-  .app-promo-copy .text-link {
-    min-height: 34px;
-    margin-top: .05rem;
-    padding: .38rem .62rem;
-    font-size: .76rem;
+  .app-card-actions {
+    gap: .5rem;
   }
 }
