@@ -1,30 +1,35 @@
 /* Android promo and app-detail content that is not owned by the shared frame or app-card styles. */
 
-.geo-promo-section {
-  margin: 0;
-  overflow: hidden;
-  background: #171f2a;
-}
-
-.geo-promo-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1024 / 500;
-  background: #071421;
-}
-
+.geo-promo-section,
 .esca-promo-section {
   margin: 0;
   overflow: hidden;
+  aspect-ratio: 3 / 1;
+}
+
+.geo-promo-section {
+  background: #171f2a;
+}
+
+.esca-promo-section {
   background: #f7efe5;
 }
 
+.geo-promo-image,
 .esca-promo-image {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 2172 / 724;
+  height: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.geo-promo-image {
+  background: #071421;
+}
+
+.esca-promo-image {
   background: #f7efe5;
 }
 

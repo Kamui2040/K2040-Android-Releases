@@ -133,7 +133,7 @@
         const media = fragment.querySelector("[data-update-media]");
         const image = fragment.querySelector("[data-update-image]");
         const localizedImage = localizedUpdateImage(update) || (archiveMode ? archiveMedia[update.projectId] : null);
-        if (card && index === 0 && !archiveMode) card.classList.add("update-card--featured");
+        if (card && index === 0 && !archiveMode && !textOnly) card.classList.add("update-card--featured");
         if (!textOnly && media && image && localizedImage) {
           image.src = localizedImage;
           image.alt = strings.imageAlt || "";
