@@ -22,7 +22,8 @@
     linear-gradient(315deg, rgba(105, 185, 232, .045), transparent 28%);
 }
 
-/* Android Home uses explicit artwork so the control does not depend on a pseudo-element. */
+/* Android Home owns one explicit icon. The background is a resilient fallback
+   for browsers that restore a stale image element from page cache. */
 .android-page [data-k2040-site-home]::before {
   content: none;
 }
@@ -31,20 +32,26 @@
   display: block;
   width: var(--k2040-icon-size, 1.5rem);
   height: var(--k2040-icon-size, 1.5rem);
+  max-width: none;
   flex: 0 0 var(--k2040-icon-size, 1.5rem);
+  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp?v=20260827home2") center / 116% no-repeat;
   object-fit: contain;
 }
 
-/* Android actions intentionally mirror the visible Main-page button treatment. */
-.android-page .text-link,
-.android-page .project-action,
-.android-page .section-link,
-.android-page .inline-link,
-.android-page .download-button,
-.android-page .resource-links a,
-.android-page .about-links a,
-.android-page .update-action,
-.android-page .text-action {
+/* Android actions mirror the Main-page button treatment. Hover styling is
+   limited to hover-capable pointers so touch navigation cannot leave a stale
+   white hover state after returning with the browser back button. */
+.android-page :is(
+  .text-link,
+  .project-action,
+  .section-link,
+  .inline-link,
+  .download-button,
+  .resource-links a,
+  .about-links a,
+  .update-action,
+  .text-action
+) {
   display: inline-flex;
   min-height: 40px;
   align-items: center;
@@ -65,24 +72,17 @@
   transition: background 140ms ease, border-color 140ms ease, box-shadow 140ms ease, color 140ms ease, transform 140ms ease;
 }
 
-.android-page .text-link:hover,
-.android-page .text-link:focus-visible,
-.android-page .project-action:hover,
-.android-page .project-action:focus-visible,
-.android-page .section-link:hover,
-.android-page .section-link:focus-visible,
-.android-page .inline-link:hover,
-.android-page .inline-link:focus-visible,
-.android-page .download-button:hover,
-.android-page .download-button:focus-visible,
-.android-page .resource-links a:hover,
-.android-page .resource-links a:focus-visible,
-.android-page .about-links a:hover,
-.android-page .about-links a:focus-visible,
-.android-page .update-action:hover,
-.android-page .update-action:focus-visible,
-.android-page .text-action:hover,
-.android-page .text-action:focus-visible {
+.android-page :is(
+  .text-link,
+  .project-action,
+  .section-link,
+  .inline-link,
+  .download-button,
+  .resource-links a,
+  .about-links a,
+  .update-action,
+  .text-action
+):focus-visible {
   border-color: rgba(0, 240, 242, .58);
   border-bottom-color: #00f0f2;
   background: linear-gradient(180deg, rgba(0, 217, 229, .16), var(--surface));
@@ -90,6 +90,27 @@
   color: var(--text);
   outline: none;
   transform: translateY(-1px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .android-page :is(
+    .text-link,
+    .project-action,
+    .section-link,
+    .inline-link,
+    .download-button,
+    .resource-links a,
+    .about-links a,
+    .update-action,
+    .text-action
+  ):hover {
+    border-color: rgba(0, 240, 242, .58);
+    border-bottom-color: #00f0f2;
+    background: linear-gradient(180deg, rgba(0, 217, 229, .16), var(--surface));
+    box-shadow: inset 0 -2px 0 #00f0f2, 0 0 13px rgba(0, 217, 229, .18);
+    color: var(--text);
+    transform: translateY(-1px);
+  }
 }
 
 /* Android app-detail content. */
@@ -264,6 +285,12 @@
     gap: 0;
   }
 
+  .android-page .site-home-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    flex-basis: 1.7rem;
+  }
+
   .android-page .nav-language-control {
     grid-row: 1;
     grid-column: 7 / span 3;
@@ -302,7 +329,7 @@
   }
 
   .android-page .global-menu > summary > strong,
-  .android-page .site-brand-section.nav-home > span,
+  .android-page .site-brand-section.nav-home > [data-global-i18n="home"],
   .android-page .theme-toggle [data-theme-label] {
     display: none;
   }
@@ -363,15 +390,17 @@
 @media (prefers-reduced-motion: reduce) {
   .app-promo-card,
   .update-card,
-  .android-page .text-link,
-  .android-page .project-action,
-  .android-page .section-link,
-  .android-page .inline-link,
-  .android-page .download-button,
-  .android-page .resource-links a,
-  .android-page .about-links a,
-  .android-page .update-action,
-  .android-page .text-action {
+  .android-page :is(
+    .text-link,
+    .project-action,
+    .section-link,
+    .inline-link,
+    .download-button,
+    .resource-links a,
+    .about-links a,
+    .update-action,
+    .text-action
+  ) {
     transition: none;
   }
 }
