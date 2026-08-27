@@ -11,6 +11,10 @@
     es: { flag: "🇪🇸", label: "Español", locale: "es-ES" },
     fr: { flag: "🇫🇷", label: "Français", locale: "fr-FR" }
   };
+  const archiveMedia = {
+    "esca-agnellis": "/K2040-Android-Releases/assets/esca-agnellis-app-card.webp",
+    geojoystick: "/K2040-Android-Releases/assets/geojoystick-app-card.webp"
+  };
   const root = document.documentElement;
   const darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -59,6 +63,19 @@
   const localStrings = (entry) => entry?.strings?.[currentLanguage] || entry?.strings?.en || {};
   const localizedUpdateImage = (entry) => entry?.images?.[currentLanguage] || entry?.images?.en || entry?.image || null;
 
+  const destinationLabel = (href) => {
+    let url;
+    try { url = new URL(href, location.href); } catch { return null; }
+    const host = url.hostname.toLowerCase();
+    if (host === "github.com" || host.endsWith(".github.com")) return "GitHub";
+    if (host === "f-droid.org" || host.endsWith(".f-droid.org")) return "F-Droid";
+    if (host === "apkpure.com" || host.endsWith(".apkpure.com")) return "APKPure";
+    if (host === "uptodown.com" || host.endsWith(".uptodown.com")) return "Uptodown";
+    if (host === "onestore.net" || host.endsWith(".onestore.net") || host === "onestore.co.kr" || host.endsWith(".onestore.co.kr")) return "ONE store";
+    if (host === "openapk.net" || host.endsWith(".openapk.net")) return "OpenAPK";
+    return null;
+  };
+
   const updateThemeToggle = (button) => {
     if (!button) return;
     const current = effectiveTheme();
@@ -106,6 +123,7 @@
       if (!template) return;
       const requestedLimit = Number.parseInt(list.dataset.updateLimit || "", 10);
       const updates = Number.isFinite(requestedLimit) && requestedLimit > 0 ? sortedUpdates().slice(0, requestedLimit) : sortedUpdates();
+      const archiveMode = document.body.classList.contains("updates-page") && Boolean(list.closest(".update-archive"));
       const textOnly = document.body.classList.contains("projects-home-page") && Boolean(list.closest("#updates"));
       list.replaceChildren();
       updates.forEach((update, index) => {
@@ -114,8 +132,8 @@
         const card = fragment.querySelector("[data-update-card]");
         const media = fragment.querySelector("[data-update-media]");
         const image = fragment.querySelector("[data-update-image]");
-        const localizedImage = localizedUpdateImage(update);
-        if (card && index === 0) card.classList.add("update-card--featured");
+        const localizedImage = localizedUpdateImage(update) || (archiveMode ? archiveMedia[update.projectId] : null);
+        if (card && index === 0 && !archiveMode) card.classList.add("update-card--featured");
         if (!textOnly && media && image && localizedImage) {
           image.src = localizedImage;
           image.alt = strings.imageAlt || "";
@@ -139,9 +157,12 @@
         if (title) title.textContent = strings.title || "";
         if (summary) summary.textContent = strings.summary || "";
         if (action) {
-          action.textContent = `${translate("actions.readMore") || "Read more"} →`;
-          if (update.href) action.href = update.href;
-          else action.remove();
+          const label = archiveMode ? destinationLabel(update.href) : null;
+          action.textContent = label || `${translate("actions.readMore") || "Read more"} →`;
+          if (update.href) {
+            action.href = update.href;
+            if (label) action.title = label;
+          } else action.remove();
         }
         list.append(fragment);
       });
