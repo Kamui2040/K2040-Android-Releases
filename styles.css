@@ -1,16 +1,15 @@
 /*
  * K2040 Android base.
- * The Gaming site owns the common visual system. Android-specific layout is
- * kept in promo.css, updates.css, android-redesign.css, app-cards.css, and
- * download-sources.css.
+ * The Main site owns the shared visual baseline and desktop navigation.
+ * Gaming keeps the shared Android/Gaming mobile two-row navigation layout.
+ * Android-specific content layout stays in the local stylesheets.
  */
-@import url("/K2040-Gaming-Mods/styles.css?v=20260823a");
-@import url("/K2040-Gaming-Mods/navigation.css?v=20260823u1");
-@import url("/K2040-Gaming-Mods/responsive.css?v=20260823a");
-@import url("/K2040-Gaming-Mods/mobile-navigation.css?v=20260823u1");
-@import url("/K2040-Gaming-Mods/redesign.css?v=20260823u1");
+@import url("https://kamui2040.github.io/styles.css?v=20260827frame1");
+@import url("https://kamui2040.github.io/navigation.css?v=20260827navcleanup1");
+@import url("https://kamui2040.github.io/responsive.css?v=20260827frame1");
+@import url("/K2040-Gaming-Mods/mobile-navigation.css?v=20260827android1");
 
-/* Compatibility aliases for Android content-only styles. Values come from Gaming. */
+/* Compatibility aliases for Android content-only styles. */
 :root {
   --background: var(--bg);
   --surface-strong: var(--strong);
