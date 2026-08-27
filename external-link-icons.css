@@ -1,13 +1,10 @@
-/* Shared external platform link icons. */
+/* Android-specific external-platform artwork. Canonical shared chrome owns icon box sizing. */
 .external-platform-link {
   gap: .5rem;
 }
 
 .external-platform-icon {
   display: inline-flex;
-  width: 1.35rem;
-  height: 1.35rem;
-  flex: 0 0 1.35rem;
   align-items: center;
   justify-content: center;
   color: currentColor;
@@ -20,13 +17,11 @@
 }
 
 .external-platform-icon--monogram {
-  width: 1.35rem;
-  height: 1.35rem;
   border: 1px solid currentColor;
   font-size: .8rem;
   font-weight: 900;
   line-height: 1;
-  clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px));
+  clip-path: polygon(0 4px, 4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px));
 }
 
 .external-platform-icon--nexus.external-platform-icon--monogram {
@@ -54,7 +49,7 @@
   clip-path: none;
 }
 
-/* Shared ONE store cue, matching the working Main News treatment. */
+/* Shared ONE store cue. */
 .external-platform-icon--onestore.external-platform-icon--monogram {
   position: relative;
   overflow: hidden;
@@ -82,32 +77,6 @@
   clip-path: none;
 }
 
-.site-brand-section.nav-home {
-  gap: .5rem;
-}
-
-.site-brand-section.nav-home::before {
-  width: 1.5rem;
-  height: 1.5rem;
-  flex: 0 0 1.5rem;
-  content: "";
-  background: transparent url("https://kamui2040.github.io/assets/icons/k2040-android.webp") center / 116% no-repeat;
-}
-
-.about-links .site-family-icon,
-.site-footer .site-family-icon {
-  width: 1.4rem;
-  height: 1.4rem;
-  flex-basis: 1.4rem;
-}
-
-.about-links .external-platform-icon,
-.site-footer .external-platform-icon {
-  width: 1.35rem;
-  height: 1.35rem;
-  flex-basis: 1.35rem;
-}
-
 .external-platform-label {
   min-width: 0;
 }
@@ -132,11 +101,5 @@
     border: 0;
     clip: rect(0 0 0 0);
     white-space: nowrap;
-  }
-
-  .external-platform-link--icon-only-mobile .external-platform-icon {
-    width: 1.35rem;
-    height: 1.35rem;
-    flex-basis: 1.35rem;
   }
 }

@@ -1,24 +1,6 @@
 (() => {
   "use strict";
 
-  const loaderScript = document.currentScript;
-  if (loaderScript?.src) {
-    const base = new URL(".", loaderScript.src);
-    if (!document.querySelector('link[data-final-qa-style]')) {
-      const styles = document.createElement("link");
-      styles.rel = "stylesheet";
-      styles.href = new URL("final-qa.css?v=20260826c", base).href;
-      styles.dataset.finalQaStyle = "true";
-      document.head.append(styles);
-    }
-    if (!document.querySelector('script[data-final-qa-script]')) {
-      const script = document.createElement("script");
-      script.src = new URL("final-qa.js?v=20260826a", base).href;
-      script.dataset.finalQaScript = "true";
-      document.head.append(script);
-    }
-  }
-
   const storeFor = (link) => {
     let url;
     try { url = new URL(link.href, location.href); } catch { return null; }
