@@ -1,4 +1,4 @@
-/* Android-only content and mobile layout. Shared frames, controls, and navigation visuals come from the canonical K2040 sources. */
+/* Android-only content and mobile layout. Shared frames and navigation visuals come from the canonical K2040 sources. */
 
 .section-heading--split {
   display: flex;
@@ -20,6 +20,76 @@
   background-image:
     linear-gradient(135deg, rgba(105, 185, 232, .08), transparent 26%),
     linear-gradient(315deg, rgba(105, 185, 232, .045), transparent 28%);
+}
+
+/* Android Home uses explicit artwork so the control does not depend on a pseudo-element. */
+.android-page [data-k2040-site-home]::before {
+  content: none;
+}
+
+.android-page .site-home-icon {
+  display: block;
+  width: var(--k2040-icon-size, 1.5rem);
+  height: var(--k2040-icon-size, 1.5rem);
+  flex: 0 0 var(--k2040-icon-size, 1.5rem);
+  object-fit: contain;
+}
+
+/* Android actions intentionally mirror the visible Main-page button treatment. */
+.android-page .text-link,
+.android-page .project-action,
+.android-page .section-link,
+.android-page .inline-link,
+.android-page .download-button,
+.android-page .resource-links a,
+.android-page .about-links a,
+.android-page .update-action,
+.android-page .text-action {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .55rem .85rem;
+  border: 1px solid rgba(0, 207, 215, .34);
+  border-bottom-color: #00d9e5;
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(0, 217, 229, .09), var(--strong));
+  box-shadow: inset 0 -2px 0 #00d9e5, 0 0 10px rgba(0, 217, 229, .08);
+  color: var(--accentText);
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  clip-path: polygon(0 8px, 8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px));
+  transition: background 140ms ease, border-color 140ms ease, box-shadow 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.android-page .text-link:hover,
+.android-page .text-link:focus-visible,
+.android-page .project-action:hover,
+.android-page .project-action:focus-visible,
+.android-page .section-link:hover,
+.android-page .section-link:focus-visible,
+.android-page .inline-link:hover,
+.android-page .inline-link:focus-visible,
+.android-page .download-button:hover,
+.android-page .download-button:focus-visible,
+.android-page .resource-links a:hover,
+.android-page .resource-links a:focus-visible,
+.android-page .about-links a:hover,
+.android-page .about-links a:focus-visible,
+.android-page .update-action:hover,
+.android-page .update-action:focus-visible,
+.android-page .text-action:hover,
+.android-page .text-action:focus-visible {
+  border-color: rgba(0, 240, 242, .58);
+  border-bottom-color: #00f0f2;
+  background: linear-gradient(180deg, rgba(0, 217, 229, .16), var(--surface));
+  box-shadow: inset 0 -2px 0 #00f0f2, 0 0 13px rgba(0, 217, 229, .18);
+  color: var(--text);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 /* Android app-detail content. */
@@ -163,7 +233,7 @@
 }
 
 @media (max-width: 760px) {
-  /* Android owns only placement. Shared sources continue to own control appearance and menu behavior. */
+  /* Android owns placement and its compact icon-only controls. */
   .android-page .site-header {
     position: relative;
     z-index: 50;
@@ -191,16 +261,21 @@
   .android-page .site-brand-section.nav-home {
     grid-row: 1;
     grid-column: 4 / span 3;
+    gap: 0;
   }
 
   .android-page .nav-language-control {
     grid-row: 1;
     grid-column: 7 / span 3;
+    position: relative;
+    padding: .15rem;
+    overflow: hidden;
   }
 
   .android-page .theme-toggle {
     grid-row: 1;
     grid-column: 10 / span 3;
+    padding: .2rem;
   }
 
   .android-page .app-menu {
@@ -224,6 +299,33 @@
     width: 100%;
     min-width: 0;
     margin: 0;
+  }
+
+  .android-page .global-menu > summary > strong,
+  .android-page .site-brand-section.nav-home > span,
+  .android-page .theme-toggle [data-theme-label] {
+    display: none;
+  }
+
+  .android-page .nav-language-control::before {
+    content: "🌐";
+    font-size: .95rem;
+    line-height: 1;
+  }
+
+  .android-page .nav-language-select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .android-page .theme-toggle-icon {
+    width: auto;
   }
 
   .android-page .app-menu-panel {
@@ -260,7 +362,16 @@
 
 @media (prefers-reduced-motion: reduce) {
   .app-promo-card,
-  .update-card {
+  .update-card,
+  .android-page .text-link,
+  .android-page .project-action,
+  .android-page .section-link,
+  .android-page .inline-link,
+  .android-page .download-button,
+  .android-page .resource-links a,
+  .android-page .about-links a,
+  .android-page .update-action,
+  .android-page .text-action {
     transition: none;
   }
 }
