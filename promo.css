@@ -1,10 +1,9 @@
+/* Android promo and app-detail content that is not owned by the shared frame or app-card styles. */
+
 .geo-promo-section {
   margin: 0;
   overflow: hidden;
-  border: 1px solid #334052;
-  border-radius: 26px;
   background: #171f2a;
-  box-shadow: var(--shadow);
 }
 
 .geo-promo-image {
@@ -18,10 +17,7 @@
 .esca-promo-section {
   margin: 0;
   overflow: hidden;
-  border: 1px solid #d8cfbf;
-  border-radius: 26px;
   background: #f7efe5;
-  box-shadow: var(--shadow);
 }
 
 .esca-promo-image {
@@ -30,33 +26,6 @@
   height: auto;
   aspect-ratio: 2172 / 724;
   background: #f7efe5;
-}
-
-.landing-hero--stacked {
-  display: block;
-}
-
-.landing-hero--stacked .landing-hero-media {
-  min-height: 0;
-}
-
-.landing-hero--stacked .landing-hero-media img {
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  aspect-ratio: 3 / 1;
-  object-fit: cover;
-}
-
-.landing-hero--stacked .landing-hero-copy {
-  min-height: 0;
-  justify-content: flex-start;
-  padding: clamp(1.4rem, 4vw, 2.5rem);
-}
-
-.landing-hero--stacked .landing-hero-copy .lead {
-  max-width: 760px;
 }
 
 .app-detail-summary {
@@ -68,7 +37,7 @@
 }
 
 .app-detail-summary h2 {
-  margin-bottom: 0.6rem;
+  margin-bottom: .6rem;
   font-size: clamp(1.45rem, 2.8vw, 2rem);
 }
 
@@ -81,220 +50,20 @@ body[data-page-title-key="pages.geo.metaTitle"] .detail-card h2 {
   font-size: clamp(1.35rem, 2.5vw, 1.9rem);
 }
 
-.app-promo-list {
-  display: grid;
-  gap: 1.35rem;
-  margin-top: 1.5rem;
-}
-
-.app-promo-card {
-  display: block;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  background: var(--strong);
-  text-decoration: none;
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-}
-
-.app-promo-card:hover,
-.app-promo-card:focus-visible {
-  border-color: var(--accent);
-  box-shadow: var(--shadow);
-  outline: none;
-  transform: translateY(-3px);
-}
-
-.app-promo-media {
-  width: 100%;
-  overflow: hidden;
-}
-
-.app-promo-media--esca {
-  background: #f7efe5;
-}
-
-.app-promo-media--esca img,
-.app-promo-geo-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.app-promo-media--esca img {
-  aspect-ratio: 2172 / 724;
-}
-
-.app-promo-media--geo {
-  background: #171f2a;
-}
-
-.app-promo-geo-image {
-  aspect-ratio: 1024 / 500;
-}
-
 .geo-banner--de {
-  display: none !important;
+  display: none;
 }
 
 html[data-language="de"] .geo-banner--en {
-  display: none !important;
+  display: none;
 }
 
 html[data-language="de"] .geo-banner--de {
-  display: block !important;
-}
-
-.app-promo-copy {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 1.25rem 1.4rem 1.35rem;
-}
-
-.app-promo-copy > div {
-  min-width: 0;
-}
-
-.app-promo-copy .app-name-row {
-  justify-content: flex-start;
-  gap: 0.8rem;
-}
-
-.app-promo-copy h3 {
-  margin: 0;
-  font-size: 1.4rem;
-}
-
-.app-promo-copy p {
-  margin: 0.45rem 0 0;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-/* Button appearance comes from the Gaming baseline. */
-.app-promo-copy .text-action {
-  flex: 0 0 auto;
-}
-
-.app-overview-media--promo {
-  position: relative;
-  overflow: hidden;
-  padding: 0.75rem;
-  background: #171f2a;
-}
-
-.geo-card-collage {
-  position: relative;
-  width: 100%;
-  height: 248px;
-  overflow: hidden;
-}
-
-.geo-card-shot,
-.geo-card-overlay-crop {
-  position: absolute;
   display: block;
-  border: 1px solid #46546a;
-  background: #171f2a;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
-}
-
-.geo-card-shot {
-  width: auto;
-  max-width: none;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.geo-card-shot--main {
-  left: 2%;
-  bottom: -10px;
-  z-index: 2;
-  height: 238px;
-}
-
-.geo-card-shot--settings {
-  right: -4%;
-  bottom: -4px;
-  z-index: 1;
-  height: 218px;
-  opacity: 0.92;
-}
-
-.geo-card-overlay-crop {
-  right: 18%;
-  bottom: 18px;
-  z-index: 3;
-  width: 104px;
-  height: 142px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.geo-card-overlay-crop img {
-  display: block;
-  width: 162px;
-  max-width: none;
-  height: auto;
-  transform: translate(-7px, -32px);
-}
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0 0 0 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-@media (max-width: 760px) {
-  .landing-hero--stacked .landing-hero-media img {
-    aspect-ratio: 16 / 8;
-  }
 }
 
 @media (max-width: 620px) {
-  .geo-promo-section,
-  .esca-promo-section {
-    border-radius: 20px;
-  }
-
   .app-detail-summary {
     margin-top: 1rem;
-  }
-
-  .app-promo-card {
-    border-radius: 18px;
-  }
-
-  .app-promo-copy {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 1rem 1.05rem 1.1rem;
-  }
-
-  .geo-card-collage {
-    height: 220px;
-  }
-
-  .geo-card-shot--main {
-    height: 215px;
-  }
-
-  .geo-card-shot--settings {
-    height: 196px;
-  }
-
-  .geo-card-overlay-crop {
-    right: 20%;
-    width: 96px;
-    height: 132px;
   }
 }
