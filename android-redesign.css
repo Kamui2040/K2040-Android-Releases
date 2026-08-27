@@ -22,12 +22,6 @@
     linear-gradient(315deg, rgba(105, 185, 232, .045), transparent 28%);
 }
 
-/* The canonical shared chrome owns the Android Home symbol. Keep the old
-   image element hidden while the markup is retired so only one icon renders. */
-.android-page .site-home-icon {
-  display: none;
-}
-
 /* Android actions mirror the Main-page button treatment. Hover styling is
    limited to hover-capable pointers so touch navigation cannot leave a stale
    white hover state after returning with the browser back button. */
