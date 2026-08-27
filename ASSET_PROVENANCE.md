@@ -7,6 +7,13 @@
 - This repository references those public assets rather than duplicating their binary files. Their detailed provenance is maintained in the Main site's `ASSET_PROVENANCE.md`.
 - The Nexus destination image is an original visual cue and is not represented as the official Nexus Mods logo.
 
+## GeoJoystick project hero
+
+- Local file: `assets/geojoystick-hero.webp`.
+- Source: original K2040 project artwork supplied by the project owner, built from first-party GeoJoystick screenshots and K2040-authored design elements.
+- Use here: shared 3:1 artwork for the GeoJoystick project page. Localized descriptive copy is rendered by the website rather than embedded in separate language-specific images.
+- Processing: converted from the approved PNG source to WebP for the public website without changing the artwork content.
+
 ## APKPure destination icon
 
 - Source: Arcticons `icons/black/apkpure.svg`
