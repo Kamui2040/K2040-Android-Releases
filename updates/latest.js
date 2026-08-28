@@ -36,8 +36,8 @@ window.K2040_CONTENT = {
         en: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 now on Uptodown", summary: "The developer-signed v0.1.4 release is now available on Uptodown as an additional official download channel." },
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 jetzt auf Uptodown", summary: "Die entwicklersignierte Version v0.1.4 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar." },
         "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.4 agora no Uptodown", summary: "A versão v0.1.4 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência." },
-        es: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 ya está en Uptodown", summary: "La versión v0.1.4 firmada por el desarrollador ya está disponible también a través de Uptodown como canal oficial de descarga adicional." },
-        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur Uptodown", summary: "La version v0.1.4 signée par le développeur est désormais également disponible via Uptodown comme canal officiel de téléchargement supplémentaire." }
+        es: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 ya está en Uptodown", summary: "La versión v0.1.4 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional." },
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur Uptodown", summary: "La version v0.1.4 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire." }
       }
     },
     {
@@ -75,8 +75,8 @@ window.K2040_CONTENT = {
         en: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 now on Uptodown", summary: "The developer-signed v0.16.0 release is now available on Uptodown as an additional official download channel." },
         de: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 jetzt auf Uptodown", summary: "Die entwicklersignierte Version v0.16.0 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar." },
         "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 agora no Uptodown", summary: "A versão v0.16.0 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência." },
-        es: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 ya está en Uptodown", summary: "La versión v0.16.0 firmada por el desarrollador ya está disponible también a través de Uptodown como canal oficial de descarga adicional." },
-        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 maintenant sur Uptodown", summary: "La version v0.16.0 signée par le développeur est désormais également disponible via Uptodown comme canal officiel de téléchargement supplémentaire." }
+        es: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 ya está en Uptodown", summary: "La versión v0.16.0 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional." },
+        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 maintenant sur Uptodown", summary: "La version v0.16.0 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire." }
       }
     },
     {
@@ -115,7 +115,7 @@ window.K2040_CONTENT = {
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 veröffentlicht", summary: "Dies war eine kleine Wartungsversion für die F-Droid-Build-Kompatibilität. Die Release-Build-Konfiguration wurde angepasst, das Verhalten der App blieb unverändert." },
         "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.2 lançado", summary: "Esta foi uma pequena versão de manutenção para compatibilidade com a compilação do F-Droid. A configuração da compilação mudou, mas o comportamento da aplicação não." },
         es: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 publicado", summary: "Fue una pequeña versión de mantenimiento para la compatibilidad con la compilación de F-Droid. Cambió la configuración de compilación, pero no el comportamiento de la aplicación." },
-        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 publié", summary: "Il s’agissait d’une petite version de maintenance pour la compatibilité de compilation F-Droid. La configuration de compilation a changé, mais pas le comportement de l’application." }
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 publié", summary: "Il s’agissait d’une petite version de maintenance pour la compatibilité de compilation F-Droid. La configuration de la compilation a changé, mais le comportement de l’application n’a pas changé." }
       }
     },
     {
