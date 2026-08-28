@@ -4,9 +4,11 @@ The Esca Agnellis AppGallery badge displayed by `store-link-icons.js` was genera
 
 Source: HUAWEI AppGallery Connect → Badge links → Make badge.
 
-The website uses the official light and dark badge artwork at 160 × 48 px and links the badge to the AppGallery Connect-generated HTML5 destination:
+The English website view uses the official light and dark badge artwork at 160 × 48 px and links the badge to the AppGallery Connect-generated HTML5 destination:
 
 `https://url.cloud.huawei.com/BQUCHKwmUo?shareTo=qrcode`
+
+Other localized views retain the normal AppGallery text button until an official badge in the matching language is supplied.
 
 The supplied badge artwork was cropped from the generated transparent source and scaled proportionally to its website display size without changing the artwork. The original combined source image had SHA-256 `ce2bfbabd8e18bac7882002064dc25d50b6d56a7fc45fb64459ee212bb2b99e8`.
 
