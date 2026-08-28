@@ -1,16 +1,22 @@
 # HUAWEI AppGallery badge provenance
 
-The Esca Agnellis AppGallery badge displayed by `store-link-icons.js` was generated in HUAWEI AppGallery Connect on 2026-08-28 for app ID `C118763233` and channel `K2040 Website`.
+The Esca Agnellis AppGallery badge was generated in HUAWEI AppGallery Connect on 2026-08-28 for app ID `C118763233` and channel `K2040 Website`.
 
 Source: HUAWEI AppGallery Connect → Badge links → Make badge.
 
-The website uses the official light and dark badge artwork at 160 × 48 px and links it to the AppGallery Connect-generated HTML5 destination:
+The site displays the supplied official 160 × 48 px badge from:
+
+`assets/appgallery-badge-en-light.png`
+
+The asset is stored unchanged from the supplied `light48.png`; SHA-256:
+
+`d1f5df67e87671f5b2ef26854387f850a7bd8b9b7910054b739ec26b68d70212`
+
+The badge links to the AppGallery Connect-generated HTML5 destination:
 
 `https://url.cloud.huawei.com/BQUCHKwmUo?shareTo=qrcode`
 
 The same supplied badge is used across the site's supported localizations at the maintainer's direction.
-
-The supplied badge artwork was cropped from the generated transparent source and scaled proportionally to its website display size without changing the artwork. The original combined source image had SHA-256 `ce2bfbabd8e18bac7882002064dc25d50b6d56a7fc45fb64459ee212bb2b99e8`.
 
 AppGallery Connect showed these use conditions when the badge was generated:
 
