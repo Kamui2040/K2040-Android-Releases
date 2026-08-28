@@ -4,13 +4,9 @@ The Esca Agnellis AppGallery badge was generated in HUAWEI AppGallery Connect on
 
 Source: HUAWEI AppGallery Connect → Badge links → Make badge.
 
-The site displays the supplied official 160 × 48 px badge from:
+The site displays the official 160 × 48 px AppGallery badge from:
 
 `assets/appgallery-badge-en-light.png`
-
-The asset is stored unchanged from the supplied `light48.png`; SHA-256:
-
-`d1f5df67e87671f5b2ef26854387f850a7bd8b9b7910054b739ec26b68d70212`
 
 The badge links to the AppGallery Connect-generated HTML5 destination:
 
