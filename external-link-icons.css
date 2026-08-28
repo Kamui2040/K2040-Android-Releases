@@ -81,6 +81,52 @@
   min-width: 0;
 }
 
+/* Official HUAWEI AppGallery distribution badge. Keep it outside the shared
+   text-button styling so the artwork remains unchanged and always visible. */
+.appgallery-official-badge {
+  display: inline-flex;
+  width: 160px;
+  min-width: 160px;
+  height: 48px;
+  min-height: 48px;
+  flex: 0 0 160px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  margin: 0;
+  overflow: visible;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  line-height: 0;
+  text-decoration: none;
+  transform: none !important;
+}
+
+.appgallery-official-badge__image {
+  display: block;
+  width: 160px;
+  max-width: none;
+  height: 48px;
+  max-height: none;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.appgallery-official-badge:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.update-copy > .appgallery-official-badge {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
 @media (max-width: 760px) {
   .external-platform-link--icon-only-mobile {
     position: relative;
