@@ -2,6 +2,19 @@
 window.K2040_CONTENT = {
   updates: [
     {
+      id: "esca-agnellis-appgallery-0-16-0",
+      projectId: "esca-agnellis",
+      date: "2026-08-28",
+      href: "https://appgallery.huawei.com/#/search/Esca%20Agnellis",
+      strings: {
+        en: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 now on HUAWEI AppGallery", summary: "Esca Agnellis v0.16.0 is now available through HUAWEI AppGallery as an additional official download channel." },
+        de: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 jetzt in der HUAWEI AppGallery", summary: "Esca Agnellis v0.16.0 ist jetzt auch über die HUAWEI AppGallery als zusätzlicher offizieller Downloadkanal verfügbar." },
+        "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 agora na HUAWEI AppGallery", summary: "Esca Agnellis v0.16.0 está agora também disponível através da HUAWEI AppGallery como canal oficial adicional de transferência." },
+        es: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 ya está en HUAWEI AppGallery", summary: "Esca Agnellis v0.16.0 ya está disponible también a través de HUAWEI AppGallery como canal oficial de descarga adicional." },
+        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 maintenant sur HUAWEI AppGallery", summary: "Esca Agnellis v0.16.0 est désormais également disponible via HUAWEI AppGallery comme canal officiel de téléchargement supplémentaire." }
+      }
+    },
+    {
       id: "geojoystick-onestore-openapk-0-1-4",
       projectId: "geojoystick",
       date: "2026-08-25",
