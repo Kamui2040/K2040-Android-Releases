@@ -3,7 +3,6 @@
 .geo-promo-section,
 .esca-promo-section {
   margin: 0;
-  overflow: hidden;
   aspect-ratio: 3 / 1;
 }
 
