@@ -12,6 +12,48 @@
   min-width: 0;
 }
 
+.appgallery-badge-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  line-height: 0;
+}
+
+.appgallery-badge-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.appgallery-badge {
+  display: block;
+  width: 160px;
+  height: 48px;
+}
+
+.appgallery-badge--dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .appgallery-badge--light {
+  display: none;
+}
+
+:root[data-theme="dark"] .appgallery-badge--dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .appgallery-badge--light {
+    display: none;
+  }
+
+  :root:not([data-theme]) .appgallery-badge--dark {
+    display: block;
+  }
+}
+
 @media (max-width: 900px) {
   .android-page .download-section .download-row {
     width: 100%;
@@ -42,5 +84,11 @@
     padding-right: .75rem;
     padding-left: .75rem;
     font-size: .84rem;
+  }
+
+  .android-page .download-section .appgallery-badge-link {
+    min-height: 48px;
+    padding: 0 !important;
+    font-size: 0;
   }
 }
