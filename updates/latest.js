@@ -5,7 +5,7 @@ window.K2040_CONTENT = {
       id: "esca-agnellis-appgallery-0-16-0",
       projectId: "esca-agnellis",
       date: "2026-08-28",
-      href: "https://appgallery.huawei.com/#/search/Esca%20Agnellis",
+      href: "https://appgallery.huawei.com/#/app/C118763233",
       strings: {
         en: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 now on HUAWEI AppGallery", summary: "Esca Agnellis v0.16.0 is now available through HUAWEI AppGallery as an additional official download channel." },
         de: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 jetzt in der HUAWEI AppGallery", summary: "Esca Agnellis v0.16.0 ist jetzt auch über die HUAWEI AppGallery als zusätzlicher offizieller Downloadkanal verfügbar." },
