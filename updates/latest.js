@@ -115,7 +115,7 @@ window.K2040_CONTENT = {
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 veröffentlicht", summary: "Dies war eine kleine Wartungsversion für die F-Droid-Build-Kompatibilität. Die Release-Build-Konfiguration wurde angepasst, das Verhalten der App blieb unverändert." },
         "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.2 lançado", summary: "Esta foi uma pequena versão de manutenção para compatibilidade com a compilação do F-Droid. A configuração da compilação mudou, mas o comportamento da aplicação não." },
         es: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 publicado", summary: "Fue una pequeña versión de mantenimiento para la compatibilidad con la compilación de F-Droid. Cambió la configuración de compilación, pero no el comportamiento de la aplicación." },
-        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 publié", summary: "Il s’agissait d’une petite version de maintenance pour la compatibilité de compilation F-Droid. La configuration de la compilation a changé, mais le comportement de l’application n’a pas changé." }
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.2 publié", summary: "Il s’agissait d’une petite version de maintenance pour la compatibilité de compilation F-Droid. La configuration de compilation a changé, mais pas le comportement de l’application." }
       }
     },
     {
