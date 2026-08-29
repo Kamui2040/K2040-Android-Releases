@@ -31,6 +31,15 @@
 - Changes: none to the icon artwork; CSS only controls its displayed size and position.
 - Uptodown's name, icon, logo, and trademarks remain the property of Uptodown.
 
+## HUAWEI AppGallery destination symbol
+
+- Local file: `assets/appgallery-cue.svg`.
+- Source: original K2040 vector artwork.
+- Use here: a small fan/blossom-shaped destination cue for AppGallery links, rendered through the same framed store-button system as the other Android download sources.
+- The cue is intentionally not a copy of HUAWEI's official AppGallery or corporate logo.
+- The AppGallery destination itself uses the HTML5 link generated in HUAWEI AppGallery Connect; see `assets/APPGALLERY-LINK-PROVENANCE.md`.
+- HUAWEI and AppGallery names and trademarks remain the property of their respective owner.
+
 ## ONE store destination symbol
 
 - Reference: ONE store developer guidance at `https://onestore-dev.gitbook.io/dev/eng/tools/icon-guide`.
