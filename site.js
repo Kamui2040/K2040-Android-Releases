@@ -117,6 +117,14 @@
     })
     .map(({ update }) => update);
 
+  const updateLinks = (update) => {
+    const links = Array.isArray(update?.links)
+      ? update.links.filter((href) => typeof href === "string" && href.trim())
+      : [];
+    if (links.length) return links;
+    return typeof update?.href === "string" && update.href.trim() ? [update.href] : [];
+  };
+
   const renderUpdates = () => {
     document.querySelectorAll("[data-update-list]").forEach((list) => {
       const template = document.querySelector("#update-card-template");
@@ -157,12 +165,28 @@
         if (title) title.textContent = strings.title || "";
         if (summary) summary.textContent = strings.summary || "";
         if (action) {
-          const label = archiveMode ? destinationLabel(update.href) : null;
-          action.textContent = label || `${translate("actions.readMore") || "Read more"} →`;
-          if (update.href) {
-            action.href = update.href;
+          const hrefs = updateLinks(update);
+          if (!hrefs.length) {
+            action.remove();
+          } else if (hrefs.length === 1) {
+            const href = hrefs[0];
+            const label = archiveMode ? destinationLabel(href) : null;
+            action.textContent = label || `${translate("actions.readMore") || "Read more"} →`;
+            action.href = href;
             if (label) action.title = label;
-          } else action.remove();
+          } else {
+            const actions = document.createElement("div");
+            actions.className = "update-actions";
+            hrefs.forEach((href) => {
+              const link = action.cloneNode(false);
+              const label = destinationLabel(href);
+              link.textContent = label || `${translate("actions.readMore") || "Read more"} →`;
+              link.href = href;
+              if (label) link.title = label;
+              actions.append(link);
+            });
+            action.replaceWith(actions);
+          }
         }
         list.append(fragment);
       });
