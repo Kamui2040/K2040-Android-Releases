@@ -102,7 +102,7 @@
     const locale = languagePresentation[currentLanguage]?.locale || "en-US";
     document.querySelectorAll("[data-esca-screenshot]").forEach((image) => {
       const filename = image.dataset.escaScreenshot;
-      if (filename) image.src = `https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/d06d78cc5ec3fa6bca1e329a8a774133101c9ccf/fastlane/metadata/android/${locale}/images/phoneScreenshots/${filename}`;
+      if (filename) image.src = `https://raw.githubusercontent.com/Kamui2040/Esca-Agnellis-Android/5db4a6eb79b27f0796dccf0c6bf4e07e69b4af8f/fastlane/metadata/android/${locale}/images/phoneScreenshots/${filename}`;
     });
   };
 
