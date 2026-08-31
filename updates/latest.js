@@ -6,6 +6,10 @@ window.K2040_CONTENT = {
       projectId: "esca-agnellis",
       date: "2026-08-31",
       href: "https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/#downloads",
+      links: [
+        "https://github.com/Kamui2040/Esca-Agnellis-Android/releases/tag/v0.17.0",
+        "https://f-droid.org/packages/com.k2040.escaagnellis/"
+      ],
       strings: {
         en: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 released on GitHub and F-Droid", summary: "v0.17.0 adds Turkish, Arabic, Polish, Russian, Ukrainian, and Romanian with improved Arabic right-to-left support. It corrects drink counting and statistics, clarifies source information, and replaces the previous wolf graphic with the shared K2040 symbol. The release is available on GitHub and F-Droid." },
         de: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 auf GitHub und F-Droid veröffentlicht", summary: "v0.17.0 ergänzt Türkisch, Arabisch, Polnisch, Russisch, Ukrainisch und Rumänisch mit verbesserter Rechts-nach-links-Unterstützung für Arabisch. Getränkezählung und Statistiken wurden korrigiert, Quellenhinweise präzisiert und die bisherige Wolf-Grafik durch das gemeinsame K2040-Symbol ersetzt. Die Version ist auf GitHub und F-Droid verfügbar." },

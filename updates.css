@@ -110,6 +110,18 @@
   line-height: 1.58;
 }
 
+.update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  margin-top: auto;
+}
+
+.update-actions > .text-link {
+  align-self: flex-start;
+}
+
 /* Layout only. The action itself is the shared .text-link component. */
 .update-copy > .text-link {
   align-self: flex-start;
