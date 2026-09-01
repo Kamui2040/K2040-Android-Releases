@@ -4,18 +4,21 @@ window.K2040_CONTENT = {
     {
       id: "esca-agnellis-0-17-0",
       projectId: "esca-agnellis",
-      date: "2026-08-31",
+      date: "2026-09-01",
       href: "https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/#downloads",
       links: [
         "https://github.com/Kamui2040/Esca-Agnellis-Android/releases/tag/v0.17.0",
-        "https://f-droid.org/packages/com.k2040.escaagnellis/"
+        "https://f-droid.org/packages/com.k2040.escaagnellis/",
+        "https://apkpure.com/p/com.k2040.escaagnellis",
+        "https://esca-agnellis.en.uptodown.com/android",
+        "https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/#downloads"
       ],
       strings: {
-        en: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 released on GitHub and F-Droid", summary: "v0.17.0 adds Turkish, Arabic, Polish, Russian, Ukrainian, and Romanian with improved Arabic right-to-left support. It corrects drink counting and statistics, clarifies source information, and replaces the previous wolf graphic with the shared K2040 symbol. The release is available on GitHub and F-Droid." },
-        de: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 auf GitHub und F-Droid veröffentlicht", summary: "v0.17.0 ergänzt Türkisch, Arabisch, Polnisch, Russisch, Ukrainisch und Rumänisch mit verbesserter Rechts-nach-links-Unterstützung für Arabisch. Getränkezählung und Statistiken wurden korrigiert, Quellenhinweise präzisiert und die bisherige Wolf-Grafik durch das gemeinsame K2040-Symbol ersetzt. Die Version ist auf GitHub und F-Droid verfügbar." },
-        "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 publicado no GitHub e F-Droid", summary: "A v0.17.0 adiciona turco, árabe, polaco, russo, ucraniano e romeno, com melhor suporte da direita para a esquerda em árabe. Corrige a contagem e as estatísticas de bebidas, clarifica a informação de fontes e substitui a imagem anterior do lobo pelo símbolo K2040 partilhado. A versão está disponível no GitHub e F-Droid." },
-        es: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 publicado en GitHub y F-Droid", summary: "La v0.17.0 añade turco, árabe, polaco, ruso, ucraniano y rumano, con mejor compatibilidad de derecha a izquierda para árabe. Corrige el recuento y las estadísticas de bebidas, aclara la información de fuentes y sustituye el gráfico anterior del lobo por el símbolo K2040 compartido. La versión está disponible en GitHub y F-Droid." },
-        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 publié sur GitHub et F-Droid", summary: "La v0.17.0 ajoute le turc, l’arabe, le polonais, le russe, l’ukrainien et le roumain, avec une meilleure prise en charge de l’affichage de droite à gauche en arabe. Elle corrige le comptage et les statistiques des boissons, clarifie les informations sur les sources et remplace l’ancien visuel du loup par le symbole K2040 partagé. La version est disponible sur GitHub et F-Droid." }
+        en: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 available across all current official channels", summary: "v0.17.0 adds Turkish, Arabic, Polish, Russian, Ukrainian, and Romanian with improved Arabic right-to-left support. It corrects drink counting and statistics, clarifies source information, and replaces the previous wolf graphic with the shared K2040 symbol. The release is now available through GitHub, F-Droid, HUAWEI AppGallery, Uptodown, and APKPure." },
+        de: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 auf allen aktuellen offiziellen Kanälen verfügbar", summary: "v0.17.0 ergänzt Türkisch, Arabisch, Polnisch, Russisch, Ukrainisch und Rumänisch mit verbesserter Rechts-nach-links-Unterstützung für Arabisch. Getränkezählung und Statistiken wurden korrigiert, Quellenhinweise präzisiert und die bisherige Wolf-Grafik durch das gemeinsame K2040-Symbol ersetzt. Die Version ist jetzt über GitHub, F-Droid, HUAWEI AppGallery, Uptodown und APKPure verfügbar." },
+        "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 disponível em todos os canais oficiais atuais", summary: "A v0.17.0 adiciona turco, árabe, polaco, russo, ucraniano e romeno, com melhor suporte da direita para a esquerda em árabe. Corrige a contagem e as estatísticas de bebidas, clarifica a informação de fontes e substitui a imagem anterior do lobo pelo símbolo K2040 partilhado. A versão está agora disponível no GitHub, F-Droid, HUAWEI AppGallery, Uptodown e APKPure." },
+        es: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 disponible en todos los canales oficiales actuales", summary: "La v0.17.0 añade turco, árabe, polaco, ruso, ucraniano y rumano, con mejor compatibilidad de derecha a izquierda para árabe. Corrige el recuento y las estadísticas de bebidas, aclara la información de fuentes y sustituye el gráfico anterior del lobo por el símbolo K2040 compartido. La versión ya está disponible en GitHub, F-Droid, HUAWEI AppGallery, Uptodown y APKPure." },
+        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 disponible sur tous les canaux officiels actuels", summary: "La v0.17.0 ajoute le turc, l’arabe, le polonais, le russe, l’ukrainien et le roumain, avec une meilleure prise en charge de l’affichage de droite à gauche en arabe. Elle corrige le comptage et les statistiques des boissons, clarifie les informations sur les sources et remplace l’ancien visuel du loup par le symbole K2040 partagé. La version est désormais disponible sur GitHub, F-Droid, HUAWEI AppGallery, Uptodown et APKPure." }
       }
     },
     {
