@@ -4,18 +4,21 @@ window.K2040_CONTENT = {
     {
       id: "esca-agnellis-0-17-0",
       projectId: "esca-agnellis",
-      date: "2026-08-31",
+      date: "2026-09-01",
       href: "https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/#downloads",
       links: [
         "https://github.com/Kamui2040/Esca-Agnellis-Android/releases/tag/v0.17.0",
-        "https://f-droid.org/packages/com.k2040.escaagnellis/"
+        "https://f-droid.org/packages/com.k2040.escaagnellis/",
+        "https://apkpure.com/p/com.k2040.escaagnellis",
+        "https://esca-agnellis.en.uptodown.com/android",
+        "https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/#downloads"
       ],
       strings: {
-        en: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 released on GitHub and F-Droid", summary: "v0.17.0 adds Turkish, Arabic, Polish, Russian, Ukrainian, and Romanian with improved Arabic right-to-left support. It corrects drink counting and statistics, clarifies source information, and replaces the previous wolf graphic with the shared K2040 symbol. The release is available on GitHub and F-Droid." },
-        de: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 auf GitHub und F-Droid veröffentlicht", summary: "v0.17.0 ergänzt Türkisch, Arabisch, Polnisch, Russisch, Ukrainisch und Rumänisch mit verbesserter Rechts-nach-links-Unterstützung für Arabisch. Getränkezählung und Statistiken wurden korrigiert, Quellenhinweise präzisiert und die bisherige Wolf-Grafik durch das gemeinsame K2040-Symbol ersetzt. Die Version ist auf GitHub und F-Droid verfügbar." },
-        "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 publicado no GitHub e F-Droid", summary: "A v0.17.0 adiciona turco, árabe, polaco, russo, ucraniano e romeno, com melhor suporte da direita para a esquerda em árabe. Corrige a contagem e as estatísticas de bebidas, clarifica a informação de fontes e substitui a imagem anterior do lobo pelo símbolo K2040 partilhado. A versão está disponível no GitHub e F-Droid." },
-        es: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 publicado en GitHub y F-Droid", summary: "La v0.17.0 añade turco, árabe, polaco, ruso, ucraniano y rumano, con mejor compatibilidad de derecha a izquierda para árabe. Corrige el recuento y las estadísticas de bebidas, aclara la información de fuentes y sustituye el gráfico anterior del lobo por el símbolo K2040 compartido. La versión está disponible en GitHub y F-Droid." },
-        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 publié sur GitHub et F-Droid", summary: "La v0.17.0 ajoute le turc, l’arabe, le polonais, le russe, l’ukrainien et le roumain, avec une meilleure prise en charge de l’affichage de droite à gauche en arabe. Elle corrige le comptage et les statistiques des boissons, clarifie les informations sur les sources et remplace l’ancien visuel du loup par le symbole K2040 partagé. La version est disponible sur GitHub et F-Droid." }
+        en: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 available across all current official channels", summary: "v0.17.0 adds Turkish, Arabic, Polish, Russian, Ukrainian, and Romanian with improved Arabic right-to-left support. It corrects drink counting and statistics, clarifies source information, and replaces the previous wolf graphic with the shared K2040 symbol. The release is now available through GitHub, F-Droid, HUAWEI AppGallery, Uptodown, and APKPure." },
+        de: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 auf allen aktuellen offiziellen Kanälen verfügbar", summary: "v0.17.0 ergänzt Türkisch, Arabisch, Polnisch, Russisch, Ukrainisch und Rumänisch mit verbesserter Rechts-nach-links-Unterstützung für Arabisch. Getränkezählung und Statistiken wurden korrigiert, Quellenhinweise präzisiert und die bisherige Wolf-Grafik durch das gemeinsame K2040-Symbol ersetzt. Die Version ist jetzt über GitHub, F-Droid, HUAWEI AppGallery, Uptodown und APKPure verfügbar." },
+        "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 disponível em todos os canais oficiais atuais", summary: "A v0.17.0 adiciona turco, árabe, polaco, russo, ucraniano e romeno, com melhor suporte da direita para a esquerda em árabe. Corrige a contagem e as estatísticas de bebidas, clarifica a informação de fontes e substitui a imagem anterior do lobo pelo símbolo K2040 partilhado. A versão está agora disponível no GitHub, F-Droid, HUAWEI AppGallery, Uptodown e APKPure." },
+        es: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 disponible en todos los canales oficiales actuales", summary: "La v0.17.0 añade turco, árabe, polaco, ruso, ucraniano y rumano, con mejor compatibilidad de derecha a izquierda para árabe. Corrige el recuento y las estadísticas de bebidas, aclara la información de fuentes y sustituye el gráfico anterior del lobo por el símbolo K2040 compartido. La versión ya está disponible en GitHub, F-Droid, HUAWEI AppGallery, Uptodown y APKPure." },
+        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.17.0 disponible sur tous les canaux officiels actuels", summary: "La v0.17.0 ajoute le turc, l’arabe, le polonais, le russe, l’ukrainien et le roumain, avec une meilleure prise en charge de l’affichage de droite à gauche en arabe. Elle corrige le comptage et les statistiques des boissons, clarifie les informations sur les sources et remplace l’ancien visuel du loup par le symbole K2040 partagé. La version est désormais disponible sur GitHub, F-Droid, HUAWEI AppGallery, Uptodown et APKPure." }
       }
     },
     {
@@ -41,7 +44,7 @@ window.K2040_CONTENT = {
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 jetzt im ONE store und bei OpenAPK", summary: "Die entwicklersignierte Version v0.1.4 ist jetzt auch über den ONE store und OpenAPK als zusätzliche offizielle Downloadkanäle verfügbar." },
         "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.4 agora na ONE store e OpenAPK", summary: "A versão v0.1.4 assinada pelo programador está agora também disponível através da ONE store e OpenAPK como canais oficiais adicionais de transferência." },
         es: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 ya está en ONE store y OpenAPK", summary: "La versión v0.1.4 firmada por el desarrollador ya está disponible también a través de ONE store y OpenAPK como canales oficiales de descarga adicionales." },
-        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur ONE store et OpenAPK", summary: "La version v0.1.4 signée par le développeur est désormais également disponible via ONE store et OpenAPK comme canaux officiels de téléchargement supplémentaires." }
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur ONE store et OpenAPK", summary: "La version v0.1.4 signée par le développeur est désormais également disponible via ONE store et OpenAPK comme canaux officiels supplémentaires." }
       }
     },
     {
@@ -54,7 +57,7 @@ window.K2040_CONTENT = {
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 jetzt auf Uptodown", summary: "Die entwicklersignierte Version v0.1.4 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar." },
         "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.4 agora no Uptodown", summary: "A versão v0.1.4 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência." },
         es: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 ya está en Uptodown", summary: "La versión v0.1.4 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional." },
-        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur Uptodown", summary: "La version v0.1.4 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire." }
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur Uptodown", summary: "La version v0.1.4 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel supplémentaire." }
       }
     },
     {
@@ -93,7 +96,7 @@ window.K2040_CONTENT = {
         de: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 jetzt auf Uptodown", summary: "Die entwicklersignierte Version v0.16.0 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar." },
         "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 agora no Uptodown", summary: "A versão v0.16.0 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência." },
         es: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 ya está en Uptodown", summary: "La versión v0.16.0 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional." },
-        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 maintenant sur Uptodown", summary: "La version v0.16.0 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire." }
+        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 maintenant sur Uptodown", summary: "La version v0.16.0 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel supplémentaire." }
       }
     },
     {
