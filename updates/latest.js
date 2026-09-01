@@ -44,7 +44,7 @@ window.K2040_CONTENT = {
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 jetzt im ONE store und bei OpenAPK", summary: "Die entwicklersignierte Version v0.1.4 ist jetzt auch über den ONE store und OpenAPK als zusätzliche offizielle Downloadkanäle verfügbar." },
         "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.4 agora na ONE store e OpenAPK", summary: "A versão v0.1.4 assinada pelo programador está agora também disponível através da ONE store e OpenAPK como canais oficiais adicionais de transferência." },
         es: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 ya está en ONE store y OpenAPK", summary: "La versión v0.1.4 firmada por el desarrollador ya está disponible también a través de ONE store y OpenAPK como canales oficiales de descarga adicionales." },
-        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur ONE store et OpenAPK", summary: "La version v0.1.4 signée par le développeur est désormais également disponible via ONE store et OpenAPK comme canaux officiels supplémentaires." }
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur ONE store et OpenAPK", summary: "La version v0.1.4 signée par le développeur est désormais également disponible via ONE store et OpenAPK comme canaux officiels de téléchargement supplémentaires." }
       }
     },
     {
@@ -57,7 +57,7 @@ window.K2040_CONTENT = {
         de: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 jetzt auf Uptodown", summary: "Die entwicklersignierte Version v0.1.4 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar." },
         "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.4 agora no Uptodown", summary: "A versão v0.1.4 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência." },
         es: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 ya está en Uptodown", summary: "La versión v0.1.4 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional." },
-        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur Uptodown", summary: "La version v0.1.4 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel supplémentaire." }
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.4 maintenant sur Uptodown", summary: "La version v0.1.4 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire." }
       }
     },
     {
@@ -96,7 +96,7 @@ window.K2040_CONTENT = {
         de: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 jetzt auf Uptodown", summary: "Die entwicklersignierte Version v0.16.0 ist jetzt auch über Uptodown als zusätzlicher offizieller Downloadkanal verfügbar." },
         "pt-PT": { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 agora no Uptodown", summary: "A versão v0.16.0 assinada pelo programador está agora também disponível no Uptodown como canal oficial adicional de transferência." },
         es: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 ya está en Uptodown", summary: "La versión v0.16.0 firmada por el desarrollador ya está disponible también en Uptodown como canal oficial de descarga adicional." },
-        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 maintenant sur Uptodown", summary: "La version v0.16.0 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel supplémentaire." }
+        fr: { category: "Esca Agnellis", title: "Esca Agnellis v0.16.0 maintenant sur Uptodown", summary: "La version v0.16.0 signée par le développeur est désormais également disponible sur Uptodown comme canal officiel de téléchargement supplémentaire." }
       }
     },
     {
