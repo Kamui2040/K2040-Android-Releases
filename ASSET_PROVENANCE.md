@@ -61,5 +61,5 @@
 - Licence: CC0 1.0 Universal, as declared by the upstream repository.
 - Local copy: `assets/openapk.svg`.
 - Use here: displayed as the destination icon for links to OpenAPK listings.
-- Changes: none to the SVG artwork; CSS only controls displayed size and position.
+- Changes: none to the SVG artwork; CSS only controls its displayed size and position.
 - OpenAPK names and trademarks remain the property of their respective owner.
