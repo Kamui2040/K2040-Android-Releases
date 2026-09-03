@@ -12,14 +12,14 @@
 - Local file: `assets/geojoystick-hero.webp`.
 - Source: original K2040 project artwork supplied by the project owner, built from first-party GeoJoystick screenshots and K2040-authored design elements.
 - Use here: shared 3:1 artwork for the GeoJoystick project page. Localized descriptive copy is rendered by the website.
-- Processing: the supplied 2048×682 PNG was center-cropped by one pixel on each horizontal edge to an exact 2046×682 (3:1) ratio and converted to WebP. The artwork content was otherwise unchanged.
+- Processing: the supplied 2172×724 PNG is already an exact 3:1 image and was converted directly to WebP without cropping or resizing.
 
 ## GeoJoystick About screenshot
 
 - Local file: `assets/geojoystick-about-v0.1.5.webp`.
 - Source: first-party GeoJoystick v0.1.5 screenshot supplied by the project owner.
 - Use here: About screenshot in the GeoJoystick project-page gallery, replacing the earlier screenshot that showed the previous wolf artwork.
-- Processing: converted from the supplied 924×2048 JPEG to WebP without changing the screenshot content.
+- Processing: converted from the supplied 1080×2392 JPEG to WebP without changing the screenshot dimensions.
 
 ## APKPure destination icon
 
