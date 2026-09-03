@@ -11,8 +11,15 @@
 
 - Local file: `assets/geojoystick-hero.webp`.
 - Source: original K2040 project artwork supplied by the project owner, built from first-party GeoJoystick screenshots and K2040-authored design elements.
-- Use here: shared 3:1 artwork for the GeoJoystick project page. Localized descriptive copy is rendered by the website rather than embedded in separate language-specific images.
-- Processing: the supplied PNG was center-cropped to the site's exact 3:1 hero ratio, resized to 1200×400, and converted to WebP for the public website. The composition and embedded artwork were otherwise unchanged.
+- Use here: shared 3:1 artwork for the GeoJoystick project page. Localized descriptive copy is rendered by the website.
+- Processing: the supplied 2048×682 PNG was center-cropped by one pixel on each horizontal edge to an exact 2046×682 (3:1) ratio and converted to WebP. The artwork content was otherwise unchanged.
+
+## GeoJoystick About screenshot
+
+- Local file: `assets/geojoystick-about-v0.1.5.webp`.
+- Source: first-party GeoJoystick v0.1.5 screenshot supplied by the project owner.
+- Use here: About screenshot in the GeoJoystick project-page gallery, replacing the earlier screenshot that showed the previous wolf artwork.
+- Processing: converted from the supplied 924×2048 JPEG to WebP without changing the screenshot content.
 
 ## APKPure destination icon
 
@@ -54,5 +61,5 @@
 - Licence: CC0 1.0 Universal, as declared by the upstream repository.
 - Local copy: `assets/openapk.svg`.
 - Use here: displayed as the destination icon for links to OpenAPK listings.
-- Changes: none to the SVG artwork; CSS only controls its displayed size and position.
+- Changes: none to the SVG artwork; CSS only controls displayed size and position.
 - OpenAPK names and trademarks remain the property of their respective owner.
