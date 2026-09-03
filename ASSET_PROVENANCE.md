@@ -12,7 +12,7 @@
 - Local file: `assets/geojoystick-hero.webp`.
 - Source: original K2040 project artwork supplied by the project owner, built from first-party GeoJoystick screenshots and K2040-authored design elements.
 - Use here: shared 3:1 artwork for the GeoJoystick project page. Localized descriptive copy is rendered by the website rather than embedded in separate language-specific images.
-- Processing: converted from the approved PNG source to WebP for the public website without changing the artwork content.
+- Processing: the supplied PNG was center-cropped to the site's exact 3:1 hero ratio, resized to 1200×400, and converted to WebP for the public website. The composition and embedded artwork were otherwise unchanged.
 
 ## APKPure destination icon
 
@@ -45,7 +45,7 @@
 - Reference: ONE store developer guidance at `https://onestore-dev.gitbook.io/dev/eng/tools/icon-guide`.
 - Use here: a small custom `1` destination symbol identifies ONE store links without redistributing or hot-linking ONE store artwork.
 - The symbol is an original site cue and is not represented as an official ONE store logo or app icon.
-- ONE store names and trademarks remain the property of One store Co., Ltd.
+- ONE store names and trademarks are the property of One store Co., Ltd.
 
 ## OpenAPK destination icon
 
@@ -53,6 +53,6 @@
 - Upstream: https://github.com/mobilenetworkltd/openapk/blob/main/public/openapk-blank.svg
 - Licence: CC0 1.0 Universal, as declared by the upstream repository.
 - Local copy: `assets/openapk.svg`.
-- Use here: displayed as the destination icon for links to OpenAPK listings.
+- Use here: displayed as the destination icon for OpenAPK listings.
 - Changes: none to the SVG artwork; CSS only controls displayed size and position.
-- OpenAPK names and trademarks remain the property of their respective owner.
+- OpenAPK names and trademarks remain the property of OpenAPK.
