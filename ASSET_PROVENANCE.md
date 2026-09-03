@@ -45,7 +45,7 @@
 - Reference: ONE store developer guidance at `https://onestore-dev.gitbook.io/dev/eng/tools/icon-guide`.
 - Use here: a small custom `1` destination symbol identifies ONE store links without redistributing or hot-linking ONE store artwork.
 - The symbol is an original site cue and is not represented as an official ONE store logo or app icon.
-- ONE store names and trademarks are the property of One store Co., Ltd.
+- ONE store names and trademarks remain the property of One store Co., Ltd.
 
 ## OpenAPK destination icon
 
@@ -55,4 +55,4 @@
 - Local copy: `assets/openapk.svg`.
 - Use here: displayed as the destination icon for OpenAPK listings.
 - Changes: none to the SVG artwork; CSS only controls displayed size and position.
-- OpenAPK names and trademarks remain the property of OpenAPK.
+- OpenAPK names and trademarks remain the property of their respective owner.
