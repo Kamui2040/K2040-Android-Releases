@@ -2,6 +2,23 @@
 window.K2040_CONTENT = {
   updates: [
     {
+      id: "geojoystick-0-1-5",
+      projectId: "geojoystick",
+      date: "2026-09-02",
+      href: "https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.5",
+      links: [
+        "https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.5",
+        "https://kamui2040.github.io/K2040-Android-Releases/apps/geojoystick/#downloads"
+      ],
+      strings: {
+        en: { category: "GeoJoystick", title: "GeoJoystick v0.1.5 released on GitHub", summary: "v0.1.5 adds 15 additional UI languages, including Arabic RTL, Korean, and Chinese, adds two-finger pinch-to-zoom in the map picker and optional place/address search, and improves enlarged-text, narrow-width, and localized layouts. The developer-signed APK is currently available from GitHub Releases." },
+        de: { category: "GeoJoystick", title: "GeoJoystick v0.1.5 auf GitHub veröffentlicht", summary: "v0.1.5 ergänzt 15 weitere Oberflächensprachen, darunter Arabisch mit Rechts-nach-links-Darstellung, Koreanisch und Chinesisch, fügt Zwei-Finger-Zoom in der Kartenwahl und eine optionale Orts-/Adresssuche hinzu und verbessert Layouts für große Schrift, schmale Breiten und Lokalisierung. Die entwicklersignierte APK ist derzeit über GitHub Releases verfügbar." },
+        "pt-PT": { category: "GeoJoystick", title: "GeoJoystick v0.1.5 lançado no GitHub", summary: "A v0.1.5 adiciona 15 idiomas de interface, incluindo árabe com escrita da direita para a esquerda, coreano e chinês, acrescenta zoom com dois dedos no seletor de mapa e pesquisa opcional de locais/endereços, e melhora os layouts para texto ampliado, ecrãs estreitos e localização. O APK assinado pelo programador está atualmente disponível no GitHub Releases." },
+        es: { category: "GeoJoystick", title: "GeoJoystick v0.1.5 publicado en GitHub", summary: "La v0.1.5 añade 15 idiomas de interfaz, incluidos árabe con escritura de derecha a izquierda, coreano y chino, incorpora zoom con dos dedos en el selector de mapa y búsqueda opcional de lugares/direcciones, y mejora los diseños con texto ampliado, anchos estrechos y localización. El APK firmado por el desarrollador está disponible actualmente en GitHub Releases." },
+        fr: { category: "GeoJoystick", title: "GeoJoystick v0.1.5 publié sur GitHub", summary: "La v0.1.5 ajoute 15 langues d’interface, dont l’arabe de droite à gauche, le coréen et le chinois, ajoute le zoom à deux doigts dans le sélecteur de carte et une recherche facultative de lieux/adresses, et améliore les mises en page pour le texte agrandi, les faibles largeurs et la localisation. L’APK signé par le développeur est actuellement disponible sur GitHub Releases." }
+      }
+    },
+    {
       id: "esca-agnellis-0-17-0",
       projectId: "esca-agnellis",
       date: "2026-09-01",
