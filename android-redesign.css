@@ -276,27 +276,18 @@
   .android-page .site-brand-section.nav-home {
     grid-row: 1;
     grid-column: 4 / span 3;
-    gap: 0;
-  }
-
-  .android-page [data-k2040-site-home] .k2040-icon--android {
-    width: 1.7rem;
-    height: 1.7rem;
-    flex-basis: 1.7rem;
   }
 
   .android-page .nav-language-control {
     grid-row: 1;
     grid-column: 7 / span 3;
     position: relative;
-    padding: .15rem;
     overflow: hidden;
   }
 
   .android-page .theme-toggle {
     grid-row: 1;
     grid-column: 10 / span 3;
-    padding: .2rem;
   }
 
   .android-page .app-menu {
@@ -316,16 +307,28 @@
 
   .android-page .global-menu > summary,
   .android-page .site-brand-section.nav-home,
-  .android-page .site-nav > * {
+  .android-page .site-nav > .nav-link,
+  .android-page .site-nav > .nav-language-control,
+  .android-page .site-nav > .theme-toggle,
+  .android-page .site-nav > .menu > summary {
     width: 100%;
     min-width: 0;
+    min-height: 36px;
     margin: 0;
+    gap: .18rem;
+    padding: .28rem .18rem;
+    font-size: clamp(.68rem, 2.9vw, .8rem);
+    line-height: 1.05;
   }
 
   .android-page .global-menu > summary > strong,
   .android-page .site-brand-section.nav-home > [data-global-i18n="home"],
   .android-page .theme-toggle [data-theme-label] {
     display: none;
+  }
+
+  .android-page .nav-language-control {
+    padding: .15rem;
   }
 
   .android-page .nav-language-control::before {
@@ -345,8 +348,14 @@
     cursor: pointer;
   }
 
+  .android-page .theme-toggle {
+    padding: .2rem;
+  }
+
   .android-page .theme-toggle-icon {
     width: auto;
+    min-width: 1.1rem;
+    font-size: 1rem;
   }
 
   .android-page .app-menu-panel {
