@@ -154,6 +154,17 @@
     max-height: 280px;
   }
 
+  /* The dedicated Updates page is text-first on phones. App artwork is
+     intentionally omitted there instead of squeezing it into a narrow card. */
+  .updates-page .update-card,
+  .updates-page .update-card--featured {
+    min-height: 0;
+  }
+
+  .updates-page .update-media {
+    display: none;
+  }
+
   .update-copy,
   .update-card--featured .update-copy,
   .updates-page .update-copy,
