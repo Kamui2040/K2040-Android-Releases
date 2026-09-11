@@ -2,6 +2,23 @@
 window.K2040_CONTENT = {
   updates: [
     {
+      id: "vectorint-0-0-8",
+      projectId: "vectorint",
+      date: "2026-09-10",
+      href: "https://github.com/Kamui2040/Vectorint/releases/tag/v0.0.8",
+      links: [
+        "https://github.com/Kamui2040/Vectorint/releases/tag/v0.0.8",
+        "https://kamui2040.github.io/K2040-Android-Releases/apps/vectorint/"
+      ],
+      strings: {
+        en: { category: "Vectorint", title: "Vectorint v0.0.8 released on GitHub", summary: "Vectorint’s first production release shows how much you can safely spend now and keeps income, expenses, recurring items, categories, tags, history, reminders, and JSON backups on your device. It works without an account, ads, analytics, tracking, or internet access. The developer-signed APK is available from GitHub Releases." },
+        de: { category: "Vectorint", title: "Vectorint v0.0.8 auf GitHub veröffentlicht", summary: "Die erste Produktionsversion von Vectorint zeigt, wie viel du gerade sicher ausgeben kannst, und verwaltet Einnahmen, Ausgaben, wiederkehrende Posten, Kategorien, Tags, Verlauf, Erinnerungen und JSON-Sicherungen auf deinem Gerät. Sie funktioniert ohne Konto, Werbung, Analyse, Tracking oder Internetzugriff. Die entwicklersignierte APK ist über GitHub Releases verfügbar." },
+        "pt-PT": { category: "Vectorint", title: "Vectorint v0.0.8 lançado no GitHub", summary: "A primeira versão de produção do Vectorint mostra quanto pode gastar em segurança neste momento e mantém rendimentos, despesas, itens recorrentes, categorias, etiquetas, histórico, lembretes e cópias de segurança JSON no dispositivo. Funciona sem conta, publicidade, análises, rastreio ou acesso à Internet. O APK assinado pelo programador está disponível no GitHub Releases." },
+        es: { category: "Vectorint", title: "Vectorint v0.0.8 publicado en GitHub", summary: "La primera versión de producción de Vectorint muestra cuánto puedes gastar con seguridad ahora y mantiene ingresos, gastos, elementos recurrentes, categorías, etiquetas, historial, recordatorios y copias de seguridad JSON en tu dispositivo. Funciona sin cuenta, publicidad, análisis, seguimiento ni acceso a Internet. El APK firmado por el desarrollador está disponible en GitHub Releases." },
+        fr: { category: "Vectorint", title: "Vectorint v0.0.8 publié sur GitHub", summary: "La première version de production de Vectorint indique combien vous pouvez dépenser sans risque maintenant et conserve les revenus, dépenses, éléments récurrents, catégories, étiquettes, historique, rappels et sauvegardes JSON sur votre appareil. Elle fonctionne sans compte, publicité, analyse, suivi ni accès à Internet. L’APK signé par le développeur est disponible sur GitHub Releases." }
+      }
+    },
+    {
       id: "geojoystick-0-1-5",
       projectId: "geojoystick",
       date: "2026-09-02",

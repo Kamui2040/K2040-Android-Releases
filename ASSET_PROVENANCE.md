@@ -14,6 +14,15 @@
 - Use here: shared 3:1 artwork for the GeoJoystick project page. Localized descriptive copy is rendered by the website.
 - Processing: the supplied 2172×724 PNG is already an exact 3:1 image and was converted directly to WebP without cropping or resizing.
 
+## Vectorint project artwork
+
+- Local files: `assets/vectorint-app-card.webp` and `assets/vectorint-hero.webp`.
+- Source: original K2040 project artwork supplied by the project owner, combining first-party Vectorint screenshots with the Vectorint Raven artwork documented in the public Vectorint repository.
+- Use here: a 4:5 landing-page app card and a 3:1 Vectorint project-page hero.
+- Processing: the supplied 1080×1350 app card was resized to 600×750 and converted to WebP; the supplied 2172×724 hero was converted to WebP without cropping or resizing.
+- Licence: the Vectorint Raven artwork is licensed under CC BY 4.0 as documented in the public Vectorint repository; the surrounding project artwork and screenshots were supplied and approved by K2040 for this website.
+- The project page also references the five first-party English release screenshots from the immutable public Vectorint commit `6df5c65425d59ef4b8efd45150f63afb2e415910`; those screenshots are not duplicated in this repository.
+
 ## GeoJoystick About screenshot
 
 - Local file: `assets/geojoystick-about-v0.1.5.webp`.

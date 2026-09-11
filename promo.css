@@ -4,7 +4,8 @@
    while the media inside it owns the 3:1 ratio. Keeping aspect-ratio off the
    framed element avoids browser-dependent bottom-border rasterization. */
 .geo-promo-section,
-.esca-promo-section {
+.esca-promo-section,
+.vectorint-promo-section {
   margin: 0;
   overflow: hidden;
 }
@@ -22,8 +23,13 @@
   background: #f7efe5;
 }
 
+.vectorint-promo-section {
+  background: #070c13;
+}
+
 .geo-promo-image,
-.esca-promo-image {
+.esca-promo-image,
+.vectorint-promo-image {
   display: block;
   width: 100%;
   height: auto;
@@ -38,6 +44,10 @@
 
 .esca-promo-image {
   background: #f7efe5;
+}
+
+.vectorint-promo-image {
+  background: #070c13;
 }
 
 .geo-promo-copy {
