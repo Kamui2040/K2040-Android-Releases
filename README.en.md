@@ -26,13 +26,21 @@ Each app's public source repository is the authoritative GitHub home for current
 
 ## Current apps
 
+### Vectorint
+
+Vectorint is a local-first budgeting companion that shows how much you can safely spend right now.
+
+- App page: <https://kamui2040.github.io/K2040-Android-Releases/apps/vectorint/>
+- Source, documentation, and GitHub releases: <https://github.com/Kamui2040/Vectorint>
+- Current GitHub release: <https://github.com/Kamui2040/Vectorint/releases/tag/v0.0.8>
+
 ### GeoJoystick
 
 GeoJoystick provides a joystick-style way to control Android mock locations.
 
 - App page: <https://kamui2040.github.io/K2040-Android-Releases/apps/geojoystick/>
 - Source, documentation, and GitHub releases: <https://github.com/Kamui2040/K2040-GeoJoystick>
-- Current GitHub release: <https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.4>
+- Current GitHub release: <https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.5>
 - F-Droid: <https://f-droid.org/packages/com.k2040.geojoystick/>
 - APKPure: <https://apkpure.com/p/com.k2040.geojoystick>
 - Uptodown: <https://geojoystick.en.uptodown.com/android>
@@ -43,7 +51,7 @@ Esca Agnellis is a simple, private food-pyramid tracker that keeps its data on t
 
 - App page: <https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/>
 - Source and documentation: <https://github.com/Kamui2040/Esca-Agnellis-Android>
-- Current GitHub release: <https://github.com/Kamui2040/Esca-Agnellis-Android/releases/tag/v0.16.0>
+- Current GitHub release: <https://github.com/Kamui2040/Esca-Agnellis-Android/releases/tag/v0.17.0>
 - F-Droid: <https://f-droid.org/packages/com.k2040.escaagnellis/>
 - APKPure: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Uptodown: <https://esca-agnellis.en.uptodown.com/android>

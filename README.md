@@ -26,13 +26,21 @@ Das öffentliche Quellrepository der jeweiligen App ist die maßgebliche GitHub-
 
 ## Aktuelle Apps
 
+### Vectorint
+
+Vectorint ist eine lokale Budget-App, die zeigt, wie viel du gerade sicher ausgeben kannst.
+
+- App-Seite: <https://kamui2040.github.io/K2040-Android-Releases/apps/vectorint/>
+- Quellcode, Dokumentation und GitHub-Releases: <https://github.com/Kamui2040/Vectorint>
+- Aktuelles GitHub-Release: <https://github.com/Kamui2040/Vectorint/releases/tag/v0.0.8>
+
 ### GeoJoystick
 
 GeoJoystick bietet eine Joystick-Steuerung für Android-Teststandorte.
 
 - App-Seite: <https://kamui2040.github.io/K2040-Android-Releases/apps/geojoystick/>
 - Quellcode, Dokumentation und GitHub-Releases: <https://github.com/Kamui2040/K2040-GeoJoystick>
-- Aktuelles GitHub-Release: <https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.4>
+- Aktuelles GitHub-Release: <https://github.com/Kamui2040/K2040-GeoJoystick/releases/tag/v0.1.5>
 - F-Droid: <https://f-droid.org/packages/com.k2040.geojoystick/>
 - APKPure: <https://apkpure.com/p/com.k2040.geojoystick>
 - Uptodown: <https://geojoystick.en.uptodown.com/android>
@@ -43,7 +51,7 @@ Esca Agnellis ist ein einfacher, privater Ernährungspyramiden-Tracker, der sein
 
 - App-Seite: <https://kamui2040.github.io/K2040-Android-Releases/apps/esca-agnellis/>
 - Quellcode und Dokumentation: <https://github.com/Kamui2040/Esca-Agnellis-Android>
-- Aktuelles GitHub-Release: <https://github.com/Kamui2040/Esca-Agnellis-Android/releases/tag/v0.16.0>
+- Aktuelles GitHub-Release: <https://github.com/Kamui2040/Esca-Agnellis-Android/releases/tag/v0.17.0>
 - F-Droid: <https://f-droid.org/packages/com.k2040.escaagnellis/>
 - APKPure: <https://apkpure.com/p/com.k2040.escaagnellis>
 - Uptodown: <https://esca-agnellis.en.uptodown.com/android>

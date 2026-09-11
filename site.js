@@ -13,7 +13,8 @@
   };
   const archiveMedia = {
     "esca-agnellis": "/K2040-Android-Releases/assets/esca-agnellis-app-card.webp",
-    geojoystick: "/K2040-Android-Releases/assets/geojoystick-app-card.webp"
+    geojoystick: "/K2040-Android-Releases/assets/geojoystick-app-card.webp",
+    vectorint: "/K2040-Android-Releases/assets/vectorint-app-card.webp"
   };
   const root = document.documentElement;
   const darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
